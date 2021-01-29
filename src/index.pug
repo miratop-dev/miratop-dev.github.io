@@ -1,0 +1,38 @@
+include includes/mixins/main-page-mixin
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel='stylesheet', href='styles/style.css')
+    title Mira.hub
+  body
+    include includes/main-page-banner.pug
+    .miratop-features
+      ul.miratop-features__container
+        +mainPageFeaturesItem('Проверенные эксперты')                                                 
+        +mainPageFeaturesItem('Простота поиска')                                                 
+        +mainPageFeaturesItem('Поддержка')                                                 
+        +mainPageFeaturesItem('Прозрачность')                                                 
+        +mainPageFeaturesItem('Надёжность сделки')                                                 
+        +mainPageFeaturesItem('Обучающие материалы')                                                 
+    .expertise-areas
+      .expertise-areas__container
+        h2.expertise-areas__title Экспертиза
+        ul.expertise-areas__list
+          +mainPageExpertiseAreas('HR', 'Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала')
+          +mainPageExpertiseAreas('Управление', 'Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала')
+          +mainPageExpertiseAreas('Масштабирование', 'Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала')
+          +mainPageExpertiseAreas('Финансы', 'Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала')
+          +mainPageExpertiseAreas('Аудит', 'Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала')
+          +mainPageExpertiseAreas('Планирование', 'Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала')
+    .achievement-stats
+
+    .work-process
+    .about-us
+    .recommendations
+    .miratop-partners
+    .workflow
+    include includes/footer.pug 

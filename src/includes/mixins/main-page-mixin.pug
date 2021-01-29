@@ -1,0 +1,15 @@
+mixin mainPageFeaturesItem(title = 'Проверенные эксперты', text = 'Помогут Вам быстро и качественно разобраться в системе ')
+  li
+    .miratop-features__img
+      //img(src="./images/logo.svg" alt="logo")
+    .miratop-features__text
+      strong= title
+      p= text 
+
+mixin mainPageExpertiseAreas(name, ...items)    
+  li
+    h2.expertise-areas__name= name
+    each item in items
+      span= item
+    a.expertise-areas__more(href="#") Показать все
+
