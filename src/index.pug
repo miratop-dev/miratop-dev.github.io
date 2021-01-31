@@ -10,29 +10,30 @@ html(lang="en")
     title Mira.hub
   body
     include includes/main-page-banner.pug
-    .miratop-features
-      ul.miratop-features__container
-        +mainPageFeaturesItem('Проверенные эксперты')                                                 
-        +mainPageFeaturesItem('Простота поиска')                                                 
-        +mainPageFeaturesItem('Поддержка')                                                 
-        +mainPageFeaturesItem('Прозрачность')                                                 
-        +mainPageFeaturesItem('Надёжность сделки')                                                 
-        +mainPageFeaturesItem('Обучающие материалы')                                                 
-    .expertise-areas
-      .expertise-areas__container
-        h2.expertise-areas__title Экспертиза
-        ul.expertise-areas__list
-          +mainPageExpertiseAreas('HR', 'Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала')
-          +mainPageExpertiseAreas('Управление', 'Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала')
-          +mainPageExpertiseAreas('Масштабирование', 'Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала')
-          +mainPageExpertiseAreas('Финансы', 'Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала')
-          +mainPageExpertiseAreas('Аудит', 'Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала')
-          +mainPageExpertiseAreas('Планирование', 'Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала')
-    .achievement-stats
+    .main
+      .miratop-features
+        ul.miratop-features__container
+          +mainPageFeaturesItem({title: 'Проверенные эксперты'})                                                 
+          +mainPageFeaturesItem({title: 'Простота поиска',  imgsrc: './images/miratop-features-search.svg'})                                                 
+          +mainPageFeaturesItem({title: 'Поддержка', imgsrc: './images/miratop-features-phone.svg'})                                                 
+          +mainPageFeaturesItem({title: 'Прозрачность', imgsrc: './images/miratop-features-clear.svg'})                                                 
+          +mainPageFeaturesItem({title:'Надёжность сделки', imgsrc: './images/miratop-features-reliability.svg'})                                                 
+          +mainPageFeaturesItem({title:'Обучающие материалы', imgsrc: './images/miratop-features-learn.svg'})                                                 
+      .expertise-areas
+        .expertise-areas__container
+          h2.expertise-areas__title Экспертиза
+          ul.expertise-areas__list
+            +mainPageExpertiseAreas('HR', 'Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала')
+            +mainPageExpertiseAreas('Управление', 'Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала')
+            +mainPageExpertiseAreas('Масштабирование', 'Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала')
+            +mainPageExpertiseAreas('Финансы', 'Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала')
+            +mainPageExpertiseAreas('Аудит', 'Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала')
+            +mainPageExpertiseAreas('Планирование', 'Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала')
+      .achievement-stats
 
-    .work-process
-    .about-us
-    .recommendations
-    .miratop-partners
-    .workflow
+      .work-process
+      .about-us
+      .recommendations
+      .miratop-partners
+      .workflow
     include includes/footer.pug 

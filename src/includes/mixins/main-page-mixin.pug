@@ -1,10 +1,21 @@
-mixin mainPageFeaturesItem(title = 'Проверенные эксперты', text = 'Помогут Вам быстро и качественно разобраться в системе ')
-  li
+//mixin mainPageFeaturesItem(args = 'Проверенные эксперты', text = 'Помогут Вам быстро и качественно разобраться в системе', imgsrc = './images/miratop-features-star.svg')
+mixin mainPageFeaturesItem(args)
+  li.miratop-features__block
     .miratop-features__img
-      //img(src="./images/logo.svg" alt="logo")
+      if args.imgsrc
+        img(src= args.imgsrc alt="logo")
+      else
+        img(src= './images/miratop-features-star.svg' alt="logo")
     .miratop-features__text
-      strong= title
-      p= text 
+      if args.title
+        strong= args.title
+      else 
+        strong Проверенные эксперты
+
+      if args.text
+        p= args.text
+      else 
+        p Помогут Вам быстро и качественно разобраться в системе
 
 mixin mainPageExpertiseAreas(name, ...items)    
   li

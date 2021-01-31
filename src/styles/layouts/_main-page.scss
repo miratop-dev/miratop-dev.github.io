@@ -1,3 +1,42 @@
 .main {
   position: relative;
+  padding: 100px 0 0 0;
+}
+
+.miratop-features {
+  margin: 0 0 100px;
+
+  &__container {
+    @include container;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__block {
+    display: flex;
+    width: 33%;
+
+    &:nth-child(-n + 3) {
+      margin: 0 0 80px;
+    }
+  }
+
+  &__text {
+    margin: 0 0 0 20px;
+    color: #26484a;
+    font-size: 18px;
+    line-height: 28px;
+
+    p {
+      margin: 4px 0 0;
+    }
+  }
+}
+
+.expertise-areas {
+  &__container {
+    @include container;
+  }
 }
