@@ -28,7 +28,6 @@
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
-  box-sizing: border-box;
 
   @include tablet {
     max-width: 728px;
@@ -36,5 +35,31 @@
 
   @include mobile {
     max-width: 320px;
+  }
+}
+
+@mixin modificators {
+  &--primary {
+    background-color: $color-primary-green;
+    border: 1px solid $color-primary-green;
+    color: $color-primary-white;
+  }
+
+  &--bordered {
+    background-color: $color-primary-white;
+    border: 1px solid $color-primary-green;
+    color: $color-primary-black;
+  }
+
+  &--md {
+    height: $control-height-md;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  &--lg {
+    height: $control-height-lg;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 }

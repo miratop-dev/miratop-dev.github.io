@@ -1,13 +1,14 @@
 {
-  "main.css": "/styles/style.css",
-  "main.js": "/scripts/main.6eb6e875.js",
-  "runtime.js": "/scripts/runtime.dc458939.js",
-  "../stats.json": "/../stats.json",
-  "fonts/main.scss": "/fonts/days-webfont.460ab7b0.woff2",
-  "images/main.scss": "/images/main-page-banner__bg.jpg",
-  "images/miratop-features-clear.svg": "/images/miratop-features-clear.svg",
-  "images/miratop-features-phone.svg": "/images/miratop-features-phone.svg",
-  "images/miratop-features-search.svg": "/images/miratop-features-search.svg",
-  "images/miratop-features-star.svg": "/images/miratop-features-star.svg",
-  "index.html": "/index.html"
+  "main.css": "styles/style.css",
+  "main.js": "scripts/main.js",
+  "runtime.js": "scripts/runtime.js",
+  "../stats.json": "../stats.json",
+  "fonts/main.scss": "fonts/days-webfont.460ab7b0.woff2",
+  "images/main.scss": "images/logo-header-white.svg",
+  "images/miratop-features-clear.svg": "images/miratop-features-clear.svg",
+  "images/miratop-features-learn.svg": "images/miratop-features-learn.svg",
+  "images/miratop-features-phone.svg": "images/miratop-features-phone.svg",
+  "images/miratop-features-search.svg": "images/miratop-features-search.svg",
+  "images/miratop-features-star.svg": "images/miratop-features-star.svg",
+  "index.html": "index.html"
 }

@@ -1,9 +1,9 @@
 .c-button {
+  white-space: nowrap;
   font-size: 18px;
   line-height: 24px;
-  color: $primary-white;
-  background-color: $primary-green;
   text-decoration: none;
   border-radius: 64px;
-  box-sizing: border-box;
+
+  @include modificators;
 }

@@ -1,6 +1,6 @@
 .main-page-banner {
   position: relative;
-  background: url('../../../images/main-page-banner__bg.jpg') no-repeat;
+  background: url('/images/main-page-banner__bg.jpg') no-repeat;
   background-position: center;
   background-size: cover;
   display: flex;
@@ -12,7 +12,7 @@
   align-items: center;
 
   &__container {
-    color: $primary-white;
+    color: $color-primary-white;
     text-align: center;
     padding: 180px 0;
     display: flex;
@@ -66,11 +66,11 @@
   }
 
   &__link {
-    padding: 20px 60px;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
 
     &:first-child {
-      margin: 0 40px 0 0;
+      margin-right: 40px;
 
       @include tablet {
         margin: 0 0 28px;
@@ -86,7 +86,7 @@
 
   &__more {
     text-decoration: none;
-    color: $primary-white;
+    color: $color-primary-white;
     position: relative;
     font-size: 24px;
     line-height: 29px;
