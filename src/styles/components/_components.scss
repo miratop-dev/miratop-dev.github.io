@@ -1,4 +1,6 @@
 .c-button {
+  display: inline-flex;
+  align-items: center;
   white-space: nowrap;
   font-size: 18px;
   line-height: 24px;
@@ -6,4 +8,12 @@
   border-radius: 64px;
 
   @include modificators;
+}
+
+.c-title {
+  font-family: 'Days', sans-serif;
+  font-size: 48px;
+  line-height: 62px;
+  color: #26484a;
+  font-weight: normal;
 }

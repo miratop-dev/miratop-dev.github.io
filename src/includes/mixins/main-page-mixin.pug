@@ -16,10 +16,13 @@ mixin mainPageFeaturesItem(args)
       else 
         p Помогут Вам быстро и качественно разобраться в системе
 
-mixin mainPageExpertiseAreas(name, ...items)    
-  li
-    h2.expertise-areas__name= name
-    each item in items
-      span= item
+mixin mainPageExpertiseAreas(name, items)    
+  li.expertise-areas__block
+    div.expertise-areas__name= name
+    each item, index in items
+      if(index < 4)
+        div.expertise-areas__activity= item
+      else
+        div.expertise-areas__activity.hide= item
     a.expertise-areas__more(href="#") Показать все
 
