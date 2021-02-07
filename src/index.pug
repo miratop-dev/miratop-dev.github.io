@@ -1,0 +1,77 @@
+include includes/mixins/main-page-mixin
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel='stylesheet', href='styles/style.css')
+    title Mira.hub
+  body
+    include includes/main-page-banner.pug
+    .main
+      .miratop-features
+        ul.miratop-features__container     
+          +mainPageFeaturesItem({title: 'Проверенные эксперты'})                                                 
+          +mainPageFeaturesItem({title: 'Простота поиска',  imgsrc: 'images/miratop-features-search.svg'})                                                 
+          +mainPageFeaturesItem({title: 'Поддержка', imgsrc: './images/miratop-features-phone.svg'})                                                 
+          +mainPageFeaturesItem({title: 'Прозрачность', imgsrc: './images/miratop-features-clear.svg'})                                                 
+          +mainPageFeaturesItem({title:'Надёжность сделки', imgsrc: './images/miratop-features-reliability.svg'})                                                 
+          +mainPageFeaturesItem({title:'Обучающие материалы', imgsrc: './images/miratop-features-learn.svg'})                                                 
+      .expertise-areas
+        .expertise-areas__container
+          h2.c-title Экспертиза
+          ul.expertise-areas__list
+            +mainPageExpertiseAreas('HR', ['Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала', 'Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала'])
+            +mainPageExpertiseAreas('Управление', ['Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала'])
+            +mainPageExpertiseAreas('Масштабирование', ['Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала'])
+            +mainPageExpertiseAreas('Финансы', ['Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала'])
+            +mainPageExpertiseAreas('Аудит', ['Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала'])
+            +mainPageExpertiseAreas('Планирование', ['Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала'])
+      .achievement-stats
+        ul.achievement-stats__container
+          li.achievement-stats__block
+            .achievement-stats__num 150
+            .achievement-stats__description Проверенных экспертов
+          li.achievement-stats__block
+            .achievement-stats__num 85
+            .achievement-stats__description Реализованных проектов
+          li.achievement-stats__block
+            .achievement-stats__num 99%
+            .achievement-stats__description Удовлетворенных клиентов
+          li.achievement-stats__block
+            .achievement-stats__num 125
+            .achievement-stats__description Безопасных сделок                                  
+      .work-process
+        .work-process__container
+          h2.c-title Как это работает
+          .work-process__slider
+            .work-process__block
+              .work-process__imgwrap
+                img(src= './images/work-process-photo.jpg' alt="work process image")
+              .work-process__textwrap
+                .work-process__title Зарегистрироваться
+                .work-process__description Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. Проблемы решаются оперативно и, главное, без потери времени и лишних денег. Вполне доволен сотрудничеством.
+                .work-process__buttons
+                  a.c-button.c-button--primary.c-button--md(href="#") Как эксперт
+                  a.c-button.c-button--bordered.c-button--md(href="#") Как бизнес
+      .about-us
+        h2.c-title О нас
+        .about-us__description Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. Проблемы решаются оперативно и, главное, без потери времени и лишних денег. Вполне доволен сотрудничеством.
+        a.c-button.c-button--primary.c-button--md(href="#") Подробнее
+      .recommendations
+        .recommendations__container
+          h2.c-title Нас рекомендуют
+          .recommendations__slider
+            .recommendations__block
+              .recommendations__recommendation Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. Проблемы решаются оперативно и, главное, без потери времени и лишних денег. Вполне доволен сотрудничеством.
+              .recommendations__info
+                .recommendations__imgwrap
+                  img(src= './images/recommendation-photo.jpg' alt="recommending's photo")
+                .recommendations__profile
+                  .recommendations__name Андрей Р.
+                  p.recommendations__position Посада, компанія
+      .miratop-partners
+      .workflow
+    include includes/footer.pug 

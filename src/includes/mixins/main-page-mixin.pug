@@ -1,0 +1,28 @@
+mixin mainPageFeaturesItem(args)
+  li.miratop-features__block
+    .miratop-features__img
+      if args.imgsrc
+        img(src= args.imgsrc alt="logo")
+      else
+        img(src= './images/miratop-features-star.svg' alt="logo")
+    .miratop-features__text
+      if args.title
+        strong= args.title
+      else 
+        strong Проверенные эксперты
+
+      if args.text
+        p= args.text
+      else 
+        p Помогут Вам быстро и качественно разобраться в системе
+
+mixin mainPageExpertiseAreas(name, items)    
+  li.expertise-areas__block
+    div.expertise-areas__name= name
+    each item, index in items
+      if(index < 4)
+        div.expertise-areas__activity= item
+      else
+        div.expertise-areas__activity.hide= item
+    a.expertise-areas__more(href="#") Показать все
+

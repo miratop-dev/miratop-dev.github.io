@@ -1,0 +1,234 @@
+.main {
+  position: relative;
+  padding: 100px 0 0 0;
+}
+
+.miratop-features {
+  margin: 0 0 100px;
+
+  &__container {
+    @include container;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__block {
+    display: flex;
+    width: 33%;
+
+    &:nth-child(-n + 3) {
+      margin: 0 0 80px;
+    }
+  }
+
+  &__text {
+    margin: 0 0 0 20px;
+    color: #26484a;
+    font-size: 18px;
+    line-height: 28px;
+
+    p {
+      margin: 4px 0 0;
+    }
+  }
+}
+
+.expertise-areas {
+  margin: 0 0 112px;
+
+  &__container {
+    @include container;
+
+    text-align: center;
+  }
+
+  &__list {
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__block {
+    width: 33%;
+    text-align: left;
+    color: #26484a;
+
+    &:nth-child(-n + 3) {
+      margin: 0 0 80px;
+    }
+  }
+
+  &__name {
+    font-family: 'Days', sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0 0 16px;
+  }
+
+  &__activity {
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0 0 8px;
+
+    &.hide {
+      display: none;
+    }
+  }
+
+  &__more {
+    color: $color-primary-green;
+    font-size: 18px;
+    line-height: 28px;
+    text-decoration: none;
+  }
+}
+
+.achievement-stats {
+  background: #f5f5f5;
+  padding: 58px 0;
+  margin: 0 0 100px;
+
+  &__container {
+    @include container;
+
+    display: flex;
+  }
+
+  &__block {
+    width: 25%;
+    text-align: center;
+  }
+
+  &__num {
+    font-family: 'Days', sans-serif;
+    font-size: 80px;
+    line-height: 96px;
+    color: #a47e4b;
+  }
+
+  &__description {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: bold;
+    color: #26484a;
+  }
+}
+
+.work-process {
+  margin: 0 0 100px;
+
+  &__container {
+    @include container;
+
+    text-align: center;
+  }
+
+  &__slider {
+    margin: 40px 0 0 0;
+  }
+
+  &__block {
+    display: flex;
+  }
+
+  &__imgwrap {
+    margin: 0 60px 0 0;
+    flex: 0 0 440px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  &__textwrap {
+    color: #26484a;
+    text-align: left;
+  }
+
+  &__title {
+    font-family: 'Days', sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0 0 10px;
+  }
+
+  &__description {
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0 0 10px;
+  }
+
+  &__buttons {
+    a {
+      &:first-child {
+        margin: 0 10px 0 0;
+      }
+    }
+  }
+}
+
+.about-us {
+  margin: 0 0 100px;
+  text-align: center;
+
+  &__description {
+    width: 100%;
+    max-width: 780px;
+    margin: 40px auto 20px;
+    color: #26484a;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.recommendations {
+  margin: 0 0 100px;
+  text-align: center;
+
+  &__container {
+    @include container;
+  }
+
+  &__slider {
+    margin: 40px 0 0 0;
+  }
+
+  &__recommendation {
+    max-width: 780px;
+    color: #26484a;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0 auto 40px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #254648;
+  }
+
+  &__imgwrap {
+    margin: 0 15px 0 0;
+    flex: 0 0 80px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  &__profile {
+    text-align: left;
+  }
+
+  &__name {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    margin: 0 0 5px;
+  }
+
+  &__position {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}

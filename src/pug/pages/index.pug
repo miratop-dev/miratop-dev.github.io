@@ -1,0 +1,70 @@
+extends ../layout/main
+
+block variables
+  - var title = 'Mira.hub';
+  - var description = 'Mira.hub main page title';
+  - var pageClass = 'index-page';
+  - let witchPage = 'main'
+
+block content 
+  main
+    .advantages
+      .advantages__container
+        .advantages__block
+          .advantages__imgwrap
+          .advantages__title Практики для практиков
+          .advantages__description Помогут Вам быстро и качественно разобраться в системе
+        .advantages__block
+          .advantages__imgwrap
+          .advantages__title Новые формы сотрудничества
+          .advantages__description Помогут Вам быстро и качественно разобраться в системе
+        .advantages__block
+          .advantages__imgwrap
+          .advantages__title Гарантия безопасности
+          .advantages__description Помогут Вам быстро и качественно разобраться в системе                    
+    .expertise-areas
+      .expertise-areas__container
+        h2.c-title Экспертиза
+        ul.expertise-areas__list
+          +mainPageExpertiseAreas('HR', ['Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала', 'Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала'])
+          +mainPageExpertiseAreas('Управление', ['Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала'])
+          +mainPageExpertiseAreas('Масштабирование', ['Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала'])
+          +mainPageExpertiseAreas('Финансы', ['Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала'])
+          +mainPageExpertiseAreas('Аудит', ['Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала'])
+          +mainPageExpertiseAreas('Планирование', ['Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала'])  
+    .workflow
+      .workflow__container 
+        .workflow__block 
+          .workflow__imgwrap
+            img(src= 'assets/img/workflow-slide-1.png' alt="slide")
+          .workflow__textwrap 
+            .workflow__title Как это работает
+            .workflow__subtitle Зарегистрироваться
+            .workflow__description Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. Проблемы решаются оперативно и, главное, без потери времени и лишних денег. Вполне доволен сотрудничеством.
+            .workflow__buttons 
+              a.workflow__link.c-button.c-button--primary.c-button--md(href="#") Как эксперт
+              a.workflow__link.workflow__link-black.c-button.c-button--primary.c-button--md(href="#") Как бизнес    
+    .responsibility 
+      .responsibility__container 
+        h2.c-title Ответственность платформы
+        .responsibility__wrapper
+          ul.responsibility__list 
+            +mainPageResponsibility('Безопасность сделки', 'Оплата услуг замораживается до завершения выполнения задачи, после чего средства поступают эксперту выполнившему работу.')
+            +mainPageResponsibility('Практики для практиков', 'Оплата услуг замораживается до завершения выполнения задачи, после чего средства поступают эксперту выполнившему работу.')
+            +mainPageResponsibility('Новые формы сотрудничества', 'Оплата услуг замораживается до завершения выполнения задачи, после чего средства поступают эксперту выполнившему работу.')
+            +mainPageResponsibility('Гарантия качества', 'Оплата услуг замораживается до завершения выполнения задачи, после чего средства поступают эксперту выполнившему работу.')
+            +mainPageResponsibility('Постояная отчетность', 'Оплата услуг замораживается до завершения выполнения задачи, после чего средства поступают эксперту выполнившему работу.')
+          .responsibility__imgwrap 
+            img(src= 'assets/img/responsibility.svg' alt="responsibility")
+    .recommendations
+      .recommendations__container
+        h2.c-title Нас рекомендуют
+        .recommendations__slider
+          .recommendations__block
+            .recommendations__recommendation Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. Проблемы решаются оперативно и, главное, без потери времени и лишних денег. Вполне доволен сотрудничеством.
+            .recommendations__info
+              .recommendations__imgwrap
+                img(src= 'assets/img/recommendation-photo.jpg' alt="recommending's photo")
+              .recommendations__profile
+                .recommendations__name Андрей Р.
+                p.recommendations__position Посада, компанія
