@@ -2,6 +2,18 @@
   position: relative;
   background: #273233;
 
+  &__decoration {
+    &--lg {
+      right: 40px;
+      top: -75px;
+    }
+
+    &--md {
+      right: 180px;
+      top: 270px;      
+    }     
+  }
+
   &__container {
     @include container;
 

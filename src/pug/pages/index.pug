@@ -33,6 +33,8 @@ block content
           +mainPageExpertiseAreas('Аудит', ['Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала'])
           +mainPageExpertiseAreas('Планирование', ['Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала'])  
     .workflow
+      .workflow__decoration--lg.c-decoration.c-decoration--150.c-decoration--white
+      .workflow__decoration--md.c-decoration.c-decoration--100.c-decoration--white
       .workflow__container
       .workflow__slider(data-js-handler="slider")
         +mainPageWorkflow({title: 'Как это работает', subtitle: 'Зарегистрироваться'})                   
@@ -56,27 +58,6 @@ block content
       .recommendations__container(data-js-handler="slider")
         h2.c-title Нас рекомендуют
         .recommendations__slider
-          .recommendations__block
-            .recommendations__recommendation Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. Проблемы решаются оперативно и, главное, без потери времени и лишних денег. Вполне доволен сотрудничеством.
-            .recommendations__info
-              .recommendations__imgwrap
-                img(src= 'assets/img/recommendation-photo.jpg' alt="recommending's photo")
-              .recommendations__profile
-                .recommendations__name Андрей Р.
-                p.recommendations__position Посада, компанія
-          .recommendations__block
-            .recommendations__recommendation Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. Проблемы решаются оперативно и, главное, без потери времени и лишних денег. Вполне доволен сотрудничеством.
-            .recommendations__info
-              .recommendations__imgwrap
-                img(src= 'assets/img/recommendation-photo.jpg' alt="recommending's photo")
-              .recommendations__profile
-                .recommendations__name Андрей Р.
-                p.recommendations__position Посада, компанія
-          .recommendations__block
-            .recommendations__recommendation Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. Проблемы решаются оперативно и, главное, без потери времени и лишних денег. Вполне доволен сотрудничеством.
-            .recommendations__info
-              .recommendations__imgwrap
-                img(src= 'assets/img/recommendation-photo.jpg' alt="recommending's photo")
-              .recommendations__profile
-                .recommendations__name Андрей Р.
-                p.recommendations__position Посада, компанія                                
+          +mainPageRecommendations({recommendation: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. Проблемы решаются оперативно и, главное, без потери времени и лишних денег. Вполне доволен сотрудничеством.'})                             
+          +mainPageRecommendations({recommendation: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. Проблемы решаются оперативно и, главное, без потери времени и лишних денег. Вполне доволен сотрудничеством.'})                             
+          +mainPageRecommendations({recommendation: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. Проблемы решаются оперативно и, главное, без потери времени и лишних денег. Вполне доволен сотрудничеством.'})                             
