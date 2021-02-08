@@ -1,21 +1,3 @@
-mixin mainPageFeaturesItem(args)
-  li.miratop-features__block
-    .miratop-features__img
-      if args.imgsrc
-        img(src= args.imgsrc alt="logo")
-      else
-        img(src= './images/miratop-features-star.svg' alt="logo")
-    .miratop-features__text
-      if args.title
-        strong= args.title
-      else 
-        strong Проверенные эксперты
-
-      if args.text
-        p= args.text
-      else 
-        p Помогут Вам быстро и качественно разобраться в системе
-
 mixin mainPageExpertiseAreas(name, items)    
   li.expertise-areas__block
     div.expertise-areas__name= name
@@ -31,3 +13,15 @@ mixin mainPageResponsibility(name, text)
     .responsibility__title= name
     .responsibility__description= text
 
+mixin mainPageWorkflow(args)
+  .workflow__wrapper 
+    .workflow__block
+      .workflow__imgwrap
+        img(src= 'assets/img/workflow-slide-1.png' alt="slide")
+      .workflow__textwrap 
+        .workflow__title= args.title
+        .workflow__subtitle= args.subtitle
+        .workflow__description Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. Проблемы решаются оперативно и, главное, без потери времени и лишних денег. Вполне доволен сотрудничеством.
+        .workflow__buttons 
+          a.workflow__link.c-button.c-button--primary.c-button--md(href="#") Как эксперт
+          a.workflow__link.workflow__link-black.c-button.c-button--primary.c-button--md(href="#") Как бизнес     

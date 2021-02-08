@@ -1,6 +1,7 @@
 main {
   position: relative;
   padding: 100px 0;
+  overflow-x: hidden;
 }
 
 .main-page-banner {
@@ -9,6 +10,7 @@ main {
 
     height: calc(100vh - 124px);
     padding-top: 8.6vw;
+    position: relative;
   }
 
   &__title {
@@ -38,6 +40,12 @@ main {
     &:first-child {
       margin-right: 20px;
     }
+  }
+
+  &__img {
+    position: absolute;
+    right: -135px;
+    top: 0;
   }
 }
 
@@ -135,16 +143,26 @@ main {
 }
 
 .workflow {
+  position: relative;
   background: linear-gradient(94.78deg, #51DB91 0%, #38D0B5 100%);
   padding: 80px 0;
   margin: 0 0 210px;
 
   &__container {
-    @include container;
+    width: 100%;
+    max-width: 1440px;
+    top: 50%;
+    position: absolute;
+    height: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1;
   }
 
   &__block {
-    display: flex;
+    @include container;
+
+    display: flex !important;
     align-items: center;
   }
 
@@ -197,6 +215,67 @@ main {
       background-color: $color-secondary-2;
       border: 1px solid $color-secondary-2;
     }
+  }
+
+  .slick-list {
+    overflow: visible;
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: -44px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+
+    li {
+      margin: 0 20px 0 0;
+      height: 4px;
+
+      button {
+        cursor: pointer;
+        display: block;
+        font-size: 0; 
+        background: #E5E5E5;
+        border-radius: 2px;
+        height: 100%;
+        width: 40px;
+      }
+
+      &.slick-active {
+        button {
+          background: linear-gradient(94.78deg, #51DB91 0%, #38D0B5 100%);
+        }
+      }
+
+      &:last-child {
+        margin: 0;
+      }  
+    }
+  }
+
+  .slick-arrow {
+    position: absolute;
+    width: 24px;
+    height: 12px;
+    overflow: hidden;
+    text-indent: -9999px;
+  }
+
+  .slick-prev {
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg width='26' height='14' viewBox='0 0 26 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7L25 7' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M1 7L8 13' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M8 1L1 7' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    left: -95px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
+  }
+
+  .slick-next {
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg width='26' height='14' viewBox='0 0 26 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 7H1' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M25 7L18 1' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M18 13L25 7' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    right: -95px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
   }
 }
 
@@ -315,4 +394,30 @@ main {
     font-size: 13px;
     line-height: 16px;
   }
+
+  .slick-arrow {
+    position: absolute;
+    width: 24px;
+    height: 12px;
+    overflow: hidden;
+    text-indent: -9999px;
+    top: 50%;
+    margin: -6px 0 0 0;
+  }
+
+  .slick-prev {
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg width='26' height='14' viewBox='0 0 26 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7L25 7' stroke='%23254648' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M1 7L8 13' stroke='%23254648' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M8 1L1 7' stroke='%23254648' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    left: -115px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+  }
+
+  .slick-next {
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg width='26' height='14' viewBox='0 0 26 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 7H1' stroke='%23254648' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M25 7L18 1' stroke='%23254648' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M18 13L25 7' stroke='%23254648' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    right: -115px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+  }  
 }

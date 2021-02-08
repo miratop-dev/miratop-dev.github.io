@@ -33,17 +33,13 @@ block content
           +mainPageExpertiseAreas('Аудит', ['Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала'])
           +mainPageExpertiseAreas('Планирование', ['Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала'])  
     .workflow
-      .workflow__container 
-        .workflow__block 
-          .workflow__imgwrap
-            img(src= 'assets/img/workflow-slide-1.png' alt="slide")
-          .workflow__textwrap 
-            .workflow__title Как это работает
-            .workflow__subtitle Зарегистрироваться
-            .workflow__description Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. Проблемы решаются оперативно и, главное, без потери времени и лишних денег. Вполне доволен сотрудничеством.
-            .workflow__buttons 
-              a.workflow__link.c-button.c-button--primary.c-button--md(href="#") Как эксперт
-              a.workflow__link.workflow__link-black.c-button.c-button--primary.c-button--md(href="#") Как бизнес    
+      .workflow__container
+      .workflow__slider(data-js-handler="slider")
+        +mainPageWorkflow({title: 'Как это работает', subtitle: 'Зарегистрироваться'})                   
+        +mainPageWorkflow({title: 'Как это работает', subtitle: 'Зарегистрироваться'})                   
+        +mainPageWorkflow({title: 'Как это работает', subtitle: 'Зарегистрироваться'})                   
+        +mainPageWorkflow({title: 'Как это работает', subtitle: 'Зарегистрироваться'})                   
+        +mainPageWorkflow({title: 'Как это работает', subtitle: 'Зарегистрироваться'})                   
     .responsibility 
       .responsibility__container 
         h2.c-title Ответственность платформы
@@ -57,7 +53,7 @@ block content
           .responsibility__imgwrap 
             img(src= 'assets/img/responsibility.svg' alt="responsibility")
     .recommendations
-      .recommendations__container
+      .recommendations__container(data-js-handler="slider")
         h2.c-title Нас рекомендуют
         .recommendations__slider
           .recommendations__block
@@ -68,3 +64,19 @@ block content
               .recommendations__profile
                 .recommendations__name Андрей Р.
                 p.recommendations__position Посада, компанія
+          .recommendations__block
+            .recommendations__recommendation Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. Проблемы решаются оперативно и, главное, без потери времени и лишних денег. Вполне доволен сотрудничеством.
+            .recommendations__info
+              .recommendations__imgwrap
+                img(src= 'assets/img/recommendation-photo.jpg' alt="recommending's photo")
+              .recommendations__profile
+                .recommendations__name Андрей Р.
+                p.recommendations__position Посада, компанія
+          .recommendations__block
+            .recommendations__recommendation Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. Проблемы решаются оперативно и, главное, без потери времени и лишних денег. Вполне доволен сотрудничеством.
+            .recommendations__info
+              .recommendations__imgwrap
+                img(src= 'assets/img/recommendation-photo.jpg' alt="recommending's photo")
+              .recommendations__profile
+                .recommendations__name Андрей Р.
+                p.recommendations__position Посада, компанія                                
