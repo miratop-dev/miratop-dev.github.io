@@ -1,0 +1,26 @@
+extends ../layout/main
+
+block variables
+  - var title = 'Mira.hub search expert';
+  - var description = 'Mira.hub search expert';
+  - var pageClass = 'search-page';
+  - let witchPage = 'search'
+  - let pageTitle = 'Поиск эксперта'
+
+block content 
+  main(class= pageClass)
+    .search-page-top 
+      .search-page-top__container 
+        .breadcrumbs
+          a.breadcrumbs__home(href="/") 
+          a.breadcrumbs__link.breadcrumbs__link--current(href="/") Поиск эксперта
+        .sort
+          span.sort__legend Сортировать:
+          select.sort__select 
+            option По рейтингу
+            option По рейтингу
+            option По рейтингу
+    .c-container
+      .c-aside
+        include ../includes/modules/filters                
+      .c-wide-content content

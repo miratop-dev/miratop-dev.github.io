@@ -7,7 +7,7 @@ block variables
   - let witchPage = 'main'
 
 block content 
-  main
+  main(class= pageClass)
     .advantages
       .advantages__container
         .advantages__block
@@ -32,11 +32,11 @@ block content
           +mainPageExpertiseAreas('Финансы', ['Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала'])
           +mainPageExpertiseAreas('Аудит', ['Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала'])
           +mainPageExpertiseAreas('Планирование', ['Подбор персонала', 'Получение фидбека от сотрудников', '1:1 переговоры', 'Подбор персонала'])  
-    .workflow
+    .workflow.c-gradient
       .workflow__decoration--lg.c-decoration.c-decoration--150.c-decoration--white
       .workflow__decoration--md.c-decoration.c-decoration--100.c-decoration--white
       .workflow__container
-      .workflow__slider(data-js-handler="slider")
+      .workflow__slider(data-js-handler="workflow__slider")
         +mainPageWorkflow({title: 'Как это работает', subtitle: 'Зарегистрироваться'})                   
         +mainPageWorkflow({title: 'Как это работает', subtitle: 'Зарегистрироваться'})                   
         +mainPageWorkflow({title: 'Как это работает', subtitle: 'Зарегистрироваться'})                   
@@ -55,9 +55,9 @@ block content
           .responsibility__imgwrap 
             img(src= 'assets/img/responsibility.svg' alt="responsibility")
     .recommendations
-      .recommendations__container(data-js-handler="slider")
+      .recommendations__container
         h2.c-title Нас рекомендуют
-        .recommendations__slider
+        .recommendations__slider(data-js-handler="recommendations__slider")
           +mainPageRecommendations({recommendation: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. Проблемы решаются оперативно и, главное, без потери времени и лишних денег. Вполне доволен сотрудничеством.'})                             
           +mainPageRecommendations({recommendation: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. Проблемы решаются оперативно и, главное, без потери времени и лишних денег. Вполне доволен сотрудничеством.'})                             
           +mainPageRecommendations({recommendation: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. Проблемы решаются оперативно и, главное, без потери времени и лишних денег. Вполне доволен сотрудничеством.'})                             

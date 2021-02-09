@@ -35,3 +35,23 @@ mixin mainPageRecommendations(args)
       .recommendations__profile
         .recommendations__name Андрей Р.
         p.recommendations__position Посада, компанія
+
+mixin pageTitle(title) 
+  .page-title.c-gradient
+    .page-title__container
+      h1= title        
+
+mixin searchFilters(args)
+  .filter-block(class=args.expanded ? '' : 'collapse')
+    .filter-block__title(class=args.expanded ? 'expanded' : 'collapse' data-js-handler="filter__toggle")= args.title
+    each input, index in args.inputs
+      if(index < 5)
+        label.filter-block__label
+          input.filter-block__checkbox(type='checkbox' name= input.name checked= input.checked)
+          p= input.label
+      else
+        label.filter-block__label.hide
+          input.filter-block__checkbox(type='checkbox' name= input.name checked= input.checked)
+          p= input.label  
+    a.filter-block__more Показать еще 
+      span.filter-block__quantity 18    

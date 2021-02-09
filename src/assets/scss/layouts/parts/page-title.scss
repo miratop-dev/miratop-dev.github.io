@@ -1,0 +1,14 @@
+.page-title {
+  padding: 35px 0;
+
+  &__container {
+    @include container;
+  }
+
+  h1 {
+    color: $color-primary-white;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 80px;
+  }
+}
