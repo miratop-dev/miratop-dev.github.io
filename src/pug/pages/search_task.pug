@@ -1,11 +1,11 @@
 extends ../layout/main
 
 block variables
-  - var title = 'Mira.hub search expert';
-  - var description = 'Mira.hub search expert';
+  - var title = 'Mira.hub search task';
+  - var description = 'Mira.hub search task';
   - var pageClass = 'search-page';
   - let witchPage = 'search'
-  - let pageTitle = 'Поиск эксперта'
+  - let pageTitle = 'Поиск предложения'
 
 block content 
   main(class= pageClass)
@@ -22,5 +22,5 @@ block content
             option По рейтингу
     .c-container
       .c-aside
-        include ../includes/modules/expert-filters               
+        include ../includes/modules/task-filters               
       .c-wide-content content

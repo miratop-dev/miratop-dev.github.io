@@ -11,3 +11,14 @@ $("div[data-js-handler='recommendations__slider']").slick({
   dots: false,
   appendArrows: $('.recommendations__slider')
 });
+
+$("[data-js-handler='menu__toggle']").on('click', function(e){
+  e.preventDefault();
+  if($('.main-menu').hasClass('show')){
+    $('.main-menu').removeClass('show');
+    $('body').removeClass('hidden');
+  } else {
+    $('.main-menu').addClass('show');
+    $('body').addClass('hidden');
+  }
+})

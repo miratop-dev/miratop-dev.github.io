@@ -31,7 +31,7 @@ module.exports = {
   output: {
     filename: `${PATHS.assets}js/[name].[hash].js`,
     path: PATHS.dist,
-    publicPath: '/'
+    publicPath: ''
   },
   optimization: {
     splitChunks: {
@@ -140,8 +140,13 @@ module.exports = {
     })),
     new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/search_expert.pug`,
-      filename: './search_expert.pug',
+      filename: './search_expert.html',
       inject: true
-    })    
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/search_task.pug`,
+      filename: './search_task.html',
+      inject: true
+    })     
   ],
 }

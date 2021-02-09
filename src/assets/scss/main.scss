@@ -5,9 +5,10 @@
 @import 'components/components';
 @import 'layouts/parts/header';
 @import 'layouts/parts/footer';
+@import 'layouts/parts/menu';
 @import 'layouts/parts/page-title';
 @import 'layouts/main-page';
-@import 'layouts/search';
+@import 'layouts/search-page';
 
 html {
   line-height: $mainLineHeight;
@@ -18,12 +19,17 @@ html {
 body {
   margin: 0;
   padding: 0;
+  position: relative;
   font-family: $mainFont;
 	font-size: $mainFontSize;
   font-weight: $mainFontWeight;
   font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  &.hidden {
+    overflow: hidden;
+  }  
 }
 
 main {
