@@ -50,6 +50,7 @@
 .c-container {
   @include container;
   display: flex;
+  align-items: flex-start;
 }
 
 .c-aside {
@@ -62,4 +63,39 @@
 .c-wide-content {
   width: 100%;
   padding-left: 40px;
+}
+
+.c-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 17px 0 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 26px;
+
+    &--current {
+      background-color: $color-secondary-grey-bg;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__link {
+    color: #26484a;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+
+    &--current {
+      color: $color-secondary-grey;
+    }
+  }
 }

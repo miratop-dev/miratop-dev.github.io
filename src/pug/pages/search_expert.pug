@@ -23,4 +23,17 @@ block content
     .c-container
       .c-aside
         include ../includes/modules/expert-filters               
-      .c-wide-content content
+      .c-wide-content
+        .experts
+          include ../includes/modules/expert-list
+        ul.c-pagination
+          li.c-pagination__block.c-pagination__block--current
+            a.c-pagination__link.c-pagination__link--current(href="#") 1
+          li.c-pagination__block
+            a.c-pagination__link(href="#") 2
+          li.c-pagination__block
+            a.c-pagination__link(href="#") 3
+          li.c-pagination__block
+            a.c-pagination__link(href="#") 4
+          li.c-pagination__block
+            a.c-pagination__link(href="#") 5                              

@@ -41,13 +41,13 @@
 @mixin modificators {
   &--primary {
     background-color: $color-secondary-blue;
-    border: 1px solid $color-secondary-blue;
+    border: 2px solid $color-secondary-blue;
     color: $color-primary-white;
   }
 
   &--bordered {
     background-color: $color-primary-white;
-    border: 1px solid $color-secondary-blue;
+    border: 2px solid $color-secondary-blue;
     color: $color-primary-black;
   }
 

@@ -55,3 +55,45 @@ mixin searchFilters(args)
           p= input.label  
     a.filter-block__more Показать еще 
       span.filter-block__quantity 18    
+
+mixin expertBlock(args)
+  .experts__block
+    .experts__imgwrap
+      img(src= args.image alt="avatar")
+    .experts__summary
+      .experts__name= args.name
+      .experts__statistics 
+        .experts__experience= args.expirience
+        .experts__projects= args.projects
+
+        if(args.free)
+          .experts__available.experts__available--free Свободен
+        else 
+          .experts__available.experts__available--busy Занят
+
+      .experts__progress
+        case args.progress
+          when 'high'
+            progress.experts__progressbar.experts__progressbar--high(max='10' value= args.value)
+          when 'middle'
+            progress.experts__progressbar.experts__progressbar--middle(max='10' value= args.value)
+          when 'low'
+            progress.experts__progressbar.experts__progressbar--low(max='10' value= args.value)
+          default
+            progress.experts__progressbar.experts__progressbar--high(max='10' value= args.value)    
+                                            
+        span.experts__value= args.value
+    .experts__info
+      .experts__description= args.description
+      .experts__tags 
+
+        each tag, index in args.tags
+          if(index < 3)
+            a.experts__tag(href= tag.url)= tag.name
+          else 
+            a.experts__tag.hide(href= tag.url)= tag.name
+          if ((index == args.tags.length - 1) && (args.tags.length > 3))
+            a.experts__tag(href="#") еще 
+              span.experts__num= args.tags.length - 3
+
+    a.experts__contact.c-button.c-button--bordered.c-button--md(href= args.expertLink) Написать эксперту
