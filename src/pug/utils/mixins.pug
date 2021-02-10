@@ -65,12 +65,10 @@ mixin expertBlock(args)
       .experts__statistics 
         .experts__experience= args.expirience
         .experts__projects= args.projects
-
         if(args.free)
           .experts__available.experts__available--free Свободен
         else 
           .experts__available.experts__available--busy Занят
-
       .experts__progress
         case args.progress
           when 'high'
@@ -80,13 +78,11 @@ mixin expertBlock(args)
           when 'low'
             progress.experts__progressbar.experts__progressbar--low(max='10' value= args.value)
           default
-            progress.experts__progressbar.experts__progressbar--high(max='10' value= args.value)    
-                                            
+            progress.experts__progressbar.experts__progressbar--high(max='10' value= args.value)                        
         span.experts__value= args.value
     .experts__info
       .experts__description= args.description
       .experts__tags 
-
         each tag, index in args.tags
           if(index < 3)
             a.experts__tag(href= tag.url)= tag.name
@@ -97,3 +93,23 @@ mixin expertBlock(args)
               span.experts__num= args.tags.length - 3
 
     a.experts__contact.c-button.c-button--bordered.c-button--md(href= args.expertLink) Написать эксперту
+
+mixin taskBlock(args)
+  .tasks__block
+    .tasks__summary
+      .tasks__name= args.name
+      .tasks__info 
+        .tasks__location= args.location
+        .tasks__date= args.date
+        .tasks__client= args.client
+      .tasks__tags 
+        each tag, index in args.tags
+          if(index < 3)
+            a.tasks__tag(href= tag.url)= tag.name
+          else 
+            a.tasks__tag.hide(href= tag.url)= tag.name
+          if ((index == args.tags.length - 1) && (args.tags.length > 3))
+            a.tasks__tag(href="#") еще 
+              span.tasks__num= args.tags.length - 3
+    .tasks__description= args.description
+    a.tasks__contact.c-button.c-button--bordered.c-button--md(href= taskLink) Попробовать

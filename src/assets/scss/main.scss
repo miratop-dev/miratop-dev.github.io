@@ -26,7 +26,7 @@ body {
   font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-variant-numeric: lining-nums;
+  font-feature-settings: 'pnum' on, 'lnum' on;
 
   &.hidden {
     overflow: hidden;
