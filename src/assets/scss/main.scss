@@ -2,6 +2,7 @@
 @import "common/mixins";
 @import "common/fonts";
 @import "common/reset";
+@import "common/common";
 @import 'components/components';
 @import 'layouts/parts/header';
 @import 'layouts/parts/footer';
@@ -9,82 +10,9 @@
 @import 'layouts/parts/page-title';
 @import 'layouts/main-page';
 @import 'layouts/search-page';
+@import 'layouts/details-page';
 
-html {
-  line-height: $mainLineHeight;
-	font-size: $mainFontSize;
-  height: 100%;
-}
 
-body {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  font-family: $mainFont;
-	font-size: $mainFontSize;
-  font-weight: $mainFontWeight;
-  font-family: 'Raleway', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: 'pnum' on, 'lnum' on;
-
-  &.hidden {
-    overflow: hidden;
-  }  
-}
-
-main {
-  position: relative;
-
-  &.index-page {
-    padding: 100px 0;
-    overflow-x: hidden;
-  }
-
-  &.search-page {
-    padding: 0 0 100px 0;
-  }
-}
-
-.breadcrumbs {
-  display: flex;
-  align-items: center;
-
-  &__home {
-    display: inline-block;
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M11.6765 5.21942C11.6762 5.21915 11.6759 5.21887 11.6756 5.2186L6.78059 0.32373C6.57194 0.11499 6.29454 0 5.99946 0C5.70439 0 5.42698 0.114899 5.21824 0.323639L0.325757 5.21603C0.324109 5.21768 0.322461 5.21942 0.320813 5.22107C-0.107654 5.65201 -0.106921 6.3512 0.322919 6.78104C0.519299 6.97751 0.778668 7.09131 1.05598 7.10321C1.06724 7.10431 1.0786 7.10486 1.09004 7.10486H1.28514V10.7072C1.28514 11.42 1.86512 12 2.57814 12H4.49324C4.68733 12 4.8448 11.8426 4.8448 11.6484V8.82422C4.8448 8.49893 5.10939 8.23434 5.43467 8.23434H6.56425C6.88954 8.23434 7.15413 8.49893 7.15413 8.82422V11.6484C7.15413 11.8426 7.3115 12 7.50569 12H9.42079C10.1338 12 10.7138 11.42 10.7138 10.7072V7.10486H10.8947C11.1897 7.10486 11.4671 6.98996 11.6759 6.78122C12.1062 6.35065 12.1064 5.65027 11.6765 5.21942Z' fill='%23909090'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
-    width: 12px;
-    height: 12px;
-  }
-
-  &__link {
-    position: relative;
-    padding: 0 0 0 44px;
-    color: $color-secondary-7;
-    font-size: 14px;
-    line-height: 24px;
-
-    &::before {
-      position: absolute;
-      content: "\2014";
-      left: 16px;
-    }
-  }
-}
-
-.sort {
-  &__legend {
-    color: $color-primary-grey;
-    font-size: 14px;
-    line-height: 24px;
-  }
-
-  &__select {
-    color: $color-secondary-2;
-    font-size: 14px;
-    line-height: 24px;
-  }
-}
 
 // Modules
 // @import "modules/my-module.scss";

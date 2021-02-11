@@ -1,3 +1,32 @@
+.c-container {
+  @include container;
+  display: flex;
+  align-items: flex-start;
+}
+
+.c-aside {
+  flex: 0 0 320px;
+  background: $color-secondary-grey-bg;
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.c-sidebar {
+  flex: 0 0 560px;
+}
+
+.c-wide-content {
+  width: 100%;
+
+  &--right {
+    padding-left: 40px;
+  }
+
+  &--left {
+    padding-right: 40px;
+  }  
+}
+
 .c-button {
   display: inline-flex;
   align-items: center;
@@ -45,24 +74,6 @@
 
 .c-gradient {
   background: linear-gradient(94.78deg, #51DB91 0%, #38D0B5 100%);
-}
-
-.c-container {
-  @include container;
-  display: flex;
-  align-items: flex-start;
-}
-
-.c-aside {
-  flex: 0 0 320px;
-  background: $color-secondary-grey-bg;
-  border-radius: 12px;
-  padding: 30px;
-}
-
-.c-wide-content {
-  width: 100%;
-  padding-left: 40px;
 }
 
 .c-pagination {

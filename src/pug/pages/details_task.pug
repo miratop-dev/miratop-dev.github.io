@@ -1,0 +1,97 @@
+extends ../layout/2columns-wide-sidebar
+
+block variables
+  - var title = 'Mira.hub details task';
+  - var description = 'Mira.hub details task';
+  - var pageClass = 'details-page';
+  - let pageTitle = 'Разработать HR стратегию'
+
+block statusbar
+  .search-page-top 
+    .search-page-top__container 
+      .breadcrumbs
+        a.breadcrumbs__home(href="/") 
+        a.breadcrumbs__link(href="/") Предложения
+        a.breadcrumbs__link.breadcrumbs__link--current(href="/")= pageTitle
+
+block content 
+  .details-task-head
+    .details-task-head__summary
+      .details-task-head__name= pageTitle
+      .details-task-head__info 
+        .details-task-head__location Киев, Украина
+        .details-task-head__date 15.01.2021
+        .details-task-head__client Rozetka
+      .details-task-head__tags 
+        a.details-task-head__tag(href='#') HR
+        a.details-task-head__tag(href='#') HR стратегия
+        a.details-task-head__tag(href='#') Внедрение стратегии
+    a.details-task-head__contact.c-button.c-button--primary.c-button--md(href='#') Попробовать  
+  .details-task-description
+    .details-task-description__block
+      .details-task-description__title Описание задачи
+      p Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. 
+      p Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником.Популярный сервис, на котором удобно и клиентам, и специалистам.
+    .details-task-description__block  
+      .details-task-description__subltitle.details-task-description__subltitle--alert Проблематика
+      p Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником.
+    .details-task-description__block  
+      .details-task-description__subltitle.details-task-description__subltitle--goal Ожидаемый результат
+      p Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным.
+  .details-task-timing
+    .details-task-timing__block.details-task-timing__block--deadline
+      .details-task-timing__title Срок подачи до:
+      .details-task-timing__date 5 апреля 2021
+    .details-task-timing__block.details-task-timing__block--term
+      .details-task-timing__title Сотрудничество:
+      .details-task-timing__date 5 месяцев
+
+block sidebar
+  .details-task-side
+    .details-task-side__title Похожие предложения
+    .details-task-side__similar
+      .details-task-side__block
+        .details-task-side__summary
+          .details-task-side__name Разработать HR стратегию
+          .details-task-side__info 
+            .details-task-side__location Киев, Украина
+            .details-task-side__date 15.01.2021
+            .details-task-side__client SoftBlues
+          .details-task-side__tags 
+            a.details-task-side__tag(href='#') HR
+            a.details-task-side__tag(href='#') HR стратегия
+            a.details-task-side__tag(href='#') Внедрение стратегии    
+      .details-task-side__block
+        .details-task-side__summary
+          .details-task-side__name Провести аудит
+          .details-task-side__info 
+            .details-task-side__location Киев, Украина
+            .details-task-side__date 15.01.2021
+            .details-task-side__client Kyivstar
+          .details-task-side__tags 
+            a.details-task-side__tag(href='#') HR
+            a.details-task-side__tag(href='#') HR стратегия
+            a.details-task-side__tag(href='#') Внедрение стратегии     
+      .details-task-side__block
+        .details-task-side__summary
+          .details-task-side__name Разработать финансовую модель
+          .details-task-side__info 
+            .details-task-side__location Киев, Украина
+            .details-task-side__date 15.01.2021
+            .details-task-side__client OKKO
+          .details-task-side__tags 
+            a.details-task-side__tag(href='#') HR
+            a.details-task-side__tag(href='#') HR стратегия
+            a.details-task-side__tag(href='#') Внедрение стратегии   
+    .details-task-side__title Другие предложения компании      
+    .details-task-side__other   
+      p
+        a(href="#") Разработать финансовую модель
+        span Срок подачи до: 5 апреля 2021
+      p
+        a(href="#") Провести аудит
+        span Срок подачи до: 5 апреля 2021
+      p
+        a(href="#") Обучение персонала
+        span Срок подачи до: 5 апреля 2021                
+  
