@@ -1,4 +1,8 @@
 .main-page-banner {
+  background: url('/assets/img/main-page-banner__bg.jpg') no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+
   &__container {
     @include container;
 
