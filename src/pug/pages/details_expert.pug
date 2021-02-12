@@ -1,0 +1,125 @@
+extends ../layout/2columns-wide-sidebar
+
+block variables
+  - var title = 'Mira.hub expert task';
+  - var description = 'Mira.hub expert task';
+  - var pageClass = 'details-page';
+  - let pageTitle = 'Андрей Петренко'
+
+block statusbar
+  .search-page-top 
+    .search-page-top__container 
+      .breadcrumbs
+        a.breadcrumbs__home(href="/") 
+        a.breadcrumbs__link(href="/") Эксперты
+        a.breadcrumbs__link.breadcrumbs__link--current(href="/")= pageTitle
+
+block content 
+  .details-expert-head
+    .details-expert-head__summary
+      .details-expert-head__imgwrap
+        img(src='assets/img/expert-avatar-full.jpg')
+      .details-expert-head__infowrap
+        .c-title.c-title__md= pageTitle
+        .c-info 
+          .c-info__experience 10 лет
+          .c-info__projects 527
+          .c-info__available.c-info__available--free Свободен
+        .c-tags 
+          a.c-tags__tag(href='#') Аудит
+          a.c-tags__tag(href='#') Бухгалтерия
+          a.c-tags__tag(href='#') Персонал
+          a.c-tags__tag(href='#') Персонал
+          a.c-tags__tag(href='#') Аудит
+          a.c-tags__tag(href='#') Бухгалтерия
+          a.c-tags__tag(href='#') еще 5
+    a.c-button.c-button--primary.c-button--md(href='#') Написать эксперту 
+  .details-expert-description
+    .details-expert-description__block
+      .c-title.c-title__md Коротко обо мне
+      p Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником.
+      p Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником.Популярный сервис, на котором удобно и клиентам, и специалистам.
+    .details-expert-description__block
+      .c-title.c-title__md Портфолио
+      .details-expert-description__accordion.details-expert-description__accordion--expanded
+        .details-expert-description__header.details-expert-description__header--expanded
+          .c-title.c-title__sm Внедрение HR стратегии
+          .c-info
+            .c-info__client Rozetka
+            .c-info__deadline 3 месяца
+            .c-info__date Год: 2021
+        .c-title.c-title__sm.c-title__sm--alert Проблематика
+        span.details-expert-description__indent Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником.
+        .c-title.c-title__sm.c-title__sm--goal Результаты
+        span Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным.
+      .details-expert-description__accordion.details-expert-description__accordion--collapse
+        .details-expert-description__header.details-expert-description__header--collapse
+          .c-title.c-title__sm Разработать финансовую модель
+          .c-info
+            .c-info__client Rozetka
+            .c-info__deadline 3 месяца
+            .c-info__date Год: 2021    
+        .c-title.c-title__sm.c-title__sm--alert Проблематика
+        span.details-expert-description__indent Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником.
+        .c-title.c-title__sm.c-title__sm--goal Результаты
+        span Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным.              
+      .details-expert-description__accordion.details-expert-description__accordion--collapse
+        .details-expert-description__header.details-expert-description__header--collapse
+          .c-title.c-title__sm Обучение персонала
+          .c-info
+            .c-info__client Rozetka
+            .c-info__deadline 3 месяца
+            .c-info__date Год: 2021     
+        .c-title.c-title__sm.c-title__sm--alert Проблематика
+        span.details-expert-description__indent Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником.
+        .c-title.c-title__sm.c-title__sm--goal Результаты
+        span Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным.             
+    .details-expert-description__block
+      .c-title.c-title__md Опыт работы   
+      div
+        .details-expert-description__line 
+          strong 2019 – 2021
+          span HRD. Epam 
+        .details-expert-description__line 
+          strong 2017 – 2019
+          span Senior HR. Company name
+        .details-expert-description__line 
+          strong 2014 – 2017
+          span Middle HR. Company name                 
+
+block sidebar
+  .c-title.c-title__md Рекомендации
+  .details-expert-sidebar 
+    .details-expert-sidebar__block
+      .details-expert-sidebar__header
+        .details-expert-sidebar__imgwrap 
+          img(src='assets/img/details-expert-sidebar-img-1.jpg')
+        .details-expert-sidebar__info 
+          .c-title.c-title__sm Андрей Романишин
+          span Head Marketing Director, Company Name
+      .details-expert-sidebar__content Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником.
+    .details-expert-sidebar__block
+      .details-expert-sidebar__header
+        .details-expert-sidebar__imgwrap 
+          img(src='assets/img/details-expert-sidebar-img-2.jpg')
+        .details-expert-sidebar__info 
+          .c-title.c-title__sm Андрей Романишин
+          span Head Marketing Director, Company Name      
+      .details-expert-sidebar__content Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей.    
+    .details-expert-sidebar__block
+      .details-expert-sidebar__header
+        .details-expert-sidebar__imgwrap 
+          img(src='assets/img/details-expert-sidebar-img-3.jpg')
+        .details-expert-sidebar__info 
+          .c-title.c-title__sm Андрей Романишин
+          span Head Marketing Director, Company Name      
+      .details-expert-sidebar__content Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.      
+  .c-title.c-title__md Успешно выполненные проекты
+  .details-expert-links 
+    a(href='#') Разработать финансовую модель
+    a(href='#') Провести аудит
+    a(href='#') Обучение персонала
+    a(href='#') Разработать финансовую модель
+    a(href='#') Провести аудит
+              
+  

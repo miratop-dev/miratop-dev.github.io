@@ -17,26 +17,26 @@ block statusbar
 block content 
   .details-task-head
     .details-task-head__summary
-      .details-task-head__name= pageTitle
-      .details-task-head__info 
-        .details-task-head__location Киев, Украина
-        .details-task-head__date 15.01.2021
-        .details-task-head__client Rozetka
-      .details-task-head__tags 
-        a.details-task-head__tag(href='#') HR
-        a.details-task-head__tag(href='#') HR стратегия
-        a.details-task-head__tag(href='#') Внедрение стратегии
-    a.details-task-head__contact.c-button.c-button--primary.c-button--md(href='#') Попробовать  
+      .c-title.c-title__md.c-title__md--indent= pageTitle
+      .c-info 
+        .c-info__location Киев, Украина
+        .c-info__date 15.01.2021
+        .c-info__client Rozetka
+      .c-tags 
+        a.c-tags__tag(href='#') HR
+        a.c-tags__tag(href='#') HR стратегия
+        a.c-tags__tag(href='#') Внедрение стратегии
+    a.c-button.c-button--primary.c-button--md(href='#') Попробовать  
   .details-task-description
     .details-task-description__block
-      .details-task-description__title Описание задачи
+      .c-title.c-title__md.c-title__md--indent Описание задачи
       p Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. 
       p Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником.Популярный сервис, на котором удобно и клиентам, и специалистам.
     .details-task-description__block  
-      .details-task-description__subltitle.details-task-description__subltitle--alert Проблематика
+      .c-title.c-title__sm.c-title__sm--alert.details-task-description__subltitle Проблематика
       p Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником.
     .details-task-description__block  
-      .details-task-description__subltitle.details-task-description__subltitle--goal Ожидаемый результат
+      .c-title.c-title__sm.c-title__sm--goal.details-task-description__subltitle Ожидаемый результат
       p Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным.
   .details-task-timing
     .details-task-timing__block.details-task-timing__block--deadline
@@ -48,42 +48,39 @@ block content
 
 block sidebar
   .details-task-side
-    .details-task-side__title Похожие предложения
+    .c-title.c-title__md Похожие предложения
     .details-task-side__similar
       .details-task-side__block
-        .details-task-side__summary
-          .details-task-side__name Разработать HR стратегию
-          .details-task-side__info 
-            .details-task-side__location Киев, Украина
-            .details-task-side__date 15.01.2021
-            .details-task-side__client SoftBlues
-          .details-task-side__tags 
-            a.details-task-side__tag(href='#') HR
-            a.details-task-side__tag(href='#') HR стратегия
-            a.details-task-side__tag(href='#') Внедрение стратегии    
+        .c-title.c-title__sm.details-task-side__name Разработать HR стратегию
+        .c-info
+          .c-info__location Киев, Украина
+          .c-info__date 15.01.2021
+          .c-info__client SoftBlues
+        .c-tags 
+          a.c-tags__tag(href='#') HR
+          a.c-tags__tag(href='#') HR стратегия
+          a.c-tags__tag(href='#') Внедрение стратегии    
       .details-task-side__block
-        .details-task-side__summary
-          .details-task-side__name Провести аудит
-          .details-task-side__info 
-            .details-task-side__location Киев, Украина
-            .details-task-side__date 15.01.2021
-            .details-task-side__client Kyivstar
-          .details-task-side__tags 
-            a.details-task-side__tag(href='#') HR
-            a.details-task-side__tag(href='#') HR стратегия
-            a.details-task-side__tag(href='#') Внедрение стратегии     
+        .c-title.c-title__sm.details-task-side__name Провести аудит
+        .c-info 
+          .c-info__location Киев, Украина
+          .c-info__date 15.01.2021
+          .c-info__client Kyivstar
+        .c-tags 
+          a.c-tags__tag(href='#') HR
+          a.c-tags__tag(href='#') HR стратегия
+          a.c-tags__tag(href='#') Внедрение стратегии     
       .details-task-side__block
-        .details-task-side__summary
-          .details-task-side__name Разработать финансовую модель
-          .details-task-side__info 
-            .details-task-side__location Киев, Украина
-            .details-task-side__date 15.01.2021
-            .details-task-side__client OKKO
-          .details-task-side__tags 
-            a.details-task-side__tag(href='#') HR
-            a.details-task-side__tag(href='#') HR стратегия
-            a.details-task-side__tag(href='#') Внедрение стратегии   
-    .details-task-side__title Другие предложения компании      
+        .c-title.c-title__sm.details-task-side__name Разработать финансовую модель
+        .c-info 
+          .c-info__location Киев, Украина
+          .c-info__date 15.01.2021
+          .c-info__client OKKO
+        .c-tags
+          a.c-tags__tag(href='#') HR
+          a.c-tags__tag(href='#') HR стратегия
+          a.c-tags__tag(href='#') Внедрение стратегии   
+    .c-title.c-title__md Другие предложения компании      
     .details-task-side__other   
       p
         a(href="#") Разработать финансовую модель

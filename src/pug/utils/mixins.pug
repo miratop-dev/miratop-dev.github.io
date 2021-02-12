@@ -1,6 +1,6 @@
 mixin mainPageExpertiseAreas(name, items)    
   li.expertise-areas__block
-    div.expertise-areas__name= name
+    .c-title.c-title__md.expertise-areas__name= name
     each item, index in items
       if(index < 4)
         div.expertise-areas__activity= item
@@ -10,7 +10,7 @@ mixin mainPageExpertiseAreas(name, items)
 
 mixin mainPageResponsibility(name, text)    
   li
-    .responsibility__title= name
+    .c-title.c-title__md.c-title__md--indent= name
     .responsibility__description= text
 
 mixin mainPageWorkflow(args)
@@ -33,8 +33,8 @@ mixin mainPageRecommendations(args)
       .recommendations__imgwrap
         img(src= 'assets/img/recommendation-photo.jpg' alt="recommending's photo")
       .recommendations__profile
-        .recommendations__name Андрей Р.
-        p.recommendations__position Посада, компанія
+        .c-title.c-title__sm= args.name
+        p.recommendations__position= args.position
 
 mixin pageTitle(title) 
   .page-title.c-gradient
@@ -61,14 +61,14 @@ mixin expertBlock(args)
     .experts__imgwrap
       img(src= args.image alt="avatar")
     .experts__summary
-      .experts__name= args.name
-      .experts__statistics 
-        .experts__experience= args.expirience
-        .experts__projects= args.projects
+      .c-title.c-title__sm= args.name
+      .c-info
+        .c-info__experience= args.expirience
+        .c-info__projects= args.projects
         if(args.free)
-          .experts__available.experts__available--free Свободен
+          .c-info__available.c-info__available--free Свободен
         else 
-          .experts__available.experts__available--busy Занят
+          .c-info__available.c-info__available--busy Занят
       .experts__progress
         case args.progress
           when 'high'
@@ -82,34 +82,34 @@ mixin expertBlock(args)
         span.experts__value= args.value
     .experts__info
       .experts__description= args.description
-      .experts__tags 
+      .c-tags 
         each tag, index in args.tags
           if(index < 3)
-            a.experts__tag(href= tag.url)= tag.name
+            a.c-tags__tag(href= tag.url)= tag.name
           else 
-            a.experts__tag.hide(href= tag.url)= tag.name
+            a.c-tags__tag.hide(href= tag.url)= tag.name
           if ((index == args.tags.length - 1) && (args.tags.length > 3))
-            a.experts__tag(href="#") еще 
-              span.experts__num= args.tags.length - 3
+            a.c-tags__tag(href="#") еще 
+              span.c-tags__num= args.tags.length - 3
 
     a.experts__contact.c-button.c-button--bordered.c-button--md(href= args.expertLink) Написать эксперту
 
 mixin taskBlock(args)
   .tasks__block
     .tasks__summary
-      .tasks__name= args.name
-      .tasks__info 
-        .tasks__location= args.location
-        .tasks__date= args.date
-        .tasks__client= args.client
-      .tasks__tags 
+      .c-title.c-title__sm.tasks__name= args.name
+      .c-info
+        .c-info__location= args.location
+        .c-info__date= args.date
+        .c-info__client= args.client
+      .c-tags  
         each tag, index in args.tags
           if(index < 3)
-            a.tasks__tag(href= tag.url)= tag.name
+            a.c-tags__tag(href= tag.url)= tag.name
           else 
-            a.tasks__tag.hide(href= tag.url)= tag.name
+            a.c-tags__tag.hide(href= tag.url)= tag.name
           if ((index == args.tags.length - 1) && (args.tags.length > 3))
-            a.tasks__tag(href="#") еще 
-              span.tasks__num= args.tags.length - 3
+            a.c-tags__tag(href="#") еще 
+              span.c-tags__num= args.tags.length - 3
     .tasks__description= args.description
     a.tasks__contact.c-button.c-button--bordered.c-button--md(href= taskLink) Попробовать
