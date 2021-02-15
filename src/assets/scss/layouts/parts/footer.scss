@@ -4,13 +4,13 @@
 
   &__decoration {
     &--lg {
-      right: 40px;
-      top: -75px;
+      right: 90px;
+      top: -50px;
     }
 
     &--md {
-      right: 180px;
-      top: 270px;      
+      right: 155px;
+      top: 130px;      
     }     
   }
 
@@ -19,7 +19,7 @@
 
     display: flex;
     justify-content: space-between;
-    padding: 80px 20px;
+    padding: 60px 20px;
 
     @include desktop-medium {
       flex-wrap: wrap;
@@ -39,9 +39,9 @@
 
   &__legal {
     color: $color-secondary-grey;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 16px;
-    margin: 0 0 12px;
+    margin: 0 0 8px;
 
     &:last-child {
       margin: 0;
@@ -61,8 +61,8 @@
 
   &__subtitle {
     color: $color-primary-white;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 16px;
+    line-height: 28px;
     margin: 0 0 20px;
     font-weight: bold;
   }
@@ -70,9 +70,9 @@
   &__link {
     color: $color-primary-white;
     display: block;
-    font-size: 16px;
-    line-height: 28px;
-    margin: 0 0 2px;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0 0 8px;
 
     &:last-child {
       margin: 0;
@@ -82,11 +82,11 @@
   &__contacts {
     a {
       color: $color-primary-white;
-      font-size: 18px;
-      line-height: 24px;
+      font-size: 12px;
+      line-height: 16px;
       display: block;
       position: relative;
-      padding: 0 0 0 44px;
+      padding: 0 0 0 26px;
       margin: 0 0 20px;
 
       &::before {
@@ -95,9 +95,9 @@
         position: absolute;
         top: 50%;
         left: 0;
-        width: 24px;
-        height: 24px;
-        margin: -12px 0 0 0;
+        width: 16px;
+        height: 16px;
+        margin: -8px 0 0 0;
       }
 
       &:last-child {
@@ -108,11 +108,11 @@
 
   &__phone {
     color: $color-primary-white;
-    font-size: 36px;
-    line-height: 52px;
+    font-size: 24px;
+    line-height: 36px;
     display: block;
     position: relative;
-    font-weight: 600;
+    font-weight: 700;
     margin: 0 0 20px;
   }
 
@@ -143,8 +143,9 @@
   &__social {
     display: inline-block;
     margin: 0 20px 0 0;
-    width: 48px;
-    height: 48px;
+    width: 60px;
+    height: 60px;
+    background-size: cover;
 
     &-fb {
       background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='24' cy='24' r='24' fill='%232673FF'/%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M26.6646 18.6567H28.1253V16.1127C27.8733 16.078 27.0066 16 25.9973 16C23.8913 16 22.4486 17.3247 22.4486 19.7593V22H20.1246V24.844H22.4486V32H25.298V24.8447H27.528L27.882 22.0007H25.2973V20.0413C25.298 19.2193 25.5193 18.6567 26.6646 18.6567Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='16' height='16' fill='white' transform='translate(16 16)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");

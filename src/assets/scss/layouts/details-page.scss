@@ -88,6 +88,14 @@
     margin: 20px 0 40px;
   }
 
+  &__title {
+    color: $color-secondary-2;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0 0 5px;
+  }
+
   &__block {
     padding: 20px 0;
     border-bottom: 2px solid $color-secondary-border;
@@ -124,7 +132,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 0 40px;
+  margin: 0 0 20px;
+
+  &__title {
+    color: $color-secondary-2;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0 0 5px;
+  }
 
   &__summary {
     width: 100%;
@@ -144,6 +160,8 @@
 .details-expert-description {
   &__block {
     margin: 0 0 40px;
+    font-size: 14px;
+    line-height: 24px;
 
     &:last-child {
       margin: 0;
@@ -157,13 +175,15 @@
   &__accordion {
     border-top: 2px solid $color-secondary-border;
     padding: 20px 10px 20px 44px;
+    margin: 10px 0 0;
 
     &:last-child {
       border-bottom: 2px solid $color-secondary-border;
     }
 
     &--collapse {
-      height: 90px;
+      height: 86px;
+      margin: 0;
       overflow: hidden;
     }
   }
@@ -216,8 +236,8 @@
 
   &__line {
     margin: 10px 0 0 0;
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 14px;
+    line-height: 24px;
     color: $color-primary-grey;
 
     &:first-child {
@@ -233,13 +253,13 @@
 }
 
 .details-expert-sidebar {
-  margin: 20px 0 40px;
+  margin: 10px 0 40px;
 
   &__block {
-    padding: 40px;
+    padding: 20px;
     background: $color-secondary-grey-bg;
     border-radius: 12px;
-    margin: 0 0 20px;
+    margin: 0 0 10px;
 
     &:last-child {
       margin: 0;
@@ -247,7 +267,7 @@
   }
 
   &__header {
-    margin: 0 0 20px;
+    margin: 0 0 10px;
     display: flex;
     align-items: center;
   }
@@ -273,7 +293,7 @@
 }
 
 .details-expert-links {
-  margin: 20px 0 0 0;
+  margin: 10px 0 0 0;
 
   a {
     display: block;

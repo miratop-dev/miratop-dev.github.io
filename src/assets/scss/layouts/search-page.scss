@@ -6,9 +6,9 @@
   &__title {
     position: relative;
     color: $color-secondary-2;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 28px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
     margin: 0 0 10px;
     cursor: pointer;
 
@@ -36,7 +36,7 @@
   &__label {
     display: flex;
     align-items: center;
-    margin: 0 0 14px;
+    margin: 0 0 10px;
     font-size: 14px;
 
     &:last-child {
@@ -50,8 +50,8 @@
 
   &__checkbox {
     margin: 0 8px 0 0;
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     background: $color-primary-white;
     border: 1px solid $color-secondary-7;
     box-sizing: border-box;
@@ -59,14 +59,13 @@
   }
 
   &__search {
-    height: 48px;
+    height: $control-height-md;
   }
 
   &__more {
     font-size: 14px;
     line-height: 24px;
     color: $color-secondary-blue;
-    font-variant-numeric: lining-nums;
   }
 
   &.collapse {
@@ -76,7 +75,7 @@
 }
 
 .experts {
-  margin: 0 0 25px;
+  margin: 0 0 10px;
 
   &__block {
     position: relative;
@@ -84,14 +83,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 40px 0;
+    padding: 30px 0;
     border-top: 2px solid $color-secondary-border;
   
     &:last-child {
       border-bottom: 2px solid $color-secondary-border;
 
       &:hover {
-        margin: -20px -60px;
+        margin: -10px -42px -10px -40px;
       }
     }
 
@@ -99,8 +98,8 @@
       background: $color-primary-white;
       border: 2px solid $color-secondary-blue;
       border-radius: 12px;
-      padding: 60px 58px;
-      margin: -20px -60px -22px;
+      padding: 40px 40px 40px 38px;
+      margin: -10px -42px -12px -40px;
       z-index: 2;
       -webkit-box-shadow: 0 0 50px 0 rgba(37,70,72,0.1);
       -moz-box-shadow:    0 0 50px 0 rgba(37,70,72,0.1);
@@ -185,7 +184,6 @@
 
   &__info {
     width: 100%;
-    padding: 0 20px 0 0;
     max-width: 400px;
   }
 
@@ -206,14 +204,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 40px 0;
+    padding: 30px 0;
     border-top: 2px solid $color-secondary-border;
   
     &:last-child {
       border-bottom: 2px solid $color-secondary-border;
 
       &:hover {
-        margin: -20px -60px;
+        margin: -10px -42px -10px -40px;
       }
     }
 
@@ -221,8 +219,8 @@
       background: $color-primary-white;
       border: 2px solid $color-secondary-blue;
       border-radius: 12px;
-      padding: 60px 58px;
-      margin: -20px -60px -22px;
+      padding: 40px 40px 40px 38px;
+      margin: -10px -42px -12px -40px;
       z-index: 2;
       -webkit-box-shadow: 0 0 50px 0 rgba(37,70,72,0.1);
       -moz-box-shadow:    0 0 50px 0 rgba(37,70,72,0.1);
@@ -231,7 +229,7 @@
   }
 
   &__summary {
-    flex: 0 0 310px;
+    flex: 0 0 315px;
   }
 
   &__name {
@@ -240,7 +238,7 @@
 
   &__description {
     width: 100%;
-    max-width: 520px;
+    max-width: 430px;
     font-size: 14px;
     line-height: 24px;
     padding: 0 20px;

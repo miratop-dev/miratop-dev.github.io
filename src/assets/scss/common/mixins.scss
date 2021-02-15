@@ -24,7 +24,7 @@
 
 @mixin container {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1320px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
@@ -35,34 +35,6 @@
 
   @include mobile {
     max-width: 320px;
-  }
-}
-
-@mixin modificators {
-  &--primary {
-    background-color: $color-secondary-blue;
-    border: 2px solid $color-secondary-blue;
-    color: $color-primary-white;
-  }
-
-  &--bordered {
-    background-color: $color-primary-white;
-    border: 2px solid $color-secondary-blue;
-    color: $color-primary-black;
-  }
-
-  &--md {
-    height: $control-height-md;
-    padding-left: 32px;
-    padding-right: 32px;
-    font-size: 14px;
-  }
-
-  &--lg {
-    height: $control-height-lg;
-    padding-left: 64px;
-    padding-right: 64px;
-    font-size: 18px;
   }
 }
 

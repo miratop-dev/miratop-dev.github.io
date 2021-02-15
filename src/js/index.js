@@ -9,7 +9,7 @@ $("div[data-js-handler='workflow__slider']").slick({
 
 $("div[data-js-handler='recommendations__slider']").slick({
   dots: false,
-  appendArrows: $('.recommendations__slider')
+  appendArrows: $('.recommendations')
 });
 
 $("[data-js-handler='menu__toggle']").on('click', function(e){

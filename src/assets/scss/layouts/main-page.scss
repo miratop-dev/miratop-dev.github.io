@@ -16,18 +16,18 @@
     max-width: 800px;
     color: $color-secondary-2;
     font-weight: bold;
-    font-size: 72px;
-    line-height: 88px;
-    margin: 0 0 40px;
+    font-size: 64px;
+    line-height: 1.25;
+    margin: 0 0 20px;
   }
 
   &__description {
     width: 100%;
-    max-width: 560px;
+    max-width: 420px;
     color: $color-primary-grey;
-    font-size: 18px;
-    line-height: 32px;
-    margin: 0 0 80px;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0 0 40px;
   }
 
   &__buttons {
@@ -49,7 +49,7 @@
 }
 
 .advantages {
-  margin: 0 0 230px;
+  margin: 0 0 150px;
 
   &__container {
     @include container;
@@ -65,7 +65,6 @@
 
   &__imgwrap {
     display: inline-block;
-    background-color: $color-secondary-blue;
     width: 70px;
     height: 70px;
     border-radius: 35px;
@@ -87,7 +86,7 @@
 }
 
 .expertise-areas {
-  margin: 0 0 230px;
+  margin: 0 0 210px;
 
   &__container {
     @include container;
@@ -96,7 +95,7 @@
   }
 
   &__list {
-    margin-top: 60px;
+    margin-top: 40px;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -108,17 +107,17 @@
     color: $color-secondary-2;
 
     &:nth-child(-n + 3) {
-      margin: 0 0 80px;
+      margin: 0 0 40px;
     }
   }
 
   &__name {  
-    margin: 0 0 20px;
+    margin: 0 0 10px;
   }
 
   &__activity {
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 14px;
+    line-height: 24px;
     margin: 0 0 8px;
 
     &.hide {
@@ -128,32 +127,31 @@
 
   &__more {
     color: $color-secondary-blue;
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 14px;
+    line-height: 24px;
     text-decoration: none;
   }
 }
 
 .workflow {
   position: relative;
-  padding: 80px 0;
+  padding: 60px 0;
   margin: 0 0 210px;
 
   &__decoration {
     &--lg {
-      right: 130px;
-      top: -75px;
+      right: 180px;
+      top: -50px;
     }
 
     &--md {
-      right: 240px;
-      top: 113px;      
+      right: 265px;
+      top: 90px;      
     }    
   }
 
   &__container {
     width: 100%;
-    max-width: 1440px;
     top: 50%;
     position: absolute;
     height: 0;
@@ -171,15 +169,15 @@
 
   &__imgwrap {
     position: relative;
-    flex: 0 0 330px;
-    margin: 0 95px 0 0;
+    flex: 0 0 240px;
+    margin: 0 120px 0 0;
     height: 0;
 
     img {
+      width: 100%;
       box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
       border-radius: 32px;
-      background: #F5F5F5;
-      border-radius: 40px;
+      background: $color-secondary-grey-bg;
       transform: translate(0, -50%);
       position: absolute;
     }
@@ -191,21 +189,23 @@
 
   &__title {
     font-weight: bold;
-    font-size: 64px;
-    line-height: 80px;
-    margin: 0 0 60px;
+    font-size: 36px;
+    line-height: 44px;
+    margin: 0 0 40px;
   }
 
   &__subtitle {
-    margin: 0 0 20px;
+    margin: 0 0 10px;
     font-weight: bold;
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 16px;
+    line-height: 28px;
   }
 
   &__description {
-    font-size: 16px;
-    line-height: 28px;
+    width: 100%;
+    max-width: 33.75vw;
+    font-size: 14px;
+    line-height: 24px;
   }
 
   &__buttons {
@@ -226,7 +226,7 @@
 
   .slick-dots {
     position: absolute;
-    bottom: -44px;
+    bottom: -24px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -267,7 +267,7 @@
 
   .slick-prev {
     background: url("data:image/svg+xml;charset=utf8,%3Csvg width='26' height='14' viewBox='0 0 26 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7L25 7' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M1 7L8 13' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M8 1L1 7' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
-    left: -95px;
+    left: 10.2vw;
     background-size: cover;
     background-repeat: no-repeat;
     background-color: transparent;
@@ -275,7 +275,7 @@
 
   .slick-next {
     background: url("data:image/svg+xml;charset=utf8,%3Csvg width='26' height='14' viewBox='0 0 26 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 7H1' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M25 7L18 1' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M18 13L25 7' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
-    right: -95px;
+    right: 10.2vw;
     background-size: cover;
     background-repeat: no-repeat;
     background-color: transparent;
@@ -290,7 +290,7 @@
   }
 
   &__wrapper {
-    margin: 60px 0 0 0;
+    margin: 40px 0 0 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -302,8 +302,8 @@
     li {
       position: relative;
       max-width: 570px;
-      padding: 0 0 0 56px;
-      margin: 0 0 40px;
+      padding: 0 0 0 38px;
+      margin: 0 0 10px;
 
       &:last-child {
         margin: 0;
@@ -312,8 +312,8 @@
       &::before {
         position: absolute;
         content: '';
-        width: 36px;
-        height: 36px;
+        width: 28px;
+        height: 28px;
         left: 0;
         top: 0;
         border-radius: 18px;
@@ -324,8 +324,8 @@
 
   &__description {
     color: $color-primary-grey;
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 14px;
+    line-height: 24px;
   }
 
   &__imgwrap {
@@ -341,8 +341,8 @@
 }
 
 .recommendations {
-  margin: 0 0 100px;
   text-align: center;
+  position: relative;
 
   &__container {
     @include container;
@@ -353,11 +353,11 @@
   }
 
   &__recommendation {
-    max-width: 780px;
-    color: #26484a;
-    font-size: 18px;
+    max-width: 840px;
+    color: $color-primary-grey;
+    font-size: 16px;
     line-height: 28px;
-    margin: 0 auto 40px;
+    margin: 0 auto 20px;
   }
 
   &__info {
@@ -396,7 +396,7 @@
 
   .slick-prev {
     background: url("data:image/svg+xml;charset=utf8,%3Csvg width='26' height='14' viewBox='0 0 26 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7L25 7' stroke='%23254648' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M1 7L8 13' stroke='%23254648' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M8 1L1 7' stroke='%23254648' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
-    left: -115px;
+    left: 10.2vw;
     background-size: contain;
     background-repeat: no-repeat;
     background-color: transparent;
@@ -404,7 +404,7 @@
 
   .slick-next {
     background: url("data:image/svg+xml;charset=utf8,%3Csvg width='26' height='14' viewBox='0 0 26 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 7H1' stroke='%23254648' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M25 7L18 1' stroke='%23254648' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M18 13L25 7' stroke='%23254648' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
-    right: -115px;
+    right: 10.2vw;
     background-size: contain;
     background-repeat: no-repeat;
     background-color: transparent;

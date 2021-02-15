@@ -12,7 +12,7 @@
 }
 
 .c-sidebar {
-  flex: 0 0 560px;
+  flex: 0 0 400px;
 }
 
 .c-wide-content {
@@ -31,12 +31,36 @@
   display: inline-flex;
   align-items: center;
   white-space: nowrap;
-  font-size: 18px;
-  line-height: 24px;
   text-decoration: none;
   border-radius: 64px;
 
-  @include modificators;
+  &--primary {
+    background-color: $color-secondary-blue;
+    border: 2px solid $color-secondary-blue;
+    color: $color-primary-white;
+  }
+
+  &--bordered {
+    background-color: $color-primary-white;
+    border: 2px solid $color-secondary-blue;
+    color: $color-primary-black;
+  }
+
+  &--md {
+    height: $control-height-md;
+    padding-left: 32px;
+    padding-right: 32px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &--lg {
+    height: $control-height-lg;
+    padding-left: 64px;
+    padding-right: 64px;
+    font-size: 14px;
+    line-height: 24px;
+  }
 }
 
 .c-title {
@@ -44,13 +68,13 @@
   font-weight: bold;
 
   &__lg {
-    font-size: 64px;
-    line-height: 80px;
+    font-size: 36px;
+    line-height: 44px;
   }
 
   &__md {
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 16px;
+    line-height: 28px;
 
     &--indent {
       margin-bottom: 8px;
@@ -58,8 +82,8 @@
   }
 
   &__sm {
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 14px;
+    line-height: 24px;
 
     &--alert {
       position: relative;
@@ -96,15 +120,15 @@
 .c-decoration {
   position: absolute;
 
-  &--150 {
-    width: 150px;
-    height: 150px;
-    border-radius: 75px;
-  }
-
   &--100 {
     width: 100px;
     height: 100px;
+    border-radius: 75px;
+  }
+
+  &--75 {
+    width: 75px;
+    height: 75px;
     border-radius: 50px;   
   }  
 
@@ -250,7 +274,7 @@
   flex-wrap: wrap;
 
   &__tag {
-    margin: 0 0 4px 4px;
+    margin: 0 4px 4px 0;
     background: $color-secondary-grey-bg;
     border: 1px solid $color-secondary-border;
     box-sizing: border-box;
@@ -259,10 +283,6 @@
     color: $color-secondary-2;
     font-size: 12px;
     line-height: 16px;
-
-    &:first-child {
-      margin: 0 0 4px 0;
-    }
 
     &.hide {
       display: none;
