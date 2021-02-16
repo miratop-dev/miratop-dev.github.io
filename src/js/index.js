@@ -4,12 +4,25 @@
 $("div[data-js-handler='workflow__slider']").slick({
     dots: true,
     appendDots: $('.workflow'),
-    appendArrows: $('.workflow__container')
+    appendArrows: $('.workflow__container'),
+    responsive: [{
+      breakpoint: 480,
+      settings: {
+        appendDots: $('.workflow__slider'),
+      }
+    }]
 });
 
 $("div[data-js-handler='recommendations__slider']").slick({
   dots: false,
-  appendArrows: $('.recommendations')
+  appendArrows: $('.recommendations'),
+  responsive: [{
+    breakpoint: 480,
+    settings: {
+      dots: true,
+      appendDots: $('.recommendations'),
+    }
+  }]  
 });
 
 $("[data-js-handler='menu__toggle']").on('click', function(e){

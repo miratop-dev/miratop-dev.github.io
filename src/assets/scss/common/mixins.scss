@@ -34,7 +34,9 @@
   }
 
   @include mobile {
-    max-width: 320px;
+    max-width: 100%;
+    padding-left: 27px;
+    padding-right: 27px;
   }
 }
 

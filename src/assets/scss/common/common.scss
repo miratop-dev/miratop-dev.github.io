@@ -27,6 +27,10 @@ html {
     &.index-page {
       padding: 100px 0 150px;
       overflow-x: hidden;
+
+      @include mobile {
+        padding: 60px 0;
+      }      
     }
   
     &.search-page {
