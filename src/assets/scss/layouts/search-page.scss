@@ -74,6 +74,54 @@
   }
 }
 
+.range-slider {
+  &__inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 18px;
+
+    input {
+      text-align: center;
+      max-width: 110px;
+      padding: 12px 0;
+      background: $color-primary-white;
+      border: 2px solid $color-secondary-7;
+      color: $color-secondary-2;
+      border-radius: 8px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  &__delimiter {
+
+  }
+
+  .ui-widget.ui-widget-content {
+    border: none;
+    background: $color-secondary-border;
+    height: 4px;
+  }
+
+  .ui-slider-horizontal .ui-slider-range {
+    background: $color-secondary-blue;
+  }
+
+  .ui-state-default, .ui-widget-content .ui-state-default {
+    border: 2px solid $color-secondary-blue;
+    background: $color-primary-white;
+  }
+
+  .ui-slider-horizontal .ui-slider-handle {
+    width: 20px;
+    height: 20px;
+    top: -8px;
+    margin-left: -5px;
+    border-radius: 10px;
+  }
+}
+
 .experts {
   margin: 0 0 10px;
 

@@ -102,4 +102,12 @@
     {label: 'Вашингтонская обл.', name: 'name[]', checked: false}
   ]
 })
+.filter-block
+  .filter-block__title Рейтинг
+  .range-slider
+    .range-slider__inputs
+      input(type='text', class='range-slider__min')
+      .range-slider__input__delimiter
+      input(type='text', class='range-slider__max')
+    .range-slider__handler(data-js-handler='range-slider__handler')
 a.filter-block__search.c-button.c-button--primary.c-button--lg(href="#") Найти эксперта  

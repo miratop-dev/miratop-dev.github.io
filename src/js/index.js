@@ -35,3 +35,21 @@ $("[data-js-handler='menu__toggle']").on('click', function(e){
     $('body').addClass('hidden');
   }
 })
+
+$( function() {
+  $("[data-js-handler='range-slider__handler']").slider({
+    range: true,
+    min: 0,
+    max: 10,
+    step: 0.1,
+    values: [4.5, 9.5],
+    slide: function( event, ui ) {
+      $('.range-slider__min').val(ui.values[ 0 ]);
+      $('.range-slider__max').val(ui.values[ 1 ]);
+    }
+  });
+  $('.range-slider__min').val(
+    $("[data-js-handler='range-slider__handler']").slider( "values", 0 )
+  );
+  $('.range-slider__max').val($("[data-js-handler='range-slider__handler']").slider( "values", 1 ) );
+} );
