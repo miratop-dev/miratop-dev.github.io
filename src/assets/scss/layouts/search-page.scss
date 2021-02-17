@@ -95,7 +95,9 @@
   }
 
   &__delimiter {
-
+    background: $color-secondary-7;
+    width: 10px;
+    height: 2px;
   }
 
   .ui-widget.ui-widget-content {

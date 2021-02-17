@@ -53,7 +53,7 @@ mixin searchFilters(args)
         label.filter-block__label.hide
           input.filter-block__checkbox(type='checkbox' name= input.name checked= input.checked)
           p= input.label  
-    a.filter-block__more Показать еще 
+    a.filter-block__more(href="#", data-js-handler='filter-block-more__handler') Показать еще 
       span.filter-block__quantity 18    
 
 mixin expertBlock(args)

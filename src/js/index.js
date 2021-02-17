@@ -36,6 +36,27 @@ $("[data-js-handler='menu__toggle']").on('click', function(e){
   }
 })
 
+$("[data-js-handler='filter__toggle']").on('click', function(e){
+  if($(this).hasClass('collapse')) {
+    $(this).removeClass('collapse').addClass('expanded');
+    $(this).parent().removeClass('collapse');
+  } else {
+    $(this).addClass('collapse').removeClass('expanded');
+    $(this).parent().addClass('collapse');
+  }
+})
+
+$("[data-js-handler='filter-block-more__handler']").on('click', function(e){
+  e.preventDefault();
+  $(this).siblings('label').each(function(index, value){
+    if($(value).hasClass('hide')) {
+      $(value).removeClass('hide').addClass('show')
+    } else if($(value).hasClass('show')) {
+      $(value).removeClass('show').addClass('hide')
+    }
+  })
+})
+
 $( function() {
   $("[data-js-handler='range-slider__handler']").slider({
     range: true,
