@@ -1,6 +1,10 @@
 .page-title {
   padding: 35px 0;
 
+  @include mobile {
+    padding: 20px 0;
+  }   
+
   &__container {
     @include container;
   }
@@ -10,5 +14,10 @@
     font-weight: bold;
     font-size: 64px;
     line-height: 80px;
+
+    @include mobile {
+      font-size: 24px;
+      line-height: 32px;
+    }    
   }
 }

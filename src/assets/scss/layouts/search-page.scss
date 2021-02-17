@@ -135,6 +135,11 @@
     justify-content: space-between;
     padding: 30px 0;
     border-top: 2px solid $color-secondary-border;
+
+    @include desktop-medium {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }    
   
     &:last-child {
       border-bottom: 2px solid $color-secondary-border;
@@ -161,12 +166,29 @@
     flex: 0 0 80px;
     margin: 0 20px 0 0;
     border-radius: 55px;
+
+    @include mobile {
+      width: 52px;
+      flex: 0 0 52px;
+    }
   }
 
   &__summary {
     width: 100%;
     max-width: 240px;
     padding: 0 20px 0 0;
+
+    @include mobile {
+      padding: 0;
+      max-width: 180px;
+    }
+  }
+
+  &__title {
+    @include mobile {
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
 
   &__statistics {
@@ -230,11 +252,20 @@
     font-weight: 600;
     font-size: 12px;
     line-height: 14px;
+
+    @include mobile {
+      font-size: 8px;
+      line-height: 12px;
+    }
   }
 
   &__info {
     width: 100%;
     max-width: 400px;
+
+    @include mobile {
+      margin: 10px 0 0 0;
+    }
   }
 
   &__description {
@@ -242,6 +273,26 @@
     font-size: 14px;
     line-height: 24px;
     margin: 0 0 14px;
+  }
+
+  &__contact {
+    @include mobile {
+      background: $color-secondary-blue;
+      position: absolute;
+      top: 23px;
+      right: 0;
+      overflow: hidden;
+      text-indent: -9999px;
+      width: 36px;
+      height: 36px;
+      padding: 0;
+      margin: 0 !important;
+      border-radius: 18px 18px 18px 2px;
+    }
+
+    @include desktop-medium {
+      margin: 10px 0 0;
+    }    
   }
 }
 

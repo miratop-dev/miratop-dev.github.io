@@ -35,6 +35,10 @@ html {
   
     &.search-page {
       padding: 0 0 150px 0;
+
+      @include mobile {
+        padding: 0 0 60px 0;
+      }        
     }
   }
   
@@ -90,5 +94,9 @@ html {
       justify-content: space-between;
       padding-top: 20px;
       padding-bottom: 20px;
+
+      @include mobile {
+        flex-direction: column;
+      }      
     }
   }

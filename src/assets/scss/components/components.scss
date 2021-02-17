@@ -2,6 +2,10 @@
   @include container;
   display: flex;
   align-items: flex-start;
+
+  @include mobile {
+    flex-direction: column;
+  }
 }
 
 .c-aside {
@@ -9,6 +13,10 @@
   background: $color-secondary-grey-bg;
   border-radius: 12px;
   padding: 30px;
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .c-sidebar {
@@ -20,10 +28,18 @@
 
   &--right {
     padding-left: 40px;
+
+    @include tablet {
+      padding-left: 0;
+    }        
   }
 
   &--left {
     padding-right: 40px;
+
+    @include tablet {
+      padding-right: 0;
+    }       
   }  
 }
 
@@ -176,6 +192,10 @@
   justify-content: center;
   align-items: center;
 
+  @include mobile {
+    justify-content: flex-start;
+  }
+
   &__block {
     display: flex;
     justify-content: center;
@@ -184,6 +204,11 @@
     width: 52px;
     height: 52px;
     border-radius: 26px;
+
+    @include mobile {
+      width: 32px;
+      height: 32px;
+    }
 
     &--current {
       background-color: $color-secondary-grey-bg;
@@ -200,6 +225,11 @@
     font-size: 16px;
     line-height: 24px;
 
+    @include mobile {
+      font-size: 12px;
+      line-height: 16px;
+    }
+
     &--current {
       color: $color-secondary-grey;
     }
@@ -215,6 +245,11 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 24px;
+
+  @include mobile {
+    font-size: 10px;
+    line-height: 14px;
+  }
 
   & > div {
     position: relative;
