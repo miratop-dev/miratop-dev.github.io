@@ -57,30 +57,43 @@ $("[data-js-handler='filter-block-more__handler']").on('click', function(e){
   })
 })
 
-$("[data-js-handler='range-slider__handler']").slider({
-  range: true,
-  min: 0,
-  max: 10,
-  step: 0.1,
-  values: [4.5, 9.5],
-  slide: function( event, ui ) {
-    $('.range-slider__min').val(ui.values[ 0 ]);
-    $('.range-slider__max').val(ui.values[ 1 ]);
+if($("[data-js-handler='range-slider__handler']").length !== 0) {
+  $("[data-js-handler='range-slider__handler']").slider({
+    range: true,
+    min: 0,
+    max: 10,
+    step: 0.1,
+    values: [4.5, 9.5],
+    slide: function( event, ui ) {
+      $('.range-slider__min').val(ui.values[ 0 ]);
+      $('.range-slider__max').val(ui.values[ 1 ]);
+    }
+  });
+  $('.range-slider__min').val(
+    $("[data-js-handler='range-slider__handler']").slider( "values", 0 )
+  );
+  $('.range-slider__min').on('change', function(e){
+    $("[data-js-handler='range-slider__handler']").slider(
+      'values', 0, $(this).val()
+    )
+  });
+  $('.range-slider__max').val(
+    $("[data-js-handler='range-slider__handler']").slider( "values", 1 ) 
+  );
+  $('.range-slider__max').on('change', function(e){
+    $("[data-js-handler='range-slider__handler']").slider(
+      'values', 1, $(this).val()
+    )
+  })
+}
+
+$("[data-js-handler='mobile-filter__handler']").on('click', function(e){
+  e.preventDefault();
+  if($('.c-aside').hasClass('over')) {
+    $('body').removeClass('hidden');
+    $('.c-aside').removeClass('over');
+  } else {
+    $('body').addClass('hidden');
+    $('.c-aside').addClass('over');
   }
-});
-$('.range-slider__min').val(
-  $("[data-js-handler='range-slider__handler']").slider( "values", 0 )
-);
-$('.range-slider__min').on('change', function(e){
-  $("[data-js-handler='range-slider__handler']").slider(
-    'values', 0, $(this).val()
-  )
-});
-$('.range-slider__max').val(
-  $("[data-js-handler='range-slider__handler']").slider( "values", 1 ) 
-);
-$('.range-slider__max').on('change', function(e){
-  $("[data-js-handler='range-slider__handler']").slider(
-    'values', 1, $(this).val()
-  )
 })

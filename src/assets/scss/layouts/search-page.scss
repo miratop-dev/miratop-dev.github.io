@@ -3,6 +3,11 @@
   margin: 0 0 20px;
   border-bottom: 2px solid $color-secondary-border;
 
+  @include tablet {
+    padding: 20px 27px;
+    margin: 0;
+  }
+
   &__title {
     position: relative;
     color: $color-secondary-2;
@@ -11,6 +16,11 @@
     line-height: 24px;
     margin: 0 0 10px;
     cursor: pointer;
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 28px;
+    }
 
     &::after {
       content: '';
@@ -60,6 +70,17 @@
 
   &__search {
     height: $control-height-md;
+    padding-left: 32px;
+    padding-right: 32px;
+
+    &:first-child {
+      display: none;
+      
+      @include tablet {
+        display: inline-flex;
+        margin: 0 10px 0 0;
+      }
+    }
   }
 
   &__more {
@@ -71,6 +92,18 @@
   &.collapse {
     height: 38px;
     overflow: hidden;
+
+    @include tablet {
+      height: 60px;
+    }
+  }
+
+  &__links {
+    @include tablet {
+      padding: 35px 27px 0;
+      display: flex;
+      justify-content: flex-start;
+    }
   }
 }
 

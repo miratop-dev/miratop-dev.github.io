@@ -1,3 +1,5 @@
+.c-aside__title.c-gradient Фильтр
+  .c-aside__close(data-js-handler='mobile-filter__handler')
 +searchFilters({
   title: 'Персонал', 
   expanded: true,
@@ -102,4 +104,6 @@
     {label: '1 тысячелетие', name: 'name[]', checked: false}
   ]
 })
-a.filter-block__search.c-button.c-button--primary.c-button--lg(href="#") Найти предложение 
+.filter-block__links
+  a.filter-block__search.c-button.c-button--bordered.c-button--lg(href="#") Отменить фильтры
+  a.filter-block__search.c-button.c-button--primary.c-button--lg(href="#") Найти предложение 

@@ -1,3 +1,5 @@
+.c-aside__title.c-gradient Фильтр
+  .c-aside__close(data-js-handler='mobile-filter__handler')
 +searchFilters({
   title: 'Персонал', 
   expanded: true,
@@ -110,4 +112,6 @@
       .range-slider__delimiter
       input(type='text', class='range-slider__max')
     .range-slider__handler(data-js-handler='range-slider__handler')
-a.filter-block__search.c-button.c-button--primary.c-button--lg(href="#") Найти эксперта  
+.filter-block__links
+  a.filter-block__search.c-button.c-button--bordered.c-button--lg(href="#") Отменить фильтры
+  a.filter-block__search.c-button.c-button--primary.c-button--lg(href="#") Найти предложение 
