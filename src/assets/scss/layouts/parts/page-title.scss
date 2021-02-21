@@ -1,7 +1,7 @@
 .page-title {
   padding: 35px 0;
 
-  @include mobile {
+  @include tablet {
     padding: 20px 0;
   }   
 
@@ -15,7 +15,7 @@
     font-size: 64px;
     line-height: 80px;
 
-    @include mobile {
+    @include tablet {
       font-size: 24px;
       line-height: 32px;
     }    

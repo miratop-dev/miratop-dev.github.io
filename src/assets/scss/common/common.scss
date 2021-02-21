@@ -87,6 +87,12 @@ main {
     font-size: 12px;
     line-height: 16px;
 
+    @include tablet {
+      padding: 0 0 0 25px;
+      font-size: 10px;
+      line-height: 14px;
+    }
+
     &--current {
       color: $color-secondary-7;
     }
@@ -95,6 +101,10 @@ main {
       position: absolute;
       content: "\2014";
       left: 16px;
+
+      @include tablet {
+        left: 8px;
+      }
     }
   }
 }

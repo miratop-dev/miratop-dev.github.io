@@ -6,7 +6,7 @@ mixin mainPageExpertiseAreas(name, items)
         div.expertise-areas__activity= item
       else
         div.expertise-areas__activity.hide= item
-    a.expertise-areas__more(href="#") Показать все
+    a.expertise-areas__more(href="#", data-js-handler='expand-list__handler') Показать все
 
 mixin mainPageResponsibility(name, text)    
   li
@@ -53,7 +53,7 @@ mixin searchFilters(args)
         label.filter-block__label.hide
           input.filter-block__checkbox(type='checkbox' name= input.name checked= input.checked)
           p= input.label  
-    a.filter-block__more(href="#", data-js-handler='filter-block-more__handler') Показать еще 
+    a.filter-block__more(href="#", data-js-handler='expand-list__handler') Показать еще 
       span.filter-block__quantity 18    
 
 mixin expertBlock(args)
@@ -89,10 +89,10 @@ mixin expertBlock(args)
           else 
             a.c-tags__tag.hide(href= tag.url)= tag.name
           if ((index == args.tags.length - 1) && (args.tags.length > 3))
-            a.c-tags__tag(href="#") еще 
+            a.c-tags__tag(href="#", data-js-handler='expand-list__handler') еще 
               span.c-tags__num= args.tags.length - 3
 
-    a.experts__contact.c-button.c-button--bordered.c-button--md(href= args.expertLink) Написать
+    a.c-button.c-button--bordered.c-button--md.c-button--mobile.experts__button(href= args.expertLink) Написать
 
 mixin taskBlock(args)
   .tasks__block
@@ -112,4 +112,4 @@ mixin taskBlock(args)
             a.c-tags__tag(href="#") еще 
               span.c-tags__num= args.tags.length - 3
     .tasks__description= args.description
-    a.tasks__contact.c-button.c-button--bordered.c-button--md(href= taskLink) Написать
+    a.c-button.c-button--bordered.c-button--md.c-button--mobile.tasks__button(href= taskLink) Написать

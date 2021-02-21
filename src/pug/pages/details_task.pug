@@ -17,7 +17,7 @@ block statusbar
 block content 
   .details-task-head
     .details-task-head__summary
-      .details-task-side__title= pageTitle
+      .details-task-head__title= pageTitle
       .c-info 
         .c-info__location Киев, Украина
         .c-info__date 15.01.2021
@@ -26,7 +26,7 @@ block content
         a.c-tags__tag(href='#') HR
         a.c-tags__tag(href='#') HR стратегия
         a.c-tags__tag(href='#') Внедрение стратегии
-    a.c-button.c-button--primary.c-button--md(href='#') Написать
+    a.c-button.c-button--primary.c-button--md.c-button--mobile.details-task-head__button(href='#') Написать
   .details-task-description
     .details-task-description__block
       .c-title.c-title__md.c-title__md--indent Описание задачи

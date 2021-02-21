@@ -25,15 +25,15 @@ block content
           .c-info__experience 10 лет
           .c-info__projects 527
           .c-info__available.c-info__available--free Свободен
-        .c-tags 
+        .c-tags.details-expert-head__tags
           a.c-tags__tag(href='#') Аудит
           a.c-tags__tag(href='#') Бухгалтерия
           a.c-tags__tag(href='#') Персонал
           a.c-tags__tag(href='#') Персонал
           a.c-tags__tag(href='#') Аудит
-          a.c-tags__tag(href='#') Бухгалтерия
-          a.c-tags__tag(href='#') еще 5
-    a.c-button.c-button--primary.c-button--md(href='#') Написать
+          a.c-tags__tag(href='#') Бухгалтерия       
+          a.c-tags__tag(href='#', data-js-handler='expand-list__handler') еще 5
+    a.c-button.c-button--primary.c-button--md.c-button--mobile.details-expert-head__button(href='#') Написать
   .details-expert-description
     .details-expert-description__block
       .c-title.c-title__md Коротко обо мне
@@ -42,7 +42,7 @@ block content
     .details-expert-description__block
       .c-title.c-title__md Портфолио
       .details-expert-description__accordion.details-expert-description__accordion--expanded
-        .details-expert-description__header.details-expert-description__header--expanded
+        .details-expert-description__header.details-expert-description__header--expanded(data-js-handler='accordion__handler')
           .c-title.c-title__sm Внедрение HR стратегии
           .c-info
             .c-info__client Rozetka
@@ -53,7 +53,7 @@ block content
         .c-title.c-title__sm.c-title__sm--goal Результаты
         span Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным.
       .details-expert-description__accordion.details-expert-description__accordion--collapse
-        .details-expert-description__header.details-expert-description__header--collapse
+        .details-expert-description__header.details-expert-description__header--collapse(data-js-handler='accordion__handler')
           .c-title.c-title__sm Разработать финансовую модель
           .c-info
             .c-info__client Rozetka
@@ -64,7 +64,7 @@ block content
         .c-title.c-title__sm.c-title__sm--goal Результаты
         span Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным.              
       .details-expert-description__accordion.details-expert-description__accordion--collapse
-        .details-expert-description__header.details-expert-description__header--collapse
+        .details-expert-description__header.details-expert-description__header--collapse(data-js-handler='accordion__handler')
           .c-title.c-title__sm Обучение персонала
           .c-info
             .c-info__client Rozetka
