@@ -113,3 +113,11 @@ mixin taskBlock(args)
               span.c-tags__num= args.tags.length - 3
     .tasks__description= args.description
     a.c-button.c-button--bordered.c-button--md.c-button--mobile.tasks__button(href= taskLink) Написать
+
+mixin relatedArticles(args)
+  .article-related__block
+    a(href= args.link)= args.title
+    .c-info
+      .c-info__date= args.date
+      .c-info__email= args.email
+      .c-info__view= args.views
