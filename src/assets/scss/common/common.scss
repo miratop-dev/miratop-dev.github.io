@@ -18,6 +18,10 @@ body {
 
   &.hidden {
     overflow: hidden;
+
+    @include tablet {
+      overflow: unset;
+    }    
   }  
 }
   
@@ -27,6 +31,7 @@ main {
   &.index-page {
     padding: 100px 0 150px;
     overflow-x: hidden;
+    -ms-scroll-limit: 0 0 0 0;
 
     @include mobile {
       padding: 60px 0;

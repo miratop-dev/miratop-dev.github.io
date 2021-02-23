@@ -1,15 +1,38 @@
 .main-menu
-  ul.main-menu__list
-    li
-      a.main-menu__el(href="./index.html") Главная
-    li  
-      a.main-menu__el(href="./search_expert.html") Поиск эксперта
-    li  
-      a.main-menu__el(href="./details_expert.html") Подробнее об эксперте 
-    li  
-      a.main-menu__el(href="./search_task.html") Поиск предложения     
-    li  
-      a.main-menu__el(href="./details_task.html") Детали предложения    
-    li  
-      a.main-menu__el(href="./article_page.html") Статья          
+  .main-menu__container
+    .main-menu__header
+      a.header__logo(href="/")
+        img(src= 'assets/img/logo__black.svg' alt="logo") 
+      a.main-menu__close(href="#", data-js-handler="menu__toggle")
+    .main-menu__wrapper
+      .main-menu__primary 
+        ul
+          li  
+            img(src="assets/img/benefit_icon_3.png")
+            a.main-menu__el.main-menu__el--lg(href="#") Как стать экспертом
+          li  
+            img(src="assets/img/benefit_icon_3.png")
+            a.main-menu__el.main-menu__el--lg(href="#") Как добавить предложение
+          li  
+            img(src="assets/img/benefit_icon_3.png")
+            a.main-menu__el.main-menu__el--lg(href="#") Безопасность сделки  
+          li  
+            img(src="assets/img/benefit_icon_3.png")
+            a.main-menu__el.main-menu__el--lg(href="#") Нужна консультация
+      .main-menu__secondary
+        ul
+          li  
+            a.main-menu__el.main-menu__el--sm(href="./search_expert.html") Поиск эксперта
+          li  
+            a.main-menu__el.main-menu__el--sm(href="./details_expert.html") Подробнее об эксперте 
+          li  
+            a.main-menu__el.main-menu__el--sm(href="./search_task.html") Поиск предложения     
+          li  
+            a.main-menu__el.main-menu__el--sm(href="./details_task.html") Детали предложения    
+          li  
+            a.main-menu__el.main-menu__el--sm(href="./article_page.html") Статья   
+        .main-menu__lang 
+          a(href="#") ENG
+          a(href="#") UA
+          a.current(href="#") RUS                    
 .overlay(data-js-handler="menu__toggle")
