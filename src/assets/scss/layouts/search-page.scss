@@ -59,7 +59,7 @@
   }
 
   &__checkbox {
-    margin: 0 8px 0 0;
+    margin: -2px 8px 0 0;
     width: 16px;
     height: 16px;
     background: $color-primary-white;
@@ -90,7 +90,7 @@
   }
 
   &.collapse {
-    height: 38px;
+    height: 37px;
     overflow: hidden;
 
     @include tablet {

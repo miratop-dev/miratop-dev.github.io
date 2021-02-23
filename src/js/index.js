@@ -49,11 +49,18 @@ $("[data-js-handler='filter__toggle']").on('click', function(e){
 $("[data-js-handler='expand-list__handler']").on('click', function(e){
   e.preventDefault();
   let sibling_previous_class = $(this).prev().attr("class").split(' ')[0];
+  let link_show_more = $(this);
+  let link_show_more_text = $(this).text();
+  if(!link_show_more.data('js-expand-title')) {
+    link_show_more.attr('data-js-expand-title', link_show_more_text);
+  }
   $(this).siblings('.' + sibling_previous_class).each(function(index, value){
     if($(value).hasClass('hide')) {
-      $(value).removeClass('hide').addClass('show')
+      $(value).removeClass('hide').addClass('show');
+      link_show_more.text('Свернуть');
     } else if($(value).hasClass('show')) {
-      $(value).removeClass('show').addClass('hide')
+      $(value).removeClass('show').addClass('hide');
+      link_show_more.text(link_show_more.data('js-expand-title'));
     }
   })
 })
