@@ -277,18 +277,77 @@ main.search-page {
     left: 16px
 }
 
-.sort__legend {
-    color: #676767
+.sort {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
 }
 
-.sort__legend,
-.sort__select {
+.sort__legend {
+    color: #676767;
     font-size: 14px;
     line-height: 24px
 }
 
 .sort__select {
-    color: #254648
+    position: relative;
+    margin: 0 0 0 8px
+}
+
+.sort select {
+    display: none
+}
+
+.sort .select-selected:after {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23254648' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    position: absolute;
+    content: "";
+    top: 10px;
+    right: 0;
+    width: 8px;
+    height: 4px;
+    background-size: contain
+}
+
+.sort .select-selected.select-arrow-active:after {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg)
+}
+
+.sort .select-items div,
+.sort .select-selected {
+    color: #254648;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0 20px 0 10px;
+    white-space: nowrap
+}
+
+.sort .select-items div {
+    padding: 10px 20px 0 10px
+}
+
+.sort .select-items {
+    position: absolute;
+    background-color: #fff;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99
+}
+
+.sort .select-hide {
+    display: none
+}
+
+.sort .same-as-selected,
+.sort .select-items div:hover {
+    background-color: #e5e5e5
 }
 
 @supports (-webkit-appearance:none) or (-moz-appearance:none) {
@@ -2497,6 +2556,16 @@ main.search-page {
         display: none
     }
 
+    .sort .select-selected:after {
+        top: 5px
+    }
+
+    .sort .select-items div,
+    .sort .select-selected {
+        font-size: 10px;
+        line-height: 14px
+    }
+
     .c-container {
         max-width: 728px
     }
@@ -2884,8 +2953,7 @@ main.search-page {
     }
 
     .sort__select {
-        font-size: 10px;
-        line-height: 14px
+        margin: 0
     }
 
     .c-container {

@@ -16,10 +16,11 @@ block statusbar
       a.search-page-top__filter.c-button.c-button--primary.c-button--filter(data-js-handler='mobile-filter__handler') Фильтр
       .sort
         span.sort__legend Сортировать:
-        select.sort__select 
-          option По рейтингу
-          option По рейтингу
-          option По рейтингу
+        .sort__select 
+          select
+            option По рейтингу
+            option По стажу
+            option По проектам
 
 block aside
   include ../includes/modules/expert-filters    

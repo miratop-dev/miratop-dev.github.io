@@ -123,6 +123,9 @@ main {
 }
   
 .sort {
+  display: flex;
+  align-items: center;
+
   @include tablet {
     width: 155px;
     display: flex;
@@ -144,15 +147,71 @@ main {
   }
 
   &__select {
+    position: relative;
+    margin: 0 0 0 8px;
+
+    @include mobile {
+      margin: 0;
+    }
+  }
+  
+  select {
+    display: none; 
+  }
+
+  .select-selected:after {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23254648' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    position: absolute;
+    content: "";
+    top: 10px;
+    right: 0;
+    width: 8px;
+    height: 4px;
+    background-size: contain;
+
+    @include tablet {
+      top: 5px;
+    }
+  }
+  
+  .select-selected.select-arrow-active:after {
+    transform: rotateX(180deg);
+  }
+  
+  .select-items div, .select-selected {
     color: $color-secondary-2;
     font-size: 14px;
     line-height: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 20px 0 10px;
+    white-space: nowrap;
 
-    @include mobile {
+    @include tablet {
       font-size: 10px;
       line-height: 14px;
     }
   }
+
+  .select-items div {
+    padding: 10px 20px 0 10px;
+  }
+  
+  .select-items {
+    position: absolute;
+    background-color: $color-primary-white;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: $color-secondary-border;
+  }  
 }
 
 @supports(-webkit-appearance: none) or (-moz-appearance: none) {
