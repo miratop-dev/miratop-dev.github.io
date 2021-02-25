@@ -1132,22 +1132,25 @@ main.search-page {
 }
 
 .overlay {
+    display: none;
+    position: absolute;
     z-index: 3;
+    width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, .6)
 }
 
-.main-menu,
-.overlay {
-    display: none;
-    position: absolute;
-    width: 100%
+.overlay.show {
+    display: block
 }
 
 .main-menu {
+    display: none;
+    position: absolute;
     background-color: #273233;
     z-index: 4;
-    height: 100vh
+    height: 100vh;
+    width: 100%
 }
 
 .main-menu__container {
@@ -1294,6 +1297,120 @@ main.search-page {
     font-weight: 700;
     font-size: 64px;
     line-height: 80px
+}
+
+.popup {
+    position: absolute;
+    padding: 70px 60px;
+    border-radius: 8px;
+    background-color: #fff;
+    background-image: url(../../assets/img/popup-bg.png);
+    background-repeat: no-repeat;
+    top: 10.4vw;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 3
+}
+
+.popup.hide {
+    display: none
+}
+
+.popup.show {
+    display: block
+}
+
+.popup__close {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L17 17' stroke='%23D1D1D1' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M17 1L0.999999 17' stroke='%23D1D1D1' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-size: contain;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 20px;
+    right: 20px
+}
+
+.popup__title {
+    text-align: center;
+    color: #254648;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px
+}
+
+.popup form {
+    width: 320px;
+    margin: 30px 0 0
+}
+
+.popup__label {
+    display: block;
+    margin: 15px 0 0
+}
+
+.popup__label:first-child {
+    margin: 0
+}
+
+.popup__desc {
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0 0 5px
+}
+
+.popup__input {
+    width: 100%;
+    font-size: 14px;
+    line-height: 24px
+}
+
+.popup__input--text {
+    color: #254648;
+    padding: 10px 0 10px 20px;
+    border: 2px solid #e5e5e5;
+    border-radius: 8px
+}
+
+.popup__input--submit {
+    margin: 20px 0 10px;
+    padding: 12px 0;
+    color: #fff;
+    background: #278fff;
+    border-radius: 64px
+}
+
+.popup__restore {
+    display: block;
+    margin: 10px 0 0;
+    width: 100%;
+    color: #278fff
+}
+
+.popup__restore,
+.popup__unregistered {
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px
+}
+
+.popup__unregistered {
+    color: #254648
+}
+
+.popup__unregistered a {
+    color: #278fff
+}
+
+.popup__socials {
+    margin: 40px 0 0;
+    text-align: center
+}
+
+.popup__social {
+    margin: 0 20px 0 0
 }
 
 .main-page-banner__container {
@@ -2745,6 +2862,11 @@ main.search-page {
     .page-title h1 {
         font-size: 24px;
         line-height: 32px
+    }
+
+    .popup {
+        width: 100%;
+        padding: 35px 20px
     }
 
     .main-page-banner__container {

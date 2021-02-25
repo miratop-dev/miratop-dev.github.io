@@ -1,0 +1,20 @@
+.popup.hide#popup-login
+  a.popup__close(href='#', data-js-handler='popup__handler-close')
+  .popup__title Добро пожаловать!
+  form.popup__form(action='#') 
+    label.popup__label
+      .popup__desc Электронная почта
+      input.popup__input.popup__input--text(type='email' name='login_name' placeholder='Email')
+    label.popup__label
+      .popup__desc Пароль
+      input.popup__input.popup__input--text(type='password' name='login_pass' placeholder='Password')
+    a.popup__restore(href="#") Забыли пароль?
+    input.popup__input.popup__input--submit(type='submit' value='Войти')
+    .popup__unregistered 
+      span Не зарегистрированы? 
+      a(href="#popup-register", data-js-handler='popup__handler') Создать аккаунт
+    .popup__socials 
+      a.popup__social(href='#')
+        img(src='assets/img/popup-google.png')
+      a(href='#')
+        img(src='assets/img/popup-facebook.png')        
