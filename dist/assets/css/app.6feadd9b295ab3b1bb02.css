@@ -1300,7 +1300,7 @@ main.index-page {
     padding: 70px 60px;
     border-radius: 8px;
     background-color: #fff;
-    background-image: url('../../assets/img/popup-bg.png');
+    background-image: url(../../assets/img/popup-bg.png);
     background-repeat: no-repeat;
     top: 10.4vw;
     left: 50%;
@@ -1336,6 +1336,68 @@ main.index-page {
     line-height: 36px
 }
 
+.popup__account-types {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.popup__account-type {
+    position: relative;
+    color: #254648;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0 0 0 32px;
+    cursor: pointer
+}
+
+.popup__account-type:first-child {
+    margin: 0 18px 0 0
+}
+
+.popup__account-type:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #e5e5e5;
+    background-color: #fff;
+    border-radius: 12px
+}
+
+.popup__account-type--active:before {
+    border: 2px solid #51db91;
+    background: -o-linear-gradient(355.22deg, #51db91 0, #38d0b5 100%);
+    background: linear-gradient(94.78deg, #51db91, #38d0b5)
+}
+
+.popup__account-type--active:after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 0;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='18' viewBox='0 0 24 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 11L7 17L23 1' stroke='%23254648' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    width: 22px;
+    height: 16px;
+    background-size: contain
+}
+
+.popup__data-wrap {
+    display: none
+}
+
+.popup__data-wrap--current {
+    display: block
+}
+
 .popup form {
     width: 320px;
     margin: 30px 0 0
@@ -1344,10 +1406,6 @@ main.index-page {
 .popup__label {
     display: block;
     margin: 15px 0 0
-}
-
-.popup__label:first-child {
-    margin: 0
 }
 
 .popup__desc {
@@ -3644,5 +3702,21 @@ main.index-page {
 
     .tasks__button {
         margin: 10px 0 0
+    }
+}
+
+@media screen and (max-width:1440px) {
+    .main-page-banner__title {
+        font-size: 52px
+    }
+
+    .main-page-banner__img {
+        right: 0
+    }
+}
+
+@media screen and (min-width:1921px) {
+    .main-page-banner__img {
+        width: 656px
     }
 }

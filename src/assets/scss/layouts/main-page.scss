@@ -22,6 +22,10 @@
     line-height: 1.25;
     margin: 0 0 20px;
 
+    @include desktop-large {
+      font-size: 52px;
+    }
+
     @include tablet {
       font-size: 24px;
       text-align: center;
@@ -123,6 +127,14 @@
     top: 0;
     right: -7.3vw;
     width: 34.2vw;
+
+    @include extra-large {
+      width: 656px;
+    }    
+
+    @include desktop-large {
+      right: 0;
+    }    
 
     @include desktop-medium {
       display: none;

@@ -316,6 +316,17 @@ $("[data-js-handler='overlay__handler']").on('click', function (e) {
     $('.main-menu').addClass('hide').removeClass('show');
   }
 });
+$("[data-js-handler='popup__account-type']").on('click', function (e) {
+  e.preventDefault();
+  var account_type = $(this).attr('href');
+
+  if (!$(this).hasClass('popup__account-type--active')) {
+    $('.popup__account-type').removeClass('popup__account-type--active');
+    $('.popup__data-wrap').removeClass('popup__data-wrap--current');
+    $(this).addClass('popup__account-type--active');
+    $(account_type).addClass('popup__data-wrap--current');
+  }
+});
 
 /***/ }),
 /* 2 */
