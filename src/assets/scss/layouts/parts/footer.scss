@@ -1,6 +1,11 @@
 .footer {
   position: relative;
   background: #273233;
+  margin: 150px 0 0;
+
+  @include mobile {
+    margin: 60px 0 0;
+  }
 
   &__decoration {
     &--lg {

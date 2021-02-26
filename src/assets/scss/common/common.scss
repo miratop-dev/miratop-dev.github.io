@@ -29,28 +29,24 @@ main {
   position: relative;
 
   &.index-page {
-    padding: 100px 0 150px;
+    padding: 100px 0 0;
     overflow-x: hidden;
     -ms-scroll-limit: 0 0 0 0;
 
     @include mobile {
-      padding: 60px 0;
+      padding: 60px 0 0;
     }      
   }
 
   &.search-page {
-    padding: 0 0 150px 0;
-
     @include mobile {
-      padding: 0 0 60px 0;
+      margin: 0 0 60px;
     }        
   }
 
   &.article-page {
-    padding: 0 0 150px 0;
-
     @include mobile {
-      padding: 0 0 60px 0;
+      margin: 0 0 60px;
     }        
   }  
 }

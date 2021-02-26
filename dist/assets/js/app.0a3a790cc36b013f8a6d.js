@@ -180,7 +180,8 @@ __webpack_require__.r(__webpack_exports__);
 // see more: https://github.com/vedees/webpack-template/blob/master/README.md#import-js-files
 $("div[data-js-handler='workflow__slider']").slick({
   dots: true,
-  appendDots: $('.workflow'),
+  //appendDots: $('.workflow'),
+  appendDots: $('.workflow__slider'),
   appendArrows: $('.workflow__container'),
   responsive: [{
     breakpoint: 480,

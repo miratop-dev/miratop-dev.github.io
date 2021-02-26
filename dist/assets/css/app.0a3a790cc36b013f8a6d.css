@@ -216,14 +216,9 @@ main {
 }
 
 main.index-page {
-    padding: 100px 0 150px;
+    padding: 100px 0 0;
     overflow-x: hidden;
     -ms-scroll-limit: 0 0 0 0
-}
-
-main.article-page,
-main.search-page {
-    padding: 0 0 150px
 }
 
 .search-page-top__container {
@@ -977,7 +972,8 @@ main.search-page {
 
 .footer {
     position: relative;
-    background: #273233
+    background: #273233;
+    margin: 150px 0 0
 }
 
 .footer__decoration--lg {
@@ -1304,7 +1300,7 @@ main.search-page {
     padding: 70px 60px;
     border-radius: 8px;
     background-color: #fff;
-    background-image: url(../../assets/img/popup-bg.png);
+    background-image: url('../../assets/img/popup-bg.png');
     background-repeat: no-repeat;
     top: 10.4vw;
     left: 50%;
@@ -1582,18 +1578,21 @@ main.search-page {
 
 .workflow {
     position: relative;
-    padding: 60px 0;
-    margin: 0 0 210px
+    padding: 80px 0;
+    margin: 0 0 210px;
+    overflow: hidden
 }
 
 .workflow__decoration--lg {
     right: 180px;
-    top: -50px
+    top: 50px;
+    z-index: 1
 }
 
 .workflow__decoration--md {
     right: 265px;
-    top: 90px
+    top: 190px;
+    z-index: 1
 }
 
 .workflow__container {
@@ -1620,6 +1619,10 @@ main.search-page {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center
+}
+
+.workflow__slider {
+    padding: 60px 0
 }
 
 .workflow__imgwrap {
@@ -2244,10 +2247,6 @@ main.search-page {
     right: 0
 }
 
-.details-page {
-    margin: 0 0 200px
-}
-
 .details-task-head {
     position: relative;
     display: -webkit-box;
@@ -2451,8 +2450,7 @@ main.search-page {
 }
 
 .details-expert-description__accordion--collapse {
-    height: 86px;
-    margin: 0;
+    height: 84px;
     overflow: hidden
 }
 
@@ -3009,10 +3007,6 @@ main.search-page {
         justify-content: flex-start
     }
 
-    .details-page {
-        margin: 0 0 60px
-    }
-
     .details-task-head {
         margin: 0 0 20px
     }
@@ -3142,12 +3136,12 @@ main.search-page {
 
 @media screen and (max-width:480px) {
     main.index-page {
-        padding: 60px 0
+        padding: 60px 0 0
     }
 
     main.article-page,
     main.search-page {
-        padding: 0 0 60px
+        margin: 0 0 60px
     }
 
     .search-page-top__container {
@@ -3222,6 +3216,10 @@ main.search-page {
 
     .header__join {
         display: none
+    }
+
+    .footer {
+        margin: 60px 0 0
     }
 
     .footer__container {

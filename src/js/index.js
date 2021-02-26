@@ -3,7 +3,8 @@
 
 $("div[data-js-handler='workflow__slider']").slick({
     dots: true,
-    appendDots: $('.workflow'),
+    //appendDots: $('.workflow'),
+    appendDots: $('.workflow__slider'),
     appendArrows: $('.workflow__container'),
     responsive: [{
       breakpoint: 480,
