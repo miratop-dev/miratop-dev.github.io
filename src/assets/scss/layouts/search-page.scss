@@ -324,6 +324,7 @@
     &--high {
       /* For IE10 */
       color: $color-new-green;
+      background: $color-new-green;
 
       &::-webkit-progress-value {
         background: $color-new-green;
@@ -337,6 +338,7 @@
     &--middle {
       /* For IE10 */
       color: $color-secondary-yellow;
+      background: $color-secondary-yellow;
 
       &::-webkit-progress-value {
         background: $color-secondary-yellow;
@@ -350,6 +352,7 @@
     &--low {
       /* For IE10 */
       color: $color-secondary-4;
+      background: $color-secondary-4;
 
       &::-webkit-progress-value {
         background: $color-secondary-4;

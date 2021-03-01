@@ -2202,7 +2202,8 @@ main.index-page {
 }
 
 .experts__progressbar--high {
-    color: #21ce99
+    color: #21ce99;
+    background: #21ce99
 }
 
 .experts__progressbar--high::-webkit-progress-value {
@@ -2214,7 +2215,8 @@ main.index-page {
 }
 
 .experts__progressbar--middle {
-    color: #ffc93d
+    color: #ffc93d;
+    background: #ffc93d
 }
 
 .experts__progressbar--middle::-webkit-progress-value {
@@ -2226,7 +2228,8 @@ main.index-page {
 }
 
 .experts__progressbar--low {
-    color: #ed7c79
+    color: #ed7c79;
+    background: #ed7c79
 }
 
 .experts__progressbar--low::-webkit-progress-value {
