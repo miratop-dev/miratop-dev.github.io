@@ -3078,11 +3078,6 @@ main.index-page {
         opacity: 1
     }
 
-    .filter-block__title {
-        font-size: 16px;
-        line-height: 28px
-    }
-
     .experts__imgwrap {
         width: 52px;
         -webkit-box-flex: 0;
@@ -3495,11 +3490,20 @@ main.index-page {
         margin: 0
     }
 
+    .filter-block__title {
+        font-size: 16px;
+        line-height: 28px
+    }
+
     .filter-block__search:first-child {
         display: -webkit-inline-box;
         display: -ms-inline-flexbox;
         display: inline-flex;
         margin: 0 10px 0 0
+    }
+
+    .filter-block.collapse {
+        height: 60px
     }
 
     .filter-block__links {
