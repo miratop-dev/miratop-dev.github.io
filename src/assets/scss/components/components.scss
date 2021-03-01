@@ -6,6 +6,10 @@
   @include desktop-medium {
     flex-direction: column;
   }
+
+  @include tablet {
+    flex-direction: column;
+  }  
 }
 
 .c-aside {
@@ -15,15 +19,25 @@
   padding: 30px;
 
   @include desktop-medium {
-    order: 2;
+    display: none;
   }
 
   @include tablet {
     display: none;
-  }
+  }  
 
   &__title {
     display: none;
+
+    @include desktop-medium {
+      font-weight: bold;
+      position: relative;
+      display: block;
+      color: $color-primary-white;
+      font-size: 24px;
+      line-height: 32px;
+      padding: 20px 27px;
+    }    
 
     @include tablet {
       font-weight: bold;
@@ -65,9 +79,13 @@
 .c-sidebar {
   flex: 0 0 400px;
 
-  @include tablet {
+  @include desktop-medium {
     margin: 20px 0 0 0;
   }
+
+  @include tablet {
+    margin: 20px 0 0 0;
+  }  
 }
 
 .c-wide-content {
@@ -80,6 +98,10 @@
       padding-left: 0;
       order: 1;
     }        
+
+    @include tablet {
+      padding-left: 0;
+    }
   }
 
   &--left {
@@ -87,7 +109,11 @@
 
     @include desktop-medium {
       padding-right: 0;
-    }       
+    }   
+    
+    @include tablet {
+      padding-right: 0;
+    }
   }  
 }
 
@@ -136,6 +162,14 @@
   }
 
   &--filter {
+    @include desktop-medium {
+      height: $control-height-lg--mobile;
+      font-size: 10px;
+      line-height: 14px;
+      padding-left: 60px;
+      padding-right: 60px;
+    }  
+
     @include tablet {
       height: $control-height-lg--mobile;
       font-size: 10px;

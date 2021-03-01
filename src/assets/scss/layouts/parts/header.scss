@@ -39,6 +39,10 @@
     @include desktop-medium {
       display: none;
     }
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__buttons {
@@ -68,6 +72,10 @@
     @include desktop-medium {
       display: none;
     }
+
+    @include tablet {
+      display: none;
+    }  
   }
   
   &__burger {

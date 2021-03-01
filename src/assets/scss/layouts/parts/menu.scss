@@ -19,10 +19,16 @@
   height: 100vh;
   width: 100%;
 
+  @include desktop-medium {
+    padding: 30px 0;
+    min-height: 100vh;
+    overflow-y: scroll;
+  }    
+
   @include tablet {
     padding: 30px 0;
     min-height: 100vh;
-    height: auto;
+    overflow-y: scroll;
   }   
 
   &__container {
@@ -78,14 +84,30 @@
         margin: 0 0 40px;
         padding: 17px 0;
 
+        @include desktop-large {
+          margin: 0 0 20px;
+        }
+
+        @include desktop-medium {
+          margin: 0 0 20px;
+        }        
+
         @include tablet {
-          margin: 0 20px 0 0;
           padding: 10px 0;
+          margin: 0 0 20px;
         }
 
         img {
           width: 70px;
           margin: 0 40px 0 0;
+
+          @include desktop-large {
+            width: 50px;
+          }
+
+          @include desktop-medium {
+            width: 50px;
+          }
 
           @include tablet {
             width: 30px;
@@ -114,6 +136,10 @@
       li {
         text-align: right;
         margin: 0 0 40px;
+
+        @include desktop-large {
+          margin: 0 0 20px;
+        }
 
         @include tablet {
           margin: 0 20px 0 0;

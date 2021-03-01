@@ -1,6 +1,10 @@
 .page-title {
   padding: 35px 0;
 
+  @include desktop-medium {
+    padding: 20px 0;
+  }
+
   @include tablet {
     padding: 20px 0;
   }   
@@ -14,6 +18,11 @@
     font-weight: bold;
     font-size: 64px;
     line-height: 80px;
+
+    @include desktop-medium {
+      font-size: 24px;
+      line-height: 32px;
+    }        
 
     @include tablet {
       font-size: 24px;

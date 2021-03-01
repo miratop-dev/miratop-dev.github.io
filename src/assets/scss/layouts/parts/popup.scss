@@ -10,8 +10,7 @@
   transform: translateX(-50%);
   z-index: 3;
 
-  @include tablet {
-    width: 100%;
+  @include mobile {
     padding: 35px 20px;
   }
 

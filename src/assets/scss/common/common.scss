@@ -17,11 +17,7 @@ body {
   font-feature-settings: 'pnum' on, 'lnum' on;
 
   &.hidden {
-    overflow: hidden;
-
-    @include tablet {
-      overflow: unset;
-    }    
+    overflow: hidden;   
   }  
 }
   
@@ -60,6 +56,10 @@ main {
     padding-top: 20px;
     padding-bottom: 20px;
 
+    @include desktop-medium {
+      flex-wrap: wrap;
+    }       
+
     @include tablet {
       flex-wrap: wrap;
     }      
@@ -67,8 +67,12 @@ main {
   &__filter {
     display: none !important;
 
+    @include desktop-medium {
+      display: inline-flex !important;
+    }
+
     @include tablet {
-      display: inline-flex!important;
+      display: inline-flex !important;
     }
   }
 }
@@ -76,6 +80,11 @@ main {
 .breadcrumbs {
   display: flex;
   align-items: center;
+
+  @include desktop-medium {
+    margin: 0 0 10px;
+    width: 100%;    
+  }
 
   @include tablet {
     margin: 0 0 10px;
@@ -122,7 +131,7 @@ main {
   display: flex;
   align-items: center;
 
-  @include tablet {
+  @include desktop-medium {
     width: 155px;
     display: flex;
     align-items: center;
@@ -132,14 +141,28 @@ main {
     border: 2px solid $color-secondary-blue;
   }
 
+  @include tablet {
+    width: 155px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 64px;
+    background-color: $color-primary-white;
+    border: 2px solid $color-secondary-blue;
+  }  
+
   &__legend {
     color: $color-primary-grey;
     font-size: 14px;
     line-height: 24px;
 
-    @include tablet {
+    @include desktop-medium {
       display: none;
     }
+
+    @include tablet {
+      display: none;
+    }    
   }
 
   &__select {
