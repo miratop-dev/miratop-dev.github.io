@@ -2148,6 +2148,12 @@ main.index-page {
     box-shadow: 0 0 50px 0 rgba(37, 70, 72, .1)
 }
 
+.experts__block:hover .experts__button {
+    background-color: #278fff;
+    border: 2px solid #278fff;
+    color: #fff
+}
+
 .experts__imgwrap {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 80px;
@@ -2195,6 +2201,10 @@ main.index-page {
     background: #e5e5e5
 }
 
+.experts__progressbar--high {
+    color: #21ce99
+}
+
 .experts__progressbar--high::-webkit-progress-value {
     background: #21ce99
 }
@@ -2203,12 +2213,20 @@ main.index-page {
     background: #21ce99
 }
 
+.experts__progressbar--middle {
+    color: #ffc93d
+}
+
 .experts__progressbar--middle::-webkit-progress-value {
     background: #ffc93d
 }
 
 .experts__progressbar--middle::-moz-progress-bar {
     background: #ffc93d
+}
+
+.experts__progressbar--low {
+    color: #ed7c79
 }
 
 .experts__progressbar--low::-webkit-progress-value {
@@ -2280,6 +2298,12 @@ main.index-page {
     z-index: 2;
     -webkit-box-shadow: 0 0 50px 0 rgba(37, 70, 72, .1);
     box-shadow: 0 0 50px 0 rgba(37, 70, 72, .1)
+}
+
+.tasks__block:hover .tasks__button {
+    background-color: #278fff;
+    border: 2px solid #278fff;
+    color: #fff
 }
 
 .tasks__summary {
@@ -3212,6 +3236,10 @@ main.index-page {
     }
 
     .c-sidebar {
+        -webkit-box-flex: 1;
+        -ms-flex: auto;
+        flex: auto;
+        width: 100%;
         margin: 20px 0 0
     }
 
@@ -3564,7 +3592,7 @@ main.index-page {
         margin: -10px 0 -12px -2px
     }
 
-    .tasks__block:hover .experts__button {
+    .tasks__block:hover .tasks__button {
         top: 33px;
         right: 18px
     }
@@ -3737,6 +3765,16 @@ main.index-page {
         display: none
     }
 
+    .sort .select-selected:after {
+        top: 5px
+    }
+
+    .sort .select-items div,
+    .sort .select-selected {
+        font-size: 10px;
+        line-height: 14px
+    }
+
     .c-container {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -3759,6 +3797,10 @@ main.index-page {
     }
 
     .c-sidebar {
+        -webkit-box-flex: 1;
+        -ms-flex: auto;
+        flex: auto;
+        width: 100%;
         margin: 20px 0 0
     }
 
@@ -3888,6 +3930,7 @@ main.index-page {
         margin: -10px 0 -12px -2px
     }
 
+    .experts__button,
     .experts__contact {
         margin: 10px 0 0
     }
@@ -3909,6 +3952,10 @@ main.index-page {
     .tasks__block:hover {
         padding: 40px 20px;
         margin: -10px 0 -12px -2px
+    }
+
+    .tasks__button {
+        margin: 10px 0 0
     }
 }
 
@@ -3965,6 +4012,10 @@ main.index-page {
         margin: -10px 0 -12px -22px
     }
 
+    .experts__button {
+        margin: 10px 0 0
+    }
+
     .tasks__block {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -3981,6 +4032,10 @@ main.index-page {
     .tasks__block:hover {
         padding: 40px 20px;
         margin: -10px 0 -12px -22px
+    }
+
+    .tasks__button {
+        margin: 10px 0 0
     }
 }
 

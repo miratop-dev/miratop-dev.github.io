@@ -80,10 +80,14 @@
   flex: 0 0 400px;
 
   @include desktop-medium {
+    flex: auto;
+    width: 100%;
     margin: 20px 0 0 0;
   }
 
   @include tablet {
+    flex: auto;
+    width: 100%;
     margin: 20px 0 0 0;
   }  
 }

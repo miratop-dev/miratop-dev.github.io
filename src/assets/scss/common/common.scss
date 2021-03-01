@@ -188,6 +188,10 @@ main {
     height: 4px;
     background-size: contain;
 
+    @include desktop-medium {
+      top: 5px;
+    }
+    
     @include tablet {
       top: 5px;
     }
@@ -205,6 +209,11 @@ main {
     cursor: pointer;
     padding: 0 20px 0 10px;
     white-space: nowrap;
+
+    @include desktop-medium {
+      font-size: 10px;
+      line-height: 14px;
+    }    
 
     @include tablet {
       font-size: 10px;

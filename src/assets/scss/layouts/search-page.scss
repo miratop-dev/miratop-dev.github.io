@@ -239,6 +239,12 @@
       -moz-box-shadow:    0 0 50px 0 rgba(37,70,72,0.1);
       box-shadow:         0 0 50px 0 rgba(37,70,72,0.1);
 
+      .experts__button {
+        background-color: $color-secondary-blue;
+        border: 2px solid $color-secondary-blue;
+        color: $color-primary-white;
+      }          
+
       @include desktop-large {
         padding: 40px 20px 40px;
         margin: -10px 0 -12px -22px;
@@ -316,6 +322,9 @@
     }    
 
     &--high {
+      /* For IE10 */
+      color: $color-new-green;
+
       &::-webkit-progress-value {
         background: $color-new-green;
       }
@@ -326,6 +335,9 @@
     } 
 
     &--middle {
+      /* For IE10 */
+      color: $color-secondary-yellow;
+
       &::-webkit-progress-value {
         background: $color-secondary-yellow;
       }
@@ -336,6 +348,9 @@
     }    
     
     &--low {
+      /* For IE10 */
+      color: $color-secondary-4;
+
       &::-webkit-progress-value {
         background: $color-secondary-4;
       }
@@ -397,6 +412,14 @@
   &__button {
     top: 23px;
     right: 0;
+
+    @include desktop-large {
+      margin: 10px 0 0;
+    }
+
+    @include desktop-medium {
+      margin: 10px 0 0;
+    }        
 
     @include tablet {
       right: 20px;
@@ -465,11 +488,17 @@
       z-index: 2;
       -webkit-box-shadow: 0 0 50px 0 rgba(37,70,72,0.1);
       -moz-box-shadow:    0 0 50px 0 rgba(37,70,72,0.1);
-      box-shadow:         0 0 50px 0 rgba(37,70,72,0.1);
+      box-shadow:         0 0 50px 0 rgba(37,70,72,0.1);   
+
+      .tasks__button {
+        background-color: $color-secondary-blue;
+        border: 2px solid $color-secondary-blue;
+        color: $color-primary-white;
+      }       
 
       @include desktop-large {
         padding: 40px 20px 40px;
-        margin: -10px 0 -12px -22px;
+        margin: -10px 0 -12px -22px;      
       }
 
       @include desktop-medium {
@@ -481,7 +510,7 @@
         padding: 40px 20px 40px;
         margin: -10px 0 -12px -2px;
 
-        .experts__button {
+        .tasks__button {
           top: 33px;
           right: 18px;
         }
@@ -521,6 +550,14 @@
   &__button {
     top: 23px;
     right: 0;
+
+    @include desktop-large {
+      margin: 10px 0 0;
+    }
+
+    @include desktop-medium {
+      margin: 10px 0 0;
+    }    
 
     @include tablet {
       right: 20px;
