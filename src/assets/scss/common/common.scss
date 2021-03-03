@@ -48,12 +48,15 @@ main {
 }
   
 .search-page-top  {
+  z-index: 1;
+  position: relative;
+
   &__container {
     @include container;
 
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 20px;
 
     @include desktop-medium {

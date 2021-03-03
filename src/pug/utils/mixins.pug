@@ -40,6 +40,10 @@ mixin pageTitle(title)
   .page-title.c-gradient
     .page-title__container
       h1= title        
+      .page-title__decoration.page-title__decoration--lg.c-decoration.c-decoration--100.c-decoration--white
+      .page-title__decoration.page-title__decoration--md.c-decoration.c-decoration--75.c-decoration--white
+    .page-title__decoration.page-title__decoration--dots
+    .page-title__decoration.page-title__decoration--wave
 
 mixin searchFilters(args)
   .filter-block(class=args.expanded ? '' : 'collapse')
