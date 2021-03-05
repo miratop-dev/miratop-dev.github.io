@@ -89,6 +89,10 @@
     width: 100%;
     max-width: 240px;
 
+    @include tablet {
+      margin: 0 0 20px;
+    }    
+
     @include mobile {
       display: none;
     }
@@ -194,9 +198,13 @@
       margin: 40px 0;
       order: 1;
     }
+    
+    @include tablet {
+      margin: 0 0 20px;
+    }
 
     @include mobile {
-      margin: 40px 0 0 0 !important;
+      margin: 40px 0 0 0;
     }
   }
 
@@ -205,10 +213,15 @@
       margin: 0 0 20px;
     }
 
+    @include tablet {
+      margin: 0 0 20px;
+    }
+
     @include mobile {
+      margin: 0 !important;
       position: absolute;
-      right: 0;
-      bottom: 0;
+      right: 27px;
+      bottom: 40px;
     }  
   }
 

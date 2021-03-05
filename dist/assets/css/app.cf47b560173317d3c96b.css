@@ -2898,13 +2898,14 @@ main.index-page {
     }
 
     .footer__socials {
-        margin: 40px 0 0 !important
+        margin: 40px 0 0
     }
 
     .footer__socwrap {
+        margin: 0 !important;
         position: absolute;
-        right: 0;
-        bottom: 0
+        right: 27px;
+        bottom: 40px
     }
 
     .footer__social {
@@ -3365,6 +3366,12 @@ main.index-page {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column
+    }
+
+    .footer__menu,
+    .footer__socials,
+    .footer__socwrap {
+        margin: 0 0 20px
     }
 
     .main-menu {
