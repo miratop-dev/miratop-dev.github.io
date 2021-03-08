@@ -327,6 +327,7 @@ $("[data-js-handler='popup__account-type']").on('click', function (e) {
     $(account_type).addClass('popup__data-wrap--current');
   }
 });
+var rellax = new Rellax('.rellax');
 
 /***/ }),
 /* 2 */

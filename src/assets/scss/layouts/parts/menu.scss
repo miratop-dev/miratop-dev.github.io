@@ -12,12 +12,23 @@
 }
 
 .main-menu {
-  display: none;
   position: absolute;
   background-color: #273233;
   z-index: 4;
-  height: 100vh;
+  max-height: 0;
+  height: 100%;
   width: 100%;
+  overflow: hidden;
+  transition: all .1s ease-in-out;
+
+  &.show {
+    max-height: 100vh;
+    transition: all .1s ease-in-out;
+
+    & ~ .overlay {
+      display: block;
+    }    
+  }  
 
   @include desktop-medium {
     padding: 30px 0;
@@ -206,13 +217,5 @@
         line-height: 28px;
       }      
     }
-  }
-
-  &.show {
-    display: block;
-
-    & ~ .overlay {
-      display: block;
-    }    
   }
 }

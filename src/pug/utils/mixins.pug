@@ -40,8 +40,8 @@ mixin pageTitle(title)
   .page-title.c-gradient
     .page-title__container
       h1= title        
-      .page-title__decoration.page-title__decoration--lg.c-decoration.c-decoration--100.c-decoration--white
-      .page-title__decoration.page-title__decoration--md.c-decoration.c-decoration--75.c-decoration--white
+      .page-title__decoration.page-title__decoration--lg.c-decoration.c-decoration--100.c-decoration--white.rellax(data-rellax-speed="-1", data-rellax-percentage="0.7")
+      .page-title__decoration.page-title__decoration--md.c-decoration.c-decoration--75.c-decoration--white.rellax(data-rellax-speed="-1.5", data-rellax-percentage="1")
     .page-title__decoration.page-title__decoration--dots
     .page-title__decoration.page-title__decoration--wave
 
@@ -125,3 +125,16 @@ mixin relatedArticles(args)
       .c-info__date= args.date
       .c-info__email= args.email
       .c-info__view= args.views
+
+mixin pagination
+  ul.c-pagination
+    li.c-pagination__block.c-pagination__block--current
+      a.c-pagination__link.c-pagination__link--current(href="#") 1
+    li.c-pagination__block
+      a.c-pagination__link(href="#") 2
+    li.c-pagination__block
+      a.c-pagination__link(href="#") 3
+    li.c-pagination__block
+      a.c-pagination__link(href="#") 4
+    li.c-pagination__block
+      a.c-pagination__link(href="#") 5    
