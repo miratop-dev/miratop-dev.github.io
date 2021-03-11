@@ -3405,7 +3405,7 @@ main.index-page {
         margin: 0 0 20px
     }
 
-    .main-menu {
+    .main-menu.show {
         padding: 30px 0;
         min-height: 100vh;
         overflow-y: scroll
@@ -3943,7 +3943,7 @@ main.index-page {
         margin: 0 0 20px
     }
 
-    .main-menu {
+    .main-menu.show {
         padding: 30px 0;
         min-height: 100vh;
         overflow-y: scroll
