@@ -1,15 +1,15 @@
 header.header
   .header__container
+    a.header__logo(href="/")
+      img(src= 'assets/img/logo.svg' alt="logo")  
     .header__links
-      a.header__logo(href="/")
-        img(src= 'assets/img/logo.svg' alt="logo")
-      a.header__link(href="#") Предложения
-      a.header__link(href="#") Эксперты
-      a.header__more(href="#") Как это работает?  
-    .header__buttons
       a.header__burger(href="#" data-js-handler="menu__toggle")
         div
         div
         div
-        div
-      a.header__join.c-button.c-button--primary.c-button--md(href="#popup-login", data-js-handler='popup__handler') Присоединиться
+        div    
+      a.header__link(href="#") Пропозиції
+      a.header__link(href="#") Експерти
+      a.header__more(href="#") Як це працює 
+    .header__buttons
+      a.header__join.c-button.c-button--primary.c-button--md(href="#popup-login", data-js-handler='popup__handler') Приєднатись

@@ -121,6 +121,23 @@
   }  
 }
 
+.c-accent {
+  position: relative;
+  z-index: 0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 20px;
+    background-color: $color-pastel-4;
+    z-index: -1;
+  }
+}
+
 .c-button {
   display: inline-flex;
   align-items: center;
@@ -130,16 +147,16 @@
   text-align: center;
 
   &--primary {
-    background-color: $color-secondary-blue;
-    border: 2px solid $color-secondary-blue;
-    color: $color-primary-white;
+    background-color: $color-pastel-7;
+    border: 2px solid $color-pastel-7;
+    color: $text-black;
   }
 
   &--bordered {
-    background-color: $color-primary-white;
-    border: 2px solid $color-secondary-blue;
-    color: $color-primary-black;
-  }
+    background-color: $text-white;
+    border: 2px solid $color-pastel-7;
+    color: $text-black;
+  } 
 
   &--md {
     height: $control-height-md;
@@ -151,10 +168,10 @@
 
   &--lg {
     height: $control-height-lg;
-    padding-left: 64px;
-    padding-right: 64px;
+    padding-left: 52px;
+    padding-right: 52px;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 28px;
 
     @include mobile {
       height: $control-height-lg--mobile;
@@ -220,8 +237,27 @@
 }
 
 .c-title {
-  color: $color-secondary-2;
+  color: $text-black;
   font-weight: bold;
+
+  &__title2 {
+    font-size: 48px;
+    line-height: 80px;
+  }
+
+  &__title3 {
+    
+  }  
+
+  &__title4 {
+    font-size: 20px;
+    line-height: 36px;
+  } 
+
+  &__title5 {
+    font-size: 14px;
+    line-height: 28px;
+  }   
 
   &__lg {
     font-size: 36px;
@@ -249,7 +285,7 @@
     @include mobile {
       //font-size: 12px;
       //line-height: 16px;
-    }
+    }    
 
     &--alert {
       position: relative;

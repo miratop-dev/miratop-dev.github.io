@@ -1,16 +1,16 @@
 mixin mainPageExpertiseAreas(name, items)    
   li.expertise-areas__block
-    .c-title.c-title__md.expertise-areas__name= name
+    .c-title.c-title__title4.expertise-areas__name&attributes(attributes)= name
     each item, index in items
-      if(index < 4)
+      if(index < 5)
         div.expertise-areas__activity= item
       else
         div.expertise-areas__activity.hide= item
-    a.expertise-areas__more(href="#", data-js-handler='expand-list__handler') Показать все
+    a.expertise-areas__more(href="#", data-js-handler='expand-list__handler') Показати всі
 
 mixin mainPageResponsibility(name, text)    
-  li
-    .c-title.c-title__md.c-title__md--indent= name
+  li.responsibility__element&attributes(attributes)
+    .c-title.c-title__title4.responsibility__title= name
     .responsibility__description= text
 
 mixin mainPageWorkflow(args)
@@ -33,7 +33,7 @@ mixin mainPageRecommendations(args)
       .recommendations__imgwrap
         img(src= 'assets/img/recommendation-photo.jpg' alt="recommending's photo")
       .recommendations__profile
-        .c-title.c-title__sm= args.name
+        .c-title.c-title__title4= args.name
         p.recommendations__position= args.position
 
 mixin pageTitle(title) 
