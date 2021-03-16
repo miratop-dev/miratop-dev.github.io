@@ -37,17 +37,13 @@ mixin mainPageRecommendations(args)
         p.recommendations__position= args.position
 
 mixin pageTitle(title) 
-  .page-title.c-gradient
+  .page-title
     .page-title__container
-      h1= title        
-      .page-title__decoration.page-title__decoration--lg.c-decoration.c-decoration--100.c-decoration--white.rellax(data-rellax-speed="-1", data-rellax-percentage="0.7")
-      .page-title__decoration.page-title__decoration--md.c-decoration.c-decoration--75.c-decoration--white.rellax(data-rellax-speed="-1.5", data-rellax-percentage="1")
-    .page-title__decoration.page-title__decoration--dots
-    .page-title__decoration.page-title__decoration--wave
+      h1= title 
 
 mixin searchFilters(args)
   .filter-block(class=args.expanded ? '' : 'collapse')
-    .filter-block__title(class=args.expanded ? 'expanded' : 'collapse' data-js-handler="filter__toggle")= args.title
+    .filter-block__title.c-title.c-title__title5(class=args.expanded ? 'expanded' : 'collapse' data-js-handler="filter__toggle")= args.title
     each input, index in args.inputs
       if(index < 5)
         label.filter-block__label
@@ -57,33 +53,34 @@ mixin searchFilters(args)
         label.filter-block__label.hide
           input.filter-block__checkbox(type='checkbox' name= input.name checked= input.checked)
           p= input.label  
-    a.filter-block__more(href="#", data-js-handler='expand-list__handler') Показать еще 
+    a.filter-block__more(href="#", data-js-handler='expand-list__handler') Показати ще 
       span.filter-block__quantity 18    
 
 mixin expertBlock(args)
   .experts__block
-    .experts__imgwrap
-      img(src= args.image alt="avatar")
-    .experts__summary
-      .experts__title.c-title.c-title__sm= args.name
-      .c-info
-        .c-info__experience= args.expirience
-        .c-info__projects= args.projects
-        if(args.free)
-          .c-info__available.c-info__available--free Свободен
-        else 
-          .c-info__available.c-info__available--busy Занят
-      .experts__progress
-        case args.progress
-          when 'high'
-            progress.experts__progressbar.experts__progressbar--high(max='10' value= args.value)
-          when 'middle'
-            progress.experts__progressbar.experts__progressbar--middle(max='10' value= args.value)
-          when 'low'
-            progress.experts__progressbar.experts__progressbar--low(max='10' value= args.value)
-          default
-            progress.experts__progressbar.experts__progressbar--high(max='10' value= args.value)                        
-        span.experts__value= args.value
+    header.experts__header
+      .experts__imgwrap
+        img(src= args.image alt="avatar")
+      .experts__summary
+        .experts__title.c-title.c-title__title4= args.name
+        .c-info
+          .c-info__experience= args.expirience
+          .c-info__projects= args.projects
+          if(args.free)
+            .c-info__available.c-info__available--free Доступний
+          else 
+            .c-info__available.c-info__available--busy зайнятий
+        .experts__progress
+          case args.progress
+            when 'high'
+              progress.experts__progressbar.experts__progressbar--high(max='10' value= args.value)
+            when 'middle'
+              progress.experts__progressbar.experts__progressbar--middle(max='10' value= args.value)
+            when 'low'
+              progress.experts__progressbar.experts__progressbar--low(max='10' value= args.value)
+            default
+              progress.experts__progressbar.experts__progressbar--high(max='10' value= args.value)                        
+          span.experts__value.c-title.c-title__title5= args.value
     .experts__info
       .experts__description= args.description
       .c-tags 
@@ -96,7 +93,7 @@ mixin expertBlock(args)
             a.c-tags__tag(href="#", data-js-handler='expand-list__handler') еще 
               span.c-tags__num= args.tags.length - 3
 
-    a.c-button.c-button--bordered.c-button--md.c-button--mobile.experts__button(href= args.expertLink) Написать
+    a.c-button.c-button--primary.c-button--md.experts__button(href= args.expertLink) Зв'язатись
 
 mixin taskBlock(args)
   .tasks__block

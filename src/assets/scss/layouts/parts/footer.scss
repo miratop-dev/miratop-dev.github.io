@@ -1,6 +1,10 @@
 .footer {
   position: relative;
-  background: $text-ultra-silver;
+  background-color: $text-ultra-silver;
+  background-image: url('/assets/img/footer.png');
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: contain;
   margin: 200px 0 0;
 
   @include desktop-medium {
@@ -91,7 +95,7 @@
     color: $text-grey;
     display: block;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 28px;
     margin: 0 0 8px;
 
     &:last-child {

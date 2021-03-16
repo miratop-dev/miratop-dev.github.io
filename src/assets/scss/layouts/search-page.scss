@@ -17,10 +17,6 @@
 
   &__title {
     position: relative;
-    color: $color-secondary-2;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 24px;
     margin: 0 0 10px;
     cursor: pointer;
 
@@ -59,6 +55,7 @@
     align-items: center;
     margin: 0 0 10px;
     font-size: 14px;
+    color: $text-black;
 
     &:last-child {
       margin: 0 0 12px;
@@ -80,9 +77,11 @@
   }
 
   &__search {
-    height: $control-height-md;
-    padding-left: 32px;
-    padding-right: 32px;
+    height: 52px;
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 28px;
 
     &:first-child {
       display: none;
@@ -95,9 +94,12 @@
   }
 
   &__more {
-    font-size: 14px;
-    line-height: 24px;
-    color: $color-secondary-blue;
+    font-size: 10px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: $text-black;
+    border-bottom: 2px solid $color-pastel-7;
+    padding: 0 0 2px 0;
   }
 
   &.collapse {
@@ -138,11 +140,11 @@
 
     input {
       text-align: center;
-      max-width: 110px;
-      padding: 12px 0;
+      max-width: 145px;
+      padding: 6px 0;
       background: $color-primary-white;
-      border: 2px solid $color-secondary-7;
-      color: $color-secondary-2;
+      border: 2px solid $color-secondary-border;
+      color: $text-black;
       border-radius: 8px;
       font-size: 14px;
       line-height: 24px;
@@ -162,12 +164,18 @@
   }
 
   .ui-slider-horizontal .ui-slider-range {
-    background: $color-secondary-blue;
+    background: $color-pastel-9;
   }
 
   .ui-state-default, .ui-widget-content .ui-state-default {
-    border: 2px solid $color-secondary-blue;
-    background: $color-primary-white;
+    border: 2px solid $color-pastel-7;
+    background: $color-pastel-7;
+    cursor: pointer;
+  }
+
+  .ui-state-default, .ui-widget-content .ui-state-active {
+    border: 2px solid $color-pastel-9;
+    background: $color-pastel-9;
   }
 
   .ui-slider-horizontal .ui-slider-handle {
@@ -180,16 +188,16 @@
 }
 
 .experts {
-  margin: 0 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   &__block {
+    width: 50%;
+    max-width: 390px;
     position: relative;
     z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 30px 0;
-    border-top: 2px solid $color-secondary-border;
 
     @include desktop-large {
       flex-wrap: wrap;
@@ -206,13 +214,12 @@
       flex-wrap: wrap;
       justify-content: flex-start;
       padding: 30px 20px;
-    }     
+    }
   
     &:last-child {
-      border-bottom: 2px solid $color-secondary-border;
 
       &:hover {
-        margin: -10px -42px -10px -40px;
+      /*  margin: -10px -42px -10px -40px;
 
         @include desktop-large {
           padding: 40px 20px 40px;
@@ -227,25 +234,23 @@
         @include tablet {
           padding: 40px 20px 40px;
           margin: -10px 0 -10px -2px;
-        }  
+        } */ 
       }
     }
 
     &:hover {
+      min-width: 480px;
       background: $color-primary-white;
-      border: 2px solid $color-secondary-blue;
       border-radius: 12px;
-      padding: 40px 40px 40px 38px;
-      margin: -10px -42px -12px -40px;
+      padding: 40px 50px 40px 40px;
       z-index: 2;
       -webkit-box-shadow: 0 0 50px 0 rgba(37,70,72,0.1);
       -moz-box-shadow:    0 0 50px 0 rgba(37,70,72,0.1);
       box-shadow:         0 0 50px 0 rgba(37,70,72,0.1);
 
       .experts__button {
-        background-color: $color-secondary-blue;
-        border: 2px solid $color-secondary-blue;
-        color: $color-primary-white;
+        display: inline-flex;
+        margin: 20px 0 0;
         transition: 0.2s all ease-in-out;
       }          
 
@@ -269,12 +274,26 @@
         }
       }
     }
+
+    &:nth-child(2n):hover {
+      margin: -10px -50px -70px -40px;
+    }
+
+    &:nth-child(2n + 1):hover {
+      margin: -10px -42px -70px -40px;
+    }    
+  }
+
+  &__header {
+    display: flex;
   }
 
   &__imgwrap {
-    flex: 0 0 80px;
+    display: inline-block;
+    vertical-align: top;
     margin: 0 20px 0 0;
-    border-radius: 55px;
+    border-radius: 40px;
+    flex: 80px 0 0;
 
     @include mobile {
       width: 52px;
@@ -284,8 +303,8 @@
 
   &__summary {
     width: 100%;
+    display: inline-block;
     max-width: 240px;
-    padding: 0 20px 0 0;
 
     @include mobile {
       padding: 0;
@@ -327,10 +346,10 @@
 
     &--high {
       /* For IE10 */
-      color: $color-new-green;
+      color: $color-pastel-7;
 
       &::-webkit-progress-value {
-        background: $color-new-green;
+        background: $color-pastel-7;
       }
 
       &::-webkit-progress-bar {
@@ -338,16 +357,16 @@
       }       
   
       &::-moz-progress-bar {
-        background: $color-new-green;
+        background: $color-pastel-7;
       }   
     } 
 
     &--middle {
       /* For IE10 */
-      color: $color-secondary-yellow;
+      color: $color-pastel-11;
 
       &::-webkit-progress-value {
-        background: $color-secondary-yellow;
+        background: $color-pastel-11;
       }
 
       &::-webkit-progress-bar {
@@ -355,16 +374,16 @@
       }         
   
       &::-moz-progress-bar {
-        background: $color-secondary-yellow
+        background: $color-pastel-11;
       }   
     }    
     
     &--low {
       /* For IE10 */
-      color: $color-secondary-4;
+      color: $color-pastel-12;
 
       &::-webkit-progress-value {
-        background: $color-secondary-4;
+        background: $color-pastel-12;
       }
 
       &::-webkit-progress-bar {
@@ -372,26 +391,19 @@
       }        
   
       &::-moz-progress-bar {
-        background: $color-secondary-4;
+        background: $color-pastel-12;
       }   
     }     
   }
 
   &__value {
-    color: $color-secondary-2;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 14px;
 
-    @include mobile {
-      font-size: 8px;
-      line-height: 12px;
-    }
   }
 
   &__info {
     width: 100%;
     max-width: 400px;
+    margin: 20px 0 0 0;
 
     @include mobile {
       margin: 10px 0 0 0;
@@ -399,10 +411,10 @@
   }
 
   &__description {
-    color: $color-secondary-2;
+    color: $text-black;
     font-size: 14px;
-    line-height: 24px;
-    margin: 0 0 14px;
+    line-height: 28px;
+    margin: 0 0 10px;
   }
 
   &__contact {
@@ -426,8 +438,7 @@
   }
 
   &__button {
-    top: 23px;
-    right: 0;
+    display: none;
 
     @include desktop-large {
       margin: 10px 0 0;
@@ -440,6 +451,22 @@
     @include tablet {
       right: 20px;
     }
+  }
+}
+
+.expertise-help {
+  margin: 40px auto 0;
+  border-radius: 12px;
+  background-color: $text-ultra-silver;
+  background-image: url('/assets/img/expertise-help.jpg');
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: contain;
+  padding-top: 50px;
+  min-height: 260px;
+
+  &__title {
+    margin-left: 180px;
   }
 }
 

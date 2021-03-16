@@ -56,8 +56,8 @@ main {
 
     display: flex;
     justify-content: space-between;
-    padding-top: 30px;
-    padding-bottom: 20px;
+    padding-top: 0;
+    padding-bottom: 40px;
 
     @include desktop-medium {
       flex-wrap: wrap;
@@ -96,7 +96,7 @@ main {
 
   &__home {
     display: inline-block;
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M11.6765 5.21942C11.6762 5.21915 11.6759 5.21887 11.6756 5.2186L6.78059 0.32373C6.57194 0.11499 6.29454 0 5.99946 0C5.70439 0 5.42698 0.114899 5.21824 0.323639L0.325757 5.21603C0.324109 5.21768 0.322461 5.21942 0.320813 5.22107C-0.107654 5.65201 -0.106921 6.3512 0.322919 6.78104C0.519299 6.97751 0.778668 7.09131 1.05598 7.10321C1.06724 7.10431 1.0786 7.10486 1.09004 7.10486H1.28514V10.7072C1.28514 11.42 1.86512 12 2.57814 12H4.49324C4.68733 12 4.8448 11.8426 4.8448 11.6484V8.82422C4.8448 8.49893 5.10939 8.23434 5.43467 8.23434H6.56425C6.88954 8.23434 7.15413 8.49893 7.15413 8.82422V11.6484C7.15413 11.8426 7.3115 12 7.50569 12H9.42079C10.1338 12 10.7138 11.42 10.7138 10.7072V7.10486H10.8947C11.1897 7.10486 11.4671 6.98996 11.6759 6.78122C12.1062 6.35065 12.1064 5.65027 11.6765 5.21942Z' fill='%23909090'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M11.676 5.21942C11.6757 5.21915 11.6754 5.21887 11.6752 5.2186L6.7801 0.32373C6.57145 0.11499 6.29405 0 5.99897 0C5.7039 0 5.4265 0.114899 5.21776 0.323639L0.325269 5.21603C0.323621 5.21768 0.321973 5.21942 0.320325 5.22107C-0.108142 5.65201 -0.10741 6.3512 0.322431 6.78104C0.518811 6.97751 0.77818 7.09131 1.05549 7.10321C1.06675 7.10431 1.07811 7.10486 1.08955 7.10486H1.28465V10.7072C1.28465 11.42 1.86464 12 2.57765 12H4.49275C4.68684 12 4.84431 11.8426 4.84431 11.6484V8.82422C4.84431 8.49893 5.1089 8.23434 5.43419 8.23434H6.56376C6.88905 8.23434 7.15364 8.49893 7.15364 8.82422V11.6484C7.15364 11.8426 7.31102 12 7.5052 12H9.4203C10.1333 12 10.7133 11.42 10.7133 10.7072V7.10486H10.8942C11.1892 7.10486 11.4666 6.98996 11.6754 6.78122C12.1057 6.35065 12.1059 5.65027 11.676 5.21942Z' fill='%23ADDED4'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
     width: 12px;
     height: 12px;
   }
@@ -104,9 +104,10 @@ main {
   &__link {
     position: relative;
     padding: 0 0 0 44px;
-    color: $color-secondary-grey;
-    font-size: 12px;
+    color: $text-grey2;
+    font-size: 10px;
     line-height: 16px;
+    text-transform: uppercase;
 
     @include tablet {
       padding: 0 0 0 25px;
@@ -115,7 +116,7 @@ main {
     }
 
     &--current {
-      color: $color-secondary-7;
+      color: $text-grey2;
     }
 
     &::before {
@@ -264,7 +265,7 @@ main {
     vertical-align: top;
     position: relative;
     cursor: pointer;
-    border: 1px solid $color-secondary-blue;
+    border: 1px solid $color-secondary-7;
     background: var(--b, var(--background));
     transition: background .3s, border-color .3s, box-shadow .2s;
     &:after {
@@ -277,11 +278,12 @@ main {
     }
     &:checked {
       //--b: var(--active);
-      background: $color-secondary-blue;;
+      background: $color-pastel-7;
       --bc: var(--active);
       --d-o: .3s;
       --d-t: .6s;
       --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+      border: 1px solid $color-pastel-7;
     }
     &:disabled {
       --b: var(--disabled);
@@ -326,7 +328,7 @@ main {
       &:after {
         width: 5px;
         height: 9px;
-        border: 1px solid var(--active-inner);
+        border: 1px solid $text-black;
         border-top: 0;
         border-left: 0;
         left: 5px;

@@ -16,6 +16,7 @@ html(lang='en')
     script(type='text/javascript', src='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
     script(type='text/javascript', src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
     script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/rellax/1.0.0/rellax.min.js')
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js')
     block head
 
   body(class=pageClass)
@@ -29,4 +30,6 @@ html(lang='en')
           block aside
         .c-wide-content.c-wide-content--right
           block content
+      .c-fullwidth 
+        block additional
     include ../includes/modules/footer

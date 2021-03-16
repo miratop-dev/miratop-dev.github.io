@@ -135,7 +135,8 @@
     top: 0;
     right: -7.3vw;
     width: 34.2vw;
-    width: 624px;
+    max-width: 624px;
+    max-height: inherit;
 
     @include extra-large {
       width: 624px;
@@ -159,15 +160,6 @@
 }
 
 .advantages {
-  margin: 0 0 200px;
-
-  @include desktop-large {
-    margin: 0 0 90px;
-  }
-
-  @include tablet {
-    margin: 0 0 60px;
-  }
 
   &__container {
     @include container;
@@ -234,19 +226,19 @@
 }
 
 .expertise-areas {
-  margin: 0 0 210px;
+  margin: 200px 0 0;
 
   @include desktop-large {
-    margin: 0 0 60px;
+    margin: 60px 0 0;
   }
 
   @include desktop-medium {
-    margin: 0 0 60px;
+    margin: 60px 0 0;
   }
 
   @include mobile {
-    margin: 0 0 60px;
-  }  
+    margin: 60px 0 0;
+  } 
 
   &__container {
     @include container;
@@ -371,22 +363,24 @@
 .workflow {
   background-image: url('/assets/img/workflow-bg.jpg');
   background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom right;
   position: relative;
   background-color: $text-ultra-silver;
   padding: 100px 0;
-  margin: 0 0 200px;
+  margin: 200px 0 0;
 
   @include desktop-large {
-    margin: 0 0 60px;
+    margin: 60px 0 0;
   }  
 
   @include desktop-medium {
-    margin: 0 0 60px;
+    margin: 60px 0 0;
   }
 
   @include mobile {
     padding: 40px 0;
-    margin: 0 0 60px;
+    margin: 60px 0 0;
   }    
 
   &__container {
@@ -468,14 +462,14 @@
 }
 
 .responsibility {
-  margin: 0 0 200px;
+  margin: 160px 0 0;
 
   @include desktop-large {
-    margin: 0 0 80px;
+    margin: 80px 0 0;
   }
 
   @include mobile {
-    margin: 0 0 60px;
+    margin: 60px 0 0;
   }
 
   &__container {
@@ -598,6 +592,7 @@
 .recommendations {
   text-align: center;
   position: relative;
+  margin: 200px 0 0;
 
   &__container {
     @include container;
