@@ -54,15 +54,15 @@ mixin searchFilters(args)
           input.filter-block__checkbox(type='checkbox' name= input.name checked= input.checked)
           p= input.label  
     a.filter-block__more(href="#", data-js-handler='expand-list__handler') Показати ще 
-      span.filter-block__quantity 18    
+      span.filter-block__quantity 18  
 
-mixin expertBlock(args)
-  .experts__block
-    header.experts__header
-      .experts__imgwrap
+mixin searchBlockExpert(args)
+  .search__block
+    header.search__header
+      .search__imgwrap
         img(src= args.image alt="avatar")
-      .experts__summary
-        .experts__title.c-title.c-title__title4= args.name
+      .search__summary
+        .search__title.c-title.c-title__title4= args.name
         .c-info
           .c-info__experience= args.expirience
           .c-info__projects= args.projects
@@ -70,19 +70,19 @@ mixin expertBlock(args)
             .c-info__available.c-info__available--free Доступний
           else 
             .c-info__available.c-info__available--busy зайнятий
-        .experts__progress
+        .search__progress
           case args.progress
             when 'high'
-              progress.experts__progressbar.experts__progressbar--high(max='10' value= args.value)
+              progress.search__progressbar.search__progressbar--high(max='10' value= args.value)
             when 'middle'
-              progress.experts__progressbar.experts__progressbar--middle(max='10' value= args.value)
+              progress.search__progressbar.search__progressbar--middle(max='10' value= args.value)
             when 'low'
-              progress.experts__progressbar.experts__progressbar--low(max='10' value= args.value)
+              progress.search__progressbar.search__progressbar--low(max='10' value= args.value)
             default
-              progress.experts__progressbar.experts__progressbar--high(max='10' value= args.value)                        
-          span.experts__value.c-title.c-title__title5= args.value
-    .experts__info
-      .experts__description= args.description
+              progress.search__progressbar.search__progressbar--high(max='10' value= args.value)                        
+          span.search__value.c-title.c-title__title5= args.value
+    .search__info
+      .search__description= args.description
       .c-tags 
         each tag, index in args.tags
           if(index < 3)
@@ -92,17 +92,18 @@ mixin expertBlock(args)
           if ((index == args.tags.length - 1) && (args.tags.length > 3))
             a.c-tags__tag(href="#", data-js-handler='expand-list__handler') еще 
               span.c-tags__num= args.tags.length - 3
+    a.c-button.c-button--primary.c-button--md.search__button(href= args.expertLink) Зв'язатись     
 
-    a.c-button.c-button--primary.c-button--md.experts__button(href= args.expertLink) Зв'язатись
-
-mixin taskBlock(args)
-  .tasks__block
-    .tasks__summary
-      .c-title.c-title__sm.tasks__name= args.name
+mixin searchBlockTask(args)
+  .search__block
+    header
+      .c-title.c-title__title4= args.name
       .c-info
         .c-info__location= args.location
         .c-info__date= args.date
         .c-info__client= args.client
+    .search__info
+      .search__description= args.description
       .c-tags  
         each tag, index in args.tags
           if(index < 3)
@@ -111,9 +112,8 @@ mixin taskBlock(args)
             a.c-tags__tag.hide(href= tag.url)= tag.name
           if ((index == args.tags.length - 1) && (args.tags.length > 3))
             a.c-tags__tag(href="#") еще 
-              span.c-tags__num= args.tags.length - 3
-    .tasks__description= args.description
-    a.c-button.c-button--bordered.c-button--md.c-button--mobile.tasks__button(href= taskLink) Написать
+              span.c-tags__num= args.tags.length - 3    
+    a.c-button.c-button--primary.c-button--md.search__button(href= args.expertLink) Зв'язатись        
 
 mixin relatedArticles(args)
   .article-related__block
