@@ -292,7 +292,10 @@ main.index-page {
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end
 }
 
 .sort__legend {
@@ -749,9 +752,6 @@ main.index-page {
 }
 
 .c-pagination {
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
     margin: 20px 0 0
 }
 
@@ -760,15 +760,15 @@ main.index-page {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center
 }
 
 .c-pagination__block {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     margin: 0 40px 0 0
 }
 
@@ -1317,8 +1317,14 @@ main.index-page {
 }
 
 .page-title {
-    padding: 50px 0 0;
-    position: relative
+    position: relative;
+    margin: 0 0 40px;
+    padding: 30px 0;
+    background-color: #f5f5f5;
+    background-image: url(/assets/img/page-title.png);
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: contain
 }
 
 .page-title__container {
@@ -2200,22 +2206,29 @@ main.index-page {
 }
 
 .search {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+.search,
+.search__block {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between
 }
 
 .search__block {
-    width: 50%;
-    max-width: 390px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
     position: relative;
     z-index: 1;
-    padding: 30px 0
+    padding: 20px 0;
+    border-top: 2px solid #e5e5e5
 }
 
 .search__block:hover {
@@ -2246,10 +2259,17 @@ main.index-page {
     margin: -10px -42px -70px -40px
 }
 
+.search__block:last-child {
+    border-bottom: 2px solid #e5e5e5
+}
+
 .search__header {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
 }
 
 .search__imgwrap {
@@ -2265,7 +2285,7 @@ main.index-page {
 .search__summary {
     width: 100%;
     display: inline-block;
-    max-width: 240px
+    max-width: 410px
 }
 
 .search__statistics {
@@ -2351,8 +2371,7 @@ main.index-page {
 
 .search__info {
     width: 100%;
-    max-width: 400px;
-    margin: 20px 0 0
+    max-width: 400px
 }
 
 .search__description {
@@ -2716,11 +2735,8 @@ main.index-page {
     border-bottom: 2px solid #added4
 }
 
-.article-head__title {
-    color: #254648;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 36px
+.article-head {
+    margin: 0 0 40px
 }
 
 .article-content>div {
@@ -2731,9 +2747,13 @@ main.index-page {
     margin: 0
 }
 
+.article-content__title {
+    margin: 0 0 10px
+}
+
 .article-content p {
     margin: 0 0 10px;
-    color: #676767;
+    color: #35343a;
     font-size: 14px;
     line-height: 24px
 }
@@ -2744,7 +2764,7 @@ main.index-page {
 
 .article-content ul li {
     position: relative;
-    color: #676767;
+    color: #35343a;
     font-size: 14px;
     line-height: 24px;
     margin: 0 0 10px;
@@ -2758,7 +2778,7 @@ main.index-page {
     top: 8px;
     width: 8px;
     height: 8px;
-    background: #278fff;
+    background: #35343a;
     border-radius: 4px
 }
 
@@ -2767,21 +2787,26 @@ main.index-page {
 }
 
 .article-related {
-    margin: 10px 0 0
+    margin: 20px 0 0
 }
 
 .article-related__block {
-    margin: 12px 0 0
+    margin: 10px 0 0
 }
 
 .article-related__block:first-child {
     margin: 0
 }
 
-.article-related__block a {
+.article-related__link {
+    margin: 0 0 8px
+}
+
+.article-related__link a {
     font-size: 14px;
     line-height: 24px;
-    color: #278fff
+    color: #35343a;
+    border-bottom: 2px solid #added4
 }
 
 @media screen and (max-width:480px) {
@@ -3629,11 +3654,6 @@ main.index-page {
         -ms-flex: 0 0 32px;
         flex: 0 0 32px;
         height: 32px
-    }
-
-    .article-head__title {
-        font-size: 16px;
-        line-height: 28px
     }
 
     .article-content ul {

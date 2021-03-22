@@ -1,6 +1,12 @@
 .page-title {
-  padding: 50px 0 0;
   position: relative;
+  margin: 0 0 40px;
+  padding: 30px 0;
+  background-color: $text-ultra-silver;
+  background-image: url(/assets/img/page-title.png);
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: contain;
 
   @include desktop-medium {
     padding: 20px 0;

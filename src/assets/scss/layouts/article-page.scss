@@ -1,15 +1,5 @@
 .article-head {
-  &__title {
-    color: $color-secondary-2;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 36px;
-
-    @include tablet {
-      font-size: 16px;
-      line-height: 28px;
-    }
-  }
+  margin: 0 0 40px;
 }
 
 .article-content {
@@ -21,9 +11,13 @@
     }
   }
 
+  &__title {
+    margin: 0 0 10px;
+  }
+
   p {
     margin: 0 0 10px;
-    color: $color-primary-grey;
+    color: $text-black;
     font-size: 14px;
     line-height: 24px;
   }
@@ -37,7 +31,7 @@
 
     li {
       position: relative;
-      color: $color-primary-grey;
+      color: $text-black;
       font-size: 14px;
       line-height: 24px;
       margin: 0 0 10px;
@@ -50,7 +44,7 @@
         top: 8px;
         width: 8px;
         height: 8px;
-        background: $color-secondary-blue;
+        background: $text-black;
         border-radius: 4px;
       }
 
@@ -62,19 +56,24 @@
 }
 
 .article-related {
-  margin: 10px 0 0 0;
+  margin: 20px 0 0 0;
 
   &__block {
-    margin: 12px 0 0 0;
+    margin: 10px 0 0 0;
 
     &:first-child {
       margin: 0;
     }
+  }
+
+  &__link {
+    margin: 0 0 8px;
 
     a {
       font-size: 14px;
       line-height: 24px;
-      color: $color-secondary-blue;
+      color: $text-black;
+      border-bottom: 2px solid $color-pastel-7;
     }
-  }
+  }  
 }

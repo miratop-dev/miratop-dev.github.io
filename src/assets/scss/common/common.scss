@@ -138,6 +138,7 @@ main {
 .sort {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 
   @include desktop-medium {
     width: 155px;

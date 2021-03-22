@@ -200,11 +200,14 @@
   justify-content: space-between;
 
   &__block {
-    width: 50%;
-    max-width: 390px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
     position: relative;
     z-index: 1;
-    padding: 30px 0;
+    padding: 20px 0;
+    border-top: 2px solid $color-secondary-border;
 
     @include desktop-large {
       flex-wrap: wrap;
@@ -267,10 +270,15 @@
     &:nth-child(2n + 1):hover {
       margin: -10px -42px -70px -40px;
     }    
+
+    &:last-child {
+      border-bottom: 2px solid $color-secondary-border;
+    }
   }
 
   &__header {
     display: flex;
+    align-items: center;
   }
 
   &__imgwrap {
@@ -289,7 +297,7 @@
   &__summary {
     width: 100%;
     display: inline-block;
-    max-width: 240px;
+    max-width: 410px;
 
     @include mobile {
       padding: 0;
@@ -384,7 +392,6 @@
   &__info {
     width: 100%;
     max-width: 400px;
-    margin: 20px 0 0 0;
 
     @include mobile {
       margin: 10px 0 0 0;

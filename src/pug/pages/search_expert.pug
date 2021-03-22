@@ -10,28 +10,28 @@ block variables
 block title 
   .page-title
     .page-title__container
-      h1 Знайди свого 
-        span.c-accent експерта
-
-block statusbar
-  .search-page-top 
-    .search-page-top__container 
       .breadcrumbs
         a.breadcrumbs__home(href="/") 
-        a.breadcrumbs__link.breadcrumbs__link--current(href="/")= pageTitle
+        a.breadcrumbs__link.breadcrumbs__link--current(href="/")= pageTitle    
+      h1 Знайди свого 
+        span.c-accent експерта
+      .sort
+        span.sort__legend Сортувати:
+        .sort__select 
+          select
+            option За рейтингом
+            option За стажем
+            option За проектами
+
+block statusbar
+  //.search-page-top 
+    .search-page-top__container 
       a.search-page-top__filter.c-button.c-button--primary.c-button--filter(data-js-handler='mobile-filter__handler') Фильтр
 
 block aside
   include ../includes/modules/expert-filters    
 
 block content 
-  .sort
-    span.sort__legend Сортувати:
-    .sort__select 
-      select
-        option За рейтингом
-        option За стажем
-        option За проектами
   include ../includes/modules/expert-list
   +pagination
 

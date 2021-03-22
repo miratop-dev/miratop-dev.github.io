@@ -36,11 +36,6 @@ mixin mainPageRecommendations(args)
         .c-title.c-title__title4= args.name
         p.recommendations__position= args.position
 
-mixin pageTitle(title) 
-  .page-title
-    .page-title__container
-      h1= title 
-
 mixin searchFilters(args)
   .filter-block(class=args.expanded ? '' : 'collapse')
     .filter-block__title.c-title.c-title__title5(class=args.expanded ? 'expanded' : 'collapse' data-js-handler="filter__toggle")= args.title
@@ -81,17 +76,17 @@ mixin searchBlockExpert(args)
             default
               progress.search__progressbar.search__progressbar--high(max='10' value= args.value)                        
           span.search__value.c-title.c-title__title5= args.value
+        .c-tags 
+          each tag, index in args.tags
+            if(index < 3)
+              a.c-tags__tag(href= tag.url)= tag.name
+            else 
+              a.c-tags__tag.hide(href= tag.url)= tag.name
+            if ((index == args.tags.length - 1) && (args.tags.length > 3))
+              a.c-tags__tag(href="#", data-js-handler='expand-list__handler') еще 
+                span.c-tags__num= args.tags.length - 3          
     .search__info
       .search__description= args.description
-      .c-tags 
-        each tag, index in args.tags
-          if(index < 3)
-            a.c-tags__tag(href= tag.url)= tag.name
-          else 
-            a.c-tags__tag.hide(href= tag.url)= tag.name
-          if ((index == args.tags.length - 1) && (args.tags.length > 3))
-            a.c-tags__tag(href="#", data-js-handler='expand-list__handler') еще 
-              span.c-tags__num= args.tags.length - 3
     a.c-button.c-button--primary.c-button--md.search__button(href= args.expertLink) Зв'язатись     
 
 mixin searchBlockTask(args)
@@ -102,8 +97,6 @@ mixin searchBlockTask(args)
         .c-info__location= args.location
         .c-info__date= args.date
         .c-info__client= args.client
-    .search__info
-      .search__description= args.description
       .c-tags  
         each tag, index in args.tags
           if(index < 3)
@@ -112,12 +105,15 @@ mixin searchBlockTask(args)
             a.c-tags__tag.hide(href= tag.url)= tag.name
           if ((index == args.tags.length - 1) && (args.tags.length > 3))
             a.c-tags__tag(href="#") еще 
-              span.c-tags__num= args.tags.length - 3    
+              span.c-tags__num= args.tags.length - 3          
+    .search__info
+      .search__description= args.description  
     a.c-button.c-button--primary.c-button--md.search__button(href= args.expertLink) Зв'язатись        
 
 mixin relatedArticles(args)
   .article-related__block
-    a(href= args.link)= args.title
+    .article-related__link
+      a(href= args.link)= args.title
     .c-info
       .c-info__date= args.date
       .c-info__email= args.email
