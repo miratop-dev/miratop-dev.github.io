@@ -319,12 +319,9 @@ main {
       }
     }
     & + label {
-      font-size: 14px;
-      line-height: 21px;
       display: inline-block;
-      vertical-align: top;
+      vertical-align: middle;
       cursor: pointer;
-      margin-left: 4px;
     }
   }
   input[type='checkbox'] {
@@ -372,15 +369,18 @@ main {
   input[type='radio'] {
     border-radius: 50%;
     &:after {
-      width: 19px;
-      height: 19px;
-      border-radius: 50%;
-      background: var(--active-inner);
+      width: 8px;
+      height: 8px;
+      border-radius: 4px;
+      background: $color-pastel-7;
       opacity: 0;
-      transform: scale(var(--s, .7));
+      top: 3px;
+      left: 3px;
+      //transform: scale(var(--s, .7));
     }
     &:checked {
       --s: .5;
+      background: $color-primary-white;
     }
   }
 }

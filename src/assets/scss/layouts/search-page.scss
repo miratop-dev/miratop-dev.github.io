@@ -53,16 +53,34 @@
   &__label {
     display: flex;
     align-items: center;
-    margin: 0 0 10px;
     font-size: 14px;
+    margin: 0 0 10px;
     color: $text-black;
 
-    &:last-child {
-      margin: 0 0 12px;
+    &--checkbox {
+      &:last-child {
+        margin: 0 0 12px;
+      }
+  
+      &.hide {
+        display: none;
+      }
     }
 
-    &.hide {
-      display: none;
+    &--radio {
+      margin-left: 8px;
+    }
+  }
+
+  &__inputs {
+    display: flex;
+
+    div {
+      margin: 0 15px 0 0;
+
+      &:last-child {
+        margin: 0;
+      }
     }
   }
 
@@ -227,18 +245,34 @@
     }
 
     &:hover {
-      min-width: 480px;
+      border-top: 2px solid $color-primary-white;
+      margin: -20px -40px -20px;
+      min-width: 920px;
+      padding: 40px;
       background: $color-primary-white;
       border-radius: 12px;
-      padding: 40px 50px 40px 40px;
       z-index: 2;
       -webkit-box-shadow: 0 0 50px 0 rgba(37,70,72,0.1);
       -moz-box-shadow:    0 0 50px 0 rgba(37,70,72,0.1);
       box-shadow:         0 0 50px 0 rgba(37,70,72,0.1);
 
+      .search__buttons {
+        display: block;
+        position: absolute;
+        background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0.3) 100%);
+        top: 0;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        width: 260px;
+      }
+
       .search__button {
         display: inline-flex;
-        margin: 20px 0 0;
+        top: 50%;
+        margin-top: -20px;
+        position: absolute;
+        right: 40px;
         transition: 0.2s all ease-in-out;
       }          
 
@@ -255,21 +289,9 @@
       @include tablet {
         padding: 40px 20px 40px;
         margin: -10px 0 -12px -2px;
-
-        .experts__button {
-          top: 33px;
-          right: 18px;
-        }
       }
     }
 
-    &:nth-child(2n):hover {
-      margin: -10px -50px -70px -40px;
-    }
-
-    &:nth-child(2n + 1):hover {
-      margin: -10px -42px -70px -40px;
-    }    
 
     &:last-child {
       border-bottom: 2px solid $color-secondary-border;
@@ -402,7 +424,6 @@
     color: $text-black;
     font-size: 14px;
     line-height: 28px;
-    margin: 0 0 10px;
   }
 
   &__contact {
@@ -423,6 +444,10 @@
     @include desktop-medium {
       margin: 10px 0 0;
     }    
+  }
+
+  &__buttons {
+    display: none;
   }
 
   &__button {

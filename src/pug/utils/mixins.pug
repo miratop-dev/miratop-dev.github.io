@@ -41,11 +41,11 @@ mixin searchFilters(args)
     .filter-block__title.c-title.c-title__title5(class=args.expanded ? 'expanded' : 'collapse' data-js-handler="filter__toggle")= args.title
     each input, index in args.inputs
       if(index < 5)
-        label.filter-block__label
+        label.filter-block__label.filter-block__label--checkbox
           input.filter-block__checkbox(type='checkbox' name= input.name checked= input.checked)
           p= input.label
       else
-        label.filter-block__label.hide
+        label.filter-block__label.filter-block__label--checkbox.hide
           input.filter-block__checkbox(type='checkbox' name= input.name checked= input.checked)
           p= input.label  
     a.filter-block__more(href="#", data-js-handler='expand-list__handler') Показати ще 
@@ -87,7 +87,8 @@ mixin searchBlockExpert(args)
                 span.c-tags__num= args.tags.length - 3          
     .search__info
       .search__description= args.description
-    a.c-button.c-button--primary.c-button--md.search__button(href= args.expertLink) Зв'язатись     
+    .search__buttons
+      a.c-button.c-button--primary.c-button--md.search__button(href= args.expertLink) Зв'язатись     
 
 mixin searchBlockTask(args)
   .search__block
@@ -108,7 +109,8 @@ mixin searchBlockTask(args)
               span.c-tags__num= args.tags.length - 3          
     .search__info
       .search__description= args.description  
-    a.c-button.c-button--primary.c-button--md.search__button(href= args.expertLink) Зв'язатись        
+    .search__buttons
+      a.c-button.c-button--primary.c-button--md.search__button(href= args.expertLink) Відгукнутись       
 
 mixin relatedArticles(args)
   .article-related__block

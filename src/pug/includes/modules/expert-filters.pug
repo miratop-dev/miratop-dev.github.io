@@ -1,5 +1,17 @@
 .c-aside__title.c-gradient Фильтр
   .c-aside__close(data-js-handler='mobile-filter__handler')
+.filter-block
+  .filter-block__title.c-title.c-title__title5.expanded(data-js-handler="filter__toggle") Доступність
+  .filter-block__inputs
+    div
+      input.filter-block__radio(type='radio', id='all_experts', name='filter_radio')
+      label.filter-block__label.filter-block__label--radio(for='all_experts') Всі експерти
+    div
+      input.filter-block__radio(type='radio', id='free_experts', name='filter_radio')
+      label.filter-block__label.filter-block__label--radio(for='free_experts') Доступні
+    div
+      input.filter-block__radio(type='radio', id='busy_experts', name='filter_radio')
+      label.filter-block__label.filter-block__label--radio(for='busy_experts') Зайняті    
 +searchFilters({
   title: 'Персонал', 
   expanded: true,
