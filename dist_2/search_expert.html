@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mira.hub search expert</title>
+    <meta name="description" content="Mira.hub search expert">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Mira.hub search expert">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.0.0/rellax.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <link href="assets/css/app.817c1c8f9765d668b9e5.css" rel="stylesheet">
+</head>
+
+<body class="search-page">
+    <div class="main-menu">
+        <div class="main-menu__container">
+            <div class="main-menu__header"><a class="header__logo" href="/"><img src="assets/img/logo__black.svg" alt="logo"></a><a class="main-menu__close" href="#" data-js-handler="menu__toggle"></a></div>
+            <div class="main-menu__wrapper">
+                <div class="main-menu__primary">
+                    <ul>
+                        <li> <img src="assets/img/benefit_icon_3.png"><a class="main-menu__el main-menu__el--lg" href="#">Как стать экспертом</a></li>
+                        <li> <img src="assets/img/benefit_icon_3.png"><a class="main-menu__el main-menu__el--lg" href="#">Как добавить предложение</a></li>
+                        <li> <img src="assets/img/benefit_icon_3.png"><a class="main-menu__el main-menu__el--lg" href="#">Безопасность сделки </a></li>
+                        <li> <img src="assets/img/benefit_icon_3.png"><a class="main-menu__el main-menu__el--lg" href="#">Нужна консультация</a></li>
+                    </ul>
+                </div>
+                <div class="main-menu__secondary">
+                    <ul>
+                        <li> <a class="main-menu__el main-menu__el--sm" href="./search_expert.html">Знайди свого експерта</a></li>
+                        <li> <a class="main-menu__el main-menu__el--sm" href="./details_expert.html">Подробнее об эксперте </a></li>
+                        <li> <a class="main-menu__el main-menu__el--sm" href="./search_task.html">Поиск предложения </a></li>
+                        <li> <a class="main-menu__el main-menu__el--sm" href="./details_task.html">Детали предложения </a></li>
+                        <li> <a class="main-menu__el main-menu__el--sm" href="./article_page.html">Статья </a></li>
+                    </ul>
+                    <div class="main-menu__lang"> <a href="#">ENG</a><a href="#">UA</a><a class="current" href="#">RUS </a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay" data-js-handler="overlay__handler"></div>
+    <header class="header">
+        <div class="header__container"><a class="header__logo" href="/"><img src="assets/img/logo.svg" alt="logo"></a>
+            <div class="header__links"><a class="header__burger" href="#" data-js-handler="menu__toggle">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div> </div>
+                </a><a class="header__link" href="#">Пропозиції</a><a class="header__link" href="#">Експерти</a><a class="header__more" href="#">Як це працює </a></div>
+            <div class="header__buttons"><a class="header__join c-button c-button--primary c-button--md" href="#popup-login" data-js-handler="popup__handler">Приєднатись</a></div>
+        </div>
+    </header>
+    <div class="page-title">
+        <div class="page-title__container">
+            <div class="breadcrumbs"><a class="breadcrumbs__home" href="/"> </a><a class="breadcrumbs__link breadcrumbs__link--current" href="/">Знайди свого експерта</a></div>
+            <h1>Знайди свого <span class="c-accent">експерта</span></h1>
+            <div class="sort"><span class="sort__legend">Сортувати:</span>
+                <div class="sort__select"> <select>
+                        <option>За рейтингом</option>
+                        <option>За стажем</option>
+                        <option>За проектами</option>
+                    </select></div>
+            </div>
+        </div>
+    </div>
+    <!--.search-page-top .search-page-top__container 
+  a.search-page-top__filter.c-button.c-button--primary.c-button--filter(data-js-handler='mobile-filter__handler') Фильтр
+-->
+    <main class="search-page">
+        <div class="c-container">
+            <div class="c-aside">
+                <div class="c-aside__title c-gradient">Фильтр<div class="c-aside__close" data-js-handler="mobile-filter__handler"></div>
+                </div>
+                <div class="filter-block">
+                    <div class="filter-block__title c-title c-title__title5 expanded" data-js-handler="filter__toggle">Доступність</div>
+                    <div class="filter-block__inputs">
+                        <div><input class="filter-block__radio" type="radio" id="all_experts" name="filter_radio"><label class="filter-block__label filter-block__label--radio" for="all_experts">Всі експерти</label></div>
+                        <div><input class="filter-block__radio" type="radio" id="free_experts" name="filter_radio"><label class="filter-block__label filter-block__label--radio" for="free_experts">Доступні</label></div>
+                        <div><input class="filter-block__radio" type="radio" id="busy_experts" name="filter_radio"><label class="filter-block__label filter-block__label--radio" for="busy_experts">Зайняті </label></div>
+                    </div>
+                </div>
+                <div class="filter-block">
+                    <div class="filter-block__title c-title c-title__title5 expanded" data-js-handler="filter__toggle">Персонал</div><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Система обучения</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Оценка персонала</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Подбор специалистов</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Система обучения</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Оценка персонала</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox hide"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Оценка персонала</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox hide"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Оценка персонала</p>
+                    </label><a class="filter-block__more" href="#" data-js-handler="expand-list__handler">Показати ще <span class="filter-block__quantity">18 </span></a>
+                </div>
+                <div class="filter-block">
+                    <div class="filter-block__title c-title c-title__title5 expanded" data-js-handler="filter__toggle">Финансы</div><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Система обучения</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]" checked>
+                        <p>Оценка персонала</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Подбор специалистов</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Система обучения</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Оценка персонала</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox hide"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Оценка персонала</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox hide"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Оценка персонала</p>
+                    </label><a class="filter-block__more" href="#" data-js-handler="expand-list__handler">Показати ще <span class="filter-block__quantity">18 </span></a>
+                </div>
+                <div class="filter-block">
+                    <div class="filter-block__title c-title c-title__title5 expanded" data-js-handler="filter__toggle">Масштабирование</div><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Система обучения</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Оценка персонала</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Подбор специалистов</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Система обучения</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Оценка персонала</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox hide"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Оценка персонала</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox hide"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Оценка персонала</p>
+                    </label><a class="filter-block__more" href="#" data-js-handler="expand-list__handler">Показати ще <span class="filter-block__quantity">18 </span></a>
+                </div>
+                <div class="filter-block collapse">
+                    <div class="filter-block__title c-title c-title__title5 collapse" data-js-handler="filter__toggle">Персонал</div><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Система обучения</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Оценка персонала</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Подбор специалистов</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Система обучения</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Оценка персонала</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox hide"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Оценка персонала</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox hide"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Оценка персонала</p>
+                    </label><a class="filter-block__more" href="#" data-js-handler="expand-list__handler">Показати ще <span class="filter-block__quantity">18 </span></a>
+                </div>
+                <div class="filter-block collapse">
+                    <div class="filter-block__title c-title c-title__title5 collapse" data-js-handler="filter__toggle">Финансы</div><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Система обучения</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]" checked>
+                        <p>Оценка персонала</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Подбор специалистов</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Система обучения</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Оценка персонала</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox hide"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Оценка персонала</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox hide"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Оценка персонала</p>
+                    </label><a class="filter-block__more" href="#" data-js-handler="expand-list__handler">Показати ще <span class="filter-block__quantity">18 </span></a>
+                </div>
+                <div class="filter-block collapse">
+                    <div class="filter-block__title c-title c-title__title5 collapse" data-js-handler="filter__toggle">Бухгалтерия</div><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Система обучения</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Оценка персонала</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Подбор специалистов</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Система обучения</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Оценка персонала</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox hide"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Оценка персонала</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox hide"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Оценка персонала</p>
+                    </label><a class="filter-block__more" href="#" data-js-handler="expand-list__handler">Показати ще <span class="filter-block__quantity">18 </span></a>
+                </div>
+                <div class="filter-block collapse">
+                    <div class="filter-block__title c-title c-title__title5 collapse" data-js-handler="filter__toggle">Масштабирование</div><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Система обучения</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Оценка персонала</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Подбор специалистов</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Система обучения</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Оценка персонала</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox hide"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Оценка персонала</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox hide"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Оценка персонала</p>
+                    </label><a class="filter-block__more" href="#" data-js-handler="expand-list__handler">Показати ще <span class="filter-block__quantity">18 </span></a>
+                </div>
+                <div class="filter-block">
+                    <div class="filter-block__title c-title c-title__title5 expanded" data-js-handler="filter__toggle">Местоположение</div><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Киев</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Киевская обл.</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Львовская обл.</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Харьковская обл.</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Одесская обл.</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox hide"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Кувейтская обл.</p>
+                    </label><label class="filter-block__label filter-block__label--checkbox hide"><input class="filter-block__checkbox" type="checkbox" name="name[]">
+                        <p>Вашингтонская обл.</p>
+                    </label><a class="filter-block__more" href="#" data-js-handler="expand-list__handler">Показати ще <span class="filter-block__quantity">18 </span></a>
+                </div>
+                <div class="filter-block">
+                    <div class="filter-block__title c-title c-title__title5">Рейтинг</div>
+                    <div class="range-slider">
+                        <div class="range-slider__inputs"><input class="range-slider__min" type="text">
+                            <div class="range-slider__delimiter"></div><input class="range-slider__max" type="text">
+                        </div>
+                        <div class="range-slider__handler" data-js-handler="range-slider__handler"></div>
+                    </div>
+                </div>
+                <div class="filter-block__links"><a class="filter-block__search c-button c-button--bordered c-button--lg" href="#">Отменить фильтры</a><a class="filter-block__search c-button c-button--primary" href="#">Знайти eксперта</a></div>
+            </div>
+            <div class="c-wide-content c-wide-content--right">
+                <div class="search">
+                    <div class="search__block">
+                        <header class="search__header">
+                            <div class="search__imgwrap"><img src="assets/img/expert-avatar-1.jpg" alt="avatar"></div>
+                            <div class="search__summary">
+                                <div class="search__title c-title c-title__title4">Андрій Петренко</div>
+                                <div class="c-info">
+                                    <div class="c-info__experience">10 лет</div>
+                                    <div class="c-info__projects">527</div>
+                                    <div class="c-info__available c-info__available--busy">зайнятий</div>
+                                </div>
+                                <div class="search__progress"><progress class="search__progressbar search__progressbar--high" max="10" value="8.75"></progress><span class="search__value c-title c-title__title5">8.75</span></div>
+                                <div class="c-tags"> <a class="c-tags__tag" href="#">Аудит</a><a class="c-tags__tag" href="#">Бухгалтерия</a><a class="c-tags__tag" href="#">Персонал</a><a class="c-tags__tag hide" href="#">Персонал</a><a class="c-tags__tag hide" href="#">Персонал</a><a class="c-tags__tag hide" href="#">Персонал</a><a class="c-tags__tag" href="#" data-js-handler="expand-list__handler">еще <span class="c-tags__num">3</span></a></div>
+                            </div>
+                        </header>
+                        <div class="search__info">
+                            <div class="search__description">Допоможу твоєму бізнесу в розробці маркетингової стратегії та позиціонуванні бренду в соціальних мережах. На «ти» з усіма Digital-інструментами, які відомі світу :)</div>
+                        </div>
+                        <div class="search__buttons"><a class="c-button c-button--primary c-button--md search__button" href="#">Зв'язатись </a></div>
+                    </div>
+                    <div class="search__block">
+                        <header class="search__header">
+                            <div class="search__imgwrap"><img src="assets/img/expert-avatar-2.jpg" alt="avatar"></div>
+                            <div class="search__summary">
+                                <div class="search__title c-title c-title__title4">Андрій Петренко</div>
+                                <div class="c-info">
+                                    <div class="c-info__experience">10 лет</div>
+                                    <div class="c-info__projects">527</div>
+                                    <div class="c-info__available c-info__available--free">Доступний</div>
+                                </div>
+                                <div class="search__progress"><progress class="search__progressbar search__progressbar--low" max="10" value="3.75"></progress><span class="search__value c-title c-title__title5">3.75</span></div>
+                                <div class="c-tags"> <a class="c-tags__tag" href="#">Аудит</a><a class="c-tags__tag" href="#">Бухгалтерия</a><a class="c-tags__tag" href="#">Персонал</a><a class="c-tags__tag hide" href="#">Персонал</a><a class="c-tags__tag hide" href="#">Персонал</a><a class="c-tags__tag hide" href="#">Персонал</a><a class="c-tags__tag" href="#" data-js-handler="expand-list__handler">еще <span class="c-tags__num">3</span></a></div>
+                            </div>
+                        </header>
+                        <div class="search__info">
+                            <div class="search__description">Допоможу твоєму бізнесу в розробці маркетингової стратегії та позиціонуванні бренду в соціальних мережах. На «ти» з усіма Digital-інструментами, які відомі світу :)</div>
+                        </div>
+                        <div class="search__buttons"><a class="c-button c-button--primary c-button--md search__button" href="#">Зв'язатись </a></div>
+                    </div>
+                    <div class="search__block">
+                        <header class="search__header">
+                            <div class="search__imgwrap"><img src="assets/img/expert-avatar-3.jpg" alt="avatar"></div>
+                            <div class="search__summary">
+                                <div class="search__title c-title c-title__title4">Андрій Петренко</div>
+                                <div class="c-info">
+                                    <div class="c-info__experience">10 лет</div>
+                                    <div class="c-info__projects">527</div>
+                                    <div class="c-info__available c-info__available--free">Доступний</div>
+                                </div>
+                                <div class="search__progress"><progress class="search__progressbar search__progressbar--middle" max="10" value="7.00"></progress><span class="search__value c-title c-title__title5">7.00</span></div>
+                                <div class="c-tags"> <a class="c-tags__tag" href="#">Аудит</a><a class="c-tags__tag" href="#">Бухгалтерия</a><a class="c-tags__tag" href="#">Персонал</a></div>
+                            </div>
+                        </header>
+                        <div class="search__info">
+                            <div class="search__description">Допоможу твоєму бізнесу в розробці маркетингової стратегії та позиціонуванні бренду в соціальних мережах. На «ти» з усіма Digital-інструментами, які відомі світу :)</div>
+                        </div>
+                        <div class="search__buttons"><a class="c-button c-button--primary c-button--md search__button" href="#">Зв'язатись </a></div>
+                    </div>
+                    <div class="search__block">
+                        <header class="search__header">
+                            <div class="search__imgwrap"><img src="assets/img/expert-avatar-1.jpg" alt="avatar"></div>
+                            <div class="search__summary">
+                                <div class="search__title c-title c-title__title4">Андрій Петренко</div>
+                                <div class="c-info">
+                                    <div class="c-info__experience">10 лет</div>
+                                    <div class="c-info__projects">527</div>
+                                    <div class="c-info__available c-info__available--busy">зайнятий</div>
+                                </div>
+                                <div class="search__progress"><progress class="search__progressbar search__progressbar--high" max="10" value="8.75"></progress><span class="search__value c-title c-title__title5">8.75</span></div>
+                                <div class="c-tags"> <a class="c-tags__tag" href="#">Аудит</a><a class="c-tags__tag" href="#">Бухгалтерия</a><a class="c-tags__tag" href="#">Персонал</a><a class="c-tags__tag hide" href="#">Персонал</a><a class="c-tags__tag hide" href="#">Персонал</a><a class="c-tags__tag hide" href="#">Персонал</a><a class="c-tags__tag" href="#" data-js-handler="expand-list__handler">еще <span class="c-tags__num">3</span></a></div>
+                            </div>
+                        </header>
+                        <div class="search__info">
+                            <div class="search__description">Допоможу твоєму бізнесу в розробці маркетингової стратегії та позиціонуванні бренду в соціальних мережах. На «ти» з усіма Digital-інструментами, які відомі світу :)</div>
+                        </div>
+                        <div class="search__buttons"><a class="c-button c-button--primary c-button--md search__button" href="#">Зв'язатись </a></div>
+                    </div>
+                    <div class="search__block">
+                        <header class="search__header">
+                            <div class="search__imgwrap"><img src="assets/img/expert-avatar-2.jpg" alt="avatar"></div>
+                            <div class="search__summary">
+                                <div class="search__title c-title c-title__title4">Андрій Петренко</div>
+                                <div class="c-info">
+                                    <div class="c-info__experience">10 лет</div>
+                                    <div class="c-info__projects">527</div>
+                                    <div class="c-info__available c-info__available--free">Доступний</div>
+                                </div>
+                                <div class="search__progress"><progress class="search__progressbar search__progressbar--low" max="10" value="3.75"></progress><span class="search__value c-title c-title__title5">3.75</span></div>
+                                <div class="c-tags"> <a class="c-tags__tag" href="#">Аудит</a><a class="c-tags__tag" href="#">Бухгалтерия</a><a class="c-tags__tag" href="#">Персонал</a><a class="c-tags__tag hide" href="#">Персонал</a><a class="c-tags__tag hide" href="#">Персонал</a><a class="c-tags__tag hide" href="#">Персонал</a><a class="c-tags__tag" href="#" data-js-handler="expand-list__handler">еще <span class="c-tags__num">3</span></a></div>
+                            </div>
+                        </header>
+                        <div class="search__info">
+                            <div class="search__description">Допоможу твоєму бізнесу в розробці маркетингової стратегії та позиціонуванні бренду в соціальних мережах. На «ти» з усіма Digital-інструментами, які відомі світу :)</div>
+                        </div>
+                        <div class="search__buttons"><a class="c-button c-button--primary c-button--md search__button" href="#">Зв'язатись </a></div>
+                    </div>
+                    <div class="search__block">
+                        <header class="search__header">
+                            <div class="search__imgwrap"><img src="assets/img/expert-avatar-3.jpg" alt="avatar"></div>
+                            <div class="search__summary">
+                                <div class="search__title c-title c-title__title4">Андрій Петренко</div>
+                                <div class="c-info">
+                                    <div class="c-info__experience">10 лет</div>
+                                    <div class="c-info__projects">527</div>
+                                    <div class="c-info__available c-info__available--free">Доступний</div>
+                                </div>
+                                <div class="search__progress"><progress class="search__progressbar search__progressbar--middle" max="10" value="7.00"></progress><span class="search__value c-title c-title__title5">7.00</span></div>
+                                <div class="c-tags"> <a class="c-tags__tag" href="#">Аудит</a><a class="c-tags__tag" href="#">Бухгалтерия</a><a class="c-tags__tag" href="#">Персонал</a></div>
+                            </div>
+                        </header>
+                        <div class="search__info">
+                            <div class="search__description">Допоможу твоєму бізнесу в розробці маркетингової стратегії та позиціонуванні бренду в соціальних мережах. На «ти» з усіма Digital-інструментами, які відомі світу :)</div>
+                        </div>
+                        <div class="search__buttons"><a class="c-button c-button--primary c-button--md search__button" href="#">Зв'язатись </a></div>
+                    </div>
+                    <div class="search__block">
+                        <header class="search__header">
+                            <div class="search__imgwrap"><img src="assets/img/expert-avatar-1.jpg" alt="avatar"></div>
+                            <div class="search__summary">
+                                <div class="search__title c-title c-title__title4">Андрій Петренко</div>
+                                <div class="c-info">
+                                    <div class="c-info__experience">10 лет</div>
+                                    <div class="c-info__projects">527</div>
+                                    <div class="c-info__available c-info__available--busy">зайнятий</div>
+                                </div>
+                                <div class="search__progress"><progress class="search__progressbar search__progressbar--high" max="10" value="8.75"></progress><span class="search__value c-title c-title__title5">8.75</span></div>
+                                <div class="c-tags"> <a class="c-tags__tag" href="#">Аудит</a><a class="c-tags__tag" href="#">Бухгалтерия</a><a class="c-tags__tag" href="#">Персонал</a><a class="c-tags__tag hide" href="#">Персонал</a><a class="c-tags__tag hide" href="#">Персонал</a><a class="c-tags__tag hide" href="#">Персонал</a><a class="c-tags__tag" href="#" data-js-handler="expand-list__handler">еще <span class="c-tags__num">3</span></a></div>
+                            </div>
+                        </header>
+                        <div class="search__info">
+                            <div class="search__description">Допоможу твоєму бізнесу в розробці маркетингової стратегії та позиціонуванні бренду в соціальних мережах. На «ти» з усіма Digital-інструментами, які відомі світу :)</div>
+                        </div>
+                        <div class="search__buttons"><a class="c-button c-button--primary c-button--md search__button" href="#">Зв'язатись </a></div>
+                    </div>
+                    <div class="search__block">
+                        <header class="search__header">
+                            <div class="search__imgwrap"><img src="assets/img/expert-avatar-2.jpg" alt="avatar"></div>
+                            <div class="search__summary">
+                                <div class="search__title c-title c-title__title4">Андрій Петренко</div>
+                                <div class="c-info">
+                                    <div class="c-info__experience">10 лет</div>
+                                    <div class="c-info__projects">527</div>
+                                    <div class="c-info__available c-info__available--free">Доступний</div>
+                                </div>
+                                <div class="search__progress"><progress class="search__progressbar search__progressbar--low" max="10" value="3.75"></progress><span class="search__value c-title c-title__title5">3.75</span></div>
+                                <div class="c-tags"> <a class="c-tags__tag" href="#">Аудит</a><a class="c-tags__tag" href="#">Бухгалтерия</a><a class="c-tags__tag" href="#">Персонал</a><a class="c-tags__tag hide" href="#">Персонал</a><a class="c-tags__tag hide" href="#">Персонал</a><a class="c-tags__tag hide" href="#">Персонал</a><a class="c-tags__tag" href="#" data-js-handler="expand-list__handler">еще <span class="c-tags__num">3</span></a></div>
+                            </div>
+                        </header>
+                        <div class="search__info">
+                            <div class="search__description">Допоможу твоєму бізнесу в розробці маркетингової стратегії та позиціонуванні бренду в соціальних мережах. На «ти» з усіма Digital-інструментами, які відомі світу :)</div>
+                        </div>
+                        <div class="search__buttons"><a class="c-button c-button--primary c-button--md search__button" href="#">Зв'язатись </a></div>
+                    </div>
+                    <div class="search__block">
+                        <header class="search__header">
+                            <div class="search__imgwrap"><img src="assets/img/expert-avatar-3.jpg" alt="avatar"></div>
+                            <div class="search__summary">
+                                <div class="search__title c-title c-title__title4">Андрій Петренко</div>
+                                <div class="c-info">
+                                    <div class="c-info__experience">10 лет</div>
+                                    <div class="c-info__projects">527</div>
+                                    <div class="c-info__available c-info__available--free">Доступний</div>
+                                </div>
+                                <div class="search__progress"><progress class="search__progressbar search__progressbar--middle" max="10" value="7.00"></progress><span class="search__value c-title c-title__title5">7.00</span></div>
+                                <div class="c-tags"> <a class="c-tags__tag" href="#">Аудит</a><a class="c-tags__tag" href="#">Бухгалтерия</a><a class="c-tags__tag" href="#">Персонал</a></div>
+                            </div>
+                        </header>
+                        <div class="search__info">
+                            <div class="search__description">Допоможу твоєму бізнесу в розробці маркетингової стратегії та позиціонуванні бренду в соціальних мережах. На «ти» з усіма Digital-інструментами, які відомі світу :)</div>
+                        </div>
+                        <div class="search__buttons"><a class="c-button c-button--primary c-button--md search__button" href="#">Зв'язатись </a></div>
+                    </div>
+                    <div class="search__block">
+                        <header class="search__header">
+                            <div class="search__imgwrap"><img src="assets/img/expert-avatar-1.jpg" alt="avatar"></div>
+                            <div class="search__summary">
+                                <div class="search__title c-title c-title__title4">Андрій Петренко</div>
+                                <div class="c-info">
+                                    <div class="c-info__experience">10 лет</div>
+                                    <div class="c-info__projects">527</div>
+                                    <div class="c-info__available c-info__available--busy">зайнятий</div>
+                                </div>
+                                <div class="search__progress"><progress class="search__progressbar search__progressbar--high" max="10" value="8.75"></progress><span class="search__value c-title c-title__title5">8.75</span></div>
+                                <div class="c-tags"> <a class="c-tags__tag" href="#">Аудит</a><a class="c-tags__tag" href="#">Бухгалтерия</a><a class="c-tags__tag" href="#">Персонал</a><a class="c-tags__tag hide" href="#">Персонал</a><a class="c-tags__tag hide" href="#">Персонал</a><a class="c-tags__tag hide" href="#">Персонал</a><a class="c-tags__tag" href="#" data-js-handler="expand-list__handler">еще <span class="c-tags__num">3</span></a></div>
+                            </div>
+                        </header>
+                        <div class="search__info">
+                            <div class="search__description">Допоможу твоєму бізнесу в розробці маркетингової стратегії та позиціонуванні бренду в соціальних мережах. На «ти» з усіма Digital-інструментами, які відомі світу :)</div>
+                        </div>
+                        <div class="search__buttons"><a class="c-button c-button--primary c-button--md search__button" href="#">Зв'язатись </a></div>
+                    </div>
+                </div>
+                <ul class="c-pagination">
+                    <li class="c-pagination__block c-pagination__block--current"><a class="c-pagination__link c-pagination__link--current" href="#">1</a></li>
+                    <li class="c-pagination__block"><a class="c-pagination__link" href="#">2</a></li>
+                    <li class="c-pagination__block"><a class="c-pagination__link" href="#">3</a></li>
+                    <li class="c-pagination__block"><a class="c-pagination__link" href="#">4</a></li>
+                    <li class="c-pagination__block"><a class="c-pagination__link" href="#">5 </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="c-fullwidth">
+            <div class="expertise-areas">
+                <div class="expertise-areas__container">
+                    <h2 class="c-title c-title__title2"> <span class="c-accent">Експертиза</span></h2>
+                    <ul class="expertise-areas__list">
+                        <li class="expertise-areas__block">
+                            <div class="c-title c-title__title4 expertise-areas__name expertise-areas__name--finance">Фінанси, облік, бухгалтерія</div>
+                            <div class="expertise-areas__activity">Розробка і впровадження управлінського обліку.</div>
+                            <div class="expertise-areas__activity">Проведення аудиту поточної облікової системи.</div>
+                            <div class="expertise-areas__activity">Оптимізація бізнес-процесів фінансової функції.</div>
+                            <div class="expertise-areas__activity">Проведення фінансового аналізу діяльності.</div>
+                            <div class="expertise-areas__activity">Коучинг та організація навчання персоналу фінансовим методам управління.</div>
+                            <div class="expertise-areas__activity hide">Розробка і впровадження управлінського обліку.</div>
+                            <div class="expertise-areas__activity hide">Проведення аудиту поточної облікової системи.</div>
+                            <div class="expertise-areas__activity hide">Оптимізація бізнес-процесів фінансової функції.</div><a class="expertise-areas__more" href="#" data-js-handler="expand-list__handler">Показати всі</a>
+                        </li>
+                        <li class="expertise-areas__block">
+                            <div class="c-title c-title__title4 expertise-areas__name expertise-areas__name--strategy">Стратегія</div>
+                            <div class="expertise-areas__activity">Розробка стратегічного плану.</div>
+                            <div class="expertise-areas__activity">Трансформація бізнес-моделі.</div>
+                            <div class="expertise-areas__activity">Масштабування бізнесу.</div>
+                            <div class="expertise-areas__activity">Систематизація бізнес-процесів.</div>
+                            <div class="expertise-areas__activity">Автоматизація бізнес-процесів.</div><a class="expertise-areas__more" href="#" data-js-handler="expand-list__handler">Показати всі</a>
+                        </li>
+                        <li class="expertise-areas__block">
+                            <div class="c-title c-title__title4 expertise-areas__name expertise-areas__name--marketing">Маркетинг та PR</div>
+                            <div class="expertise-areas__activity">Розробка маркетингової стратегії.</div>
+                            <div class="expertise-areas__activity">Розробка та виведення на ринок нового продукту.</div>
+                            <div class="expertise-areas__activity">Розробка стратегії комунікації.</div>
+                            <div class="expertise-areas__activity">Організація роботи відділу маркетингу.</div>
+                            <div class="expertise-areas__activity">Розробка/аудит інструментів інтернет-маркетингу.</div><a class="expertise-areas__more" href="#" data-js-handler="expand-list__handler">Показати всі</a>
+                        </li>
+                        <li class="expertise-areas__block">
+                            <div class="c-title c-title__title4 expertise-areas__name expertise-areas__name--sales">Продажі</div>
+                            <div class="expertise-areas__activity">Залучення нових клієнтів.</div>
+                            <div class="expertise-areas__activity">Збільшення продажів.</div>
+                            <div class="expertise-areas__activity">Побудова взаємодії з VIP-клієнтами.</div>
+                            <div class="expertise-areas__activity">Дослідження цільових аудиторій.</div>
+                            <div class="expertise-areas__activity">Повернення втрачених покупців.</div><a class="expertise-areas__more" href="#" data-js-handler="expand-list__handler">Показати всі</a>
+                        </li>
+                        <li class="expertise-areas__block">
+                            <div class="c-title c-title__title4 expertise-areas__name expertise-areas__name--management">Управління персоналом / HR</div>
+                            <div class="expertise-areas__activity">Розробка ефективної системи підбору.</div>
+                            <div class="expertise-areas__activity">Розробка програми адаптації.</div>
+                            <div class="expertise-areas__activity">Налагодження кадрового обліку.</div>
+                            <div class="expertise-areas__activity">Розробка та оцінка системи винагороди.</div>
+                            <div class="expertise-areas__activity">Створення кадрового резерву.</div><a class="expertise-areas__more" href="#" data-js-handler="expand-list__handler">Показати всі</a>
+                        </li>
+                        <li class="expertise-areas__block">
+                            <div class="c-title c-title__title4 expertise-areas__name expertise-areas__name--logistics">Логістика</div>
+                            <div class="expertise-areas__activity">Організація транспортування.</div>
+                            <div class="expertise-areas__activity">Управління запасами.</div>
+                            <div class="expertise-areas__activity">Контроль та управління складською діяльністю.</div>
+                            <div class="expertise-areas__activity">Управління матеріально-технічною базою.</div>
+                            <div class="expertise-areas__activity">Стратегічне планування в розрізі управління корпоративною логістичною системою.</div><a class="expertise-areas__more" href="#" data-js-handler="expand-list__handler">Показати всі</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="expertise-help">
+                <h2 class="c-title c-title__title2 expertise-help__title"><span class="c-accent">Допоможемо </span><br /><span>з вибором експерта</span></h2>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__socials"><a class="footer__logo" href="/"><img src="assets/img/logo.svg" alt="logo"></a>
+                <div class="footer__socwrap"><a class="footer__social footer__social-fb" href="/"></a><a class="footer__social footer__social-youtube" href="/"></a><a class="footer__social footer__social-linkedin" href="/"></a></div>
+                <div class="footer__legals">
+                    <div class="footer__legal">2021 Mira.hub | Все права защищены.</div>
+                    <div class="footer__legal">Лицензия № 98487395483467587</div>
+                    <div class="footer__legal">Дизайн и разработка:<a href="/">softblues.io</a></div>
+                </div>
+            </div>
+            <div class="footer__menu">
+                <div class="c-title c-title__title5 footer__subtitle">Пользователям</div><a class="footer__link" href="/">Предложения</a><a class="footer__link" href="/">Эксперты</a><a class="footer__link" href="/">Как это работает</a><a class="footer__link" href="/">Экспертиза</a><a class="footer__link" href="/">Ответственность платформы</a><a class="footer__link" href="/">Рекомендации пользователей</a><a class="footer__link" href="/">Ответы на частые вопросы</a>
+            </div>
+            <div class="footer__menu">
+                <div class="c-title c-title__title5 footer__subtitle">О компании</div><a class="footer__link" href="/">О компании</a><a class="footer__link" href="/">Наша команда</a><a class="footer__link" href="/">Партнеры</a><a class="footer__link" href="/">Статьи и новости </a>
+            </div>
+            <div class="footer__contacts">
+                <div class="footer__phone">+38 050 381-44-13</div><a class="footer__place" href="/">01001 м. Київ,<br /> вул. Хрещатик 27а, оф. 20, 21</a><a class="footer__email" href="mailto:info@mira.hub">info@mira.hub</a>
+            </div>
+        </div>
+    </footer>
+    <div class="popup hide" id="popup-login"><a class="popup__close" href="#" data-js-handler="popup__handler-close"></a>
+        <div class="popup__title">Добро пожаловать!</div>
+        <form class="popup__form" action="#"> <label class="popup__label">
+                <div class="popup__desc">Электронная почта</div><input class="popup__input popup__input--text" type="email" name="login_name" placeholder="Email">
+            </label><label class="popup__label">
+                <div class="popup__desc">Пароль</div><input class="popup__input popup__input--text" type="password" name="login_pass" placeholder="Password">
+            </label><a class="popup__restore" href="#">Забыли пароль?</a><input class="popup__input popup__input--submit" type="submit" value="Войти">
+            <div class="popup__unregistered"> <span>Не зарегистрированы? </span><a href="#popup-register" data-js-handler="popup__handler">Создать аккаунт</a></div>
+            <div class="popup__socials"> <a class="popup__social" href="#"><img src="assets/img/popup-google.png"></a><a href="#"><img src="assets/img/popup-facebook.png"></a></div>
+        </form>
+    </div>
+    <div class="popup hide" id="popup-register"><a class="popup__close" href="#" data-js-handler="popup__handler-close"></a>
+        <div class="popup__title">Создать аккаунт!</div>
+        <form class="popup__form" action="#">
+            <div class="popup__account-types"><a class="popup__account-type popup__account-type--active" href="#account-type-client" data-js-handler="popup__account-type"> Клиент</a><a class="popup__account-type" href="#account-type-expert" data-js-handler="popup__account-type"> Эксперт </a></div>
+            <div class="popup__data-wrap popup__data-wrap--current" id="account-type-client"><label class="popup__label">
+                    <div class="popup__desc">Электронная почта</div><input class="popup__input popup__input--text" type="email" name="client_login_name" placeholder="Client email">
+                </label><label class="popup__label">
+                    <div class="popup__desc">Пароль</div><input class="popup__input popup__input--text" type="password" name="client_login_pass" placeholder="Client password">
+                </label><label class="popup__label">
+                    <div class="popup__desc">Повторите пароль</div><input class="popup__input popup__input--text" type="password " name="confirm_client_login_pass" placeholder="Confirm client password">
+                </label></div>
+            <div class="popup__data-wrap" id="account-type-expert"><label class="popup__label">
+                    <div class="popup__desc">Электронная почта</div><input class="popup__input popup__input--text" type="email" name="client_login_name" placeholder="Expert email">
+                </label><label class="popup__label">
+                    <div class="popup__desc">Пароль</div><input class="popup__input popup__input--text" type="password" name="client_login_pass" placeholder="Expert password">
+                </label><label class="popup__label">
+                    <div class="popup__desc">Повторите пароль</div><input class="popup__input popup__input--text" type="password" name="confirm_expert_login_pass" placeholder="Confirm expert password">
+                </label></div><input class="popup__input popup__input--submit" type="submit" value="Зарегистрироваться">
+            <div class="popup__unregistered"> <span>Уже есть аккаунт? </span><a href="#popup-login" data-js-handler="popup__handler">Войти</a></div>
+            <div class="popup__socials"> <a class="popup__social" href="#"><img src="assets/img/popup-google.png"></a><a href="#"><img src="assets/img/popup-facebook.png"></a></div>
+        </form>
+    </div>
+    <script type="text/javascript" src="assets/js/vendors.817c1c8f9765d668b9e5.js"></script>
+    <script type="text/javascript" src="assets/js/app.817c1c8f9765d668b9e5.js"></script>
+</body>
+
+</html>

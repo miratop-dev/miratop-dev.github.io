@@ -5,50 +5,26 @@ block variables
   - var description = 'Mira.hub search expert';
   - var pageClass = 'search-page';
   - let witchPage = 'search'
-  - let pageTitle = 'Знайди свого експерта'
-
-block title 
-  .page-title
-    .page-title__container
-      .breadcrumbs
-        a.breadcrumbs__home(href="/") 
-        a.breadcrumbs__link.breadcrumbs__link--current(href="/")= pageTitle    
-      h1 Знайди свого 
-        span.c-accent експерта
-      .sort
-        span.sort__legend Сортувати:
-        .sort__select 
-          select
-            option За рейтингом
-            option За стажем
-            option За проектами
+  - let pageTitle = 'Поиск эксперта'
 
 block statusbar
-  //.search-page-top 
+  .search-page-top 
     .search-page-top__container 
+      .breadcrumbs
+        a.breadcrumbs__home(href="/") 
+        a.breadcrumbs__link.breadcrumbs__link--current(href="/")= pageTitle
       a.search-page-top__filter.c-button.c-button--primary.c-button--filter(data-js-handler='mobile-filter__handler') Фильтр
+      .sort
+        span.sort__legend Сортировать:
+        .sort__select 
+          select
+            option По рейтингу
+            option По стажу
+            option По проектам
 
 block aside
   include ../includes/modules/expert-filters    
 
 block content 
   include ../includes/modules/expert-list
-  +pagination
-
-block additional
-  .expertise-areas
-    .expertise-areas__container
-      h2.c-title.c-title__title2 
-        span.c-accent Експертиза
-      ul.expertise-areas__list
-        +mainPageExpertiseAreas('Фінанси, облік, бухгалтерія', ['Розробка і впровадження управлінського обліку.', 'Проведення аудиту поточної облікової системи.', 'Оптимізація бізнес-процесів фінансової функції.', 'Проведення фінансового аналізу діяльності.', 'Коучинг та організація навчання персоналу фінансовим методам управління.', 'Розробка і впровадження управлінського обліку.', 'Проведення аудиту поточної облікової системи.', 'Оптимізація бізнес-процесів фінансової функції.'])(class='expertise-areas__name--finance')
-        +mainPageExpertiseAreas('Стратегія', ['Розробка стратегічного плану.', 'Трансформація бізнес-моделі.', 'Масштабування бізнесу.', 'Систематизація бізнес-процесів.', 'Автоматизація бізнес-процесів.'])(class='expertise-areas__name--strategy')
-        +mainPageExpertiseAreas('Маркетинг та PR', ['Розробка маркетингової стратегії.', 'Розробка та виведення на ринок нового продукту.', 'Розробка стратегії комунікації.', 'Організація роботи відділу маркетингу.', 'Розробка/аудит інструментів інтернет-маркетингу.'])(class='expertise-areas__name--marketing')
-        +mainPageExpertiseAreas('Продажі', ['Залучення нових клієнтів.', 'Збільшення продажів.', 'Побудова взаємодії з VIP-клієнтами.', 'Дослідження цільових аудиторій.', 'Повернення втрачених покупців.'])(class='expertise-areas__name--sales')
-        +mainPageExpertiseAreas('Управління персоналом / HR', ['Розробка ефективної системи підбору.', 'Розробка програми адаптації.', 'Налагодження кадрового обліку.', 'Розробка та оцінка системи винагороди.', 'Створення кадрового резерву.'])(class='expertise-areas__name--management')
-        +mainPageExpertiseAreas('Логістика', ['Організація транспортування.', 'Управління запасами.', 'Контроль та управління складською діяльністю.', 'Управління матеріально-технічною базою.', 'Стратегічне планування в розрізі управління корпоративною логістичною системою.'])(class='expertise-areas__name--logistics')
-  .expertise-help
-    h2.c-title.c-title__title2.expertise-help__title
-      span.c-accent Допоможемо 
-      <br />
-      span з вибором експерта
+  +pagination             

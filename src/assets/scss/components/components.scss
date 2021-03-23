@@ -18,7 +18,8 @@
 }
 
 .c-aside {
-  flex: 0 0 360px;
+  flex: 0 0 290px;
+  max-width: 290px;
   background: $text-ultra-silver;
   border-radius: 8px;
   padding: 20px 30px 20px 20px;
@@ -101,7 +102,7 @@
   width: 100%;
 
   &--right {
-    padding-left: 80px;
+    padding-left: 40px;
 
     @include desktop-medium {
       padding-left: 0;
@@ -114,7 +115,7 @@
   }
 
   &--left {
-    padding-right: 80px;
+    padding-right: 40px;
 
     @include desktop-medium {
       padding-right: 0;
@@ -337,18 +338,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 40px 0 0;
+    width: 52px;
+    height: 52px;
 
     &:last-child {
       margin: 0;
+    }
+
+    &--current {
+      background-color: $text-ultra-silver;
+      border-radius: 26px;
     }
   }
 
   &__link {
     color: $text-grey;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 28px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
 
     @include mobile {
       font-size: 12px;

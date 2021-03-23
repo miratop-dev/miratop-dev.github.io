@@ -11,7 +11,6 @@ body {
   font-family: $mainFont;
     font-size: $mainFontSize;
   font-weight: $mainFontWeight;
-  font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'pnum' on, 'lnum' on;
@@ -51,7 +50,7 @@ main {
   z-index: 1;
   position: relative;
   padding-top: 0;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 
   &__container {
     @include container;

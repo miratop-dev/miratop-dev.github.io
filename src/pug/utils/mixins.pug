@@ -1,16 +1,16 @@
 mixin mainPageExpertiseAreas(name, items)    
   li.expertise-areas__block
-    .c-title.c-title__title4.expertise-areas__name&attributes(attributes)= name
+    .c-title.c-title__md.expertise-areas__name= name
     each item, index in items
-      if(index < 5)
+      if(index < 4)
         div.expertise-areas__activity= item
       else
         div.expertise-areas__activity.hide= item
-    a.expertise-areas__more(href="#", data-js-handler='expand-list__handler') Показати всі
+    a.expertise-areas__more(href="#", data-js-handler='expand-list__handler') Показать все
 
 mixin mainPageResponsibility(name, text)    
-  li.responsibility__element&attributes(attributes)
-    .c-title.c-title__title4.responsibility__title= name
+  li
+    .c-title.c-title__md.c-title__md--indent= name
     .responsibility__description= text
 
 mixin mainPageWorkflow(args)
@@ -33,67 +33,71 @@ mixin mainPageRecommendations(args)
       .recommendations__imgwrap
         img(src= 'assets/img/recommendation-photo.jpg' alt="recommending's photo")
       .recommendations__profile
-        .c-title.c-title__title4= args.name
+        .c-title.c-title__sm= args.name
         p.recommendations__position= args.position
+
+mixin pageTitle(title) 
+  .page-title
+    .page-title__container
+      h1= title
 
 mixin searchFilters(args)
   .filter-block(class=args.expanded ? '' : 'collapse')
-    .filter-block__title.c-title.c-title__title5(class=args.expanded ? 'expanded' : 'collapse' data-js-handler="filter__toggle")= args.title
+    .filter-block__title(class=args.expanded ? 'expanded' : 'collapse' data-js-handler="filter__toggle")= args.title
     each input, index in args.inputs
       if(index < 5)
-        label.filter-block__label.filter-block__label--checkbox
+        label.filter-block__label
           input.filter-block__checkbox(type='checkbox' name= input.name checked= input.checked)
           p= input.label
       else
-        label.filter-block__label.filter-block__label--checkbox.hide
+        label.filter-block__label.hide
           input.filter-block__checkbox(type='checkbox' name= input.name checked= input.checked)
           p= input.label  
-    a.filter-block__more(href="#", data-js-handler='expand-list__handler') Показати ще 
-      span.filter-block__quantity 18  
+    a.filter-block__more(href="#", data-js-handler='expand-list__handler') Показать еще 
+      span.filter-block__quantity 18    
 
-mixin searchBlockExpert(args)
-  .search__block
-    header.search__header
-      .search__imgwrap
-        img(src= args.image alt="avatar")
-      .search__summary
-        .search__title.c-title.c-title__title4= args.name
-        .c-info
-          .c-info__experience= args.expirience
-          .c-info__projects= args.projects
-          if(args.free)
-            .c-info__available.c-info__available--free Доступний
+mixin expertBlock(args)
+  .experts__block
+    .experts__imgwrap
+      img(src= args.image alt="avatar")
+    .experts__summary
+      .experts__title.c-title.c-title__sm= args.name
+      .c-info
+        .c-info__experience= args.expirience
+        .c-info__projects= args.projects
+        if(args.free)
+          .c-info__available.c-info__available--free Свободен
+        else 
+          .c-info__available.c-info__available--busy Занят
+      .experts__progress
+        case args.progress
+          when 'high'
+            progress.experts__progressbar.experts__progressbar--high(max='10' value= args.value)
+          when 'middle'
+            progress.experts__progressbar.experts__progressbar--middle(max='10' value= args.value)
+          when 'low'
+            progress.experts__progressbar.experts__progressbar--low(max='10' value= args.value)
+          default
+            progress.experts__progressbar.experts__progressbar--high(max='10' value= args.value)                        
+        span.experts__value= args.value
+    .experts__info
+      .experts__description= args.description
+      .c-tags 
+        each tag, index in args.tags
+          if(index < 3)
+            a.c-tags__tag(href= tag.url)= tag.name
           else 
-            .c-info__available.c-info__available--busy зайнятий
-        .search__progress
-          case args.progress
-            when 'high'
-              progress.search__progressbar.search__progressbar--high(max='10' value= args.value)
-            when 'middle'
-              progress.search__progressbar.search__progressbar--middle(max='10' value= args.value)
-            when 'low'
-              progress.search__progressbar.search__progressbar--low(max='10' value= args.value)
-            default
-              progress.search__progressbar.search__progressbar--high(max='10' value= args.value)                        
-          span.search__value.c-title.c-title__title5= args.value
-        .c-tags 
-          each tag, index in args.tags
-            if(index < 3)
-              a.c-tags__tag(href= tag.url)= tag.name
-            else 
-              a.c-tags__tag.hide(href= tag.url)= tag.name
-            if ((index == args.tags.length - 1) && (args.tags.length > 3))
-              a.c-tags__tag(href="#", data-js-handler='expand-list__handler') еще 
-                span.c-tags__num= args.tags.length - 3          
-    .search__info
-      .search__description= args.description
-    .search__buttons
-      a.c-button.c-button--primary.c-button--md.search__button(href= args.expertLink) Зв'язатись     
+            a.c-tags__tag.hide(href= tag.url)= tag.name
+          if ((index == args.tags.length - 1) && (args.tags.length > 3))
+            a.c-tags__tag(href="#", data-js-handler='expand-list__handler') еще 
+              span.c-tags__num= args.tags.length - 3
 
-mixin searchBlockTask(args)
-  .search__block
-    header
-      .c-title.c-title__title4= args.name
+    a.c-button.c-button--bordered.c-button--md.c-button--mobile.experts__button(href= args.expertLink) Написать
+
+mixin taskBlock(args)
+  .tasks__block
+    .tasks__summary
+      .c-title.c-title__sm.tasks__name= args.name
       .c-info
         .c-info__location= args.location
         .c-info__date= args.date
@@ -106,16 +110,13 @@ mixin searchBlockTask(args)
             a.c-tags__tag.hide(href= tag.url)= tag.name
           if ((index == args.tags.length - 1) && (args.tags.length > 3))
             a.c-tags__tag(href="#") еще 
-              span.c-tags__num= args.tags.length - 3          
-    .search__info
-      .search__description= args.description  
-    .search__buttons
-      a.c-button.c-button--primary.c-button--md.search__button(href= args.expertLink) Відгукнутись       
+              span.c-tags__num= args.tags.length - 3
+    .tasks__description= args.description
+    a.c-button.c-button--bordered.c-button--md.c-button--mobile.tasks__button(href= taskLink) Написать
 
 mixin relatedArticles(args)
   .article-related__block
-    .article-related__link
-      a(href= args.link)= args.title
+    a(href= args.link)= args.title
     .c-info
       .c-info__date= args.date
       .c-info__email= args.email

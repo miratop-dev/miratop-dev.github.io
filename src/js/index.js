@@ -1,6 +1,19 @@
 // Main js file
 // see more: https://github.com/vedees/webpack-template/blob/master/README.md#import-js-files
 
+$("div[data-js-handler='workflow__slider']").slick({
+    dots: true,
+    //appendDots: $('.workflow'),
+    appendDots: $('.workflow__slider'),
+    appendArrows: $('.workflow__container'),
+    responsive: [{
+      breakpoint: 480,
+      settings: {
+        appendDots: $('.workflow__slider'),
+      }
+    }]
+});
+
 $("div[data-js-handler='recommendations__slider']").slick({
   dots: false,
   appendArrows: $('.recommendations'),
@@ -45,7 +58,7 @@ $("[data-js-handler='expand-list__handler']").on('click', function(e){
   $(this).siblings('.' + sibling_previous_class).each(function(index, value){
     if($(value).hasClass('hide')) {
       $(value).removeClass('hide').addClass('show');
-      link_show_more.text('Згорнути');
+      link_show_more.text('Свернуть');
     } else if($(value).hasClass('show')) {
       $(value).removeClass('show').addClass('hide');
       link_show_more.text(link_show_more.data('js-expand-title'));
