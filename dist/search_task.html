@@ -14,7 +14,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.0.0/rellax.min.js"></script>
-    <link href="assets/css/app.9fadf72c7a75d3abee01.css" rel="stylesheet">
+    <link href="assets/css/app.241a5b55afe751257359.css" rel="stylesheet">
 </head>
 
 <body class="search-page">
@@ -46,18 +46,18 @@
     <div class="overlay" data-js-handler="overlay__handler"></div>
     <header class="header">
         <div class="header__container"><a class="header__logo" href="/"><img src="assets/img/logo.svg" alt="logo"></a>
-            <div class="header__links"><a class="header__burger" href="#" data-js-handler="menu__toggle">
+            <div class="header__links"> <a class="header__link" href="#">Пропозиції</a><a class="header__link" href="#">Експерти</a><a class="header__more" href="#">Як це працює </a></div>
+            <div class="header__buttons"><a class="header__burger" href="#" data-js-handler="menu__toggle">
                     <div></div>
                     <div></div>
                     <div></div>
                     <div> </div>
-                </a><a class="header__link" href="#">Пропозиції</a><a class="header__link" href="#">Експерти</a><a class="header__more" href="#">Як це працює </a></div>
-            <div class="header__buttons"><a class="header__join c-button c-button--primary c-button--md" href="#popup-login" data-js-handler="popup__handler">Приєднатись</a></div>
+                </a><a class="header__join c-button c-button--primary c-button--md" href="#popup-login" data-js-handler="popup__handler">Приєднатись</a></div>
         </div>
     </header>
     <div class="page-title">
         <div class="page-title__container">
-            <h1>Поиск предложения</h1>
+            <h1>Поиск <span class="c-accent c-accent--pagetitle">предложения</span></h1>
         </div>
     </div>
     <div class="search-page-top">
@@ -370,40 +370,40 @@
         </div>
     </footer>
     <div class="popup hide" id="popup-login"><a class="popup__close" href="#" data-js-handler="popup__handler-close"></a>
-        <div class="popup__title">Добро пожаловать!</div>
+        <div class="popup__title">Вітаємо!</div>
         <form class="popup__form" action="#"> <label class="popup__label">
-                <div class="popup__desc">Электронная почта</div><input class="popup__input popup__input--text" type="email" name="login_name" placeholder="Email">
+                <div class="popup__desc">Електронна пошта</div><input class="popup__input popup__input--text" type="email" name="login_name" placeholder="Email">
             </label><label class="popup__label">
                 <div class="popup__desc">Пароль</div><input class="popup__input popup__input--text" type="password" name="login_pass" placeholder="Password">
-            </label><a class="popup__restore" href="#">Забыли пароль?</a><input class="popup__input popup__input--submit" type="submit" value="Войти">
-            <div class="popup__unregistered"> <span>Не зарегистрированы? </span><a href="#popup-register" data-js-handler="popup__handler">Создать аккаунт</a></div>
+            </label><a class="popup__restore" href="#">Забули пароль?</a><input class="popup__input popup__input--submit" type="submit" value="Войти">
+            <div class="popup__unregistered"> <span>Не зареєстровані? </span><a href="#popup-register" data-js-handler="popup__handler">Створити акаунт</a></div>
             <div class="popup__socials"> <a class="popup__social" href="#"><img src="assets/img/popup-google.png"></a><a href="#"><img src="assets/img/popup-facebook.png"></a></div>
         </form>
     </div>
     <div class="popup hide" id="popup-register"><a class="popup__close" href="#" data-js-handler="popup__handler-close"></a>
-        <div class="popup__title">Создать аккаунт!</div>
+        <div class="popup__title">Створити акаунт!</div>
         <form class="popup__form" action="#">
-            <div class="popup__account-types"><a class="popup__account-type popup__account-type--active" href="#account-type-client" data-js-handler="popup__account-type"> Клиент</a><a class="popup__account-type" href="#account-type-expert" data-js-handler="popup__account-type"> Эксперт </a></div>
+            <div class="popup__account-types"><a class="popup__account-type popup__account-type--active" href="#account-type-client" data-js-handler="popup__account-type"> Замовник</a><a class="popup__account-type" href="#account-type-expert" data-js-handler="popup__account-type"> Експерт</a></div>
             <div class="popup__data-wrap popup__data-wrap--current" id="account-type-client"><label class="popup__label">
-                    <div class="popup__desc">Электронная почта</div><input class="popup__input popup__input--text" type="email" name="client_login_name" placeholder="Client email">
+                    <div class="popup__desc">Електронна пошта</div><input class="popup__input popup__input--text" type="email" name="client_login_name" placeholder="Client email">
                 </label><label class="popup__label">
                     <div class="popup__desc">Пароль</div><input class="popup__input popup__input--text" type="password" name="client_login_pass" placeholder="Client password">
                 </label><label class="popup__label">
-                    <div class="popup__desc">Повторите пароль</div><input class="popup__input popup__input--text" type="password " name="confirm_client_login_pass" placeholder="Confirm client password">
+                    <div class="popup__desc">Повторіть пароль</div><input class="popup__input popup__input--text" type="password " name="confirm_client_login_pass" placeholder="Confirm client password">
                 </label></div>
             <div class="popup__data-wrap" id="account-type-expert"><label class="popup__label">
-                    <div class="popup__desc">Электронная почта</div><input class="popup__input popup__input--text" type="email" name="client_login_name" placeholder="Expert email">
+                    <div class="popup__desc">Електронна пошта</div><input class="popup__input popup__input--text" type="email" name="client_login_name" placeholder="Expert email">
                 </label><label class="popup__label">
                     <div class="popup__desc">Пароль</div><input class="popup__input popup__input--text" type="password" name="client_login_pass" placeholder="Expert password">
                 </label><label class="popup__label">
-                    <div class="popup__desc">Повторите пароль</div><input class="popup__input popup__input--text" type="password" name="confirm_expert_login_pass" placeholder="Confirm expert password">
-                </label></div><input class="popup__input popup__input--submit" type="submit" value="Зарегистрироваться">
-            <div class="popup__unregistered"> <span>Уже есть аккаунт? </span><a href="#popup-login" data-js-handler="popup__handler">Войти</a></div>
+                    <div class="popup__desc">Повторіть пароль</div><input class="popup__input popup__input--text" type="password" name="confirm_expert_login_pass" placeholder="Confirm expert password">
+                </label></div><input class="popup__input popup__input--submit" type="submit" value="Зареєструватись">
+            <div class="popup__unregistered"> <span>Вже зареєстровані? </span><a href="#popup-login" data-js-handler="popup__handler">Увійти</a></div>
             <div class="popup__socials"> <a class="popup__social" href="#"><img src="assets/img/popup-google.png"></a><a href="#"><img src="assets/img/popup-facebook.png"></a></div>
         </form>
     </div>
-    <script type="text/javascript" src="assets/js/vendors.9fadf72c7a75d3abee01.js"></script>
-    <script type="text/javascript" src="assets/js/app.9fadf72c7a75d3abee01.js"></script>
+    <script type="text/javascript" src="assets/js/vendors.241a5b55afe751257359.js"></script>
+    <script type="text/javascript" src="assets/js/app.241a5b55afe751257359.js"></script>
 </body>
 
 </html>

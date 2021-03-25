@@ -64,16 +64,16 @@
     &:first-child {
       margin: 0;
     }
-  }
-
-  &__link {
-    margin: 0 0 8px;
 
     a {
       font-size: 14px;
-      line-height: 24px;
+      line-height: 28px;
       color: $text-black;
       border-bottom: 2px solid $color-pastel-7;
+    }  
+    
+    .c-info {
+      margin: 5px 0 0 0;
     }
-  }  
+  }
 }

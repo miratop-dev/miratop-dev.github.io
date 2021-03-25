@@ -134,13 +134,19 @@
   &::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    top: 65%;
     left: 0;
     right: 0;
     width: 100%;
     height: 20px;
     background-color: $color-pastel-6;
     z-index: -1;
+  }
+
+  &--pagetitle {
+    &::after {
+      background-color: $color-pastel-7;
+    }
   }
 }
 

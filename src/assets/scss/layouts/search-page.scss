@@ -61,14 +61,14 @@
       &:last-child {
         margin: 0 0 12px;
       }
-  
-      &.hide {
-        display: none;
-      }
     }
 
     &--radio {
       margin-left: 8px;
+    }
+
+    &.hide {
+      display: none;
     }
   }
 

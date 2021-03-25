@@ -4,6 +4,7 @@
 
     height: calc(100vh - 124px);
     max-height: 956px;
+    min-height: 700px;
     padding-top: 8.6vw;
     position: relative;
 
@@ -385,6 +386,19 @@
 
   &__container {
     @include container;
+  }
+
+  &__titlewrap {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__more {
+    margin: 0 0 18px 30px;
+    color: $text-black;
+    font-size: 14px;
+    line-height: 18px;
+    border-bottom: 2px solid $color-pastel-7;
   }
 
   &__infographics {

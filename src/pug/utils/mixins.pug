@@ -9,8 +9,8 @@ mixin mainPageExpertiseAreas(name, items)
     a.expertise-areas__more(href="#", data-js-handler='expand-list__handler') Показать все
 
 mixin mainPageResponsibility(name, text)    
-  li
-    .c-title.c-title__md.c-title__md--indent= name
+  li.responsibility__element&attributes(attributes)
+    .c-title.c-title__title4.responsibility__title= name
     .responsibility__description= text
 
 mixin mainPageWorkflow(args)

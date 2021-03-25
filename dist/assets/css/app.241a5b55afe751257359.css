@@ -609,13 +609,17 @@ main.index-page {
 .c-accent:after {
     content: "";
     position: absolute;
-    bottom: 0;
+    top: 65%;
     left: 0;
     right: 0;
     width: 100%;
     height: 20px;
     background-color: #f8c3b9;
     z-index: -1
+}
+
+.c-accent--pagetitle:after {
+    background-color: #added4
 }
 
 .c-button {
@@ -980,12 +984,12 @@ main.index-page {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
     line-height: 0;
-    width: 28px;
-    margin: 0 30px 0 0
+    width: 24px;
+    margin: 0 70px 0 0
 }
 
 .header__burger div {
@@ -996,7 +1000,7 @@ main.index-page {
 }
 
 .header__burger div:nth-child(2n) {
-    width: 28px
+    width: 24px
 }
 
 .header__burger div:nth-child(odd) {
@@ -1323,6 +1327,7 @@ main.index-page {
     position: relative;
     margin: 0 0 40px;
     padding: 12px 0;
+    background-image: url(../../assets/img/page-title.png);
     background-color: #f5f5f5;
     background-repeat: no-repeat;
     background-position: 100%;
@@ -1347,11 +1352,12 @@ main.index-page {
 
 .popup {
     position: absolute;
-    padding: 70px 60px;
+    padding: 40px 60px;
     border-radius: 8px;
     background-color: #fff;
     background-image: url(../../assets/img/popup-bg.png);
     background-repeat: no-repeat;
+    background-position: 20px 20px;
     top: 10.4vw;
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -1380,10 +1386,10 @@ main.index-page {
 
 .popup__title {
     text-align: center;
-    color: #254648;
+    color: #35343a;
     font-weight: 700;
-    font-size: 24px;
-    line-height: 36px
+    font-size: 32px;
+    line-height: 64px
 }
 
 .popup__account-types {
@@ -1424,9 +1430,8 @@ main.index-page {
 }
 
 .popup__account-type--active:before {
-    border: 2px solid #51db91;
-    background: -o-linear-gradient(355.22deg, #51db91 0, #38d0b5 100%);
-    background: linear-gradient(94.78deg, #51db91, #38d0b5)
+    border: 2px solid #added4;
+    background: #added4
 }
 
 .popup__account-type--active:after {
@@ -1450,7 +1455,7 @@ main.index-page {
 
 .popup form {
     width: 320px;
-    margin: 30px 0 0
+    margin: 40px 0 0
 }
 
 .popup__label {
@@ -1459,7 +1464,9 @@ main.index-page {
 }
 
 .popup__desc {
-    font-size: 12px;
+    color: #35343a;
+    text-transform: uppercase;
+    font-size: 10px;
     line-height: 16px;
     margin: 0 0 5px
 }
@@ -1480,32 +1487,37 @@ main.index-page {
 .popup__input--submit {
     margin: 20px 0 10px;
     padding: 12px 0;
-    color: #fff;
-    background: #278fff;
+    color: #35343a;
+    background: #added4;
     border-radius: 64px
 }
 
 .popup__restore {
     display: block;
-    margin: 10px 0 0;
-    width: 100%;
-    color: #278fff
+    margin: 10px auto 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-weight: 500;
+    line-height: 20px;
+    border-bottom: 2px solid #added4
 }
 
 .popup__restore,
 .popup__unregistered {
     text-align: center;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 16px
+    font-size: 14px;
+    color: #35343a
 }
 
 .popup__unregistered {
-    color: #254648
+    line-height: 28px;
+    line-height: 16px
 }
 
 .popup__unregistered a {
-    color: #278fff
+    color: #35343a;
+    border-bottom: 2px solid #added4
 }
 
 .popup__socials {
@@ -1525,6 +1537,7 @@ main.index-page {
     padding-right: 20px;
     height: calc(100vh - 124px);
     max-height: 956px;
+    min-height: 700px;
     padding-top: 8.6vw;
     position: relative
 }
@@ -1750,6 +1763,23 @@ main.index-page {
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px
+}
+
+.workflow__titlewrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end
+}
+
+.workflow__more {
+    margin: 0 0 18px 30px;
+    color: #35343a;
+    font-size: 14px;
+    line-height: 18px;
+    border-bottom: 2px solid #added4
 }
 
 .workflow__infographics {
@@ -2088,12 +2118,12 @@ main.index-page {
     margin: 0 0 12px
 }
 
-.filter-block__label--checkbox.hide {
-    display: none
-}
-
 .filter-block__label--radio {
     margin-left: 8px
+}
+
+.filter-block__label.hide {
+    display: none
 }
 
 .filter-block__inputs {
@@ -2876,15 +2906,15 @@ main.index-page {
     margin: 0
 }
 
-.article-related__link {
-    margin: 0 0 8px
-}
-
-.article-related__link a {
+.article-related__block a {
     font-size: 14px;
-    line-height: 24px;
+    line-height: 28px;
     color: #35343a;
     border-bottom: 2px solid #added4
+}
+
+.article-related__block .c-info {
+    margin: 5px 0 0
 }
 
 @media screen and (max-width:480px) {
