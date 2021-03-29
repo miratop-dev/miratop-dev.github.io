@@ -11,7 +11,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.0.0/rellax.min.js"></script>
-    <link href="assets/css/app.241a5b55afe751257359.css" rel="stylesheet">
+    <link href="assets/css/app.72da65243e3dba0ff85c.css" rel="stylesheet">
 </head>
 
 <body class="index-page">
@@ -260,11 +260,13 @@
     </footer>
     <div class="popup hide" id="popup-login"><a class="popup__close" href="#" data-js-handler="popup__handler-close"></a>
         <div class="popup__title">Вітаємо!</div>
-        <form class="popup__form" action="#"> <label class="popup__label">
+        <form class="popup__form" action="#"> <label class="popup__label hide">
+                <div class="popup__error">Невірний логін або пароль, спробуйте ще.</div>
+            </label><label class="popup__label">
                 <div class="popup__desc">Електронна пошта</div><input class="popup__input popup__input--text" type="email" name="login_name" placeholder="Email">
             </label><label class="popup__label">
                 <div class="popup__desc">Пароль</div><input class="popup__input popup__input--text" type="password" name="login_pass" placeholder="Password">
-            </label><a class="popup__restore" href="#">Забули пароль?</a><input class="popup__input popup__input--submit" type="submit" value="Войти">
+            </label><a class="popup__restore" href="#popup-restore-pass" data-js-handler="popup__handler">Забули пароль?</a><input class="popup__input popup__input--submit" type="submit" value="Увійти">
             <div class="popup__unregistered"> <span>Не зареєстровані? </span><a href="#popup-register" data-js-handler="popup__handler">Створити акаунт</a></div>
             <div class="popup__socials"> <a class="popup__social" href="#"><img src="assets/img/popup-google.png"></a><a href="#"><img src="assets/img/popup-facebook.png"></a></div>
         </form>
@@ -290,9 +292,25 @@
             <div class="popup__unregistered"> <span>Вже зареєстровані? </span><a href="#popup-login" data-js-handler="popup__handler">Увійти</a></div>
             <div class="popup__socials"> <a class="popup__social" href="#"><img src="assets/img/popup-google.png"></a><a href="#"><img src="assets/img/popup-facebook.png"></a></div>
         </form>
+        <form class="popup__form hide" action="#"><img class="popup__img--success" src="assets/img/register-success.svg">
+            <div class="popup__greetings">Вітаємо! Ваша реєстрація пройшла успішно, приємного користування. </div><input class="popup__input popup__input--submit" type="submit" value="Увійти">
+        </form>
     </div>
-    <script type="text/javascript" src="assets/js/vendors.241a5b55afe751257359.js"></script>
-    <script type="text/javascript" src="assets/js/app.241a5b55afe751257359.js"></script>
+    <div class="popup hide" id="popup-restore-pass"><a class="popup__close" href="#" data-js-handler="popup__handler-close"></a>
+        <div class="popup__title">Забули пароль?</div>
+        <form class="popup__form" action="#"> <label class="popup__label">
+                <div class="popup__instructions">Щоб відновити пароль, введіть електронну пошту, пов’язану з вашим обліковим записом.</div>
+            </label><label class="popup__label">
+                <div class="popup__desc">Електронна пошта</div><input class="popup__input popup__input--text" type="email" name="login_name" placeholder="Email">
+            </label><input class="popup__input popup__input--submit" type="submit" value="Відновити пароль">
+            <div class="popup__unregistered"> <span>Не зареєстровані? </span><a href="#popup-register" data-js-handler="popup__handler">Створити акаунт </a></div>
+        </form>
+        <form class="popup__form hide" action="#"><img class="popup__img--success" src="assets/img/register-success.svg">
+            <div class="popup__greetings">Вітаємо! Новий пароль успішно надіслано на вашу електронну пошту.</div><input class="popup__input popup__input--submit" type="submit" value="Увійти">
+        </form>
+    </div>
+    <script type="text/javascript" src="assets/js/vendors.72da65243e3dba0ff85c.js"></script>
+    <script type="text/javascript" src="assets/js/app.72da65243e3dba0ff85c.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,17 @@
+.popup.hide#popup-restore-pass
+  a.popup__close(href='#', data-js-handler='popup__handler-close')
+  .popup__title Забули пароль?
+  form.popup__form(action='#') 
+    label.popup__label
+      div.popup__instructions Щоб відновити пароль, введіть електронну пошту, пов’язану з вашим обліковим записом.
+    label.popup__label
+      .popup__desc Електронна пошта
+      input.popup__input.popup__input--text(type='email' name='login_name' placeholder='Email')
+    input.popup__input.popup__input--submit(type='submit' value='Відновити пароль')
+    .popup__unregistered 
+      span Не зареєстровані? 
+      a(href="#popup-register", data-js-handler='popup__handler') Створити акаунт    
+  form.popup__form.hide(action='#')
+    img.popup__img--success(src='assets/img/register-success.svg')
+    div.popup__greetings Вітаємо! Новий пароль успішно надіслано на вашу електронну пошту.
+    input.popup__input.popup__input--submit(type='submit' value='Увійти')      

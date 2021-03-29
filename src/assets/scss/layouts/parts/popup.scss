@@ -33,6 +33,30 @@
     right: 20px;
   }
 
+  &__img {
+    &--success {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  
+  &__greetings {
+    text-align: center;
+    margin: 40px 0 0 0;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 600;
+    color: $text-black;
+  }
+
+  &__instructions {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 28px;
+    color: $text-black;
+    text-align: center;
+  }
+
   &__title {
     text-align: center;
     color: $text-black ;
@@ -101,11 +125,30 @@
   form {
     width: 320px;
     margin: 40px 0 0 0;
+
+    &.hide {
+      display: none;
+    }
   }
 
   &__label {
     display: block;
     margin: 15px 0 0;
+
+    &.hide {
+      display: none;
+    }
+  }
+
+  &__error {
+    background: #FFF8F7;
+    border: 2px solid $color-pastel-12;
+    border-radius: 8px;
+    box-shadow: inset 4px 0 0 $color-pastel-12;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    padding: 8px 0;
   }
 
   &__desc {

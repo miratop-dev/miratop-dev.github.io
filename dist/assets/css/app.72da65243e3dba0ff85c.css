@@ -1384,6 +1384,24 @@ main.index-page {
     right: 20px
 }
 
+.popup__img--success {
+    display: block;
+    margin: 0 auto
+}
+
+.popup__greetings {
+    margin: 40px 0 0
+}
+
+.popup__greetings,
+.popup__instructions {
+    text-align: center;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 600;
+    color: #35343a
+}
+
 .popup__title {
     text-align: center;
     color: #35343a;
@@ -1458,9 +1476,29 @@ main.index-page {
     margin: 40px 0 0
 }
 
+.popup form.hide {
+    display: none
+}
+
 .popup__label {
     display: block;
     margin: 15px 0 0
+}
+
+.popup__label.hide {
+    display: none
+}
+
+.popup__error {
+    background: #fff8f7;
+    border: 2px solid #ebbab4;
+    border-radius: 8px;
+    -webkit-box-shadow: inset 4px 0 0 #ebbab4;
+    box-shadow: inset 4px 0 0 #ebbab4;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    padding: 8px 0
 }
 
 .popup__desc {

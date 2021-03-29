@@ -2,14 +2,16 @@
   a.popup__close(href='#', data-js-handler='popup__handler-close')
   .popup__title Вітаємо!
   form.popup__form(action='#') 
+    label.popup__label.hide
+      div.popup__error Невірний логін або пароль, спробуйте ще.
     label.popup__label
       .popup__desc Електронна пошта
       input.popup__input.popup__input--text(type='email' name='login_name' placeholder='Email')
     label.popup__label
       .popup__desc Пароль
       input.popup__input.popup__input--text(type='password' name='login_pass' placeholder='Password')
-    a.popup__restore(href="#") Забули пароль?
-    input.popup__input.popup__input--submit(type='submit' value='Войти')
+    a.popup__restore(href="#popup-restore-pass", data-js-handler='popup__handler') Забули пароль?
+    input.popup__input.popup__input--submit(type='submit' value='Увійти')
     .popup__unregistered 
       span Не зареєстровані? 
       a(href="#popup-register", data-js-handler='popup__handler') Створити акаунт
