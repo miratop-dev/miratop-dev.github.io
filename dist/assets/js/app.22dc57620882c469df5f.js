@@ -205,11 +205,9 @@ $("[data-js-handler='menu__toggle']").on('click', function (e) {
   e.preventDefault();
 
   if ($('.main-menu').hasClass('show')) {
-    $('.main-menu').removeClass('show');
-    $('body').removeClass('hidden');
+    $('.main-menu').removeClass('show'); //$('body').removeClass('hidden');
   } else {
-    $('.main-menu').addClass('show');
-    $('body').addClass('hidden');
+    $('.main-menu').addClass('show'); //$('body').addClass('hidden');
   }
 });
 $("[data-js-handler='filter__toggle']").on('click', function (e) {

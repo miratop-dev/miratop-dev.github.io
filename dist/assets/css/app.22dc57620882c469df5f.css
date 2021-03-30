@@ -222,7 +222,7 @@ main.index-page {
 }
 
 .search-page-top {
-    z-index: 1;
+    z-index: 2;
     position: relative;
     padding-top: 0;
     padding-bottom: 20px
@@ -316,7 +316,7 @@ main.index-page {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23254648' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
     position: absolute;
     content: "";
-    top: 10px;
+    top: 50%;
     right: 0;
     width: 8px;
     height: 4px;
@@ -325,35 +325,65 @@ main.index-page {
 
 .sort .select-selected.select-arrow-active:after {
     -webkit-transform: rotateX(180deg);
-    transform: rotateX(180deg)
+    transform: rotateX(180deg);
+    right: 86px
 }
 
 .sort .select-items div,
 .sort .select-selected {
-    color: #254648;
+    color: #35343a;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 28px;
     font-weight: 700;
     cursor: pointer;
-    padding: 0 20px 0 10px;
-    white-space: nowrap
+    padding: 9px 20px 8px;
+    white-space: nowrap;
+    -webkit-transition: all .05s ease-in-out;
+    -o-transition: .05s all ease-in-out;
+    transition: all .05s ease-in-out
+}
+
+.sort .select-selected {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-top: 1px solid #fff
+}
+
+.sort .select-selected.select-arrow-active {
+    border-left: 1px solid #added4;
+    border-right: 1px solid #added4;
+    border-top: 1px solid #added4;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    background-color: #f5f5f5;
+    padding: 9px 108px 8px 20px
 }
 
 .sort .select-items div {
-    padding: 10px 20px 0 10px
+    padding: 9px 108px 9px 20px
 }
 
 .sort .select-items {
+    border-left: 1px solid #added4;
+    border-right: 1px solid #added4;
+    border-bottom: 1px solid #added4;
     position: absolute;
     background-color: #fff;
     top: 100%;
     left: 0;
     right: 0;
-    z-index: 99
+    z-index: 99;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: .3s all ease-in-out;
+    transition: all .3s ease-in-out
 }
 
 .sort .select-hide {
-    display: none
+    height: 0;
+    overflow: hidden;
+    border: none
 }
 
 .sort .same-as-selected,
@@ -1169,7 +1199,10 @@ main.index-page {
     z-index: 3;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, .6)
+    background: rgba(0, 0, 0, .6);
+    top: 0;
+    right: 0;
+    left: 0
 }
 
 .overlay.show {
@@ -1177,150 +1210,55 @@ main.index-page {
 }
 
 .main-menu {
-    position: absolute;
-    background-color: #273233;
-    z-index: 4;
-    max-height: 0;
-    height: 100%;
-    width: 100%;
+    height: 0;
     overflow: hidden
 }
 
-.main-menu,
 .main-menu.show {
-    -webkit-transition: all .1s ease-in-out;
-    -o-transition: all .1s ease-in-out;
-    transition: all .1s ease-in-out
-}
-
-.main-menu.show {
-    max-height: 100vh
-}
-
-.main-menu.show~.overlay {
-    display: block
-}
-
-.main-menu__container {
-    max-width: 1320px;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    position: relative;
-    height: 100%
-}
-
-.main-menu__container,
-.main-menu__header {
+    height: auto;
+    position: absolute;
+    background-color: #fff;
+    border-bottom: 1px solid #added4;
+    z-index: 2;
     width: 100%;
+    padding: 38px 0;
+    -webkit-box-shadow: 0 30px 50px -30px rgba(37, 70, 72, .1);
+    box-shadow: 0 30px 50px -30px rgba(37, 70, 72, .1);
+    -webkit-transition: all .1s ease-out;
+    -o-transition: .1s all ease-out;
+    transition: all .1s ease-out
+}
+
+.main-menu__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center
 }
 
-.main-menu__header {
-    position: absolute;
-    top: 30px;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    padding: 0 35px 0 0
+.main-menu__list li {
+    margin: 0 80px 0 0
 }
 
-.main-menu__close {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.80859 23.1924L23.1934 4.80761' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M4.80859 4.80761L23.1934 23.1924' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
-    width: 28px;
-    height: 28px
-}
-
-.main-menu__wrapper {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between
-}
-
-.main-menu__primary ul li {
-    position: relative;
-    margin: 0 0 40px;
-    padding: 17px 0
-}
-
-.main-menu__primary ul li img {
-    width: 70px;
-    margin: 0 40px 0 0
-}
-
-.main-menu__primary ul li:last-child {
+.main-menu__list li:last-child {
     margin: 0
 }
 
-.main-menu__secondary {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end
-}
-
-.main-menu__secondary ul li {
-    text-align: right;
-    margin: 0 0 40px
-}
-
-.main-menu__secondary ul li:last-child {
-    margin: 0
-}
-
-.main-menu__lang {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex
-}
-
-.main-menu__lang a {
-    margin: 0 20px 0 0;
-    color: #fff;
+.main-menu__list li a {
+    color: #35343a;
+    font-weight: 600;
     font-size: 14px;
-    line-height: 24px
-}
-
-.main-menu__lang a:last-child {
-    margin: 0
-}
-
-.main-menu__lang a.current {
-    color: #676767
-}
-
-.main-menu__el {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 700
-}
-
-.main-menu__el--lg {
-    font-size: 24px;
-    line-height: 36px
-}
-
-.main-menu__el--sm {
-    font-size: 16px;
     line-height: 28px
+}
+
+.main-menu__list li a:hover {
+    border-bottom: 4px solid #added4;
+    padding: 0 0 3px
 }
 
 .page-title {
@@ -3087,7 +3025,6 @@ main.index-page {
         margin: 0 0 20px
     }
 
-    .main-menu__container,
     .page-title__container {
         max-width: 100%;
         padding-left: 27px;
@@ -3490,68 +3427,6 @@ main.index-page {
         margin: 0 0 20px
     }
 
-    .main-menu.show {
-        padding: 30px 0;
-        min-height: 100vh;
-        overflow-y: scroll
-    }
-
-    .main-menu__container {
-        max-width: 728px;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column
-    }
-
-    .main-menu__header {
-        position: relative;
-        top: 0;
-        padding: 0
-    }
-
-    .main-menu__wrapper {
-        margin: 40px 0 0;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column
-    }
-
-    .main-menu__primary ul li {
-        padding: 10px 0;
-        margin: 0 0 20px
-    }
-
-    .main-menu__primary ul li img {
-        width: 30px;
-        margin: 0 10px 0 0
-    }
-
-    .main-menu__secondary {
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: flex-start
-    }
-
-    .main-menu__secondary ul li {
-        margin: 0 20px 0 0;
-        padding: 11px 0;
-        text-align: left
-    }
-
-    .main-menu__lang {
-        width: 100%;
-        border-top: 1px solid #676767;
-        padding: 15px 0 0
-    }
-
-    .main-menu__el--lg,
-    .main-menu__el--sm {
-        font-size: 16px;
-        line-height: 28px
-    }
-
     .page-title {
         padding: 20px 0
     }
@@ -3934,20 +3809,6 @@ main.index-page {
         margin: 0 0 20px
     }
 
-    .main-menu.show {
-        padding: 30px 0;
-        min-height: 100vh;
-        overflow-y: scroll
-    }
-
-    .main-menu__primary ul li {
-        margin: 0 0 20px
-    }
-
-    .main-menu__primary ul li img {
-        width: 50px
-    }
-
     .page-title {
         padding: 20px 0
     }
@@ -4020,18 +3881,6 @@ main.index-page {
 }
 
 @media screen and (min-width:1024px) and (max-width:1440px) {
-    .main-menu__primary ul li {
-        margin: 0 0 20px
-    }
-
-    .main-menu__primary ul li img {
-        width: 50px
-    }
-
-    .main-menu__secondary ul li {
-        margin: 0 0 20px
-    }
-
     .main-page-banner__title {
         font-size: 52px
     }

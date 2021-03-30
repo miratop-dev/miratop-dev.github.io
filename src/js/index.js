@@ -30,10 +30,10 @@ $("[data-js-handler='menu__toggle']").on('click', function(e){
   e.preventDefault();
   if($('.main-menu').hasClass('show')){
     $('.main-menu').removeClass('show');
-    $('body').removeClass('hidden');
+    //$('body').removeClass('hidden');
   } else {
     $('.main-menu').addClass('show');
-    $('body').addClass('hidden');
+    //$('body').addClass('hidden');
   }
 });
 
