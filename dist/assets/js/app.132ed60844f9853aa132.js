@@ -210,6 +210,15 @@ $("[data-js-handler='menu__toggle']").on('click', function (e) {
     $('.main-menu').addClass('show'); //$('body').addClass('hidden');
   }
 });
+$("[data-js-handler='header-user__handler']").on('click', function (e) {
+  e.preventDefault();
+
+  if ($('.header-user__dropdown').hasClass('show')) {
+    $('.header-user__dropdown').removeClass('show').addClass('hide'); //$('body').removeClass('hidden');
+  } else {
+    $('.header-user__dropdown').removeClass('hide').addClass('show'); //$('body').addClass('hidden');
+  }
+});
 $("[data-js-handler='filter__toggle']").on('click', function (e) {
   if ($(this).hasClass('collapse')) {
     $(this).removeClass('collapse').addClass('expanded');

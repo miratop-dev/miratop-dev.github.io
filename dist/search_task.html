@@ -14,24 +14,37 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.0.0/rellax.min.js"></script>
-    <link href="assets/css/app.22dc57620882c469df5f.css" rel="stylesheet">
+    <link href="assets/css/app.132ed60844f9853aa132.css" rel="stylesheet">
 </head>
 
 <body class="search-page">
     <header class="header">
         <div class="header__container"><a class="header__logo" href="/"><img src="assets/img/logo.svg" alt="logo"></a>
-            <div class="header__links"> <a class="header__link" href="/search_task.html">Пропозиції</a><a class="header__link" href="/search_expert.html">Експерти</a><a class="header__more" href="#">Як це працює </a></div>
+            <div class="header__links"> <a class="header__link" href="search_task.html">Пропозиції</a><a class="header__link" href="/search_expert.html">Експерти</a><a class="header__more" href="#">Як це працює </a></div>
             <div class="header__buttons"><a class="header__burger" href="#" data-js-handler="menu__toggle">
                     <div></div>
                     <div></div>
                     <div></div>
                     <div> </div>
-                </a><a class="header__join c-button c-button--primary c-button--md" href="#popup-login" data-js-handler="popup__handler">Приєднатись</a></div>
+                </a>
+                <!--a.header__join.c-button.c-button--primary.c-button--md(href='#popup-login', data-js-handler='popup__handler') Приєднатись-->
+                <div class="header-user">
+                    <div class="header-user__imgwrap"> <a class="header-user__avatar" href="#" data-js-handler="header-user__handler"> <img src="assets/img/expert-avatar-3.jpg" alt="avatar"></a>
+                        <div class="header-user__status header-user__status--active"></div>
+                        <ul class="header-user__dropdown hide">
+                            <li class="header-user__item header-user__item--message"><a href="#">Повідомлення</a></li>
+                            <li class="header-user__item header-user__item--offer"><a href="#"> Пропозиції</a></li>
+                            <li class="header-user__item header-user__item--workflow"><a href="#"> Хід робіт</a></li>
+                            <li class="header-user__item header-user__item--options"><a href="#"> Налаштування </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
     <div class="main-menu">
         <ul class="main-menu__list">
-            <li> <a href="#">Експертам </a></li>
+            <li><a href="#">Експертам </a></li>
             <li> <a href="#">Клієнтам</a></li>
             <li> <a href="#">Відповідальність</a></li>
             <li> <a href="#">Часті питання</a></li>
@@ -214,7 +227,7 @@
                             </div>
                             <div class="c-tags"> <a class="c-tags__tag" href="#">HR</a><a class="c-tags__tag" href="#">HR стратегия</a><a class="c-tags__tag" href="#">Внедрение стратегии</a></div>
                         </div>
-                        <div class="tasks__description">Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.</div><a class="c-button c-button--bordered c-button--md c-button--mobile tasks__button">Написать</a>
+                        <div class="tasks__description">Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.</div><a class="c-button c-button--bordered c-button--md c-button--mobile tasks__button" href="/details_task.html">Написать</a>
                     </div>
                     <div class="tasks__block">
                         <div class="tasks__summary">
@@ -226,7 +239,7 @@
                             </div>
                             <div class="c-tags"> <a class="c-tags__tag" href="#">HR</a><a class="c-tags__tag" href="#">HR стратегия</a><a class="c-tags__tag" href="#">Внедрение стратегии</a></div>
                         </div>
-                        <div class="tasks__description">Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.</div><a class="c-button c-button--bordered c-button--md c-button--mobile tasks__button">Написать</a>
+                        <div class="tasks__description">Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.</div><a class="c-button c-button--bordered c-button--md c-button--mobile tasks__button" href="/details_task.html">Написать</a>
                     </div>
                     <div class="tasks__block">
                         <div class="tasks__summary">
@@ -238,7 +251,7 @@
                             </div>
                             <div class="c-tags"> <a class="c-tags__tag" href="#">HR</a><a class="c-tags__tag" href="#">HR стратегия</a><a class="c-tags__tag" href="#">Внедрение стратегии</a></div>
                         </div>
-                        <div class="tasks__description">Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.</div><a class="c-button c-button--bordered c-button--md c-button--mobile tasks__button">Написать</a>
+                        <div class="tasks__description">Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.</div><a class="c-button c-button--bordered c-button--md c-button--mobile tasks__button" href="/details_task.html">Написать</a>
                     </div>
                     <div class="tasks__block">
                         <div class="tasks__summary">
@@ -250,7 +263,7 @@
                             </div>
                             <div class="c-tags"> <a class="c-tags__tag" href="#">HR</a><a class="c-tags__tag" href="#">HR стратегия</a><a class="c-tags__tag" href="#">Внедрение стратегии</a></div>
                         </div>
-                        <div class="tasks__description">Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.</div><a class="c-button c-button--bordered c-button--md c-button--mobile tasks__button">Написать</a>
+                        <div class="tasks__description">Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.</div><a class="c-button c-button--bordered c-button--md c-button--mobile tasks__button" href="/details_task.html">Написать</a>
                     </div>
                     <div class="tasks__block">
                         <div class="tasks__summary">
@@ -262,7 +275,7 @@
                             </div>
                             <div class="c-tags"> <a class="c-tags__tag" href="#">HR</a><a class="c-tags__tag" href="#">HR стратегия</a><a class="c-tags__tag" href="#">Внедрение стратегии</a></div>
                         </div>
-                        <div class="tasks__description">Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.</div><a class="c-button c-button--bordered c-button--md c-button--mobile tasks__button">Написать</a>
+                        <div class="tasks__description">Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.</div><a class="c-button c-button--bordered c-button--md c-button--mobile tasks__button" href="/details_task.html">Написать</a>
                     </div>
                     <div class="tasks__block">
                         <div class="tasks__summary">
@@ -274,7 +287,7 @@
                             </div>
                             <div class="c-tags"> <a class="c-tags__tag" href="#">HR</a><a class="c-tags__tag" href="#">HR стратегия</a><a class="c-tags__tag" href="#">Внедрение стратегии</a></div>
                         </div>
-                        <div class="tasks__description">Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.</div><a class="c-button c-button--bordered c-button--md c-button--mobile tasks__button">Написать</a>
+                        <div class="tasks__description">Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.</div><a class="c-button c-button--bordered c-button--md c-button--mobile tasks__button" href="/details_task.html">Написать</a>
                     </div>
                     <div class="tasks__block">
                         <div class="tasks__summary">
@@ -286,7 +299,7 @@
                             </div>
                             <div class="c-tags"> <a class="c-tags__tag" href="#">HR</a><a class="c-tags__tag" href="#">HR стратегия</a><a class="c-tags__tag" href="#">Внедрение стратегии</a></div>
                         </div>
-                        <div class="tasks__description">Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.</div><a class="c-button c-button--bordered c-button--md c-button--mobile tasks__button">Написать</a>
+                        <div class="tasks__description">Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.</div><a class="c-button c-button--bordered c-button--md c-button--mobile tasks__button" href="/details_task.html">Написать</a>
                     </div>
                     <div class="tasks__block">
                         <div class="tasks__summary">
@@ -298,7 +311,7 @@
                             </div>
                             <div class="c-tags"> <a class="c-tags__tag" href="#">HR</a><a class="c-tags__tag" href="#">HR стратегия</a><a class="c-tags__tag" href="#">Внедрение стратегии</a></div>
                         </div>
-                        <div class="tasks__description">Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.</div><a class="c-button c-button--bordered c-button--md c-button--mobile tasks__button">Написать</a>
+                        <div class="tasks__description">Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.</div><a class="c-button c-button--bordered c-button--md c-button--mobile tasks__button" href="/details_task.html">Написать</a>
                     </div>
                     <div class="tasks__block">
                         <div class="tasks__summary">
@@ -310,7 +323,7 @@
                             </div>
                             <div class="c-tags"> <a class="c-tags__tag" href="#">HR</a><a class="c-tags__tag" href="#">HR стратегия</a><a class="c-tags__tag" href="#">Внедрение стратегии</a></div>
                         </div>
-                        <div class="tasks__description">Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.</div><a class="c-button c-button--bordered c-button--md c-button--mobile tasks__button">Написать</a>
+                        <div class="tasks__description">Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.</div><a class="c-button c-button--bordered c-button--md c-button--mobile tasks__button" href="/details_task.html">Написать</a>
                     </div>
                     <div class="tasks__block">
                         <div class="tasks__summary">
@@ -322,7 +335,7 @@
                             </div>
                             <div class="c-tags"> <a class="c-tags__tag" href="#">HR</a><a class="c-tags__tag" href="#">HR стратегия</a><a class="c-tags__tag" href="#">Внедрение стратегии</a></div>
                         </div>
-                        <div class="tasks__description">Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.</div><a class="c-button c-button--bordered c-button--md c-button--mobile tasks__button">Написать</a>
+                        <div class="tasks__description">Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.</div><a class="c-button c-button--bordered c-button--md c-button--mobile tasks__button" href="/details_task.html">Написать</a>
                     </div>
                 </div>
                 <ul class="c-pagination">
@@ -356,7 +369,7 @@
             </div>
         </div>
     </footer>
-    <div class="popup hide" id="popup-login"><a class="popup__close" href="#" data-js-handler="popup__handler-close"></a>
+    <div class="popup popup--info hide" id="popup-login"><a class="popup__close" href="#" data-js-handler="popup__handler-close"></a>
         <div class="popup__title">Вітаємо!</div>
         <form class="popup__form" action="#"> <label class="popup__label hide">
                 <div class="popup__error">Невірний логін або пароль, спробуйте ще.</div>
@@ -369,7 +382,7 @@
             <div class="popup__socials"> <a class="popup__social" href="#"><img src="assets/img/popup-google.png"></a><a href="#"><img src="assets/img/popup-facebook.png"></a></div>
         </form>
     </div>
-    <div class="popup hide" id="popup-register"><a class="popup__close" href="#" data-js-handler="popup__handler-close"></a>
+    <div class="popup popup popup--info hide" id="popup-register"><a class="popup__close" href="#" data-js-handler="popup__handler-close"></a>
         <div class="popup__title">Створити акаунт!</div>
         <form class="popup__form" action="#">
             <div class="popup__account-types"><a class="popup__account-type popup__account-type--active" href="#account-type-client" data-js-handler="popup__account-type"> Замовник</a><a class="popup__account-type" href="#account-type-expert" data-js-handler="popup__account-type"> Експерт</a></div>
@@ -394,7 +407,7 @@
             <div class="popup__greetings">Вітаємо! Ваша реєстрація пройшла успішно, приємного користування. </div><input class="popup__input popup__input--submit" type="submit" value="Увійти">
         </form>
     </div>
-    <div class="popup hide" id="popup-restore-pass"><a class="popup__close" href="#" data-js-handler="popup__handler-close"></a>
+    <div class="popup popup popup--info hide" id="popup-restore-pass"><a class="popup__close" href="#" data-js-handler="popup__handler-close"></a>
         <div class="popup__title">Забули пароль?</div>
         <form class="popup__form" action="#"> <label class="popup__label">
                 <div class="popup__instructions">Щоб відновити пароль, введіть електронну пошту, пов’язану з вашим обліковим записом.</div>
@@ -407,8 +420,29 @@
             <div class="popup__greetings">Вітаємо! Новий пароль успішно надіслано на вашу електронну пошту.</div><input class="popup__input popup__input--submit" type="submit" value="Увійти">
         </form>
     </div>
-    <script type="text/javascript" src="assets/js/vendors.22dc57620882c469df5f.js"></script>
-    <script type="text/javascript" src="assets/js/app.22dc57620882c469df5f.js"></script>
+    <div class="popup popup popup--message hide" id="popup-message"><a class="popup__close" href="#" data-js-handler="popup__handler-close"></a>
+        <div class="popup-message__header">
+            <div class="popup-message__avatar"> <img src="assets/img/popup-avatar.png" alt="avatar">
+                <div class="popup-message__status popup-message__status--active"></div>
+            </div>
+            <div class="popup-message__summary">
+                <div class="c-title c-title__title4">Розробити HR стратегію</div>
+                <div class="c-info">
+                    <div class="c-info__location">Киев, Украина</div>
+                    <div class="c-info__date">15.01.2021</div>
+                    <div class="c-info__client">Rozetka</div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-message__main">
+            <div class="popup-message__desc">Повідомлення</div><textarea class="popup-message__textarea" type="textarea" rows="7"></textarea>
+        </div>
+        <div class="popup-message__feedback"> <label class="popup-message__label" for="upload"> <a class="popup-message__upload">Прикріпити файл</a>
+                <div class="popup-message__maxsize">Максимальний розмір файлу – 5Мб</div>
+            </label><a class="c-button c-button--primary c-button--md c-button--mobile" href="#">Надіслати</a></div>
+    </div>
+    <script type="text/javascript" src="assets/js/vendors.132ed60844f9853aa132.js"></script>
+    <script type="text/javascript" src="assets/js/app.132ed60844f9853aa132.js"></script>
 </body>
 
 </html>

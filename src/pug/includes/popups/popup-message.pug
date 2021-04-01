@@ -1,0 +1,20 @@
+.popup.popup.popup--message.hide#popup-message
+  a.popup__close(href='#', data-js-handler='popup__handler-close')
+  .popup-message__header 
+    .popup-message__avatar 
+      img(src='assets/img/popup-avatar.png', alt='avatar')
+      .popup-message__status.popup-message__status--active
+    .popup-message__summary
+      .c-title.c-title__title4 Розробити HR стратегію
+      .c-info 
+        .c-info__location Киев, Украина
+        .c-info__date 15.01.2021
+        .c-info__client Rozetka
+  .popup-message__main 
+    .popup-message__desc Повідомлення
+    textarea.popup-message__textarea(type='textarea', rows='7')
+  .popup-message__feedback 
+    label.popup-message__label(for='upload') 
+      a.popup-message__upload Прикріпити файл
+      .popup-message__maxsize Максимальний розмір файлу – 5Мб
+    a.c-button.c-button--primary.c-button--md.c-button--mobile(href='#') Надіслати

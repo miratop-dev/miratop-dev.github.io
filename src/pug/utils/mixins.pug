@@ -112,7 +112,7 @@ mixin taskBlock(args)
             a.c-tags__tag(href="#") еще 
               span.c-tags__num= args.tags.length - 3
     .tasks__description= args.description
-    a.c-button.c-button--bordered.c-button--md.c-button--mobile.tasks__button(href= taskLink) Написать
+    a.c-button.c-button--bordered.c-button--md.c-button--mobile.tasks__button(href= args.taskLink) Написать
 
 mixin relatedArticles(args)
   .article-related__block

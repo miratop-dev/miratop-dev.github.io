@@ -1,15 +1,29 @@
 header.header
   .header__container
-    a.header__logo(href="/")
-      img(src= 'assets/img/logo.svg' alt="logo")  
+    a.header__logo(href='/')
+      img(src= 'assets/img/logo.svg' alt='logo')  
     .header__links  
-      a.header__link(href="/search_task.html") Пропозиції
-      a.header__link(href="/search_expert.html") Експерти
-      a.header__more(href="#") Як це працює 
+      a.header__link(href='search_task.html') Пропозиції
+      a.header__link(href='/search_expert.html') Експерти
+      a.header__more(href='#') Як це працює 
     .header__buttons
-      a.header__burger(href="#" data-js-handler="menu__toggle")
+      a.header__burger(href='#' data-js-handler='menu__toggle')
         div
         div
         div
         div      
-      a.header__join.c-button.c-button--primary.c-button--md(href="#popup-login", data-js-handler='popup__handler') Приєднатись
+      //a.header__join.c-button.c-button--primary.c-button--md(href='#popup-login', data-js-handler='popup__handler') Приєднатись
+      .header-user
+        .header-user__imgwrap 
+          a.header-user__avatar(href='#', data-js-handler='header-user__handler') 
+            img(src='assets/img/expert-avatar-3.jpg', alt='avatar')
+          .header-user__status.header-user__status--active
+          ul.header-user__dropdown.hide
+            li.header-user__item.header-user__item--message
+              a(href='#') Повідомлення
+            li.header-user__item.header-user__item--offer
+              a(href='#')  Пропозиції
+            li.header-user__item.header-user__item--workflow
+              a(href='#')  Хід робіт
+            li.header-user__item.header-user__item--options
+              a(href='#')  Налаштування                                   
