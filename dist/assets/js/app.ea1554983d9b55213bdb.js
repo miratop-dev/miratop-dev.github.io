@@ -360,11 +360,17 @@ for (i = 0; i < l; i++) {
   b = document.createElement("DIV");
   b.setAttribute("class", "select-items select-hide");
 
-  for (j = 1; j < ll; j++) {
+  for (j = 0; j < ll; j++) {
     /* For each option in the original select element,
     create a new DIV that will act as an option item: */
     c = document.createElement("DIV");
     c.innerHTML = selElmnt.options[j].innerHTML;
+    /* hide default element in dropdown */
+
+    if (a.innerHTML === c.innerHTML) {
+      c.setAttribute("class", "same-as-selected");
+    }
+
     c.addEventListener("click", function (e) {
       /* When an item is clicked, update the original select box,
       and the selected item: */

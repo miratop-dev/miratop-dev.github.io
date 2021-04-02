@@ -380,6 +380,10 @@ main.index-page {
     transition: all .3s ease-in-out
 }
 
+.sort .select-items .same-as-selected {
+    display: none
+}
+
 .sort .select-hide {
     height: 0;
     overflow: hidden;

@@ -264,7 +264,12 @@ main {
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
     transition: 0.3s all ease-in-out;
+
+    .same-as-selected {
+      display: none;
+    }
   }
+
   .select-hide {
     height: 0;
     overflow: hidden;
