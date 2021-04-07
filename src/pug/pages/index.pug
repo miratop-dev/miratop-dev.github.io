@@ -64,11 +64,21 @@ block content
           span  платформи
         .responsibility__wrapper
           ul.responsibility__list 
-            +mainPageResponsibility('Перевірена експертність', 'Професійність рекомендацій та реалізовані кейси, додатково підтверджуються незалежною експертною комісією.')(class='responsibility__element--expert')
-            +mainPageResponsibility('Супровід на кожному етапі', 'Ми зацікавлені в успіху твого бізнесу, тому допоможемо в супроводженні проєкту на всіх етапах та подбаємо про паперову тяганину.')(class='responsibility__element--support')
-            +mainPageResponsibility('Конфіденційність', 'Ми цінуємо приватність, тому подбали про захист інформації у відповідних документах.')(class='responsibility__element--confidentiality')
-            +mainPageResponsibility('Страхування угоди', 'За потреби ти можеш скористатися додатковою можливістю та застрахувати угоду через страхового партнера компанії.')(class='responsibility__element--insurance')
-            +mainPageResponsibility('Вирішення суперечок', 'Ми за партнерський підхід, тому у випадку виникнення розбіжностей незалежна комісія платформи допоможе знайти рішення, використовуючи принцип win-win.')(class='responsibility__element--dispute')
+            li.responsibility__element.responsibility__element--expert
+              .c-title.c-title__title4.responsibility__title Перевірена експертність
+              .responsibility__description Професійність рекомендацій та реалізовані кейси, додатково підтверджуються незалежною експертною комісією.     
+            li.responsibility__element.responsibility__element--support
+              .c-title.c-title__title4.responsibility__title Супровід на кожному етапі
+              .responsibility__description Ми зацікавлені в успіху твого бізнесу, тому допоможемо в супроводженні проєкту на всіх етапах та подбаємо про паперову тяганину.
+            li.responsibility__element.responsibility__element--confidentiality
+              .c-title.c-title__title4.responsibility__title Конфіденційність
+              .responsibility__description Ми цінуємо приватність, тому подбали про захист інформації у <a href="#">відповідних документах.</a>
+            li.responsibility__element.responsibility__element--insurance
+              .c-title.c-title__title4.responsibility__title Страхування угоди
+              .responsibility__description За потреби ти можеш скористатися додатковою можливістю та застрахувати угоду через <a href="#">страхового партнера компанії.</a>
+            li.responsibility__element.responsibility__element--dispute
+              .c-title.c-title__title4.responsibility__title Вирішення суперечок
+              .responsibility__description Ми за партнерський підхід, тому у випадку виникнення розбіжностей незалежна комісія платформи допоможе знайти рішення, використовуючи принцип win-win.
           .responsibility__imgwrap 
             img(src= 'assets/img/responsibility.png' alt="responsibility")
     .recommendations

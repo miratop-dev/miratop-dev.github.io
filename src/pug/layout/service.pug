@@ -15,14 +15,8 @@ html(lang='en')
     block head
 
   body(class=pageClass)
-    include ../includes/modules/header
-    include ../includes/modules/menu
-    block title
-    block statusbar
-    main(class= pageClass)
-      .c-container
-        .c-wide-content.c-wide-content--left
-          block content
-        .c-sidebar 
-          block sidebar         
+    header.service-header 
+      a.service-header__logo(href='/')
+        img(src= 'assets/img/logo.svg' alt='logo')  
+    block content
     include ../includes/modules/footer

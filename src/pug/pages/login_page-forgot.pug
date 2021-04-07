@@ -1,0 +1,22 @@
+extends ../layout/service
+
+block variables
+  - var title = 'Mira.hub login page';
+  - var description = 'Mira.hub login page';
+  - var pageClass = 'login-page';
+  - let pageTitle = 'Введіть електронну пошту, яку ви використовували при реєстрації'
+
+block content 
+  .service-main
+    .c-title.c-title__title3.service-main__title Введіть електронну пошту, яку ви <br />використовували при реєстрації
+    form.service-main__form(action='#')
+      fieldset
+        label.service-main__label(for='email') 
+          .service-main__clarification.service-main__clarification--required Електронна пошта або логін
+          input.service-main__input#email(type='text' name='login-email' placeholder='Введіть ваш email або логін') 
+      fieldset               
+        a.service-main__button.c-button.c-button--primary(href='#') Відновити пароль
+    .service-additional 
+      .service-additional__block
+        .service-additional__desc Вперше на нашому сайті?
+        a.c-button.c-button--md.c-button--primary(href='#') Зареєструйтесь    

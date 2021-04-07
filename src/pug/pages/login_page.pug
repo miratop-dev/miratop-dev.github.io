@@ -1,0 +1,31 @@
+extends ../layout/service
+
+block variables
+  - var title = 'Mira.hub login page';
+  - var description = 'Mira.hub login page';
+  - var pageClass = 'login-page';
+  - let pageTitle = 'Увійдіть на сайт з допомогою електронної пошти або через соціальну мережу'
+
+block content 
+  .service-main
+    .c-title.c-title__title3.service-main__title Увійдіть на сайт з допомогою електронної пошти <br />або через соціальну мережу
+    form.service-main__form(action='#')
+      fieldset
+        label.service-main__label(for='email') 
+          .service-main__clarification.service-main__clarification--required Електронна пошта
+          input.service-main__input#email(type='email' name='email' placeholder='Введіть ваш email')
+        label.service-main__label(for='password') 
+          .service-main__clarification.service-main__clarification--required Пароль
+          input.service-main__input#password(type='password' name='password' placeholder='Введіть ваш пароль')   
+      fieldset               
+        label.service-main__label(for='remember-me') 
+          input.service-main__checkbox#remember-me(type='checkbox' name='remember-me' placeholder='Введіть ваш пароль')  
+          p Запам’ятати мене    
+        a.service-main__button.c-button.c-button--primary(href='#') Увійти на сайт   
+    .service-additional 
+      .service-additional__block
+        .service-additional__desc Вперше на нашому сайті?
+        a.c-button.c-button--md.c-button--primary(href='#') Зареєструйтесь
+      .service-additional__block
+        .service-additional__desc Забули пароль?
+        a.c-button.c-button--md.c-button--primary(href='#') Відновити пароль     

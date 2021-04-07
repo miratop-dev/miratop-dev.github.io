@@ -10,11 +10,6 @@ mixin mainPageExpertiseAreas(name, icon, items)
         div.expertise-areas__activity.hide= item
     a.expertise-areas__more(href="#", data-js-handler='expand-list__handler') Показать все
 
-mixin mainPageResponsibility(name, text)    
-  li.responsibility__element&attributes(attributes)
-    .c-title.c-title__title4.responsibility__title= name
-    .responsibility__description= text
-
 mixin mainPageWorkflow(args)
   .workflow__wrapper 
     .workflow__block

@@ -34,6 +34,7 @@ module.exports = {
     publicPath: ''
   },
   optimization: {
+    minimize: false,
     splitChunks: {
       cacheGroups: {
         vendor: {
@@ -96,7 +97,9 @@ module.exports = {
           options: { sourceMap: true, config: { path: `./postcss.config.js` } }
         }, {
           loader: 'sass-loader',
-          options: { sourceMap: true }
+          options: { 
+            sourceMap: true,
+          }
         }
       ]
     }, {
@@ -147,6 +150,31 @@ module.exports = {
       template: `${PAGES_DIR}/search_task.pug`,
       filename: './search_task.html',
       inject: true
-    })     
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/details_task.pug`,
+      filename: './details_task.html',
+      inject: true
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/details_expert.pug`,
+      filename: './details_expert.html',
+      inject: true
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/article_page.pug`,
+      filename: './article_page.html',
+      inject: true
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/login_page.pug`,
+      filename: './login_page.html',
+      inject: true
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/login_page-forgot.pug`,
+      filename: './login_page-forgot.html',
+      inject: true
+    })        
   ],
 }
