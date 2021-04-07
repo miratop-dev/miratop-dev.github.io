@@ -1,6 +1,8 @@
-mixin mainPageExpertiseAreas(name, items)    
+mixin mainPageExpertiseAreas(name, icon, items)    
   li.expertise-areas__block
-    .c-title.c-title__md.expertise-areas__name= name
+    .c-title.c-title__title4.expertise-areas__name
+      img(src= icon alt="icon")
+      span= name
     each item, index in items
       if(index < 4)
         div.expertise-areas__activity= item
@@ -33,7 +35,7 @@ mixin mainPageRecommendations(args)
       .recommendations__imgwrap
         img(src= 'assets/img/default-user-avatar.svg' alt="recommending's photo")
       .recommendations__profile
-        .c-title.c-title__sm= args.name
+        .c-title.c-title__title5= args.name
         p.recommendations__position= args.position
 
 mixin pageTitle(title) 
@@ -61,7 +63,7 @@ mixin expertBlock(args)
     .experts__imgwrap
       img(src= args.image alt="avatar")
     .experts__summary
-      .experts__title.c-title.c-title__sm= args.name
+      .experts__title.c-title.c-title__title4= args.name
       .c-info
         .c-info__experience= args.expirience
         .c-info__projects= args.projects
@@ -97,7 +99,7 @@ mixin expertBlock(args)
 mixin taskBlock(args)
   .tasks__block
     .tasks__summary
-      .c-title.c-title__sm.tasks__name= args.name
+      .c-title.c-title__title4.tasks__name= args.name
       .c-info
         .c-info__location= args.location
         .c-info__date= args.date

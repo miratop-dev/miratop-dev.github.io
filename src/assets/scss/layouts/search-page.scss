@@ -420,11 +420,10 @@
 
   &__block {
     &:hover {
-      border-top: 2px solid $color-pastel-7;
-      border-bottom: 2px solid $color-pastel-7;
+      border: 2px solid $color-pastel-7;
       margin: -20px -40px -22px;
       min-width: 1030px;
-      padding: 40px;
+      padding: 40px 38px;
       background: $color-primary-white;
       border-radius: 12px;
       z-index: 2;
@@ -453,6 +452,10 @@
       }
     }
   }
+
+  &__description {
+    padding: 0 40px 0 0;
+  }
 }
 
 .experts {
@@ -469,11 +472,10 @@
 
   &__block {
     &:hover {
-      border-top: 2px solid $color-pastel-7;
-      border-bottom: 2px solid $color-pastel-7;
+      border: 2px solid $color-pastel-7;
       margin: -20px -40px -22px;
       min-width: 1030px;
-      padding: 40px;
+      padding: 40px 38px;
       background: $color-primary-white;
       border-radius: 12px;
       z-index: 2;
