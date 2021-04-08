@@ -1549,11 +1549,66 @@ main.index-page {
     color: #d2d2d2
 }
 
+.service-main__captcha {
+    background-color: #f5f5f5;
+    background-image: url(../../assets/img/captcha.png);
+    background-repeat: no-repeat;
+    width: 302px;
+    height: 76px
+}
+
 .service-main__checkbox {
     margin: 0 8px 0 0;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 16px;
     flex: 0 0 16px
+}
+
+.service-main__user {
+    position: relative;
+    color: #35343a;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 28px;
+    padding: 0 0 0 34px
+}
+
+.service-main__user:first-child {
+    margin: 0 20px 0 0
+}
+
+.service-main__user:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #e5e5e5;
+    border-radius: 12px
+}
+
+.service-main__user--active:before {
+    border: 2px solid #added4
+}
+
+.service-main__user--active:after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background-color: #added4
+}
+
+.service-main__note {
+    color: #77747f;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    text-transform: uppercase
 }
 
 .service-main__button {

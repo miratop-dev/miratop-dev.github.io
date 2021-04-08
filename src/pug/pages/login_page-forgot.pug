@@ -1,8 +1,8 @@
 extends ../layout/service
 
 block variables
-  - var title = 'Mira.hub login page';
-  - var description = 'Mira.hub login page';
+  - var title = 'Mira.hub forgot login';
+  - var description = 'Mira.hub forgot login';
   - var pageClass = 'login-page';
   - let pageTitle = 'Введіть електронну пошту, яку ви використовували при реєстрації'
 
@@ -19,4 +19,4 @@ block content
     .service-additional 
       .service-additional__block
         .service-additional__desc Вперше на нашому сайті?
-        a.c-button.c-button--md.c-button--primary(href='#') Зареєструйтесь    
+        a.c-button.c-button--md.c-button--primary(href='/registration.html') Зареєструйтесь

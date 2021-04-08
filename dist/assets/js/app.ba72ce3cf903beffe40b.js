@@ -323,23 +323,20 @@ $("[data-js-handler='overlay__handler']").on('click', function (e) {
     $('.main-menu').addClass('hide').removeClass('show');
   }
 });
-$("[data-js-handler='popup__account-type']").on('click', function (e) {
-  e.preventDefault();
-  var account_type = $(this).attr('href');
-
-  if (!$(this).hasClass('popup__account-type--active')) {
-    $('.popup__account-type').removeClass('popup__account-type--active');
-    $('.popup__data-wrap').removeClass('popup__data-wrap--current');
-    $(this).addClass('popup__account-type--active');
-    $(account_type).addClass('popup__data-wrap--current');
-  }
-});
 $("[data-js-handler='account-type']").on('click', function (e) {
   e.preventDefault();
 
   if ($(this).hasClass('service-main__private--unactive')) {
     $(this).removeClass('service-main__private--unactive').addClass('service-main__private--active');
     $(this).siblings().removeClass('service-main__private--active').addClass('service-main__private--unactive');
+  }
+});
+$("[data-js-handler='registration__user-type']").on('click', function (e) {
+  e.preventDefault();
+
+  if (!$(this).hasClass('service-main__user--active')) {
+    $(this).addClass('service-main__user--active');
+    $(this).siblings().removeClass('service-main__user--active');
   }
 });
 
