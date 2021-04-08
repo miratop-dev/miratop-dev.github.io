@@ -334,6 +334,14 @@ $("[data-js-handler='popup__account-type']").on('click', function (e) {
     $(account_type).addClass('popup__data-wrap--current');
   }
 });
+$("[data-js-handler='account-type']").on('click', function (e) {
+  e.preventDefault();
+
+  if ($(this).hasClass('service-main__private--unactive')) {
+    $(this).removeClass('service-main__private--unactive').addClass('service-main__private--active');
+    $(this).siblings().removeClass('service-main__private--active').addClass('service-main__private--unactive');
+  }
+});
 
 /***/ }),
 /* 2 */

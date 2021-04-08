@@ -1175,28 +1175,23 @@ main.index-page {
     width: 100%;
     max-width: 1320px;
     margin: 0 auto;
-    padding: 60px 20px
-}
-
-.footer__container,
-.footer__socials {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between
+    justify-content: space-between;
+    padding: 60px 20px
 }
 
 .footer__socials {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column
+    display: block
 }
 
 .footer__logo {
-    max-width: 204px
+    display: block;
+    max-width: 204px;
+    margin: 0 0 60px
 }
 
 .footer__legal {
@@ -1287,6 +1282,10 @@ main.index-page {
 
 .footer__place:before {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M8 0.000976562C4.69141 0.000976562 2 2.6927 2 6.00098C2 10.4274 7.53581 15.6885 7.7715 15.9105C7.83594 15.9707 7.91797 16.001 8 16.001C8.08203 16.001 8.16406 15.9707 8.22853 15.9105C8.46419 15.6885 14 10.4274 14 6.00098C14 2.6927 11.3086 0.000976562 8 0.000976562ZM8 9.33432C6.16209 9.33432 4.66666 7.83888 4.66666 6.00098C4.66666 4.16307 6.16213 2.66763 8 2.66763C9.83787 2.66763 11.3333 4.1631 11.3333 6.00098C11.3333 7.83885 9.83791 9.33432 8 9.33432Z' fill='%239E9DA3'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='16' height='16' fill='white' transform='translate(0 0.000976562)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E")
+}
+
+.footer__socwrap {
+    margin: 0 0 45px
 }
 
 .footer__social {
@@ -1488,6 +1487,31 @@ main.index-page {
     top: 0
 }
 
+.service-main__account {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    border-radius: 64px;
+    border: 2px solid #added4;
+    overflow: hidden
+}
+
+.service-main__private {
+    color: #35343a;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    width: 50%;
+    text-align: center;
+    padding: 10px 0
+}
+
+.service-main__private--active {
+    background-color: #added4
+}
+
 .service-main__input {
     border: 2px solid #e5e5e5;
     border-radius: 8px;
@@ -1497,36 +1521,39 @@ main.index-page {
 
 .service-main__input::-webkit-input-placeholder {
     font-size: 14px;
-    line-height: 28px;
+    line-height: 18px;
     color: #d2d2d2
 }
 
 .service-main__input::-moz-placeholder {
     font-size: 14px;
-    line-height: 28px;
+    line-height: 18px;
     color: #d2d2d2
 }
 
 .service-main__input:-ms-input-placeholder {
     font-size: 14px;
-    line-height: 28px;
+    line-height: 18px;
     color: #d2d2d2
 }
 
 .service-main__input::-ms-input-placeholder {
     font-size: 14px;
-    line-height: 28px;
+    line-height: 18px;
     color: #d2d2d2
 }
 
 .service-main__input::placeholder {
     font-size: 14px;
-    line-height: 28px;
+    line-height: 18px;
     color: #d2d2d2
 }
 
 .service-main__checkbox {
-    margin: 0 8px 0 0
+    margin: 0 8px 0 0;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 16px;
+    flex: 0 0 16px
 }
 
 .service-main__button {

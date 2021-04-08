@@ -71,6 +71,29 @@
     }
   }
 
+  &__account {
+    display: flex;
+    width: 100%;
+    border-radius: 64px;
+    border: 2px solid $color-pastel-7;
+    overflow: hidden;
+  }
+
+  &__private {
+    color: $text-black;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    width: 50%;
+    text-align: center;
+    padding: 10px 0;
+    
+    &--active {
+      background-color: $color-pastel-7;
+    }
+  }
+
   &__input {
     border: 2px solid $text-silver;
     border-radius: 8px;
@@ -79,13 +102,14 @@
 
     &::placeholder {
       font-size: 14px;
-      line-height: 28px;
+      line-height: 18px;
       color: #D2D2D2;
     }  
   }
 
   &__checkbox {
     margin: 0 8px 0 0;
+    flex: 0 0 16px;
   }
 
   &__button {

@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Mira.hub login page</title>
-    <meta name="description" content="Mira.hub login page">
+    <title>Mira.hub registration page</title>
+    <meta name="description" content="Mira.hub registration page">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
@@ -16,16 +16,25 @@
 <body class="login-page">
     <header class="service-header"> <a class="service-header__logo" href="/"><img src="assets/img/logo.svg" alt="logo"></a></header>
     <div class="service-main">
-        <div class="c-title c-title__title3 service-main__title">Увійдіть на сайт з допомогою електронної пошти <br />або через соціальну мережу</div>
+        <div class="c-title c-title__title3 service-main__title">Зареєструйтесь на сайті з допомогою смартфона, <br />електронної пошти або через соціальну мережу</div>
         <form class="service-main__form" action="#">
-            <fieldset><label class="service-main__label" for="email">
-                    <div class="service-main__clarification service-main__clarification--required">Електронна пошта</div><input class="service-main__input" id="email" type="email" name="email" placeholder="Введіть ваш email">
+            <fieldset><label class="service-main__label">
+                    <div class="service-main__clarification">Тип аккаунту</div>
+                    <div class="service-main__account"> <a class="service-main__private service-main__private--active" href="#" data-js-handler="account-type">Приватна особа</a><a class="service-main__private service-main__private--unactive" href="#" data-js-handler="account-type">Компанія</a></div>
+                </label><label class="service-main__label" for="name">
+                    <div class="service-main__clarification">Ім’я</div><input class="service-main__input" id="name" type="text" name="name" placeholder="Ваше ім’я">
+                </label><label class="service-main__label" for="email">
+                    <div class="service-main__clarification">Електронна пошта</div><input class="service-main__input" id="email" type="email" name="email" placeholder="Введіть ваш email">
+                </label><label class="service-main__label" for="phone">
+                    <div class="service-main__clarification">Телефон</div><input class="service-main__input" id="phone" type="tel" name="phone" placeholder="50 123 4567">
                 </label><label class="service-main__label" for="password">
-                    <div class="service-main__clarification service-main__clarification--required">Пароль</div><input class="service-main__input" id="password" type="password" name="password" placeholder="Введіть ваш пароль">
+                    <div class="service-main__clarification">Пароль</div><input class="service-main__input" id="password" type="password" name="password" placeholder="Введіть ваш пароль">
+                </label><label class="service-main__label" for="confirm-password">
+                    <div class="service-main__clarification">Пароль ще раз</div><input class="service-main__input" id="confirm-password" type="password" name="confirm-password" placeholder="Повторіть пароль">
                 </label></fieldset>
-            <fieldset> <label class="service-main__label" for="remember-me"> <input class="service-main__checkbox" id="remember-me" type="checkbox" name="remember-me" placeholder="Введіть ваш пароль">
-                    <p>Запам’ятати мене </p>
-                </label><a class="service-main__button c-button c-button--primary" href="#">Увійти на сайт </a></fieldset>
+            <fieldset> <label class="service-main__label" for="accept"> <input class="service-main__checkbox" id="accept" type="checkbox" name="accept">
+                    <p>погоджуюсь з правилами використання сервісу, та обробкою моїх персональних даних. </p>
+                </label><a class="service-main__button c-button c-button--primary" href="#">Зареєструватись</a></fieldset>
         </form>
         <div class="service-additional">
             <div class="service-additional__block">
