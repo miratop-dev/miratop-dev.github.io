@@ -28,6 +28,10 @@ main {
     overflow-x: hidden;
     -ms-scroll-limit: 0 0 0 0;
 
+    @include desktop-large {
+      padding: 60px 0 0;
+    }        
+
     @include mobile {
       padding: 60px 0 0;
     }      
@@ -283,7 +287,8 @@ main {
 
 @supports(-webkit-appearance: none) or (-moz-appearance: none) {
   input[type='checkbox'],
-  input[type='radio'] {
+  input[type='radio'],
+  .filter-block__checkbox {
     --active: #275EFE;
     --active-inner: #fff;
     --focus: 2px rgba(39, 94, 254, .3);

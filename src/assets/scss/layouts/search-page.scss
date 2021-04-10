@@ -243,6 +243,10 @@
       &:hover {
         border-bottom: 2px solid $color-pastel-7;
         margin: -20px -40px;
+
+        @include desktop-large {
+          margin: -10px -22px;
+        }
       }
     }
   }
@@ -437,7 +441,8 @@
       }          
   
       @include desktop-large {
-        padding: 40px 20px 40px;
+        min-width: 845px;
+        padding: 30px 20px;
         margin: -10px 0 -12px -22px;
       }
   
@@ -455,6 +460,11 @@
 
   &__description {
     padding: 0 40px 0 0;
+
+    @include desktop-large {
+      max-width: 385px;
+      padding: 0;
+    }
   }
 }
 
@@ -463,6 +473,10 @@
     width: 100%;
     display: inline-block;
     max-width: 240px;
+
+    @include desktop-large {
+      padding: 0 20px 0 0;
+    }
 
     @include mobile {
       padding: 0;
@@ -489,11 +503,13 @@
       }          
   
       @include desktop-large {
-        padding: 40px 20px 40px;
+        min-width: 845px;
+        padding: 30px 20px;
         margin: -10px 0 -12px -22px;
       }
   
       @include desktop-medium {
+        min-width: 845px;
         padding: 40px 20px 40px;
         margin: -10px 0 -12px -2px;
       }
