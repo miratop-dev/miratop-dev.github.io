@@ -1,0 +1,80 @@
+extends ../layout/main
+
+block variables
+  - var title = 'Mira.hub';
+  - var description = 'Mira.hub main page title';
+  - var pageClass = 'index-page';
+  - let witchPage = 'main'
+
+block content 
+  main(class= pageClass)
+    .advantages
+      .advantages__container
+        .advantages__block
+          .advantages__imgwrap
+            img(src="assets/img/benefit_icon_1.png")
+          .advantages__textwrap
+            .c-title.c-title__title4.advantages__title Практики для практиків
+            .advantages__description На платформі немає «лівих» людей. Експерти платформи — це перевірені часом профі з багажем успішно реалізованих кейсів.
+        .advantages__block
+          .advantages__imgwrap
+            img(src="assets/img/benefit_icon_2.png")
+          .advantages__textwrap
+            .c-title.c-title__title4.advantages__title Новий формат
+            .advantages__description Якісна експертиза та проєктний підхід — це цілком сумісні та реальні поняття. Працюй з MIRAHUB та переконайся в цьому на практиці.
+        .advantages__block
+          .advantages__imgwrap
+            img(src="assets/img/benefit_icon_3.png")
+          .advantages__textwrap
+            .c-title.c-title__title4.advantages__title Безпечна угода
+            .advantages__description Оплата проєкту відбувається тільки за фактом успішної реалізації. Ми дбаємо про це.                   
+    .expertise-areas
+      .expertise-areas__container
+        h2.c-title.c-title__title2 
+          span.c-accent Експертиза
+        ul.expertise-areas__list
+          +mainPageExpertiseAreas('Фінанси, облік, бухгалтерія', ['Розробка і впровадження управлінського обліку.', 'Проведення аудиту поточної облікової системи.', 'Оптимізація бізнес-процесів фінансової функції.', 'Проведення фінансового аналізу діяльності.', 'Коучинг та організація навчання персоналу фінансовим методам управління.', 'Розробка і впровадження управлінського обліку.', 'Проведення аудиту поточної облікової системи.', 'Оптимізація бізнес-процесів фінансової функції.'])(class='expertise-areas__name--finance')
+          +mainPageExpertiseAreas('Стратегія', ['Розробка стратегічного плану.', 'Трансформація бізнес-моделі.', 'Масштабування бізнесу.', 'Систематизація бізнес-процесів.', 'Автоматизація бізнес-процесів.'])(class='expertise-areas__name--strategy')
+          +mainPageExpertiseAreas('Маркетинг та PR', ['Розробка маркетингової стратегії.', 'Розробка та виведення на ринок нового продукту.', 'Розробка стратегії комунікації.', 'Організація роботи відділу маркетингу.', 'Розробка/аудит інструментів інтернет-маркетингу.'])(class='expertise-areas__name--marketing')
+          +mainPageExpertiseAreas('Продажі', ['Залучення нових клієнтів.', 'Збільшення продажів.', 'Побудова взаємодії з VIP-клієнтами.', 'Дослідження цільових аудиторій.', 'Повернення втрачених покупців.'])(class='expertise-areas__name--sales')
+          +mainPageExpertiseAreas('Управління персоналом / HR', ['Розробка ефективної системи підбору.', 'Розробка програми адаптації.', 'Налагодження кадрового обліку.', 'Розробка та оцінка системи винагороди.', 'Створення кадрового резерву.'])(class='expertise-areas__name--management')
+          +mainPageExpertiseAreas('Логістика', ['Організація транспортування.', 'Управління запасами.', 'Контроль та управління складською діяльністю.', 'Управління матеріально-технічною базою.', 'Стратегічне планування в розрізі управління корпоративною логістичною системою.'])(class='expertise-areas__name--logistics')
+    .workflow
+      .workflow__container  
+        h2.c-title.c-title__title2 Як це 
+          span.c-accent працює
+        .workflow__infographics
+          .workflow__column 
+            .workflow__block.workflow__block--pastel-6 Сформулюй запит під потребу свого бізнесу
+          .workflow__column 
+            .workflow__block.workflow__block--pastel-3 Обери експерта із запропонованого переліку та напиши йому
+            .workflow__block.workflow__block--pastel-4 Опублікуй свою потребу та очікуй на зворотний зв'язок
+          .workflow__column 
+            .workflow__block.workflow__block--pastel-11 Обери зручний формат роботи
+          .workflow__column 
+            .workflow__block.workflow__block--pastel-1 
+              span Почни реалізацію проєкту разом з MIRAHUB
+              a.workflow__link(href="#") Розпочати
+    .responsibility 
+      .responsibility__container 
+        h2.c-title.c-title__title2 
+          span.c-accent Відповідальність
+          span  платформи
+        .responsibility__wrapper
+          ul.responsibility__list 
+            +mainPageResponsibility('Перевірена експертність', 'Професійність рекомендацій та реалізовані кейси, додатково підтверджуються незалежною експертною комісією.')(class='responsibility__element--expert')
+            +mainPageResponsibility('Супровід на кожному етапі', 'Ми зацікавлені в успіху твого бізнесу, тому допоможемо в супроводженні проєкту на всіх етапах та подбаємо про паперову тяганину.')(class='responsibility__element--support')
+            +mainPageResponsibility('Конфіденційність', 'Ми цінуємо приватність, тому подбали про захист інформації у відповідних документах.')(class='responsibility__element--confidentiality')
+            +mainPageResponsibility('Страхування угоди', 'За потреби ти можеш скористатися додатковою можливістю та застрахувати угоду через страхового партнера компанії.')(class='responsibility__element--insurance')
+            +mainPageResponsibility('Вирішення суперечок', 'Ми за партнерський підхід, тому у випадку виникнення розбіжностей незалежна комісія платформи допоможе знайти рішення, використовуючи принцип win-win.')(class='responsibility__element--dispute')
+          .responsibility__imgwrap 
+            img(src= 'assets/img/responsibility.png' alt="responsibility")
+    .recommendations
+      .recommendations__container
+        h2.c-title.c-title__title2
+          span.c-accent Рекомендації
+          span  клієнтів платформи
+        .recommendations__slider(data-js-handler="recommendations__slider")
+          +mainPageRecommendations({name: 'Андрей Романишин', position: 'Head Marketing Director, Company Name', recommendation: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. Дополняется понятным и информативным интерфейсом.'})                         
+          +mainPageRecommendations({name: 'Андрей Романишин', position: 'Head Marketing Director, Company Name', recommendation: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. Дополняется понятным и информативным интерфейсом.'})                         
+          +mainPageRecommendations({name: 'Андрей Романишин', position: 'Head Marketing Director, Company Name', recommendation: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. Дополняется понятным и информативным интерфейсом.'})                         

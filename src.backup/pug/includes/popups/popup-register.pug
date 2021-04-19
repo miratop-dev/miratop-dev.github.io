@@ -1,0 +1,36 @@
+.popup.hide#popup-register
+  a.popup__close(href='#', data-js-handler='popup__handler-close')
+  .popup__title Создать аккаунт!
+  form.popup__form(action='#') 
+    .popup__account-types
+      a.popup__account-type.popup__account-type--active(href='#account-type-client', data-js-handler='popup__account-type')  Клиент
+      a.popup__account-type(href='#account-type-expert', data-js-handler='popup__account-type')  Эксперт  
+    .popup__data-wrap.popup__data-wrap--current#account-type-client
+      label.popup__label
+        .popup__desc Электронная почта
+        input.popup__input.popup__input--text(type='email' name='client_login_name' placeholder='Client email')
+      label.popup__label
+        .popup__desc Пароль
+        input.popup__input.popup__input--text(type='password' name='client_login_pass' placeholder='Client password')
+      label.popup__label
+        .popup__desc Повторите пароль
+        input.popup__input.popup__input--text(type='password ' name='confirm_client_login_pass' placeholder='Confirm client password') 
+    .popup__data-wrap#account-type-expert
+      label.popup__label
+        .popup__desc Электронная почта
+        input.popup__input.popup__input--text(type='email' name='client_login_name' placeholder='Expert email')
+      label.popup__label
+        .popup__desc Пароль
+        input.popup__input.popup__input--text(type='password' name='client_login_pass' placeholder='Expert password')
+      label.popup__label
+        .popup__desc Повторите пароль
+        input.popup__input.popup__input--text(type='password' name='confirm_expert_login_pass' placeholder='Confirm expert password')              
+    input.popup__input.popup__input--submit(type='submit' value='Зарегистрироваться')
+    .popup__unregistered 
+      span Уже есть аккаунт? 
+      a(href="#popup-login", data-js-handler='popup__handler') Войти
+    .popup__socials 
+      a.popup__social(href='#')
+        img(src='assets/img/popup-google.png')
+      a(href='#')
+        img(src='assets/img/popup-facebook.png')        

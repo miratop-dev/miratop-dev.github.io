@@ -1,0 +1,132 @@
+extends ../layout/2columns-wide-sidebar
+
+block variables
+  - var title = 'Mira.hub expert task';
+  - var description = 'Mira.hub expert task';
+  - var pageClass = 'details-page';
+  - let pageTitle = 'Андрій Петренко'
+
+block statusbar
+  .page-title
+    .page-title__container
+      .breadcrumbs
+        a.breadcrumbs__home(href="/") 
+        a.breadcrumbs__link(href="/")
+          span Експерти
+        a.breadcrumbs__link.breadcrumbs__link--current(href="/")= pageTitle    
+      h1 Андрій 
+        span.c-accent Петренко
+
+block content 
+  .details-expert-head
+    .details-expert-head__summary
+      .details-expert-head__imgwrap
+        img(src='assets/img/expert-avatar-full.jpg')
+      .details-expert-head__infowrap
+        .details-expert-head__title= pageTitle
+        .c-info 
+          .c-info__experience 10 років
+          .c-info__projects 527
+          .c-info__available.c-info__available--busy зайнятий
+        .c-tags.details-expert-head__tags
+          a.c-tags__tag(href='#') Аудит
+          a.c-tags__tag(href='#') Бухгалтерия
+          a.c-tags__tag(href='#') Персонал
+          a.c-tags__tag(href='#') Маркетинг
+          a.c-tags__tag(href='#') Аудит     
+          a.c-tags__tag(href='#', data-js-handler='expand-list__handler') еще 5
+    a.c-button.c-button--primary.c-button--md.c-button--mobile.details-expert-head__button(href='#') Зв'язатись
+  .details-expert-description
+    .details-expert-description__block
+      .c-title.c-title__title4 Коротко про мене
+      p Вітаю, мене звуть Олена і я маркетолог з 15 річним досвідом. Будьмо знайомі! :)
+      p За ці 15 років мені випала можливість попрацювати в рітейлі, банку, виробничих компаніях, а також створити свою консалтингову компанію. Наразі я розвиваю власний бізнес в напрямку маркетингу та ділюсь досвідом з іншими компаніями. За плечами кілька десятків успішно реалізованих кейсів. Буду корисна твоєму бізнесу в побудові маркетингової стратегії, дослідженні ринку та сегментуванні аудиторії, розробці і реалізації рекламних кампаній та в інших маркетингових бізнес-завданнях.
+    .details-expert-description__block
+      .c-title.c-title__title4 Портфоліо
+      .details-expert-description__accordion.details-expert-description__accordion--expanded
+        .details-expert-description__header.details-expert-description__header--expanded(data-js-handler='accordion__handler')
+          .c-title.c-title__title4 Розробка Digital маркетингової стратегії
+          .c-info
+            .c-info__client Rozetka
+            .c-info__deadline 3 місяці
+            .c-info__date 2021
+        .c-title.c-title__title5.c-title--alert Виклик
+        span.details-expert-description__indent Розробка стратегії Digital маркетингу з нуля, у зв'язку з виведенням бізнесу в e-commerce. 
+        .c-title.c-title__title5.c-title--goal Результати
+        span Відсоток конверсії збільшено у 2 рази. <br />Впізнаваність бренду виросла на 30%. <br />Залучено близько 5 тисяч нових унікальних клієнтів.
+      .details-expert-description__accordion.details-expert-description__accordion--collapse
+        .details-expert-description__header.details-expert-description__header--collapse(data-js-handler='accordion__handler')
+          .c-title.c-title__title4 Розробити фінансову модель
+          .c-info
+            .c-info__client Rozetka
+            .c-info__deadline 3 місяці
+            .c-info__date 2021    
+        .c-title.c-title__title5.c-title--alert Виклик
+        span.details-expert-description__indent Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником.
+        .c-title.c-title__title5.c-title--goal Результати
+        span Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным.              
+      .details-expert-description__accordion.details-expert-description__accordion--collapse
+        .details-expert-description__header.details-expert-description__header--collapse(data-js-handler='accordion__handler')
+          .c-title.c-title__title4 Навчання персоналу
+          .c-info
+            .c-info__client Rozetka
+            .c-info__deadline 3 місяці
+            .c-info__date 2021     
+        .c-title.c-title__title5.c-title--alert Виклик
+        span.details-expert-description__indent Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником.
+        .c-title.c-title__title5.c-title--goal Результати
+        span Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным.             
+    .details-expert-description__block
+      .c-title.c-title__title4 Досвід роботи   
+      div
+        .details-expert-description__line 
+          strong 2019 – 2021
+          span HRD. Epam 
+        .details-expert-description__line 
+          strong 2017 – 2019
+          span Senior HR. Company name
+        .details-expert-description__line 
+          strong 2014 – 2017
+          span Middle HR. Company name                 
+
+block sidebar
+  .c-title.c-title__title4 Рекомендації
+  .details-expert-sidebar 
+    .details-expert-sidebar__block
+      .details-expert-sidebar__header
+        .details-expert-sidebar__imgwrap 
+          img(src='assets/img/details-expert-sidebar-img-1.jpg')
+        .details-expert-sidebar__info 
+          .c-title.c-title__title5 Андрей Романишин
+          span Head Marketing Director, Company Name
+      .details-expert-sidebar__content Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником.
+    .details-expert-sidebar__block
+      .details-expert-sidebar__header
+        .details-expert-sidebar__imgwrap 
+          img(src='assets/img/details-expert-sidebar-img-2.jpg')
+        .details-expert-sidebar__info 
+          .c-title.c-title__title5 Андрей Романишин
+          span Head Marketing Director, Company Name      
+      .details-expert-sidebar__content Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей.    
+    .details-expert-sidebar__block
+      .details-expert-sidebar__header
+        .details-expert-sidebar__imgwrap 
+          img(src='assets/img/details-expert-sidebar-img-3.jpg')
+        .details-expert-sidebar__info 
+          .c-title.c-title__title5 Андрей Романишин
+          span Head Marketing Director, Company Name      
+      .details-expert-sidebar__content Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.      
+  .c-title.c-title__title4 Успішно виконані проекти
+  .details-links 
+    a(href='#') 
+      span Разработать финансовую модель
+    a(href='#') 
+      span Провести аудит 
+    a(href='#') 
+      span Обучение персонала
+    a(href='#') 
+      span Разработать финансовую модель
+    a(href='#') 
+      span Провести аудит
+              
+  

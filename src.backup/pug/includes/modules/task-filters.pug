@@ -1,0 +1,109 @@
+.c-aside__title.c-gradient Фильтр
+  .c-aside__close(data-js-handler='mobile-filter__handler')
++searchFilters({
+  title: 'Персонал', 
+  expanded: true,
+  inputs: [
+    {label: 'Система обучения', name: 'name[]', checked: false}, 
+    {label: 'Оценка персонала', name: 'name[]', checked: false},
+    {label: 'Подбор специалистов', name: 'name[]', checked: false},
+    {label: 'Система обучения', name: 'name[]', checked: false},
+    {label: 'Оценка персонала', name: 'name[]', checked: false},
+    {label: 'Оценка персонала', name: 'name[]', checked: false},
+    {label: 'Оценка персонала', name: 'name[]', checked: false}
+  ]
+})
++searchFilters({
+  title: 'Финансы',
+  expanded: true, 
+  inputs: [
+    {label: 'Система обучения', name: 'name[]', checked: false}, 
+    {label: 'Оценка персонала', name: 'name[]', checked: true},
+    {label: 'Подбор специалистов', name: 'name[]', checked: false},
+    {label: 'Система обучения', name: 'name[]', checked: false},
+    {label: 'Оценка персонала', name: 'name[]', checked: false},
+    {label: 'Оценка персонала', name: 'name[]', checked: false},
+    {label: 'Оценка персонала', name: 'name[]', checked: false}
+  ]
+})       
++searchFilters({
+  title: 'Масштабирование',
+  expanded: true, 
+  inputs: [
+    {label: 'Система обучения', name: 'name[]', checked: false}, 
+    {label: 'Оценка персонала', name: 'name[]', checked: false},
+    {label: 'Подбор специалистов', name: 'name[]', checked: false},
+    {label: 'Система обучения', name: 'name[]', checked: false},
+    {label: 'Оценка персонала', name: 'name[]', checked: false},
+    {label: 'Оценка персонала', name: 'name[]', checked: false},
+    {label: 'Оценка персонала', name: 'name[]', checked: false}
+  ]
+})    
++searchFilters({
+  title: 'Персонал', 
+  expanded: false,
+  inputs: [
+    {label: 'Система обучения', name: 'name[]', checked: false}, 
+    {label: 'Оценка персонала', name: 'name[]', checked: false},
+    {label: 'Подбор специалистов', name: 'name[]', checked: false},
+    {label: 'Система обучения', name: 'name[]', checked: false},
+    {label: 'Оценка персонала', name: 'name[]', checked: false},
+    {label: 'Оценка персонала', name: 'name[]', checked: false},
+    {label: 'Оценка персонала', name: 'name[]', checked: false}
+  ]
+})
++searchFilters({
+  title: 'Финансы',
+  expanded: false, 
+  inputs: [
+    {label: 'Система обучения', name: 'name[]', checked: false}, 
+    {label: 'Оценка персонала', name: 'name[]', checked: true},
+    {label: 'Подбор специалистов', name: 'name[]', checked: false},
+    {label: 'Система обучения', name: 'name[]', checked: false},
+    {label: 'Оценка персонала', name: 'name[]', checked: false},
+    {label: 'Оценка персонала', name: 'name[]', checked: false},
+    {label: 'Оценка персонала', name: 'name[]', checked: false}
+  ]
+})   
++searchFilters({
+  title: 'Бухгалтерия',
+  expanded: false, 
+  inputs: [
+    {label: 'Система обучения', name: 'name[]', checked: false}, 
+    {label: 'Оценка персонала', name: 'name[]', checked: false},
+    {label: 'Подбор специалистов', name: 'name[]', checked: false},
+    {label: 'Система обучения', name: 'name[]', checked: false},
+    {label: 'Оценка персонала', name: 'name[]', checked: false},
+    {label: 'Оценка персонала', name: 'name[]', checked: false},
+    {label: 'Оценка персонала', name: 'name[]', checked: false}
+  ]
+})  
++searchFilters({
+  title: 'Масштабирование',
+  expanded: false, 
+  inputs: [
+    {label: 'Система обучения', name: 'name[]', checked: false}, 
+    {label: 'Оценка персонала', name: 'name[]', checked: false},
+    {label: 'Подбор специалистов', name: 'name[]', checked: false},
+    {label: 'Система обучения', name: 'name[]', checked: false},
+    {label: 'Оценка персонала', name: 'name[]', checked: false},
+    {label: 'Оценка персонала', name: 'name[]', checked: false},
+    {label: 'Оценка персонала', name: 'name[]', checked: false}
+  ]
+})    
++searchFilters({
+  title: 'Срок выполнения',
+  expanded: true, 
+  inputs: [
+    {label: '2 недели', name: 'name[]', checked: false}, 
+    {label: '1 месяц', name: 'name[]', checked: true},
+    {label: '3 месяца', name: 'name[]', checked: false},
+    {label: '6 месяцев', name: 'name[]', checked: false},
+    {label: '1 год', name: 'name[]', checked: false},
+    {label: '100 лет', name: 'name[]', checked: false},
+    {label: '1 тысячелетие', name: 'name[]', checked: false}
+  ]
+})
+.filter-block__links
+  a.filter-block__search.c-button.c-button--bordered.c-button--lg(href="#") Отменить фильтры
+  a.filter-block__search.c-button.c-button--primary.c-button--lg(href="#") Найти предложение 

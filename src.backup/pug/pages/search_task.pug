@@ -1,0 +1,36 @@
+extends ../layout/2columns-narrow-sidebar
+
+block variables
+  - var title = 'Mira.hub search task';
+  - var description = 'Mira.hub search task';
+  - var pageClass = 'search-page';
+  - let witchPage = 'search'
+  - let pageTitle = 'Знайди цікаву пропозицію'
+
+block title 
+  .page-title
+    .page-title__container
+      .breadcrumbs
+        a.breadcrumbs__home(href="/") 
+        a.breadcrumbs__link.breadcrumbs__link--current(href="/")= pageTitle    
+      h1 Знайди цікаву 
+        span.c-accent пропозицію
+      .sort
+        span.sort__legend Сортувати:
+        .sort__select 
+          select
+            option За датою створення
+            option За датою створення
+            option За датою створення        
+
+block statusbar
+  //.search-page-top 
+    .search-page-top__container 
+      a.search-page-top__filter.c-button.c-button--primary.c-button--filter(data-js-handler='mobile-filter__handler') Фильтр
+
+block aside
+  include ../includes/modules/task-filters  
+
+block content 
+  include ../includes/modules/task-list                     
+  +pagination      

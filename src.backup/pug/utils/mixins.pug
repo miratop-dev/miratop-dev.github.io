@@ -1,0 +1,135 @@
+mixin mainPageExpertiseAreas(name, items)    
+  li.expertise-areas__block
+    .c-title.c-title__title4.expertise-areas__name&attributes(attributes)= name
+    each item, index in items
+      if(index < 5)
+        div.expertise-areas__activity= item
+      else
+        div.expertise-areas__activity.hide= item
+    a.expertise-areas__more(href="#", data-js-handler='expand-list__handler') Показати всі
+
+mixin mainPageResponsibility(name, text)    
+  li.responsibility__element&attributes(attributes)
+    .c-title.c-title__title4.responsibility__title= name
+    .responsibility__description= text
+
+mixin mainPageWorkflow(args)
+  .workflow__wrapper 
+    .workflow__block
+      .workflow__imgwrap
+        img(src= 'assets/img/workflow-slide-1.png' alt="slide")
+      .workflow__textwrap 
+        .workflow__title= args.title
+        .workflow__subtitle= args.subtitle
+        .workflow__description Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. Проблемы решаются оперативно и, главное, без потери времени и лишних денег. Вполне доволен сотрудничеством.
+        .workflow__buttons 
+          a.workflow__link.c-button.c-button--primary.c-button--md(href="#") Как эксперт
+          a.workflow__link.workflow__link-black.c-button.c-button--primary.c-button--md(href="#") Как бизнес   
+
+mixin mainPageRecommendations(args)  
+  .recommendations__block
+    .recommendations__recommendation= args.recommendation
+    .recommendations__info
+      .recommendations__imgwrap
+        img(src= 'assets/img/recommendation-photo.jpg' alt="recommending's photo")
+      .recommendations__profile
+        .c-title.c-title__title4= args.name
+        p.recommendations__position= args.position
+
+mixin searchFilters(args)
+  .filter-block(class=args.expanded ? '' : 'collapse')
+    .filter-block__title.c-title.c-title__title5(class=args.expanded ? 'expanded' : 'collapse' data-js-handler="filter__toggle")= args.title
+    each input, index in args.inputs
+      if(index < 5)
+        label.filter-block__label.filter-block__label--checkbox
+          input.filter-block__checkbox(type='checkbox' name= input.name checked= input.checked)
+          p= input.label
+      else
+        label.filter-block__label.filter-block__label--checkbox.hide
+          input.filter-block__checkbox(type='checkbox' name= input.name checked= input.checked)
+          p= input.label  
+    a.filter-block__more(href="#", data-js-handler='expand-list__handler') Показати ще 
+      span.filter-block__quantity 18  
+
+mixin searchBlockExpert(args)
+  .search__block
+    header.search__header
+      .search__imgwrap
+        img(src= args.image alt="avatar")
+      .search__summary
+        .search__title.c-title.c-title__title4= args.name
+        .c-info
+          .c-info__experience= args.expirience
+          .c-info__projects= args.projects
+          if(args.free)
+            .c-info__available.c-info__available--free Доступний
+          else 
+            .c-info__available.c-info__available--busy зайнятий
+        .search__progress
+          case args.progress
+            when 'high'
+              progress.search__progressbar.search__progressbar--high(max='10' value= args.value)
+            when 'middle'
+              progress.search__progressbar.search__progressbar--middle(max='10' value= args.value)
+            when 'low'
+              progress.search__progressbar.search__progressbar--low(max='10' value= args.value)
+            default
+              progress.search__progressbar.search__progressbar--high(max='10' value= args.value)                        
+          span.search__value.c-title.c-title__title5= args.value
+        .c-tags 
+          each tag, index in args.tags
+            if(index < 3)
+              a.c-tags__tag(href= tag.url)= tag.name
+            else 
+              a.c-tags__tag.hide(href= tag.url)= tag.name
+            if ((index == args.tags.length - 1) && (args.tags.length > 3))
+              a.c-tags__tag(href="#", data-js-handler='expand-list__handler') еще 
+                span.c-tags__num= args.tags.length - 3          
+    .search__info
+      .search__description= args.description
+    .search__buttons
+      a.c-button.c-button--primary.c-button--md.search__button(href= args.expertLink) Зв'язатись     
+
+mixin searchBlockTask(args)
+  .search__block
+    header
+      .c-title.c-title__title4= args.name
+      .c-info
+        .c-info__location= args.location
+        .c-info__date= args.date
+        .c-info__client= args.client
+      .c-tags  
+        each tag, index in args.tags
+          if(index < 3)
+            a.c-tags__tag(href= tag.url)= tag.name
+          else 
+            a.c-tags__tag.hide(href= tag.url)= tag.name
+          if ((index == args.tags.length - 1) && (args.tags.length > 3))
+            a.c-tags__tag(href="#") еще 
+              span.c-tags__num= args.tags.length - 3          
+    .search__info
+      .search__description= args.description  
+    .search__buttons
+      a.c-button.c-button--primary.c-button--md.search__button(href= args.expertLink) Відгукнутись       
+
+mixin relatedArticles(args)
+  .article-related__block
+    .article-related__link
+      a(href= args.link)= args.title
+    .c-info
+      .c-info__date= args.date
+      .c-info__email= args.email
+      .c-info__view= args.views
+
+mixin pagination
+  ul.c-pagination
+    li.c-pagination__block.c-pagination__block--current
+      a.c-pagination__link.c-pagination__link--current(href="#") 1
+    li.c-pagination__block
+      a.c-pagination__link(href="#") 2
+    li.c-pagination__block
+      a.c-pagination__link(href="#") 3
+    li.c-pagination__block
+      a.c-pagination__link(href="#") 4
+    li.c-pagination__block
+      a.c-pagination__link(href="#") 5    

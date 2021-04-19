@@ -1,0 +1,221 @@
+.overlay {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+
+  &.show {
+    display: block;
+  }
+}
+
+.main-menu {
+  position: absolute;
+  background-color: #273233;
+  z-index: 4;
+  max-height: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  transition: all .1s ease-in-out;
+
+  &.show {
+    max-height: 100vh;
+    transition: all .1s ease-in-out;
+
+    @include desktop-medium {
+      padding: 30px 0;
+      min-height: 100vh;
+      overflow-y: scroll;
+    }    
+  
+    @include tablet {
+      padding: 30px 0;
+      min-height: 100vh;
+      overflow-y: scroll;
+    }      
+
+    & ~ .overlay {
+      display: block;
+    }    
+  }   
+
+  &__container {
+    @include container;
+
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+
+    @include tablet {
+      flex-direction: column;
+    }    
+  }
+
+  &__header {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 35px 0 0;
+
+    @include tablet {
+      position: relative;
+      top: 0;
+      padding: 0;
+    }    
+  }
+
+  &__close {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.80859 23.1924L23.1934 4.80761' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M4.80859 4.80761L23.1934 23.1924' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    width: 28px;
+    height: 28px;
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      margin: 40px 0 0 0;
+      flex-direction: column;
+    }
+  }
+
+  &__primary {
+    ul {
+      li {
+        position: relative;
+        margin: 0 0 40px;
+        padding: 17px 0;
+
+        @include desktop-large {
+          margin: 0 0 20px;
+        }
+
+        @include desktop-medium {
+          margin: 0 0 20px;
+        }        
+
+        @include tablet {
+          padding: 10px 0;
+          margin: 0 0 20px;
+        }
+
+        img {
+          width: 70px;
+          margin: 0 40px 0 0;
+
+          @include desktop-large {
+            width: 50px;
+          }
+
+          @include desktop-medium {
+            width: 50px;
+          }
+
+          @include tablet {
+            width: 30px;
+            margin: 0 10px 0 0;
+          }
+        }
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &__secondary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include tablet {
+      align-items: flex-start;
+    }
+
+    ul {
+      li {
+        text-align: right;
+        margin: 0 0 40px;
+
+        @include desktop-large {
+          margin: 0 0 20px;
+        }
+
+        @include tablet {
+          margin: 0 20px 0 0;
+          padding: 11px 0;
+        }        
+
+        @include tablet {
+          text-align: left;
+        }
+
+        &:last-child {
+          margin: 0;
+        }        
+      }
+    }
+  }
+
+  &__lang {
+    display: flex;
+
+    @include tablet {
+      width: 100%;
+      border-top: 1px solid $color-primary-grey;
+      padding: 15px 0 0;
+    }
+
+    a {
+      margin: 0 20px 0 0;
+      color: $color-primary-white;
+      font-size: 14px;
+      line-height: 24px;
+
+      &:last-child {
+        margin: 0;
+      }        
+
+      &.current {
+        color: $color-primary-grey;
+      }
+    }
+  }
+
+  &__el {
+    text-decoration: none;
+    color: $color-primary-white;
+    font-weight: bold;
+
+    &--lg {
+      font-size: 24px;
+      line-height: 36px;
+
+      @include tablet {
+        font-size: 16px;
+        line-height: 28px;
+      }
+    }
+
+    &--sm {
+      font-size: 16px;
+      line-height: 28px;
+
+      @include tablet {
+        font-size: 16px;
+        line-height: 28px;
+      }      
+    }
+  }
+}

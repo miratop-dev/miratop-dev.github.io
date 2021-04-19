@@ -1,0 +1,40 @@
+.page-title {
+  position: relative;
+  margin: 0 0 40px;
+  padding: 30px 0;
+  background-color: $text-ultra-silver;
+  background-image: url(/assets/img/page-title.png);
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: contain;
+
+  @include desktop-medium {
+    padding: 20px 0;
+  }
+
+  @include tablet {
+    padding: 20px 0;
+  }   
+
+  &__container {
+    @include container;
+    position: relative;
+  }
+
+  h1 {
+    color: $text-black;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 80px;
+
+    @include desktop-medium {
+      font-size: 24px;
+      line-height: 32px;
+    }        
+
+    @include tablet {
+      font-size: 24px;
+      line-height: 32px;
+    }    
+  }
+}

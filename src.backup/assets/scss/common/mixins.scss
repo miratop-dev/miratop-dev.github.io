@@ -1,0 +1,54 @@
+@mixin extra-large {
+  @media screen and (min-width: 1921px) {
+    @content;
+  }
+}
+
+@mixin desktop-large {
+  @media screen and (min-width: 1024px) and (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin desktop-medium {
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include tablet {
+    max-width: 728px;
+  }
+
+  @include mobile {
+    max-width: 100%;
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}

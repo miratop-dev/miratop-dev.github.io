@@ -1,0 +1,29 @@
+include ../utils/mixins
+block variables
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title #{title}
+    meta(name="description", content=description)
+    meta(name="description", content=description)
+    meta(http-equiv="x-ua-compatible", content="ie=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    link(rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+    script(type='text/javascript', src='https://code.jquery.com/jquery-3.5.1.min.js')
+    script(type='text/javascript', src='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/rellax/1.0.0/rellax.min.js')
+    block head
+
+  body(class=pageClass)
+    include ../includes/modules/menu
+    include ../includes/modules/header
+    block statusbar
+    main(class= pageClass)
+      .c-container
+        .c-wide-content.c-wide-content--left
+          block content
+        .c-sidebar 
+          block sidebar         
+    include ../includes/modules/footer

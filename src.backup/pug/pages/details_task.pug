@@ -1,0 +1,97 @@
+extends ../layout/2columns-wide-sidebar
+
+block variables
+  - var title = 'Mira.hub details task';
+  - var description = 'Mira.hub details task';
+  - var pageClass = 'details-page';
+  - let pageTitle = 'Розробити HR стратегію'
+
+block statusbar
+  .page-title
+    .page-title__container
+      .breadcrumbs
+        a.breadcrumbs__home(href="/") 
+        a.breadcrumbs__link(href="/") 
+          span Пропозиції
+        a.breadcrumbs__link.breadcrumbs__link--current(href="/")= pageTitle    
+      h1 Розробити HR 
+        span.c-accent стратегію
+  .search-page-top 
+
+block content 
+  .details-task-head
+    .details-task-head__summary
+      .c-info 
+        .c-info__location Киев, Украина
+        .c-info__date 15.01.2021
+        .c-info__client Rozetka
+      .c-tags 
+        a.c-tags__tag(href='#') HR
+        a.c-tags__tag(href='#') HR стратегія
+        a.c-tags__tag(href='#') Впровадження стратегії
+    a.c-button.c-button--primary.c-button--md.c-button--mobile.details-task-head__button(href='#') Написати
+  .details-task-description
+    .details-task-description__block
+      .c-title.c-title__title4 Опис задачі
+      p Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. 
+      p Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником.Популярный сервис, на котором удобно и клиентам, и специалистам.
+    .details-task-description__block  
+      .c-title.c-title__title4.c-title--alert.details-task-description__subltitle Проблематика
+      p Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником.
+    .details-task-description__block  
+      .c-title.c-title__title4.c-title--goal.details-task-description__subltitle Очікуваний результат
+      p Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным.
+  .details-task-timing
+    .details-task-timing__block.details-task-timing__block--deadline
+      .details-task-timing__title Термін подачі до:
+      .details-task-timing__date 5 квітня 2021
+    .details-task-timing__block.details-task-timing__block--term
+      .details-task-timing__title Співпраця:
+      .details-task-timing__date 5 місяців
+
+block sidebar
+  .details-task-side
+    .c-title.c-title__title4 Схожі пропозиції
+    .details-task-side__similar
+      .details-task-side__block
+        .c-title.c-title__title4.details-task-side__name Розробити HR стратегію
+        .c-info
+          .c-info__location Киев, Украина
+          .c-info__date 15.01.2021
+          .c-info__client SoftBlues
+        .c-tags 
+          a.c-tags__tag(href='#') HR
+          a.c-tags__tag(href='#') HR стратегія
+          a.c-tags__tag(href='#') Впровадження стратегії   
+      .details-task-side__block
+        .c-title.c-title__title4.details-task-side__name Провести аудит
+        .c-info 
+          .c-info__location Киев, Украина
+          .c-info__date 15.01.2021
+          .c-info__client Kyivstar
+        .c-tags 
+          a.c-tags__tag(href='#') HR
+          a.c-tags__tag(href='#') HR стратегія
+          a.c-tags__tag(href='#') Впровадження стратегії    
+      .details-task-side__block
+        .c-title.c-title__title4.details-task-side__name Розробити фінансову модель
+        .c-info 
+          .c-info__location Киев, Украина
+          .c-info__date 15.01.2021
+          .c-info__client OKKO
+        .c-tags
+          a.c-tags__tag(href='#') HR
+          a.c-tags__tag(href='#') HR стратегія
+          a.c-tags__tag(href='#') Впровадження стратегії   
+    .c-title.c-title__title4 Інші пропозиції компанії                   
+    .details-links 
+      a(href='#') 
+        span Разработать финансовую модель
+      a(href='#') 
+        span Провести аудит 
+      a(href='#') 
+        span Обучение персонала
+      a(href='#') 
+        span Разработать финансовую модель
+      a(href='#') 
+        span Провести аудит
