@@ -3238,6 +3238,57 @@ main.index-page {
     line-height: 28px
 }
 
+.details-expert-description__block ul {
+    padding: 0 0 0 40px
+}
+
+.details-expert-description__block ul li {
+    position: relative;
+    color: #35343a;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0 0 10px;
+    padding: 0 0 0 18px
+}
+
+.details-expert-description__block ul li:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background: #35343a;
+    border-radius: 4px
+}
+
+.details-expert-description__block ul li:last-child {
+    margin: 0
+}
+
+.details-expert-description__block ol {
+    padding: 0 0 0 40px
+}
+
+.details-expert-description__block ol li {
+    position: relative;
+    color: #35343a;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0 0 10px;
+    padding: 0 0 0 18px;
+    list-style: decimal
+}
+
+.details-expert-description__block ol li:last-child {
+    margin: 0
+}
+
+.details-expert-description__block table td,
+.details-expert-description__block table th {
+    padding: 5px 7px
+}
+
 .details-expert-description__accordion {
     border-top: 2px solid #e5e5e5;
     padding: 20px 10px 20px 44px;
@@ -3392,6 +3443,13 @@ main.index-page {
     margin: 0 0 40px
 }
 
+.article-content h2 {
+    color: #35343a;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px
+}
+
 .article-content>div {
     margin: 0 0 20px
 }
@@ -3437,6 +3495,29 @@ main.index-page {
 
 .article-content ul li:last-child {
     margin: 0
+}
+
+.article-content ol {
+    padding: 0 0 0 40px
+}
+
+.article-content ol li {
+    position: relative;
+    color: #35343a;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0 0 10px;
+    padding: 0 0 0 18px;
+    list-style: decimal
+}
+
+.article-content ol li:last-child {
+    margin: 0
+}
+
+.article-content table td,
+.article-content table th {
+    padding: 5px 7px
 }
 
 .article-related {
@@ -4282,8 +4363,17 @@ main.index-page {
         margin: 0 0 20px
     }
 
-    .details-expert-description__accordion,
     .details-expert-description__block p {
+        font-size: 10px;
+        line-height: 14px
+    }
+
+    .details-expert-description__block ol,
+    .details-expert-description__block ul {
+        padding: 0
+    }
+
+    .details-expert-description__accordion {
         font-size: 10px;
         line-height: 14px
     }
@@ -4319,6 +4409,7 @@ main.index-page {
         height: 32px
     }
 
+    .article-content ol,
     .article-content ul {
         padding: 0
     }
