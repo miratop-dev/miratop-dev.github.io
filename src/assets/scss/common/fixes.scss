@@ -32,3 +32,12 @@
   text-decoration-color: #added4;
   text-decoration-thickness: 2px;
 }
+
+.details-expert-description__block ul.panel li::before {
+  margin: 0;
+  padding: 0;
+
+  &::before {
+    display: none;
+  }
+}

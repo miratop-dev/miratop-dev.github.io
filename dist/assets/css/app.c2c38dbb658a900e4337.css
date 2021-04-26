@@ -607,6 +607,15 @@ main.index-page {
     text-decoration-thickness: 2px
 }
 
+.details-expert-description__block ul.panel li:before {
+    margin: 0;
+    padding: 0
+}
+
+.details-expert-description__block ul.panel li:before:before {
+    display: none
+}
+
 .c-container {
     display: -webkit-box;
     display: -ms-flexbox;
