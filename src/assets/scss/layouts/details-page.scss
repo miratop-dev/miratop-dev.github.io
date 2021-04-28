@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   margin: 0 0 40px;
 
   @include tablet {
@@ -130,6 +130,11 @@
       line-height: 14px;
     }    
   }
+}
+
+.details-task-footer {
+  margin: 40px 0 0 0;
+  text-align: center;
 }
 
 .details-task-side {

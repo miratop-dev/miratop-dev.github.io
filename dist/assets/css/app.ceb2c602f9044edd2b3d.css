@@ -964,6 +964,10 @@ main.index-page {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M5.99964 4.36368C5.09691 4.36368 4.36328 5.0973 4.36328 6.00004C4.36328 6.90277 5.09691 7.6364 5.99964 7.6364C6.90237 7.6364 7.636 6.90277 7.636 6.00004C7.636 5.0973 6.90235 4.36368 5.99964 4.36368Z' fill='%23909090'/%3E%3Cpath d='M6.00001 1.90912C3.27273 1.90912 0.943646 3.60547 0 6.00003C0.943646 8.39457 3.27273 10.0909 6.00001 10.0909C8.73001 10.0909 11.0564 8.39457 12 6.00003C11.0564 3.60547 8.73001 1.90912 6.00001 1.90912ZM6.00001 8.72729C4.49456 8.72729 3.27273 7.50546 3.27273 6C3.27273 4.49455 4.49456 3.27275 6.00001 3.27275C7.50547 3.27275 8.7273 4.49457 8.7273 6.00003C8.7273 7.50549 7.50547 8.72729 6.00001 8.72729Z' fill='%23909090'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E")
 }
 
+.c-info__term:before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.00391 0V1.3347H7.33861V2.00204C7.80574 1.93532 8.20615 1.93532 8.67331 2.00204V1.3347H10.008V0H6.00391Z' fill='%2335343A'/%3E%3Cpath d='M12.5449 4.40449L13.012 3.93736L13.5459 4.47125L14.4802 3.53695L12.4782 1.53491L11.5439 2.46921L12.0777 3.00307L11.4771 3.60368C8.27387 1.66836 4.13631 2.66938 2.26775 5.87265C0.399186 9.07591 1.40018 13.08 4.53672 15.0153C7.67326 16.9506 11.8108 15.9496 13.6794 12.7463C15.3477 10.0102 14.8806 6.54001 12.5449 4.40449ZM8.00691 13.9476C5.40426 13.9476 3.33549 11.8788 3.33549 9.27615C3.33549 6.67349 5.40426 4.6047 8.00691 4.6047V9.27612H12.6783C12.6784 11.8788 10.6096 13.9476 8.00691 13.9476Z' fill='%2335343A'/%3E%3C/svg%3E")
+}
+
 .c-info__available:before {
     border-radius: 6px
 }
@@ -3056,9 +3060,9 @@ main.index-page {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     margin: 0 0 40px
 }
 
@@ -3140,6 +3144,11 @@ main.index-page {
     font-weight: 700;
     font-size: 14px;
     line-height: 28px
+}
+
+.details-task-footer {
+    margin: 40px 0 0;
+    text-align: center
 }
 
 .details-task-side__similar {
