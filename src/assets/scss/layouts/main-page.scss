@@ -158,6 +158,24 @@
     }    
   }  
 
+  &__video {
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    width: 325px;
+    height: 670px;
+    border-radius: 48px;
+
+    video {
+      max-width: unset;
+      position: relative;
+      width: 600px;
+      height: 764px;
+      margin: -45px 0 0 -274px;
+    }
+  }
+
   &__iphone {
     position: absolute;
     left: 50%;
