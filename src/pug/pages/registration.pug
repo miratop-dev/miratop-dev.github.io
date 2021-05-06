@@ -4,11 +4,11 @@ block variables
   - var title = 'Mira.hub registration page';
   - var description = 'Mira.hub registration page';
   - var pageClass = 'login-page';
-  - let pageTitle = 'Зареєструйтесь на сайті з допомогою смартфона, електронної пошти або через соціальну мережу'
+  - let pageTitle = 'Зареєструйстесь на сайті за допомогою електронної пошти'
 
 block content 
   .service-main
-    .c-title.c-title__title3.service-main__title Зареєструйтесь на сайті з допомогою смартфона, <br />електронної пошти або через соціальну мережу
+    .c-title.c-title__title3.service-main__title Зареєструйстесь на сайті за допомогою електронної пошти.
     form.service-main__form(action='#')
       fieldset
         label.service-main__label
@@ -16,6 +16,12 @@ block content
           .service-main__account 
              a.service-main__private.service-main__private--active(href='#', data-js-handler='account-type') Приватна особа
              a.service-main__private.service-main__private--unactive(href='#', data-js-handler='account-type') Компанія
+        label.service-main__label
+          .service-main__message.service-main__message--error
+            p Всі поля обов’язкові для заповнення.       
+        label.service-main__label
+          .service-main__message.service-main__message--success
+            p Всі поля успішно заповнені.                    
         label.service-main__label(for='name') 
           .service-main__clarification Ім’я
           input.service-main__input#name(type='text' name='name' placeholder='Ваше ім’я')         
@@ -27,12 +33,13 @@ block content
           input.service-main__input#phone(type='tel' name='phone' placeholder='50 123 4567') 
         label.service-main__label(for='password') 
           .service-main__clarification Пароль
-          input.service-main__input#password(type='password' name='password' placeholder='Введіть ваш пароль')         
+          input.service-main__input.service-main__input--error#password(type='password' name='password' placeholder='Введіть ваш пароль')         
         label.service-main__label(for='confirm-password') 
           .service-main__clarification Пароль ще раз
           input.service-main__input#confirm-password(type='password' name='confirm-password' placeholder='Повторіть пароль')      
         label.service-main__label(for='captcha') 
           .service-main__clarification Введіть каптчу
+          input.service-main__input.service-main__input--half#captcha(type='text' name='captcha' placeholder='0')   
           .service-main__captcha      
         label.service-main__label 
           .service-main__users    

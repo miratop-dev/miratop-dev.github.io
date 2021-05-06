@@ -1478,6 +1478,14 @@ main.index-page {
     margin: 0 auto
 }
 
+.service-main__info {
+    text-align: center;
+    color: #35343a;
+    font-weight: 500;
+    line-height: 16px;
+    width: 100%
+}
+
 .service-main__form {
     margin: 60px 0 0;
     display: -webkit-box;
@@ -1512,6 +1520,9 @@ main.index-page {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     margin: 0 0 15px
 }
 
@@ -1519,7 +1530,10 @@ main.index-page {
     margin: 0
 }
 
-.service-main__clarification,
+.service-main__label.hide {
+    display: none
+}
+
 .service-main__label p {
     color: #35343a;
     text-transform: uppercase;
@@ -1528,11 +1542,43 @@ main.index-page {
     line-height: 16px
 }
 
+.service-main__message {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 8px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 6px 20px;
+    min-height: 40px
+}
+
+.service-main__message--error {
+    background: #fff8f7;
+    border: 2px solid #ebbab4;
+    -webkit-box-shadow: inset 4px 0 0 #ebbab4;
+    box-shadow: inset 4px 0 0 #ebbab4
+}
+
+.service-main__message--success {
+    background: #f1fff3;
+    border: 2px solid #b5efce;
+    -webkit-box-shadow: inset 4px 0 0 #b5efce;
+    box-shadow: inset 4px 0 0 #b5efce
+}
+
 .service-main__clarification {
     position: absolute;
     top: 13px;
     right: calc(100% + 20px);
-    white-space: nowrap
+    white-space: nowrap;
+    color: #35343a;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px
 }
 
 .service-main__clarification--required {
@@ -1609,12 +1655,20 @@ main.index-page {
     color: #d2d2d2
 }
 
+.service-main__input--error {
+    border: 2px solid #ebbab4
+}
+
+.service-main__input--half {
+    max-width: 110px
+}
+
 .service-main__captcha {
     background-color: #f5f5f5;
     background-image: url(../../assets/img/captcha.png);
     background-repeat: no-repeat;
-    width: 302px;
-    height: 76px
+    width: 115px;
+    height: 30px
 }
 
 .service-main__checkbox {

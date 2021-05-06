@@ -175,6 +175,31 @@ module.exports = {
       template: `${PAGES_DIR}/login_page-forgot.pug`,
       filename: './login_page-forgot.html',
       inject: true
-    })        
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/registration.pug`,
+      filename: './registration.html',
+      inject: true
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/login_page-verification.pug`,
+      filename: './login_page-verification.html',
+      inject: true
+    }),    
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/login_page-confirmation.pug`,
+      filename: './login_page-confirmation.html',
+      inject: true
+    }),      
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/login_page-change-pass.pug`,
+      filename: './login_page-change-pass.html',
+      inject: true
+    }),      
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/index_video.pug`,
+      filename: './index_video.html',
+      inject: true
+    })         
   ],
 }

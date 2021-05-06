@@ -11,6 +11,12 @@ block content
     .c-title.c-title__title3.service-main__title Введіть електронну пошту, яку ви <br />використовували при реєстрації
     form.service-main__form(action='#')
       fieldset
+        label.service-main__label
+          .service-main__message.service-main__message--error
+            p Користувача з вказаним email не існує. 
+        label.service-main__label
+          .service-main__message.service-main__message--success
+            p На Ваш email були надіслані інструкції зі змінами.       
         label.service-main__label(for='email') 
           .service-main__clarification.service-main__clarification--required Електронна пошта або логін
           input.service-main__input#email(type='text' name='login-email' placeholder='Введіть ваш email або логін') 

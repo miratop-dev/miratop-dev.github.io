@@ -1,0 +1,28 @@
+extends ../layout/service
+
+block variables
+  - var title = 'Mira.hub forgot login';
+  - var description = 'Mira.hub forgot login';
+  - var pageClass = 'login-page';
+  - let pageTitle = 'Зміна паролю'
+
+block content 
+  .service-main
+    .c-title.c-title__title3.service-main__title Зміна паролю
+    form.service-main__form(action='#')
+      fieldset
+        label.service-main__label
+          .service-main__message.service-main__message--error
+            p Пароль та його підтвердження не співпадають     
+        label.service-main__label(for='password') 
+          .service-main__clarification Пароль
+          input.service-main__input#password(type='password' name='password' placeholder='Введіть ваш пароль')         
+        label.service-main__label(for='confirm-password') 
+          .service-main__clarification Пароль ще раз
+          input.service-main__input#confirm-password(type='password' name='confirm-password' placeholder='Повторіть пароль')   
+      fieldset               
+        a.service-main__button.c-button.c-button--primary(href='#') Зберегти зміни
+    .service-additional 
+      .service-additional__block
+        .service-additional__desc Вперше на нашому сайті?
+        a.c-button.c-button--md.c-button--primary(href='registration.html') Зареєструйтесь
