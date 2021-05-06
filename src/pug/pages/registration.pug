@@ -12,11 +12,6 @@ block content
     form.service-main__form(action='#')
       fieldset
         label.service-main__label
-          .service-main__clarification Тип аккаунту
-          .service-main__account 
-             a.service-main__private.service-main__private--active(href='#', data-js-handler='account-type') Приватна особа
-             a.service-main__private.service-main__private--unactive(href='#', data-js-handler='account-type') Компанія
-        label.service-main__label
           .service-main__message.service-main__message--error
             p Всі поля обов’язкові для заповнення.       
         label.service-main__label
@@ -24,7 +19,10 @@ block content
             p Всі поля успішно заповнені.                    
         label.service-main__label(for='name') 
           .service-main__clarification Ім’я
-          input.service-main__input#name(type='text' name='name' placeholder='Ваше ім’я')         
+          input.service-main__input#name(type='text' name='name' placeholder='Ваше ім’я')     
+        label.service-main__label(for='lastname') 
+          .service-main__clarification Прізвище
+          input.service-main__input#lastname(type='text' name='name' placeholder='Ваше прізвище')                 
         label.service-main__label(for='email') 
           .service-main__clarification Електронна пошта
           input.service-main__input#email(type='email' name='email' placeholder='Введіть ваш email')
@@ -53,9 +51,6 @@ block content
           .service-main__note Всі поля обов’язкові для заповнення
         a.service-main__button.c-button.c-button--primary(href='#') Зареєструватись
     .service-additional 
-      .service-additional__block
-        .service-additional__desc Вперше на нашому сайті?
-        a.c-button.c-button--md.c-button--primary(href='registration.html') Зареєструйтесь
       .service-additional__block
         .service-additional__desc Забули пароль?
         a.c-button.c-button--md.c-button--primary(href='login_page-forgot.html') Відновити пароль     

@@ -16,6 +16,16 @@
     font-weight: 500;
     line-height: 16px;
     width: 100%;
+    margin: 40px 0 0 0;
+
+    a {
+      color: $text-black;
+      border-bottom: 2px solid #added4;
+
+      &:visited {
+        color: $text-black;
+      }
+    }
   }
 
   &__form {
@@ -72,13 +82,11 @@
     &--error {
       background: #FFF8F7;
       border: 2px solid $color-pastel-12;
-      box-shadow: inset 4px 0 0 $color-pastel-12;
     }
 
     &--success {
       background: #f1fff3;
       border: 2px solid $color-pastel-2;
-      box-shadow: inset 4px 0 0 $color-pastel-2;
     }    
   }
 
@@ -102,29 +110,6 @@
         right: 0;
         top: 0;
       }
-    }
-  }
-
-  &__account {
-    display: flex;
-    width: 100%;
-    border-radius: 64px;
-    border: 2px solid $color-pastel-7;
-    overflow: hidden;
-  }
-
-  &__private {
-    color: $text-black;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 16px;
-    width: 50%;
-    text-align: center;
-    padding: 10px 0;
-    
-    &--active {
-      background-color: $color-pastel-7;
     }
   }
 
