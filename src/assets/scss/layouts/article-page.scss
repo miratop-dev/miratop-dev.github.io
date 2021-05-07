@@ -112,3 +112,192 @@
     }
   }
 }
+
+.about {
+  p {
+    margin: 0 0 10px;
+    color: $text-black;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+.about-explain {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 0 120px;
+
+  &__desc {
+    width: 100%;
+    max-width: 620px;
+  }
+
+  &__why {
+    margin: 0 0 20px;
+  }
+
+  &__img {
+    margin: 0 0 0 110px;
+  }
+}
+
+.about-unique {
+  margin: 0 0 120px;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 0 0;
+
+    @include mobile {
+      flex-direction: column;
+    }    
+  }
+
+  &__block {
+    width: 32%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 12px;
+    padding: 40px;
+
+    &:first-child {
+      border: 2px solid $color-pastel-6;
+    }
+
+    &:nth-child(2) {
+      border: 2px solid $color-pastel-3;
+    }
+
+    &:nth-child(3) {
+      border: 2px solid $color-pastel-1;
+    }    
+
+    @include mobile {
+      width: 100%;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      margin: 0 0 20px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }        
+  }
+
+  &__imgwrap {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    margin: 0 0 30px;
+
+    @include mobile {
+      margin: 0 10px 0 0;
+      width: 24px;
+      height: 24px;
+    }     
+  }
+
+  &__head {
+    margin: 0 0 10px;
+
+    @include mobile {
+      margin: 0 0 2px;
+    }       
+  }
+
+  &__description {
+    display: inline-block;
+    width: 100%;
+    max-width: 340px;
+    color: $text-grey;
+    font-size: 14px;
+    line-height: 28px;
+
+    @include mobile {
+      font-size: 10px;
+      line-height: 14px;
+    }    
+  }
+}
+
+.about-who {
+  margin: 0 0 120px;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__container {
+    margin: 40px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__block {
+    -webkit-box-shadow: 0px 0px 25px 10px rgba(37,70,72,0.1); 
+    box-shadow: 0px 0px 25px 10px rgba(37,70,72,0.1);
+    border: 1px solid $color-pastel-8;
+    width: 50%;
+    max-width: 618px;
+    min-height: 478px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  &__imgwrap {
+    max-height: 280px;
+  }
+
+  &__textwrap {
+    padding: 20px 38px 40px 20px;
+  }
+
+  &__desc {
+    color: $text-grey;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+  }
+}
+
+.about-reviews {
+  text-align: center;
+
+  &__block {
+    display: inline-block;
+    width: 100%;
+    max-width: 840px;
+    border: 2px solid #B7DCF4;
+    padding: 40px;
+    border-radius: 12px;
+    margin: 0 0 40px;
+    text-align: left;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__title {
+    margin: 20px 0 0 0;
+  }
+
+  &__desc {
+    color: $text-grey;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+  }
+}

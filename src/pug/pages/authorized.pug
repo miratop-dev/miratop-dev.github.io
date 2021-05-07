@@ -1,0 +1,160 @@
+extends ../layout/authorized
+
+block variables
+  - var title = 'Mira.hub';
+  - var description = 'Mira.hub main page title';
+  - var pageClass = 'index-page';
+  - let witchPage = 'main'
+
+block header
+  .main-page-banner
+    header.header
+      .header__container
+        a.header__logo(href='/')
+          img(src= 'assets/img/logo.svg' alt='logo')  
+        .header__links  
+          a.header__link(href='search_task.html') Пропозиції
+          a.header__link(href='search_expert.html') Експерти
+          a.header__more(href='#') Як це працює 
+        .header__buttons
+          a.header__burger(href='#' data-js-handler='menu__toggle')
+            div
+            div
+            div
+            div      
+          a.header__join.hide.c-button.c-button--primary.c-button--md(href='login_page.html') Приєднатись
+          .header-user
+            .header-user__imgwrap 
+              a.header-user__avatar(href='#', data-js-handler='header-user__handler') 
+                img(src='assets/img/expert-avatar-3.jpg', alt='avatar')
+              .header-user__status.header-user__status--active
+              ul.header-user__dropdown.hide
+                li.header-user__item.header-user__item--message
+                  a(href='#') Повідомлення
+                li.header-user__item.header-user__item--offer
+                  a(href='#')  Пропозиції
+                li.header-user__item.header-user__item--workflow
+                  a(href='#')  Хід робіт
+                li.header-user__item.header-user__item--options
+                  a(href='#')  Налаштування  
+                li.header-user__item.header-user__item--logout
+                  a(href='#')  Вийти                             
+  
+  .main-menu
+    ul.main-menu__list 
+      li
+        a(href="#") Експертам       
+      li 
+        a(href="#") Клієнтам
+      li 
+        a(href="#") Відповідальність
+      li 
+        a(href="#") Часті питання
+      li 
+        a(href="about-us_page.html") Про нас
+      li 
+        a(href="#") Команда
+      li 
+        a(href="#") Партнери
+      li 
+        a(href="#") Контакти                                        
+  .overlay(data-js-handler='overlay__handler')
+
+  .main-page-banner__container
+    .main-page-banner__wrap
+      h1.main-page-banner__title Зустрінь свого 
+        span.c-accent експерта
+      .main-page-banner__description Знайди того самого експерта-практика, з яким прокачаєш свій бізнес до нових висот. 
+      .main-page-banner__buttons
+        a.main-page-banner__link.c-button.c-button--primary.c-button--lg(href="#") Знайти експерта
+        a.main-page-banner__link.c-button.c-button--bordered.c-button--lg(href="#") Переглянути запити
+        a.main-page-banner__more(href="#") Як це працює
+      .main-page-banner__note Професійність експертів є цінністю MIRAHUB та гарантом безпечної угоди для клієнта.
+    .main-page-banner__img
+      img(src='assets/img/main-page-banner__circles.png')
+      img.main-page-banner__iphone(src='assets/img/main-page-banner__iphone.png')
+
+block content 
+  main(class= pageClass)
+    .advantages
+      .advantages__container
+        .advantages__block
+          .advantages__imgwrap
+            img(src="assets/img/benefit_icon_1.png")
+          .advantages__textwrap
+            .c-title.c-title__title4.advantages__title Практики для практиків
+            .advantages__description На платформі немає «лівих» людей. Експерти платформи — це перевірені часом профі з багажем успішно реалізованих кейсів.
+        .advantages__block
+          .advantages__imgwrap
+            img(src="assets/img/benefit_icon_2.png")
+          .advantages__textwrap
+            .c-title.c-title__title4.advantages__title Новий формат
+            .advantages__description Якісна експертиза та проєктний підхід — це цілком сумісні та реальні поняття. Працюй з MIRAHUB та переконайся в цьому на практиці.
+        .advantages__block
+          .advantages__imgwrap
+            img(src="assets/img/benefit_icon_3.png")
+          .advantages__textwrap
+            .c-title.c-title__title4.advantages__title Безпечна угода
+            .advantages__description Оплата проєкту відбувається тільки за фактом успішної реалізації. Ми дбаємо про це.                   
+    .expertise-areas
+      .expertise-areas__container
+        h2.c-title.c-title__title2 
+          span.c-accent Експертиза
+        ul.expertise-areas__list
+          +mainPageExpertiseAreas('Фінанси, облік, бухгалтерія', 'assets/img/expertise-areas-finance.png', ['Розробка і впровадження управлінського обліку.', 'Проведення аудиту поточної облікової системи.', 'Оптимізація бізнес-процесів фінансової функції.', 'Проведення фінансового аналізу діяльності.', 'Коучинг та організація навчання персоналу фінансовим методам управління.', 'Розробка і впровадження управлінського обліку.', 'Проведення аудиту поточної облікової системи.', 'Оптимізація бізнес-процесів фінансової функції.'])(class='expertise-areas__name--finance')
+          +mainPageExpertiseAreas('Стратегія', 'assets/img/expertise-areas-strategy.png', ['Розробка стратегічного плану.', 'Трансформація бізнес-моделі.', 'Масштабування бізнесу.', 'Систематизація бізнес-процесів.', 'Автоматизація бізнес-процесів.'])(class='expertise-areas__name--strategy')
+          +mainPageExpertiseAreas('Маркетинг та PR', 'assets/img/expertise-areas-marketing.png', ['Розробка маркетингової стратегії.', 'Розробка та виведення на ринок нового продукту.', 'Розробка стратегії комунікації.', 'Організація роботи відділу маркетингу.', 'Розробка/аудит інструментів інтернет-маркетингу.'])(class='expertise-areas__name--marketing')
+          +mainPageExpertiseAreas('Продажі', 'assets/img/expertise-areas-sales.png', ['Залучення нових клієнтів.', 'Збільшення продажів.', 'Побудова взаємодії з VIP-клієнтами.', 'Дослідження цільових аудиторій.', 'Повернення втрачених покупців.'])(class='expertise-areas__name--sales')
+          +mainPageExpertiseAreas('Управління персоналом / HR', 'assets/img/expertise-areas-management.png', ['Розробка ефективної системи підбору.', 'Розробка програми адаптації.', 'Налагодження кадрового обліку.', 'Розробка та оцінка системи винагороди.', 'Створення кадрового резерву.'])(class='expertise-areas__name--management')
+          +mainPageExpertiseAreas('Логістика', 'assets/img/expertise-areas-logistics.png', ['Організація транспортування.', 'Управління запасами.', 'Контроль та управління складською діяльністю.', 'Управління матеріально-технічною базою.', 'Стратегічне планування в розрізі управління корпоративною логістичною системою.'])(class='expertise-areas__name--logistics')
+    .workflow
+      .workflow__container  
+        .workflow__titlewrap
+          h2.c-title.c-title__title2 Як це 
+            span.c-accent працює
+          a.workflow__more(href="#") Дізнатись більше
+        .workflow__infographics
+          .workflow__column 
+            .workflow__block.workflow__block--pastel-6 Сформулюй запит під потребу свого бізнесу
+          .workflow__column 
+            .workflow__block.workflow__block--pastel-3 Обери експерта із запропонованого переліку та напиши йому
+            .workflow__block.workflow__block--pastel-4 Опублікуй свою потребу та очікуй на зворотний зв'язок
+          .workflow__column 
+            .workflow__block.workflow__block--pastel-11 Обери зручний формат роботи
+          .workflow__column 
+            .workflow__block.workflow__block--pastel-1 
+              span Почни реалізацію проєкту разом з MIRAHUB
+              a.workflow__link(href="#") Розпочати
+    .responsibility 
+      .responsibility__container 
+        h2.c-title.c-title__title2 
+          span.c-accent Відповідальність
+          span  платформи
+        .responsibility__wrapper
+          ul.responsibility__list 
+            li.responsibility__element.responsibility__element--expert
+              .c-title.c-title__title4.responsibility__title Перевірена експертність
+              .responsibility__description Професійність рекомендацій та реалізовані кейси, додатково підтверджуються незалежною експертною комісією.     
+            li.responsibility__element.responsibility__element--support
+              .c-title.c-title__title4.responsibility__title Супровід на кожному етапі
+              .responsibility__description Ми зацікавлені в успіху твого бізнесу, тому допоможемо в супроводженні проєкту на всіх етапах та подбаємо про паперову тяганину.
+            li.responsibility__element.responsibility__element--confidentiality
+              .c-title.c-title__title4.responsibility__title Конфіденційність
+              .responsibility__description Ми цінуємо приватність, тому подбали про захист інформації у <a href="#">відповідних документах.</a>
+            li.responsibility__element.responsibility__element--insurance
+              .c-title.c-title__title4.responsibility__title Страхування угоди
+              .responsibility__description За потреби ти можеш скористатися додатковою можливістю та застрахувати угоду через <a href="#">страхового партнера компанії.</a>
+            li.responsibility__element.responsibility__element--dispute
+              .c-title.c-title__title4.responsibility__title Вирішення суперечок
+              .responsibility__description Ми за партнерський підхід, тому у випадку виникнення розбіжностей незалежна комісія платформи допоможе знайти рішення, використовуючи принцип win-win.
+          .responsibility__imgwrap 
+            img(src= 'assets/img/responsibility.png' alt="responsibility")
+    .recommendations
+      .recommendations__container
+        h2.c-title.c-title__title2
+          span.c-accent Рекомендації
+          span  клієнтів платформи
+        .recommendations__slider(data-js-handler="recommendations__slider")
+          +mainPageRecommendations({name: 'Андрей Романишин', position: 'Head Marketing Director, Company Name', recommendation: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. Дополняется понятным и информативным интерфейсом.'})                         
+          +mainPageRecommendations({name: 'Андрей Романишин', position: 'Head Marketing Director, Company Name', recommendation: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. Дополняется понятным и информативным интерфейсом.'})                         
+          +mainPageRecommendations({name: 'Андрей Романишин', position: 'Head Marketing Director, Company Name', recommendation: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом, что делает «Кабанчика» отличным помощником. Дополняется понятным и информативным интерфейсом.'})                         
