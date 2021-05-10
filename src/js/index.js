@@ -166,3 +166,14 @@ $("[data-js-handler='registration__user-type']").on('click', function(e){
     $(this).siblings().removeClass('service-main__user--active');
   }
 });
+
+$("[data-js-handler='options-tabs'] a").on('click', function(e){
+  e.preventDefault();
+  if(!$(this).parent().hasClass('active')) {
+    let href = $(this).attr('href');
+    $("[data-js-handler='options-tab']").removeClass('active');
+    $(href).addClass('active');
+    $("[data-js-handler='options-tabs'] li").removeClass('active');
+    $(this).parent().addClass('active');
+  }
+});

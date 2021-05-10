@@ -48,16 +48,16 @@ module.exports = {
   },
   module: {
     rules: [{
-      test: /\.pug$/,
+      test: /\.pug$/,     
       oneOf: [
         // this applies to <template lang="pug"> in Vue components
         {
           resourceQuery: /^\?vue/,
-          use: ['pug-plain-loader']
+          use: ['pug-plain-loader?pretty=true'],
         },
         // this applies to pug imports inside JavaScript
         {
-          use: ['pug-loader']
+          use: ['pug-loader?pretty=true']
         }
       ]
     }, {
@@ -200,6 +200,21 @@ module.exports = {
       template: `${PAGES_DIR}/index_video.pug`,
       filename: './index_video.html',
       inject: true
-    })         
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/about-us_page.pug`,
+      filename: './about-us_page.html',
+      inject: true
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/authorized.pug`,
+      filename: './authorized.html',
+      inject: true
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/options.pug`,
+      filename: './options.html',
+      inject: true
+    })            
   ],
 }
