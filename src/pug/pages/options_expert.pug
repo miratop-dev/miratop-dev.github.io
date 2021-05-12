@@ -29,6 +29,9 @@ block content
         a(href="#notice") Сповіщення
     .options-page__tab.active#profile(data-js-handler='options-tab')
       form.options-profile(action="#")
+        label.options-profile__label
+          .options-profile__message.options-profile__message--error
+            p Всі поля обов’язкові для заповнення. 
         .options-profile__columns
           .options-profile__column.options-profile__column--vertical
             .options-profile__photo 
@@ -42,10 +45,7 @@ block content
                 option(value="ukraine") Україна                
                 option(value="germany") Німеччина                    
                 option(value="lesoto") Лесото     
-          .options-profile__column
-            label.options-profile__label
-              .options-profile__message.options-profile__message--error
-                p Всі поля обов’язкові для заповнення.             
+          .options-profile__column            
             label.options-profile__label(for='lastname') 
               .options-profile__clarification.options-profile__clarification--required Прізвище
               input.options-profile__input#lastname(type='text' name='lastname' placeholder='Введіть прізвище')   
@@ -71,7 +71,7 @@ block content
         .options-profile__container
           .options-profile__textarea 
             .options-profile__clarification.options-profile__clarification--required Опис діяльності
-            textarea(name="description" cols="30" rows="10" placeholder="Опишіть діяльність") 
+            textarea(name="description" cols="30" rows="10" placeholder="Опишіть діяльність")
           label.options-profile__label.options-profile__label--min(for='experience') 
             .options-profile__clarification.options-profile__clarification--required Досвід роботи
             select#experience.options-profile__select               

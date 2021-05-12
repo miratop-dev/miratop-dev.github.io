@@ -3882,6 +3882,8 @@ main.index-page {
 
 .options-profile__message {
     width: 100%;
+    max-width: 290px;
+    margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3998,35 +4000,35 @@ main.index-page {
     font-size: 14px;
     line-height: 18px;
     color: #d2d2d2;
-    text-transform: uppercase
+    text-transform: capitalize
 }
 
 .options-profile__input::-moz-placeholder {
     font-size: 14px;
     line-height: 18px;
     color: #d2d2d2;
-    text-transform: uppercase
+    text-transform: capitalize
 }
 
 .options-profile__input:-ms-input-placeholder {
     font-size: 14px;
     line-height: 18px;
     color: #d2d2d2;
-    text-transform: uppercase
+    text-transform: capitalize
 }
 
 .options-profile__input::-ms-input-placeholder {
     font-size: 14px;
     line-height: 18px;
     color: #d2d2d2;
-    text-transform: uppercase
+    text-transform: capitalize
 }
 
 .options-profile__input::placeholder {
     font-size: 14px;
     line-height: 18px;
     color: #d2d2d2;
-    text-transform: uppercase
+    text-transform: capitalize
 }
 
 .options-profile__input--error {

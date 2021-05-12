@@ -27,6 +27,9 @@ block content
         a(href="#notice") Сповіщення
     .options-page__tab.active#profile(data-js-handler='options-tab')
       form.options-profile(action="#")
+        label.options-profile__label
+          .options-profile__message.options-profile__message--error
+            p Всі поля обов’язкові для заповнення.        
         .options-profile__columns
           .options-profile__column.options-profile__column--vertical
             .options-profile__photo 
@@ -40,10 +43,7 @@ block content
                 option(value="ukraine") Україна                
                 option(value="germany") Німеччина                    
                 option(value="lesoto") Лесото     
-          .options-profile__column
-            label.options-profile__label
-              .options-profile__message.options-profile__message--error
-                p Всі поля обов’язкові для заповнення.           
+          .options-profile__column         
             label.options-profile__label(for='company') 
               .options-profile__clarification.options-profile__clarification--required Компанія
               input.options-profile__input#company(type='text' name='company' placeholder='Введіть прізвище')     
@@ -66,7 +66,7 @@ block content
         .options-profile__container
           .options-profile__textarea 
             .options-profile__clarification.options-profile__clarification--required Опис діяльності
-            textarea(name="description" cols="30" rows="10" placeholder="Опишіть діяльність")               
+            textarea(name="description" cols="30" rows="10" placeholder="Опишіть діяльність")
         .options-profile__buttons 
           a.options-profile__button.c-button.c-button--primary.c-button--lg Зберегти зміни
           a.options-profile__button.c-button.c-button--bordered.c-button--lg Скасувати

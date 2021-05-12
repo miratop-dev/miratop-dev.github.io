@@ -72,6 +72,8 @@
 
   &__message {
     width: 100%;
+    max-width: 290px;
+    margin: 0 auto;
     display: flex;
     border-radius: 8px;
     align-items: center;
@@ -187,7 +189,7 @@
       font-size: 14px;
       line-height: 18px;
       color: #D2D2D2;
-      text-transform: uppercase;
+      text-transform: capitalize;
     } 
     
     &--error {
