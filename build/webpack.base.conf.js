@@ -212,10 +212,15 @@ module.exports = {
       inject: true
     }),
     new HtmlWebpackPlugin({
-      template: `${PAGES_DIR}/options_client.pug`,
-      filename: './options_client.html',
+      template: `${PAGES_DIR}/options_client_personal.pug`,
+      filename: './options_client_personal.html',
       inject: true
     }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/options_client_company.pug`,
+      filename: './options_client_company.html',
+      inject: true
+    }),    
     new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/options_expert.pug`,
       filename: './options_expert.html',

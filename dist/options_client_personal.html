@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Mira.hub expert options</title>
-    <meta name="description" content="Mira.hub expert options">
+    <title>Mira.hub client options</title>
+    <meta name="description" content="Mira.hub client options">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
@@ -58,7 +58,6 @@
           <div class="options-page">
             <ul class="options-page__tabs" data-js-handler="options-tabs">
               <li class="active"><a href="#profile">Профайл</a></li>
-              <li> <a href="#portfolio">Портфоліо       </a></li>
               <li> <a href="#finance">Фінансова інформація</a></li>
               <li><a href="#access">Доступ</a></li>
               <li> <a href="#notice">Сповіщення</a></li>
@@ -83,12 +82,12 @@
                   <div class="options-profile__column">
                     <label class="options-profile__label">
                       <div class="options-profile__message options-profile__message--error">
-                        <p>Всі поля обов’язкові для заповнення.             </p>
+                        <p>Всі поля обов’язкові для заповнення.           </p>
                       </div>
                     </label>
                     <label class="options-profile__label" for="lastname"> 
                       <div class="options-profile__clarification options-profile__clarification--required">Прізвище</div>
-                      <input class="options-profile__input" id="lastname" type="text" name="lastname" placeholder="Введіть прізвище">
+                      <input class="options-profile__input" id="lastname" type="text" name="name" placeholder="Введіть прізвище">
                     </label>
                     <label class="options-profile__label" for="name"> 
                       <div class="options-profile__clarification options-profile__clarification--required">Ім’я</div>
@@ -96,7 +95,7 @@
                     </label>
                     <label class="options-profile__label" for="login"> 
                       <div class="options-profile__clarification options-profile__clarification--required">Логін</div>
-                      <input class="options-profile__input" id="login" type="text" name="login" placeholder="Введіть логін">
+                      <input class="options-profile__input" id="login" type="text" name="name" placeholder="Введіть логін">
                     </label>
                     <label class="options-profile__label" for="phone"> 
                       <div class="options-profile__clarification options-profile__clarification--required">Телефон</div>
@@ -112,7 +111,7 @@
                         <option>Оберіть місто          </option>
                         <option value="kyiv">Київ                  </option>
                         <option value="odessa">Одеса                      </option>
-                        <option value="lviv">Львів </option>
+                        <option value="lviv">Львів                </option>
                       </select>
                     </label>
                   </div>
@@ -120,112 +119,11 @@
                 <div class="options-profile__container">
                   <div class="options-profile__textarea"> 
                     <div class="options-profile__clarification options-profile__clarification--required">Опис діяльності</div>
-                    <textarea name="description" cols="30" rows="10" placeholder="Опишіть діяльність"> </textarea>
-                  </div>
-                  <label class="options-profile__label options-profile__label--min" for="experience"> 
-                    <div class="options-profile__clarification options-profile__clarification--required">Досвід роботи</div>
-                    <select class="options-profile__select" id="experience">              
-                      <option value="1_year">1 рік              </option>
-                      <option value="5_years">5 років                      </option>
-                      <option value="10_years">10 років    </option>
-                    </select>
-                  </label>
-                  <div class="options-profile__information"> 
-                    <div class="c-title c-title__title4 options-profile__title">Експертиза  </div>
-                    <div class="options-profile__additionals" href="#" data-js-handler="data-options-additionals">
-                      <div class="options-profile__additional">
-                        <div class="c-title c-title__title5 options-profile__domain">Маркетинг та PR</div>
-                        <div class="options-profile__type">Розробка маркетингової стратегії</div><a class="options-profile__remove" href="#" data-js-handler="data-options-profile-remove"></a>
-                      </div>
-                      <div class="options-profile__additional">
-                        <div class="c-title c-title__title5 options-profile__domain">Маркетинг та PR</div>
-                        <div class="options-profile__type">Розробка маркетингової стратегії</div><a class="options-profile__remove" href="#" data-js-handler="data-options-profile-remove"></a>
-                      </div>
-                      <div class="options-profile__additional">
-                        <div class="c-title c-title__title5 options-profile__domain">Маркетинг та PR</div>
-                        <div class="options-profile__type">Розробка маркетингової стратегії</div><a class="options-profile__remove" href="#" data-js-handler="data-options-profile-remove"> </a>
-                      </div>
-                    </div>
-                    <div class="options-profile__controls">     
-                      <select class="options-profile__control-domain" data-js-handler="data-options-control-domain">
-                        <option value="#domain-1">Стратегія 1         </option>
-                        <option value="#domain-2">Стратегія 2                 </option>
-                        <option value="#domain-3">Стратегія 3</option>
-                      </select>
-                      <select class="options-profile__control-type active" id="domain-1" data-js-handler="data-options-control-type">
-                        <option value="type-1">Розробка стратегічного плану 1      </option>
-                        <option value="type-2">Розробка стратегічного плану 2                  </option>
-                        <option value="type-3">Розробка стратегічного плану 3</option>
-                      </select>
-                      <select class="options-profile__control-type" id="domain-2" data-js-handler="data-options-control-type">
-                        <option value="type-1">Тестовий тип 1      </option>
-                        <option value="type-2">Тестовий тип 2                    </option>
-                        <option value="type-3">Тестовий тип 3    </option>
-                      </select>
-                      <select class="options-profile__control-type" id="domain-3" data-js-handler="data-options-control-type">
-                        <option value="type-1">Інший тестовий тип 1      </option>
-                        <option value="type-2">Інший тестовий тип 2                     </option>
-                        <option value="type-3">Інший тестовий тип 3                          </option>
-                      </select><a class="options-profile__control-add" href="#" data-js-handler="data-options-profile-add-option">Додати  </a>
-                    </div>
-                  </div>
-                  <div class="options-profile__information"> 
-                    <div class="c-title c-title__title4 options-profile__title">Навички</div>
-                    <div class="options-profile__tags" data-js-handler="data-options-additionals">
-                      <div class="options-profile__tag"> <span>HR</span><a href="#" data-js-handler="data-options-profile-remove"> </a></div>
-                      <div class="options-profile__tag"> <span>HR стратегія</span><a href="#" data-js-handler="data-options-profile-remove"> </a></div>
-                      <div class="options-profile__tag"> <span>Впровадження стратегії</span><a href="#" data-js-handler="data-options-profile-remove"> </a></div>
-                      <div class="options-profile__tag"> <span>Аудит</span><a href="#" data-js-handler="data-options-profile-remove">  </a></div>
-                      <div class="options-profile__tag"> <span>Аудит</span><a href="#" data-js-handler="data-options-profile-remove"> </a></div>
-                      <div class="options-profile__tag"> <span>Впровадження стратегії</span><a href="#" data-js-handler="data-options-profile-remove">   </a></div>
-                      <div class="options-profile__tag"> <span>Аудит</span><a href="#" data-js-handler="data-options-profile-remove">                                                                                              </a></div>
-                    </div>
-                    <div class="options-profile__controls">
-                      <label class="options-profile__label options-profile__label--tag" for="tag"> 
-                        <input class="options-profile__input" id="tag" type="text" name="tag" placeholder="Введіть навичку" data-js-handler="data-options-profile-tag">
-                      </label><a class="options-profile__control-add" href="#" data-js-handler="data-options-profile-add-tag">Додати</a>
-                    </div>
-                  </div>
-                  <div class="options-profile__information"> 
-                    <div class="c-title c-title__title4 options-profile__title">Досвід роботи  </div>
-                    <div class="options-profile__additionals" href="#" data-js-handler="data-options-additionals">
-                      <div class="options-profile__additional">
-                        <div class="c-title c-title__title5 options-profile__domain"><span class="options-profile__start">2019 </span><span>– </span><span class="options-profile__end">2021</span></div>
-                        <div class="options-profile__type"> <span class="options-profile__position">HRD. </span><span class="options-profile__company">Epam</span></div><a class="options-profile__remove" href="#" data-js-handler="data-options-profile-remove"></a>
-                      </div>
-                      <div class="options-profile__additional">
-                        <div class="c-title c-title__title5 options-profile__domain"><span class="options-profile__start">2017 </span><span>– </span><span class="options-profile__end">2019</span></div>
-                        <div class="options-profile__type"> <span class="options-profile__position">Розробка маркетингової стратегії   </span></div><a class="options-profile__remove" href="#" data-js-handler="data-options-profile-remove"></a>
-                      </div>
-                      <div class="options-profile__additional">
-                        <div class="c-title c-title__title5 options-profile__domain"><span class="options-profile__start">2014</span><span>– </span><span class="options-profile__end">2017</span></div>
-                        <div class="options-profile__type"><span class="options-profile__position">Middle HR. </span><span class="options-profile__company">Company name</span></div><a class="options-profile__remove" href="#" data-js-handler="data-options-profile-remove"> </a>
-                      </div>
-                    </div>
-                    <div class="options-profile__period"> 
-                      <div class="options-profile__clarification">Період</div>
-                      <label>
-                        <input class="options-profile__input" type="text" name="start" placeholder="Рік" data-js-handler="data-options-profile-start"><span>–   </span>
-                        <input class="options-profile__input" type="text" name="end" placeholder="Рік" data-js-handler="data-options-profile-end">
-                      </label>
-                    </div>
-                    <div class="options-profile__controls"> 
-                      <label class="options-profile__label" for="company"> 
-                        <div class="options-profile__clarification">Компанія</div>
-                        <input class="options-profile__input" id="company" type="text" name="company" placeholder="Введіть компанію" data-js-handler="data-options-profile-company">
-                      </label>
-                      <label class="options-profile__label" for="position"> 
-                        <div class="options-profile__clarification">Посада</div>
-                        <input class="options-profile__input" id="position" type="text" name="position" placeholder="Введіть посаду" data-js-handler="data-options-profile-position">
-                      </label><a class="options-profile__control-add" href="#" data-js-handler="data-options-profile-add-input">Додати   </a>
-                    </div>
+                    <textarea name="description" cols="30" rows="10" placeholder="Опишіть діяльність">              </textarea>
                   </div>
                 </div>
-                <div class="options-profile__buttons"> <a class="options-profile__button c-button c-button--primary c-button--lg" href="#">Зберегти зміни</a><a class="options-profile__button c-button c-button--bordered c-button--lg" href="#">Скасувати</a></div>
+                <div class="options-profile__buttons"> <a class="options-profile__button c-button c-button--primary c-button--lg">Зберегти зміни</a><a class="options-profile__button c-button c-button--bordered c-button--lg">Скасувати</a></div>
               </form>
-            </div>
-            <div class="options-page__tab" id="portfolio" data-js-handler="options-tab">
-              <p>portfolio</p>
             </div>
             <div class="options-page__tab" id="finance" data-js-handler="options-tab">
               <p>finance</p>

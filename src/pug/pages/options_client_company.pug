@@ -1,0 +1,79 @@
+extends ../layout/1column
+
+block variables
+  - var title = 'Mira.hub client options';
+  - var description = 'Mira.hub client options';
+  - var pageClass = 'article-page';
+  - let pageTitle = 'Налаштування клієнта'
+
+block title 
+  .page-title
+    .page-title__container
+      h1 
+        span.c-accent.c-accent--pagetitle Налаштування
+
+block statusbar
+
+block content 
+  .options-page
+    ul.options-page__tabs(data-js-handler='options-tabs')
+      li.active
+        a(href="#profile") Профайл
+      li 
+        a(href="#finance") Фінансова інформація
+      li
+        a(href="#access") Доступ
+      li 
+        a(href="#notice") Сповіщення
+    .options-page__tab.active#profile(data-js-handler='options-tab')
+      form.options-profile(action="#")
+        .options-profile__columns
+          .options-profile__column.options-profile__column--vertical
+            .options-profile__photo 
+              .options-profile__avatar 
+                img(src="assets/img/default-user-avatar.svg", alt="user")
+              a.c-title.c-title__title5.options-profile__upload(href="#") Завантажити фото
+              .options-profile__hint Максимальний розмір файлу – 5Мб
+            label.options-profile__label(for='country') 
+              .options-profile__clarification.options-profile__clarification--required Країна
+              select#country.options-profile__select                  
+                option(value="ukraine") Україна                
+                option(value="germany") Німеччина                    
+                option(value="lesoto") Лесото     
+          .options-profile__column
+            label.options-profile__label
+              .options-profile__message.options-profile__message--error
+                p Всі поля обов’язкові для заповнення.           
+            label.options-profile__label(for='company') 
+              .options-profile__clarification.options-profile__clarification--required Компанія
+              input.options-profile__input#company(type='text' name='company' placeholder='Введіть прізвище')     
+            label.options-profile__label(for='login') 
+              .options-profile__clarification.options-profile__clarification--required Логін
+              input.options-profile__input#login(type='text' name='name' placeholder='Введіть логін')   
+            label.options-profile__label(for='phone') 
+              .options-profile__clarification.options-profile__clarification--required Телефон
+              input.options-profile__input#phone(type='tel' name='phone' placeholder='+380 50 123 4567')    
+            label.options-profile__label(for='email') 
+              .options-profile__clarification.options-profile__clarification--required Електронна пошта
+              input.options-profile__input#email(type='email' name='email' placeholder='Введіть email')  
+            label.options-profile__label(for='city') 
+              .options-profile__clarification.options-profile__clarification--required Місто
+              select#city.options-profile__select               
+                option Оберіть місто          
+                option(value="kyiv") Київ                  
+                option(value="odessa") Одеса                      
+                option(value="lviv") Львів                
+        .options-profile__container
+          .options-profile__textarea 
+            .options-profile__clarification.options-profile__clarification--required Опис діяльності
+            textarea(name="description" cols="30" rows="10" placeholder="Опишіть діяльність")               
+        .options-profile__buttons 
+          a.options-profile__button.c-button.c-button--primary.c-button--lg Зберегти зміни
+          a.options-profile__button.c-button.c-button--bordered.c-button--lg Скасувати
+
+    .options-page__tab#finance(data-js-handler='options-tab')
+      p finance
+    .options-page__tab#access(data-js-handler='options-tab')
+      p access
+    .options-page__tab#notice(data-js-handler='options-tab')
+      p notice

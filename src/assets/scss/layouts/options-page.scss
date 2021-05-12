@@ -70,6 +70,25 @@
     margin: 0 0 40px;
   }
 
+  &__message {
+    width: 100%;
+    display: flex;
+    border-radius: 8px;
+    align-items: center;
+    padding: 6px 20px;
+    min-height: 40px;    
+
+    &--error {
+      background: #FFF8F7;
+      border: 2px solid $color-pastel-12;
+    }
+
+    &--success {
+      background: #f1fff3;
+      border: 2px solid $color-pastel-2;
+    }    
+  }
+
   &__photo {
     width: 100%;
     border: 2px solid $text-ultra-silver;
@@ -161,11 +180,14 @@
     border-radius: 8px;
     width: 100%;
     padding: 8px 20px 7px;
+    font-family: $mainFont;
+    font-size: 14px;
 
     &::placeholder {
       font-size: 14px;
       line-height: 18px;
       color: #D2D2D2;
+      text-transform: uppercase;
     } 
     
     &--error {

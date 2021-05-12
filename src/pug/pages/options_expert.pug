@@ -37,12 +37,15 @@ block content
               a.c-title.c-title__title5.options-profile__upload(href="#") Завантажити фото
               .options-profile__hint Максимальний розмір файлу – 5Мб
             label.options-profile__label(for='country') 
-              .options-profile__clarification.options-profile__clarification--required Місто
+              .options-profile__clarification.options-profile__clarification--required Країна
               select#country.options-profile__select                  
                 option(value="ukraine") Україна                
                 option(value="germany") Німеччина                    
                 option(value="lesoto") Лесото     
           .options-profile__column
+            label.options-profile__label
+              .options-profile__message.options-profile__message--error
+                p Всі поля обов’язкові для заповнення.             
             label.options-profile__label(for='lastname') 
               .options-profile__clarification.options-profile__clarification--required Прізвище
               input.options-profile__input#lastname(type='text' name='lastname' placeholder='Введіть прізвище')   
@@ -54,7 +57,7 @@ block content
               input.options-profile__input#login(type='text' name='login' placeholder='Введіть логін')   
             label.options-profile__label(for='phone') 
               .options-profile__clarification.options-profile__clarification--required Телефон
-              input.options-profile__input#phone(type='tel' name='phone' placeholder='50 123 4567')    
+              input.options-profile__input#phone(type='tel' name='phone' placeholder='+380 50 123 4567')    
             label.options-profile__label(for='email') 
               .options-profile__clarification.options-profile__clarification--required Електронна пошта
               input.options-profile__input#email(type='email' name='email' placeholder='Введіть email')  
