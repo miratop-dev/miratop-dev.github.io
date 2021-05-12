@@ -3,7 +3,6 @@
 
 $("div[data-js-handler='workflow__slider']").slick({
     dots: true,
-    //appendDots: $('.workflow'),
     appendDots: $('.workflow__slider'),
     appendArrows: $('.workflow__container'),
     responsive: [{
@@ -30,10 +29,8 @@ $("[data-js-handler='menu__toggle']").on('click', function(e){
   e.preventDefault();
   if($('.main-menu').hasClass('show')){
     $('.main-menu').removeClass('show');
-    //$('body').removeClass('hidden');
   } else {
     $('.main-menu').addClass('show');
-    //$('body').addClass('hidden');
   }
 });
 
@@ -41,10 +38,8 @@ $("[data-js-handler='header-user__handler']").on('click', function(e){
   e.preventDefault();
   if($('.header-user__dropdown').hasClass('show')){
     $('.header-user__dropdown').removeClass('show').addClass('hide');
-    //$('body').removeClass('hidden');
   } else {
     $('.header-user__dropdown').removeClass('hide').addClass('show');
-    //$('body').addClass('hidden');
   }
 });
 
@@ -177,3 +172,43 @@ $("[data-js-handler='options-tabs'] a").on('click', function(e){
     $(this).parent().addClass('active');
   }
 });
+
+$("[data-js-handler='data-options-additionals']").on('click', "[data-js-handler='data-options-profile-remove']", function(e){
+  e.preventDefault();
+  $(this).parent().remove();
+});
+
+$("[data-js-handler='data-options-control-domain']").on('change', function() {
+  var active_type = $(this).val();
+  $("[data-js-handler='data-options-control-type']").removeClass('active');
+  $(active_type + "[data-js-handler='data-options-control-type']").addClass('active');
+});  
+
+$("[data-js-handler='data-options-profile-add-option']").on('click', function(e){
+  e.preventDefault();
+  var domain = $(this).siblings("select[data-js-handler='data-options-control-domain']").children("option").filter(":selected").text();
+  var type = $(this).siblings("select.active[data-js-handler='data-options-control-type']").children("option").filter(":selected").text();
+  var additional = '<div class="options-profile__additional"><div class="c-title c-title__title5 options-profile__domain">' + domain + '</div><div class="options-profile__type">' + type + '</div><a class="options-profile__remove" href="#" data-js-handler="data-options-profile-remove"></a></div>';
+  $(this).parent().siblings("[data-js-handler='data-options-additionals']").append(additional);
+});
+
+$("[data-js-handler='data-options-profile-add-input']").on('click', function(e){
+  e.preventDefault();
+  var year_start = $("[data-js-handler='data-options-profile-start']").val();
+  var year_end = $("[data-js-handler='data-options-profile-end']").val();
+  var company = $("[data-js-handler='data-options-profile-company']").val();
+  var position = $("[data-js-handler='data-options-profile-position']").val();
+  if(year_start.length > 0 && year_end.length > 0 && (company.length > 0 || position.length > 0)) {
+    var additional = '<div class="options-profile__additional"><div class="c-title c-title__title5 options-profile__domain"><span class="options-profile__start">' + year_start + '  </span><span>– </span><span class="options-profile__end">' + year_end + '</span></div><div class="options-profile__type"> <span class="options-profile__position">' + position + ' </span><span class="options-profile__company">' + company + '</span></div><a class="options-profile__remove" href="#" data-js-handler="data-options-profile-remove"></a></div>';
+    $(this).parent().siblings("[data-js-handler='data-options-additionals']").append(additional);
+  }
+});  
+
+$("[data-js-handler='data-options-profile-add-tag']").on('click', function(e){
+  e.preventDefault();
+  var tag = $("[data-js-handler='data-options-profile-tag']").val();
+  if(tag.length > 0) {
+    var additional = '<div class="options-profile__tag"><span>' + tag + '</span><a href="#" data-js-handler="data-options-profile-remove"> </a></div>';
+    $(this).parent().siblings("[data-js-handler='data-options-additionals']").append(additional);
+  }
+});    

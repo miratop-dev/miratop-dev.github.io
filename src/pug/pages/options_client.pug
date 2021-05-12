@@ -1,10 +1,10 @@
 extends ../layout/1column
 
 block variables
-  - var title = 'Mira.hub options';
-  - var description = 'Mira.hub options';
+  - var title = 'Mira.hub client options';
+  - var description = 'Mira.hub client options';
   - var pageClass = 'article-page';
-  - let pageTitle = 'Налаштування'
+  - let pageTitle = 'Налаштування клієнта'
 
 block title 
   .page-title
@@ -63,9 +63,10 @@ block content
                 option(value="kyiv") Київ                  
                 option(value="odessa") Одеса                      
                 option(value="lviv") Львів                
-        .options-profile__textarea 
-          .options-profile__clarification.options-profile__clarification--required Опис діяльності
-          textarea(name="description" cols="30" rows="10" placeholder="Опишіть діяльність") 
+        .options-profile__container
+          .options-profile__textarea 
+            .options-profile__clarification.options-profile__clarification--required Опис діяльності
+            textarea(name="description" cols="30" rows="10" placeholder="Опишіть діяльність")               
         .options-profile__buttons 
           a.options-profile__button.c-button.c-button--primary.c-button--lg Зберегти зміни
           a.options-profile__button.c-button.c-button--bordered.c-button--lg Скасувати
