@@ -3951,7 +3951,7 @@ main.index-page {
 }
 
 .options-profile__container {
-    margin: 0 0 40px
+    margin: 15px 0 40px
 }
 
 .options-profile__message {
@@ -4134,6 +4134,10 @@ main.index-page {
     text-align: left
 }
 
+.options-profile__textarea:nth-child(n+2) {
+    margin: 15px 0 0
+}
+
 .options-profile__textarea textarea {
     font-family: Manrope, sans-serif;
     border: 2px solid #e5e5e5;
@@ -4273,6 +4277,10 @@ main.index-page {
     align-items: flex-end
 }
 
+.options-profile__controls:nth-child(n+2) {
+    margin: 15px 0 0
+}
+
 .options-profile__controls label {
     margin: 0 20px 0 0
 }
@@ -4396,12 +4404,32 @@ main.index-page {
     margin: 0 0 0 16px
 }
 
+.options-profile__buttons {
+    text-align: center
+}
+
 .options-profile__button {
     height: 52px
 }
 
 .options-profile__button:first-child {
     margin: 0 20px 0 0
+}
+
+.portfolio-list {
+    display: none
+}
+
+.portfolio-list.active {
+    display: block
+}
+
+.portfolio-add {
+    display: none
+}
+
+.portfolio-add.active {
+    display: block
 }
 
 .portfolio-block {

@@ -1,0 +1,159 @@
+form.options-profile(action="#")
+  label.options-profile__label
+    .options-profile__message.options-profile__message--error
+      p Всі поля обов’язкові для заповнення. 
+  .options-profile__columns
+    .options-profile__column.options-profile__column--vertical
+      .options-profile__photo 
+        .options-profile__avatar 
+          img(src="assets/img/default-user-avatar.svg", alt="user")
+        a.c-title.c-title__title5.options-profile__upload(href="#") Завантажити фото
+        .options-profile__hint Максимальний розмір файлу – 5Мб
+      label.options-profile__label(for='country') 
+        .options-profile__clarification.options-profile__clarification--required Країна
+        select#country.options-profile__select                  
+          option(value="ukraine") Україна                
+          option(value="germany") Німеччина                    
+          option(value="lesoto") Лесото     
+    .options-profile__column            
+      label.options-profile__label(for='lastname') 
+        .options-profile__clarification.options-profile__clarification--required Прізвище
+        input.options-profile__input#lastname(type='text' name='lastname' placeholder='Введіть прізвище')   
+      label.options-profile__label(for='name') 
+        .options-profile__clarification.options-profile__clarification--required Ім’я
+        input.options-profile__input#name(type='text' name='name' placeholder='Введіть ім’я')   
+      label.options-profile__label(for='login') 
+        .options-profile__clarification.options-profile__clarification--required Логін
+        input.options-profile__input#login(type='text' name='login' placeholder='Введіть логін')   
+      label.options-profile__label(for='phone') 
+        .options-profile__clarification.options-profile__clarification--required Телефон
+        input.options-profile__input#phone(type='tel' name='phone' placeholder='+380 50 123 4567')    
+      label.options-profile__label(for='email') 
+        .options-profile__clarification.options-profile__clarification--required Електронна пошта
+        input.options-profile__input#email(type='email' name='email' placeholder='Введіть email')  
+      label.options-profile__label(for='city') 
+        .options-profile__clarification.options-profile__clarification--required Місто
+        select#city.options-profile__select               
+          option Оберіть місто          
+          option(value="kyiv") Київ                  
+          option(value="odessa") Одеса                      
+          option(value="lviv") Львів 
+  .options-profile__container
+    .options-profile__textarea 
+      .options-profile__clarification.options-profile__clarification--required Опис діяльності
+      textarea(name="description" cols="30" rows="10" placeholder="Опишіть діяльність")
+    label.options-profile__label.options-profile__label--min(for='experience') 
+      .options-profile__clarification.options-profile__clarification--required Досвід роботи
+      select#experience.options-profile__select               
+        option(value="1_year") 1 рік              
+        option(value="5_years") 5 років                      
+        option(value="10_years") 10 років    
+    .options-profile__information 
+      .c-title.c-title__title4.options-profile__title.options-profile__title--required Експертиза  
+      .options-profile__additionals(href="#" data-js-handler='data-options-additionals')
+        .options-profile__additional
+          .c-title.c-title__title5.options-profile__domain Маркетинг та PR
+          .options-profile__type Розробка маркетингової стратегії
+          a.options-profile__remove(href="#" data-js-handler='data-options-profile-remove')
+        .options-profile__additional
+          .c-title.c-title__title5.options-profile__domain Маркетинг та PR
+          .options-profile__type Розробка маркетингової стратегії
+          a.options-profile__remove(href="#" data-js-handler='data-options-profile-remove')
+        .options-profile__additional
+          .c-title.c-title__title5.options-profile__domain Маркетинг та PR
+          .options-profile__type Розробка маркетингової стратегії
+          a.options-profile__remove(href="#" data-js-handler='data-options-profile-remove')  
+      .options-profile__controls      
+        select.options-profile__control-domain(data-js-handler='data-options-control-domain')
+          option(value="#domain-1") Стратегія 1         
+          option(value="#domain-2") Стратегія 2                 
+          option(value="#domain-3") Стратегія 3
+        select.options-profile__control-type.active#domain-1(data-js-handler='data-options-control-type')
+          option(value="type-1") Розробка стратегічного плану 1      
+          option(value="type-2") Розробка стратегічного плану 2                  
+          option(value="type-3") Розробка стратегічного плану 3
+        select.options-profile__control-type#domain-2(data-js-handler='data-options-control-type')
+          option(value="type-1") Тестовий тип 1      
+          option(value="type-2") Тестовий тип 2                    
+          option(value="type-3") Тестовий тип 3    
+        select.options-profile__control-type#domain-3(data-js-handler='data-options-control-type')
+          option(value="type-1") Інший тестовий тип 1      
+          option(value="type-2") Інший тестовий тип 2                     
+          option(value="type-3") Інший тестовий тип 3                          
+        a.options-profile__control-add(href="#" data-js-handler='data-options-profile-add-option') Додати  
+
+    .options-profile__information 
+      .c-title.c-title__title4.options-profile__title Навички
+      .options-profile__tags(data-js-handler='data-options-additionals')
+        .options-profile__tag 
+          span HR
+          a(href="#" data-js-handler='data-options-profile-remove') 
+        .options-profile__tag 
+          span HR стратегія
+          a(href="#" data-js-handler='data-options-profile-remove')  
+        .options-profile__tag 
+          span Впровадження стратегії
+          a(href="#" data-js-handler='data-options-profile-remove')  
+        .options-profile__tag 
+          span Аудит
+          a(href="#" data-js-handler='data-options-profile-remove')   
+        .options-profile__tag 
+          span Аудит
+          a(href="#" data-js-handler='data-options-profile-remove')  
+        .options-profile__tag 
+          span Впровадження стратегії
+          a(href="#" data-js-handler='data-options-profile-remove')    
+        .options-profile__tag 
+          span Аудит
+          a(href="#" data-js-handler='data-options-profile-remove')                                                                                               
+      .options-profile__controls
+        label.options-profile__label.options-profile__label--tag(for='tag') 
+          input.options-profile__input#tag(type='text' name='tag' placeholder='Введіть навичку' data-js-handler='data-options-profile-tag')
+        a.options-profile__control-add(href="#" data-js-handler='data-options-profile-add-tag') Додати
+
+    .options-profile__information 
+      .c-title.c-title__title4.options-profile__title.options-profile__title--required Досвід роботи  
+      .options-profile__additionals(href="#" data-js-handler='data-options-additionals')
+        .options-profile__additional
+          .c-title.c-title__title5.options-profile__domain
+            span.options-profile__start 2019 
+            span – 
+            span.options-profile__end 2021
+          .options-profile__type 
+            span.options-profile__position HRD. 
+            span.options-profile__company Epam
+          a.options-profile__remove(href="#" data-js-handler='data-options-profile-remove')
+        .options-profile__additional
+          .c-title.c-title__title5.options-profile__domain
+            span.options-profile__start 2017 
+            span – 
+            span.options-profile__end 2019
+          .options-profile__type 
+            span.options-profile__position Розробка маркетингової стратегії   
+          a.options-profile__remove(href="#" data-js-handler='data-options-profile-remove')
+        .options-profile__additional
+          .c-title.c-title__title5.options-profile__domain
+            span.options-profile__start 2014
+            span – 
+            span.options-profile__end 2017
+          .options-profile__type
+            span.options-profile__position Middle HR. 
+            span.options-profile__company Company name
+          a.options-profile__remove(href="#" data-js-handler='data-options-profile-remove') 
+      .options-profile__period 
+          .options-profile__clarification Період
+          label
+            input.options-profile__input(type='text' name='start' placeholder='Рік' data-js-handler='data-options-profile-start') 
+            span –   
+            input.options-profile__input(type='text' name='end' placeholder='Рік' data-js-handler='data-options-profile-end')   
+      .options-profile__controls 
+        label.options-profile__label(for='company') 
+          .options-profile__clarification Компанія
+          input.options-profile__input#company(type='text' name='company' placeholder='Введіть компанію' data-js-handler='data-options-profile-company')   
+        label.options-profile__label(for='position') 
+          .options-profile__clarification Посада
+          input.options-profile__input#position(type='text' name='position' placeholder='Введіть посаду' data-js-handler='data-options-profile-position')
+        a.options-profile__control-add(href="#" data-js-handler='data-options-profile-add-input') Додати   
+  .options-profile__buttons 
+    a.options-profile__button.c-button.c-button--primary.c-button--lg(href="#") Зберегти зміни
+    a.options-profile__button.c-button.c-button--bordered.c-button--lg(href="#") Скасувати

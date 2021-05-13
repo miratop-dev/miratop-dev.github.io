@@ -67,7 +67,7 @@
   }
 
   &__container {
-    margin: 0 0 40px;
+    margin: 15px 0 40px;
   }
 
   &__message {
@@ -221,6 +221,10 @@
   &__textarea {
     text-align: left;
 
+    &:nth-child(n + 2) {
+      margin: 15px 0 0 0;
+    }    
+
     textarea {
       font-family: $mainFont;
       border: 2px solid $text-silver;
@@ -318,6 +322,10 @@
   &__controls {
     display: flex;
     align-items: flex-end;
+
+    &:nth-child(n + 2) {
+      margin: 15px 0 0 0;
+    }
 
     label {
       margin: 0 20px 0 0;
@@ -437,6 +445,10 @@
     }
   }
 
+  &__buttons {
+    text-align: center;
+  }
+
   &__button {
     height: 52px;
 
@@ -444,6 +456,22 @@
       margin: 0 20px 0 0;
     }
   }
+}
+
+.portfolio-list {
+  display: none;
+  
+  &.active {
+    display: block;
+  }
+}
+
+.portfolio-add {
+  display: none;
+
+  &.active {
+    display: block;
+  }  
 }
 
 .portfolio-block {

@@ -1,0 +1,114 @@
+.portfolio-list.active(data-js-handler='options-expert-portfolio-container')
+  .portfolio-blocks(data-js-handler='options-expert-portfolio-blocks')
+    .portfolio-block 
+      .portfolio-block__head 
+        .c-title.c-title__title4 Розробка Digital маркетингової стратегії
+        .portfolio-block__management 
+          a.portfolio-block__edit(href="#" data-js-handler='portfolio-edit') Редагувати
+          a.portfolio-block__remove(href="#" data-js-handler='portfolio-remove') 
+      .portfolio-block__content 
+        .c-info
+          .c-info__client Rozetka
+          .c-info__deadline 3 місяці
+          .c-info__date рік: 2021
+        .c-title.c-title__title5.portfolio-block__subtitle Розробка маркетингової стратегії
+        .portfolio-block__section
+          .c-title.c-title.c-title__title5.c-title--alert Проблематика
+          p Розробка стратегії Digital маркетингу з нуля, у зв'язку з виведенням бізнесу в e-commerce. Розробка стратегії Digital маркетингу з нуля.
+        .portfolio-block__section
+          .c-title.c-title.c-title__title5.c-title--goal Отримані результати
+          p Відсоток конверсії збільшено у 2 рази. <br />Впізнаваність бренду виросла на 30%.<br />Залучено близько 5 тисяч нових унікальних клієнтів.
+
+    .portfolio-block 
+      .portfolio-block__head 
+        .c-title.c-title__title4 Проект під NDA
+        .portfolio-block__management 
+          a.portfolio-block__edit(href="#" data-js-handler='portfolio-edit') Редагувати
+          a.portfolio-block__remove(href="#" data-js-handler='portfolio-remove') 
+      .portfolio-block__content 
+        .c-info
+          .c-info__deadline 3 місяці
+          .c-info__date рік: 2021
+        .c-title.c-title__title5.portfolio-block__subtitle Розробка маркетингової стратегії
+        .portfolio-block__section
+          .c-title.c-title.c-title__title5.c-title--alert Проблематика
+          p Розробка стратегії Digital маркетингу з нуля, у зв'язку з виведенням бізнесу в e-commerce. Розробка стратегії Digital маркетингу з нуля.
+        .portfolio-block__section
+          .c-title.c-title.c-title__title5.c-title--goal Отримані результати
+          p Відсоток конверсії збільшено у 2 рази. <br />Впізнаваність бренду виросла на 30%.<br />Залучено близько 5 тисяч нових унікальних клієнтів.
+
+    .portfolio-block 
+      .portfolio-block__head 
+        .c-title.c-title__title4 Розробка Digital маркетингової стратегії
+        .portfolio-block__management 
+          a.portfolio-block__edit(href="#" data-js-handler='portfolio-edit') Редагувати
+          a.portfolio-block__remove(href="#" data-js-handler='portfolio-remove') 
+      .portfolio-block__content 
+        .c-info
+          .c-info__client Rozetka
+          .c-info__deadline 3 місяці
+          .c-info__date рік: 2021
+          .c-info__moderation Очікує перевірки
+        .c-title.c-title__title5.portfolio-block__subtitle Розробка маркетингової стратегії
+        .portfolio-block__section
+          .c-title.c-title.c-title__title5.c-title--alert Проблематика
+          p Розробка стратегії Digital маркетингу з нуля, у зв'язку з виведенням бізнесу в e-commerce. Розробка стратегії Digital маркетингу з нуля.
+        .portfolio-block__section
+          .c-title.c-title.c-title__title5.c-title--goal Отримані результати
+          p Відсоток конверсії збільшено у 2 рази. <br />Впізнаваність бренду виросла на 30%.<br />Залучено близько 5 тисяч нових унікальних клієнтів.                        
+  
+  .options-profile__buttons 
+    a.options-profile__button.c-button.c-button--primary.c-button--lg(href="#" data-js-handler='portfolio-toggle-editor') Додати проект
+
+.portfolio-add(data-js-handler='options-expert-portfolio-container')
+  .portfolio-block 
+    .c-title.c-title__title3 Додати проект
+    form.options-profile(action="#")
+      label.options-profile__label(for='portfolio-project') 
+        .options-profile__clarification.options-profile__clarification--required Назва проекту
+        input.options-profile__input#portfolio-project(type='text' name='portfolio-project' placeholder='Введіть назву проекту' data-js-handler='portfolio-add-project')   
+      label.options-profile__label(for='portfolio-company') 
+        .options-profile__clarification.options-profile__clarification--required Компанія
+        input.options-profile__input#portfolio-company(type='text' name='portfolio-company' placeholder='Введіть назву компанії' data-js-handler='portfolio-add-company')
+
+      .options-profile__controls 
+        label.options-profile__label(for='portfolio-year') 
+          .options-profile__clarification.options-profile__clarification--required Рік виконання
+          input.options-profile__input#portfolio-year(type='text' name='portfolio-year' placeholder='Вкажіть рік' data-js-handler='portfolio-add-year')   
+        label.options-profile__label(for='portfolio-position') 
+          .options-profile__clarification.options-profile__clarification--required Тривалість
+          input.options-profile__input#portfolio-position(type='text' name='portfolio-position' placeholder='Вкажіть тривалість' data-js-handler='portfolio-add-duration')  
+
+      .options-profile__controls  
+        label.options-profile__label   
+          .options-profile__clarification.options-profile__clarification--required Експертиза
+          select.options-profile__control-domain(data-js-handler='data-options-control-domain')
+            option(value="#portfolio-domain-1") Стратегія 1         
+            option(value="#portfolio-domain-2") Стратегія 2                 
+            option(value="#portfolio-domain-3") Стратегія 3
+        label.options-profile__label
+          .options-profile__clarification.options-profile__clarification--required Категорія
+          select.options-profile__control-type.active#portfolio-domain-1(data-js-handler='data-options-control-type')
+            option(value="type-1") Розробка стратегічного плану 1      
+            option(value="type-2") Розробка стратегічного плану 2                  
+            option(value="type-3") Розробка стратегічного плану 3
+          select.options-profile__control-type#portfolio-domain-2(data-js-handler='data-options-control-type')
+            option(value="type-1") Тестовий тип 1      
+            option(value="type-2") Тестовий тип 2                    
+            option(value="type-3") Тестовий тип 3    
+          select.options-profile__control-type#portfolio-domain-3(data-js-handler='data-options-control-type')
+            option(value="type-1") Інший тестовий тип 1      
+            option(value="type-2") Інший тестовий тип 2                     
+            option(value="type-3") Інший тестовий тип 3   
+
+      .options-profile__container
+        .options-profile__textarea 
+          .options-profile__clarification.options-profile__clarification--required Проблематика
+          textarea(name="problem" cols="30" rows="10" placeholder="Опишіть проблематику" data-js-handler='portfolio-add-problem')
+        .options-profile__textarea 
+          .options-profile__clarification.options-profile__clarification--required Отримані результати
+          textarea(name="results" cols="30" rows="10" placeholder="Отримані результати" data-js-handler='portfolio-add-results')
+
+      .options-profile__buttons 
+        a.options-profile__button.c-button.c-button--primary.c-button--lg(href="#" data-js-handler='portfolio-add') Зберегти зміни
+        a.options-profile__button.c-button.c-button--bordered.c-button--lg(href="#" data-js-handler='portfolio-toggle-editor') Скасувати                                            

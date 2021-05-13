@@ -220,3 +220,49 @@ $("[data-js-handler='data-options-profile-add-tag']").on('click', function(e){
     $(this).parent().siblings("[data-js-handler='data-options-additionals']").append(additional);
   }
 });    
+
+$("[data-js-handler='portfolio-toggle-editor']").on('click', function(e){
+  e.preventDefault();
+  togglePortfolioContainers();
+});    
+
+$("[data-js-handler='portfolio-add']").on('click', function(e){
+  e.preventDefault();
+  var project = $("[data-js-handler='portfolio-add-project']").val();
+  var company = $("[data-js-handler='portfolio-add-company']").val();
+  var year = $("[data-js-handler='portfolio-add-year']").val();
+  var duration = $("[data-js-handler='portfolio-add-duration']").val();
+  var problem = $("[data-js-handler='portfolio-add-problem']").val();
+  var results = $("[data-js-handler='portfolio-add-results']").val();
+
+  if(project.length > 0 && company.length > 0 && year.length > 0 && duration.length > 0 && problem.length > 0 && results.length > 0) {
+    var additional = '<div class="portfolio-block">';
+    additional += '<div class="portfolio-block__head"> <div class="c-title c-title__title4">' + project +'</div><div class="portfolio-block__management"> <a class="portfolio-block__edit" href="#" data-js-handler="portfolio-edit">Редагувати</a><a class="portfolio-block__remove" href="#" data-js-handler="portfolio-remove"> </a></div></div>';
+    additional += '<div class="portfolio-block__content">';
+    additional += '<div class="c-info">';
+    additional += '<div class="c-info__client"> ' + company + '</div><div class="c-info__deadline">' + duration + '</div><div class="c-info__date">рік: ' + year + '</div>';
+    additional += '</div>';
+    additional += '<div class="c-title c-title__title5 portfolio-block__subtitle">' + project + '</div>';
+    additional += '<div class="portfolio-block__section"><div class="c-title c-title c-title__title5 c-title--alert">Проблематика</div><p> ' + problem + '</p></div>';
+    additional += '<div class="portfolio-block__section"><div class="c-title c-title c-title__title5 c-title--goal">Отримані результати</div><p>' + results + '</p></div>';
+    additional += '</div></div>';
+  
+    $('[data-js-handler="options-expert-portfolio-blocks"]').append(additional);
+    togglePortfolioContainers();
+  }
+});  
+
+function togglePortfolioContainers() {
+  $("[data-js-handler='options-expert-portfolio-container']").each(function(value, index) {
+    if($(this).hasClass('active')) {
+      $(this).removeClass('active');
+    } else {
+      $(this).addClass('active');
+    }
+  });
+}
+
+$("[data-js-handler='options-expert-portfolio-blocks']").on('click', "[data-js-handler='portfolio-remove']", function(e){
+  e.preventDefault();
+  $(this).closest('.portfolio-block').remove();
+});
