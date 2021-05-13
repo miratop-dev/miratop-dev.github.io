@@ -11,6 +11,9 @@ block content
     .c-title.c-title__title3.service-main__title Увійдіть на сайт з допомогою електронної пошти
     form.service-main__form(action='#')
       fieldset
+        label.service-main__label
+          .service-main__message.service-main__message--error
+            p Користувач з вказаним email вже існує.       
         label.service-main__label(for='email') 
           .service-main__clarification.service-main__clarification--required Електронна пошта
           input.service-main__input#email(type='email' name='email' placeholder='Введіть ваш email')
@@ -21,7 +24,14 @@ block content
         label.service-main__label(for='remember-me') 
           input.service-main__checkbox#remember-me(type='checkbox' name='remember-me' placeholder='Введіть ваш пароль')  
           p Запам’ятати мене    
-        a.service-main__button.c-button.c-button--primary(href='#') Увійти 
+        a.service-main__button.c-button.c-button--primary(href='#') Увійти
+        .service-main__socials 
+          a.service-main__button.c-button.c-button--bordered(href='#') 
+            i.service-main__icon.service-main__icon--google
+            span Google
+          a.service-main__button.c-button.c-button--bordered(href='#') 
+            i.service-main__icon.service-main__icon--facebook       
+            span Facebook  
     .service-additional 
       .service-additional__block
         .service-additional__desc Вперше на нашому сайті?

@@ -242,11 +242,19 @@
   }
 
   &__title {
+    position: relative;
     text-align: left;
     border-bottom: 2px solid $text-silver;
     padding: 0 0 20px;
     margin: 0 0 20px;
     line-height: 1;
+
+    &--required {
+      &::after {
+        content: '*';
+        color: $color-pastel-12;
+      }
+    }
   }
 
   &__additionals {

@@ -322,6 +322,14 @@ $("[data-js-handler='overlay__handler']").on('click', function (e) {
     $('.main-menu').addClass('hide').removeClass('show');
   }
 });
+$("[data-js-handler='account-type']").on('click', function (e) {
+  e.preventDefault();
+
+  if ($(this).hasClass('service-main__private--unactive')) {
+    $(this).removeClass('service-main__private--unactive').addClass('service-main__private--active');
+    $(this).siblings().removeClass('service-main__private--active').addClass('service-main__private--unactive');
+  }
+});
 $("[data-js-handler='registration__user-type']").on('click', function (e) {
   e.preventDefault();
 

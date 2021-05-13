@@ -1,0 +1,35 @@
+extends ../layout/service
+
+block variables
+  - var title = 'Mira.hub registration socials page';
+  - var description = 'Mira.hub registration socials page';
+  - var pageClass = 'login-page';
+  - let pageTitle = 'Для завершення реєстрації уведіть Вашу електронну пошту'
+
+block content 
+  .service-main
+    .c-title.c-title__title3.service-main__title Для завершення реєстрації уведіть Вашу електронну пошту
+    form.service-main__form(action='#')
+      fieldset
+        .service-main__greetengs 
+          img(src='assets/img/expert-avatar-3.jpg', alt='avatar')
+          .c-title.c-title__title5 Вітаємо, Андрій Петренко!
+        label.service-main__label
+          .service-main__message.service-main__message--error
+            p Користувач з вказаним email вже існує.       
+        label.service-main__label
+          .service-main__clarification.service-main__clarification--required Електронна пошта
+          input.service-main__input#email(type='email' name='email' placeholder='Введіть ваш email')
+        label.service-main__label(for='phone') 
+          .service-main__clarification.service-main__clarification--required Телефон
+          input.service-main__input#phone(type='tel' name='phone' placeholder='+380 50 123 4567')     
+      
+        label.service-main__label 
+          .service-main__users    
+            a.service-main__user.service-main__user--active(href='customer', data-js-handler='registration__user-type') Замовник
+            a.service-main__user(href='expert', data-js-handler='registration__user-type') Експерт
+      fieldset               
+        label.service-main__label(for='accept') 
+          input.service-main__checkbox#accept(type='checkbox' name='accept')  
+          p погоджуюсь з правилами використання сервісу, та обробкою моїх персональних даних.  
+        a.service-main__button.c-button.c-button--primary(href='#') Завершити реєстрацію

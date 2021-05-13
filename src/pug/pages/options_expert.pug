@@ -17,9 +17,9 @@ block statusbar
 block content 
   .options-page
     ul.options-page__tabs(data-js-handler='options-tabs')
-      li
+      li.active
         a(href="#profile") Профайл
-      li.active 
+      li 
         a(href="#portfolio") Портфоліо       
       li 
         a(href="#finance") Фінансова інформація
@@ -27,7 +27,7 @@ block content
         a(href="#access") Доступ
       li 
         a(href="#notice") Сповіщення
-    .options-page__tab#profile(data-js-handler='options-tab')
+    .options-page__tab.active#profile(data-js-handler='options-tab')
       form.options-profile(action="#")
         label.options-profile__label
           .options-profile__message.options-profile__message--error
@@ -79,7 +79,7 @@ block content
               option(value="5_years") 5 років                      
               option(value="10_years") 10 років    
           .options-profile__information 
-            .c-title.c-title__title4.options-profile__title Експертиза  
+            .c-title.c-title__title4.options-profile__title.options-profile__title--required Експертиза  
             .options-profile__additionals(href="#" data-js-handler='data-options-additionals')
               .options-profile__additional
                 .c-title.c-title__title5.options-profile__domain Маркетинг та PR
@@ -142,7 +142,7 @@ block content
               a.options-profile__control-add(href="#" data-js-handler='data-options-profile-add-tag') Додати
 
           .options-profile__information 
-            .c-title.c-title__title4.options-profile__title Досвід роботи  
+            .c-title.c-title__title4.options-profile__title.options-profile__title--required Досвід роботи  
             .options-profile__additionals(href="#" data-js-handler='data-options-additionals')
               .options-profile__additional
                 .c-title.c-title__title5.options-profile__domain
@@ -187,7 +187,7 @@ block content
         .options-profile__buttons 
           a.options-profile__button.c-button.c-button--primary.c-button--lg(href="#") Зберегти зміни
           a.options-profile__button.c-button.c-button--bordered.c-button--lg(href="#") Скасувати
-    .options-page__tab.active#portfolio(data-js-handler='options-tab')
+    .options-page__tab#portfolio(data-js-handler='options-tab')
       .portfolio-block 
         .portfolio-block__head 
           .c-title.c-title__title4 Розробка Digital маркетингової стратегії

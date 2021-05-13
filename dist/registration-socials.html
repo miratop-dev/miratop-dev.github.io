@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Mira.hub login page</title>
-    <meta name="description" content="Mira.hub login page">
+    <title>Mira.hub registration socials page</title>
+    <meta name="description" content="Mira.hub registration socials page">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
@@ -13,39 +13,36 @@
   <body class="login-page">
     <header class="service-header"> <a class="service-header__logo" href="/"><img src="assets/img/logo.svg" alt="logo"></a></header>
     <div class="service-main">
-      <div class="c-title c-title__title3 service-main__title">Увійдіть на сайт з допомогою електронної пошти</div>
+      <div class="c-title c-title__title3 service-main__title">Для завершення реєстрації уведіть Вашу електронну пошту</div>
       <form class="service-main__form" action="#">
         <fieldset>
+          <div class="service-main__greetengs"> <img src="assets/img/expert-avatar-3.jpg" alt="avatar">
+            <div class="c-title c-title__title5">Вітаємо, Андрій Петренко!</div>
+          </div>
           <label class="service-main__label">
             <div class="service-main__message service-main__message--error">
               <p>Користувач з вказаним email вже існує.       </p>
             </div>
           </label>
-          <label class="service-main__label" for="email"> 
+          <label class="service-main__label">
             <div class="service-main__clarification service-main__clarification--required">Електронна пошта</div>
             <input class="service-main__input" id="email" type="email" name="email" placeholder="Введіть ваш email">
           </label>
-          <label class="service-main__label" for="password"> 
-            <div class="service-main__clarification service-main__clarification--required">Пароль</div>
-            <input class="service-main__input" id="password" type="password" name="password" placeholder="Введіть ваш пароль">
+          <label class="service-main__label" for="phone"> 
+            <div class="service-main__clarification service-main__clarification--required">Телефон</div>
+            <input class="service-main__input" id="phone" type="tel" name="phone" placeholder="+380 50 123 4567">
+          </label>
+          <label class="service-main__label"> 
+            <div class="service-main__users">   <a class="service-main__user service-main__user--active" href="customer" data-js-handler="registration__user-type">Замовник</a><a class="service-main__user" href="expert" data-js-handler="registration__user-type">Експерт</a></div>
           </label>
         </fieldset>
         <fieldset>              
-          <label class="service-main__label" for="remember-me"> 
-            <input class="service-main__checkbox" id="remember-me" type="checkbox" name="remember-me" placeholder="Введіть ваш пароль">
-            <p>Запам’ятати мене    </p>
-          </label><a class="service-main__button c-button c-button--primary" href="#">Увійти</a>
-          <div class="service-main__socials"> <a class="service-main__button c-button c-button--bordered" href="#"> <i class="service-main__icon service-main__icon--google"></i><span>Google</span></a><a class="service-main__button c-button c-button--bordered" href="#"> <i class="service-main__icon service-main__icon--facebook">      </i><span>Facebook  </span></a></div>
+          <label class="service-main__label" for="accept"> 
+            <input class="service-main__checkbox" id="accept" type="checkbox" name="accept">
+            <p>погоджуюсь з правилами використання сервісу, та обробкою моїх персональних даних.  </p>
+          </label><a class="service-main__button c-button c-button--primary" href="#">Завершити реєстрацію</a>
         </fieldset>
       </form>
-      <div class="service-additional"> 
-        <div class="service-additional__block">
-          <div class="service-additional__desc">Вперше на нашому сайті?</div><a class="c-button c-button--md c-button--primary" href="registration.html">Зареєструйтесь</a>
-        </div>
-        <div class="service-additional__block">
-          <div class="service-additional__desc">Забули пароль?</div><a class="c-button c-button--md c-button--primary" href="login_page-forgot.html">Відновити пароль    </a>
-        </div>
-      </div>
     </div>
 <footer class="footer">
   <div class="footer__container">

@@ -182,6 +182,11 @@ module.exports = {
       inject: true
     }),
     new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/registration-socials.pug`,
+      filename: './registration-socials.html',
+      inject: true
+    }),    
+    new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/login_page-verification.pug`,
       filename: './login_page-verification.html',
       inject: true

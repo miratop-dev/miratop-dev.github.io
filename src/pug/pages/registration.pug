@@ -16,28 +16,30 @@ block content
             p Всі поля обов’язкові для заповнення.       
         label.service-main__label
           .service-main__message.service-main__message--success
-            p Всі поля успішно заповнені.                    
+            p Всі поля успішно заповнені.  
+        label.service-main__label
+          .service-main__clarification Тип аккаунту
+          .service-main__account 
+             a.service-main__private.service-main__private--active(href='#', data-js-handler='account-type') Приватна особа
+             a.service-main__private.service-main__private--unactive(href='#', data-js-handler='account-type') Компанія
         label.service-main__label(for='name') 
-          .service-main__clarification Ім’я
-          input.service-main__input#name(type='text' name='name' placeholder='Ваше ім’я')     
-        label.service-main__label(for='lastname') 
-          .service-main__clarification Прізвище
-          input.service-main__input#lastname(type='text' name='name' placeholder='Ваше прізвище')                 
+          .service-main__clarification.service-main__clarification--required Ім’я
+          input.service-main__input#name(type='text' name='name' placeholder='Ваше ім’я')                     
         label.service-main__label(for='email') 
-          .service-main__clarification Електронна пошта
+          .service-main__clarification.service-main__clarification--required Електронна пошта
           input.service-main__input#email(type='email' name='email' placeholder='Введіть ваш email')
         label.service-main__label(for='phone') 
-          .service-main__clarification Телефон
-          input.service-main__input#phone(type='tel' name='phone' placeholder='50 123 4567') 
+          .service-main__clarification.service-main__clarification--required Телефон
+          input.service-main__input#phone(type='tel' name='phone' placeholder='+380 50 123 4567') 
         label.service-main__label(for='password') 
-          .service-main__clarification Пароль
+          .service-main__clarification.service-main__clarification--required Пароль
           input.service-main__input.service-main__input--error#password(type='password' name='password' placeholder='Введіть ваш пароль')         
         label.service-main__label(for='confirm-password') 
-          .service-main__clarification Пароль ще раз
+          .service-main__clarification.service-main__clarification--required Пароль ще раз
           input.service-main__input#confirm-password(type='password' name='confirm-password' placeholder='Повторіть пароль')      
         label.service-main__label(for='captcha') 
-          .service-main__clarification Введіть каптчу
-          input.service-main__input.service-main__input--half#captcha(type='text' name='captcha' placeholder='0')   
+          .service-main__clarification.service-main__clarification--required Введіть каптчу
+          input.service-main__input.service-main__input--half#captcha(type='text' name='captcha')   
           .service-main__captcha      
         label.service-main__label 
           .service-main__users    
@@ -50,6 +52,13 @@ block content
         label.service-main__label 
           .service-main__note Всі поля обов’язкові для заповнення
         a.service-main__button.c-button.c-button--primary(href='#') Зареєструватись
+        .service-main__socials 
+          a.service-main__button.c-button.c-button--bordered(href='#') 
+            i.service-main__icon.service-main__icon--google
+            span Google
+          a.service-main__button.c-button.c-button--bordered(href='#') 
+            i.service-main__icon.service-main__icon--facebook
+            span Facebook
     .service-additional 
       .service-additional__block
         .service-additional__desc Вже зареєстровані?
