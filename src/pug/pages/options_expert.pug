@@ -17,26 +17,28 @@ block statusbar
 block content 
   .options-page
     ul.options-page__tabs(data-js-handler='options-tabs')
-      li
+      li.active
         a(href="#profile") Профайл
       li
         a(href="#portfolio") Портфоліо       
-      li.active 
+      li 
         a(href="#finance") Фінансова інформація
       li
         a(href="#access") Доступ
       li 
         a(href="#notice") Сповіщення
-    .options-page__tab#profile(data-js-handler='options-tab')
+
+    .options-page__tab.active#profile(data-js-handler='options-tab')
       include ../includes/modules/options-expert/options-expert-profile.pug
 
     .options-page__tab#portfolio(data-js-handler='options-tab')
       include ../includes/modules/options-expert/options-expert-portfolio.pug
 
-    .options-page__tab.active#finance(data-js-handler='options-tab')
+    .options-page__tab#finance(data-js-handler='options-tab')
       include ../includes/modules/options-expert/options-expert-finance.pug
 
     .options-page__tab#access(data-js-handler='options-tab')
-      p access
+      include ../includes/modules/options-expert/options-expert-access.pug
+
     .options-page__tab#notice(data-js-handler='options-tab')
-      p notice
+      include ../includes/modules/options-expert/options-expert-notice.pug

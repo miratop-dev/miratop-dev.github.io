@@ -4562,10 +4562,35 @@ main.index-page {
     padding: 20px
 }
 
-.portfolio-finance {
+.portfolio-fieldset {
+    border: none;
+    text-align: left;
+    margin: 40px 0 0
+}
+
+.portfolio-notice {
     width: 100%;
     max-width: 620px;
     text-align: left;
+    margin: 0 auto 40px
+}
+
+.portfolio-notice__title {
+    margin: 0 0 15px
+}
+
+.portfolio-access {
+    margin: 0 auto 40px
+}
+
+.portfolio-access,
+.portfolio-finance {
+    width: 100%;
+    max-width: 620px;
+    text-align: left
+}
+
+.portfolio-finance {
     margin: 0 auto
 }
 
@@ -4616,12 +4641,6 @@ main.index-page {
 .portfolio-finance__block.active {
     display: block;
     margin: 0 0 40px
-}
-
-.portfolio-finance__fieldset {
-    border: none;
-    text-align: left;
-    margin: 40px 0 0
 }
 
 .portfolio-finance__addfile {

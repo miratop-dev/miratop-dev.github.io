@@ -584,6 +584,30 @@
   }
 }
 
+.portfolio-fieldset {
+  border: none;
+  text-align: left;
+  margin: 40px 0 0 0;
+}
+
+.portfolio-notice {
+  width: 100%;
+  max-width: 620px;
+  text-align: left;
+  margin: 0 auto 40px;
+
+  &__title {
+    margin: 0 0 15px;
+  }
+}
+
+.portfolio-access {
+  width: 100%;
+  max-width: 620px;
+  text-align: left;
+  margin: 0 auto 40px;
+}
+
 .portfolio-finance {
   width: 100%;
   max-width: 620px;
@@ -639,12 +663,6 @@
       display: block;
       margin: 0 0 40px;
     }
-  }
-
-  &__fieldset {
-    border: none;
-    text-align: left;
-    margin: 40px 0 0 0;
   }
 
   &__addfile {
