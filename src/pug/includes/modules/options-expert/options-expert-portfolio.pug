@@ -57,8 +57,13 @@
           .c-title.c-title.c-title__title5.c-title--goal Отримані результати
           p Відсоток конверсії збільшено у 2 рази. <br />Впізнаваність бренду виросла на 30%.<br />Залучено близько 5 тисяч нових унікальних клієнтів.                        
   
-  .options-profile__buttons 
+  .options-profile__buttons(href="#" data-js-handler='portfolio-buttons')
     a.options-profile__button.c-button.c-button--primary.c-button--lg(href="#" data-js-handler='portfolio-toggle-editor') Додати проект
+
+  .portfolio-none(data-js-handler='options-expert-portfolio-none')
+    .portfolio-none__block
+      .c-title.c-title.c-title__title5.c-title--alert Проекти відсутні
+      a.c-button.c-button--primary.c-button--md(href="#" data-js-handler='portfolio-toggle-editor') Додати проект      
 
 .portfolio-add(data-js-handler='options-expert-portfolio-container')
   .portfolio-block 
@@ -88,15 +93,15 @@
             option(value="#portfolio-domain-3") Стратегія 3
         label.options-profile__label
           .options-profile__clarification.options-profile__clarification--required Категорія
-          select.options-profile__control-type.active#portfolio-domain-1(data-js-handler='data-options-control-type')
+          select.options-profile__control-type.active#portfolio-domain-1(data-js-handler='portfolio-add-type')
             option(value="type-1") Розробка стратегічного плану 1      
             option(value="type-2") Розробка стратегічного плану 2                  
             option(value="type-3") Розробка стратегічного плану 3
-          select.options-profile__control-type#portfolio-domain-2(data-js-handler='data-options-control-type')
+          select.options-profile__control-type#portfolio-domain-2(data-js-handler='portfolio-add-type')
             option(value="type-1") Тестовий тип 1      
             option(value="type-2") Тестовий тип 2                    
             option(value="type-3") Тестовий тип 3    
-          select.options-profile__control-type#portfolio-domain-3(data-js-handler='data-options-control-type')
+          select.options-profile__control-type#portfolio-domain-3(data-js-handler='portfolio-add-type')
             option(value="type-1") Інший тестовий тип 1      
             option(value="type-2") Інший тестовий тип 2                     
             option(value="type-3") Інший тестовий тип 3   
@@ -111,4 +116,4 @@
 
       .options-profile__buttons 
         a.options-profile__button.c-button.c-button--primary.c-button--lg(href="#" data-js-handler='portfolio-add') Зберегти зміни
-        a.options-profile__button.c-button.c-button--bordered.c-button--lg(href="#" data-js-handler='portfolio-toggle-editor') Скасувати                                            
+        a.options-profile__button.c-button.c-button--bordered.c-button--lg(href="#" data-js-handler='portfolio-toggle-editor') Скасувати                                      

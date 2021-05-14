@@ -4408,6 +4408,10 @@ main.index-page {
     text-align: center
 }
 
+.options-profile__buttons.hide {
+    display: none
+}
+
 .options-profile__button {
     height: 52px
 }
@@ -4529,6 +4533,33 @@ main.index-page {
     color: #35343a;
     font-size: 14px;
     line-height: 28px
+}
+
+.portfolio-none {
+    display: none;
+    margin: 60px auto 0;
+    width: 100%;
+    max-width: 620px
+}
+
+.portfolio-none.active {
+    display: block
+}
+
+.portfolio-none__block {
+    background: #f5f5f5;
+    border-radius: 8px;
+    margin: 0 0 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 20px
 }
 
 @media screen and (min-width:1024px) and (max-width:1440px) {

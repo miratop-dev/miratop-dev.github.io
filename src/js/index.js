@@ -231,6 +231,7 @@ $("[data-js-handler='portfolio-add']").on('click', function(e){
   var project = $("[data-js-handler='portfolio-add-project']").val();
   var company = $("[data-js-handler='portfolio-add-company']").val();
   var year = $("[data-js-handler='portfolio-add-year']").val();
+  var type = $("select.active[data-js-handler='portfolio-add-type']").children("option").filter(":selected").text();
   var duration = $("[data-js-handler='portfolio-add-duration']").val();
   var problem = $("[data-js-handler='portfolio-add-problem']").val();
   var results = $("[data-js-handler='portfolio-add-results']").val();
@@ -242,12 +243,14 @@ $("[data-js-handler='portfolio-add']").on('click', function(e){
     additional += '<div class="c-info">';
     additional += '<div class="c-info__client"> ' + company + '</div><div class="c-info__deadline">' + duration + '</div><div class="c-info__date">рік: ' + year + '</div>';
     additional += '</div>';
-    additional += '<div class="c-title c-title__title5 portfolio-block__subtitle">' + project + '</div>';
+    additional += '<div class="c-title c-title__title5 portfolio-block__subtitle">' + type + '</div>';
     additional += '<div class="portfolio-block__section"><div class="c-title c-title c-title__title5 c-title--alert">Проблематика</div><p> ' + problem + '</p></div>';
     additional += '<div class="portfolio-block__section"><div class="c-title c-title c-title__title5 c-title--goal">Отримані результати</div><p>' + results + '</p></div>';
     additional += '</div></div>';
   
     $('[data-js-handler="options-expert-portfolio-blocks"]').append(additional);
+    $("[data-js-handler='portfolio-buttons']").removeClass('hide');
+    $("[data-js-handler='options-expert-portfolio-none']").removeClass('active');
     togglePortfolioContainers();
   }
 });  
@@ -265,4 +268,9 @@ function togglePortfolioContainers() {
 $("[data-js-handler='options-expert-portfolio-blocks']").on('click', "[data-js-handler='portfolio-remove']", function(e){
   e.preventDefault();
   $(this).closest('.portfolio-block').remove();
+  var block_length = $(".active[data-js-handler='options-expert-portfolio-container'] .portfolio-block").length;
+  if (block_length === 0) {
+    $("[data-js-handler='portfolio-buttons']").addClass('hide');
+    $("[data-js-handler='options-expert-portfolio-none']").addClass('active');
+  }
 });

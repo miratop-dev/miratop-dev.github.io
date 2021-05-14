@@ -447,6 +447,10 @@
 
   &__buttons {
     text-align: center;
+
+    &.hide {
+      display: none;
+    }
   }
 
   &__button {
@@ -556,5 +560,26 @@
       font-size: 14px;
       line-height: 28px;
     }
+  }
+}
+
+.portfolio-none {
+  display: none;
+  margin: 60px auto 0;
+  width: 100%;
+  max-width: 620px;
+
+  &.active {
+    display: block;
+  }
+
+  &__block {
+    background: $color-secondary-grey-bg;
+    border-radius: 8px;
+    margin: 0 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
   }
 }
