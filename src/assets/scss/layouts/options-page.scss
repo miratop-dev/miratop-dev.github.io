@@ -583,3 +583,86 @@
     padding: 20px;
   }
 }
+
+.portfolio-finance {
+  width: 100%;
+  max-width: 620px;
+  text-align: left;
+  margin: 0 auto;
+
+  &__type {
+    position: relative;
+    color: $text-black;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 28px;
+    padding: 0 0 0 34px;
+    margin: 0 20px 0 0;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -1px;
+      width: 24px; 
+      height: 24px;
+      border: 2px solid $text-silver;
+      border-radius: 12px;
+    }
+
+    &.active {
+      &::before {
+        border: 2px solid $color-pastel-7;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 6px;
+        top: 5px;
+        width: 12px; 
+        height: 12px;
+        border-radius: 6px;
+        background-color: $color-pastel-7;
+      }
+    }
+  }
+
+  &__block {
+    display: none;
+
+    &.active {
+      display: block;
+      margin: 0 0 40px;
+    }
+  }
+
+  &__fieldset {
+    border: none;
+    text-align: left;
+    margin: 40px 0 0 0;
+  }
+
+  &__addfile {
+    position: relative;
+    padding: 0 0 0 32px;
+    text-decoration: underline;
+    text-decoration-color: $color-pastel-7;
+    text-decoration-thickness: 2px;
+    text-underline-position: under;    
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 24px;
+      height: 24px;
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M22.9807 8.74063C22.5891 8.35114 21.956 8.35287 21.5665 8.74443L9.54519 20.8307C7.98558 22.3903 5.45253 22.3903 3.89001 20.8286C2.32866 19.2665 2.32866 16.7334 3.8902 15.1719L16.2673 2.72975C17.241 1.75609 18.8241 1.75609 19.8006 2.73186C20.7768 3.70811 20.7768 5.29097 19.8004 6.26749L9.54707 16.5207C9.54641 16.5214 9.54585 16.5221 9.54519 16.5228C9.15457 16.9112 8.52329 16.9107 8.13347 16.5209C7.74299 16.1304 7.74299 15.4975 8.13347 15.1071L13.0826 10.1569C13.4731 9.76628 13.4731 9.13308 13.0825 8.7426C12.6919 8.35212 12.0587 8.35217 11.6683 8.74274L6.71913 13.6929C5.54764 14.8643 5.54764 16.7636 6.71922 17.9351C7.89075 19.1066 9.78998 19.1066 10.9616 17.9351C10.9629 17.9337 10.964 17.9323 10.9653 17.9309L21.2146 7.68165C22.9721 5.92408 22.9721 3.07486 21.2146 1.31728C19.4568 -0.439257 16.6077 -0.439257 14.8512 1.31728L2.47407 13.7595C0.133362 16.1002 0.133361 19.8993 2.47576 22.2429C4.81971 24.5856 8.61883 24.5856 10.9614 22.2431L22.9846 10.1549C23.374 9.76328 23.3723 9.13012 22.9807 8.74063Z' fill='%23ADDED4'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+    }
+  }
+}

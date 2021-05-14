@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <link href="assets/css/app.1b7c5f69853785a621b3.css" rel="stylesheet"></head>
+  <link href="assets/css/app.8ed9c8bf8c5679fa701a.css" rel="stylesheet"></head>
   <body class="article-page">
 <header class="header">
   <div class="header__container"><a class="header__logo" href="/"><img src="assets/img/logo.svg" alt="logo"></a>
@@ -57,13 +57,13 @@
         <div class="c-wide-content">
           <div class="options-page">
             <ul class="options-page__tabs" data-js-handler="options-tabs">
-              <li class="active"><a href="#profile">Профайл</a></li>
+              <li><a href="#profile">Профайл</a></li>
               <li><a href="#portfolio">Портфоліо       </a></li>
-              <li> <a href="#finance">Фінансова інформація</a></li>
+              <li class="active"> <a href="#finance">Фінансова інформація</a></li>
               <li><a href="#access">Доступ</a></li>
               <li> <a href="#notice">Сповіщення</a></li>
             </ul>
-            <div class="options-page__tab active" id="profile" data-js-handler="options-tab">
+            <div class="options-page__tab" id="profile" data-js-handler="options-tab">
 <form class="options-profile" action="#">
   <label class="options-profile__label">
     <div class="options-profile__message options-profile__message--error">
@@ -366,8 +366,191 @@
   </div>
 </div>
             </div>
-            <div class="options-page__tab" id="finance" data-js-handler="options-tab">
-              <p>finance</p>
+            <div class="options-page__tab active" id="finance" data-js-handler="options-tab">
+<div class="portfolio-finance">
+  <div class="portfolio-finance__types"><a class="portfolio-finance__type active" href="#legal" data-js-handler="portfolio-finance-type">Юридична особа</a><a class="portfolio-finance__type" href="#individual" data-js-handler="portfolio-finance-type">Фізична особа</a><a class="portfolio-finance__type" href="#independent" data-js-handler="portfolio-finance-type">Незалежна ПП діяльність</a></div>
+  <div class="portfolio-finance__block active" id="legal">
+    <fieldset class="portfolio-finance__fieldset">
+      <div class="c-title c-title__title4">Юридична особа:</div>
+      <label class="options-profile__label" for="finance-legal-name"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Назва юридичної особи</div>
+        <input class="options-profile__input" id="finance-legal-name" type="text" name="finance-legal-name" placeholder="Введіть назву юридичної особи">
+      </label>
+      <label class="options-profile__label" for="finance-legal-EDRPOU"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Код ЄДРПОУ</div>
+        <input class="options-profile__input" id="finance-legal-EDRPOU" type="text" name="finance-legal-EDRPOU" placeholder="Введіть код ЄДРПОУ">
+      </label>
+      <label class="options-profile__label" for="finance-legal-address"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Адреса юридичної особи</div>
+        <input class="options-profile__input" id="finance-legal-address" type="text" name="finance-legal-address" placeholder="Введіть адресу юридичної особи">
+      </label>
+      <label class="options-profile__label" for="finance-legal-number"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Поточний рахунок</div>
+        <input class="options-profile__input" id="finance-legal-number" type="text" name="finance-legal-number" placeholder="Введіть поточний рахунок">
+      </label>
+      <label class="options-profile__label" for="finance-legal-bank"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Банківська установа</div>
+        <input class="options-profile__input" id="finance-legal-bank" type="text" name="finance-legal-bank" placeholder="Введіть банківську установу">
+      </label>
+      <label class="options-profile__label" for="finance-legal-inn"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Індивідуальний податковий номер</div>
+        <input class="options-profile__input" id="finance-legal-inn" type="text" name="finance-legal-inn" placeholder="Введіть індивідуальний податковий номер">
+      </label>
+      <label class="options-profile__label" for="finance-legal-phone"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Телефон для зв’язку</div>
+        <input class="options-profile__input" id="finance-legal-phone" type="tel" name="finance-legal-phone" placeholder="+380 50 123 4567">
+      </label>
+      <label class="options-profile__label" for="finance-legal-email"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Електронна пошта</div>
+        <input class="options-profile__input" id="finance-legal-email" type="text" name="finance-legal-email" placeholder="Введіть email">
+      </label>
+      <label class="options-profile__label" for="finance-legal-post"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Адреса для листів</div>
+        <input class="options-profile__input" id="finance-legal-post" type="text" name="finance-legal-post" placeholder="Введіть адресу для листування">
+      </label>
+      <label class="options-profile__label" for="finance-legal-document"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Підтверджуючий документ</div>
+        <input class="options-profile__input" id="finance-legal-document" type="text" name="finance-legal-document" placeholder="Введіть підтверджуючий документ">
+      </label>
+      <label class="options-profile__label" for="finance-legal-addfile">   <a class="portfolio-finance__addfile c-title c-title__title5" href="#">Прикріпити файл</a></label>
+    </fieldset>
+    <fieldset class="portfolio-finance__fieldset">
+      <div class="c-title c-title__title4">Довірена особа:</div>
+      <label class="options-profile__label" for="finance-legal-confidant"> 
+        <div class="options-profile__clarification options-profile__clarification--required">ПІБ</div>
+        <input class="options-profile__input" id="finance-legal-confidant" type="text" name="finance-legal-confidant" placeholder="Введіть ПІБ">
+      </label>
+      <label class="options-profile__label" for="finance-legal-position "> 
+        <div class="options-profile__clarification options-profile__clarification--required">Посада</div>
+        <input class="options-profile__input" id="finance-legal-position" type="text" name="finance-legal-position" placeholder="Введіть посаду">
+      </label>
+    </fieldset>
+    <fieldset class="portfolio-finance__fieldset">
+      <div class="c-title c-title__title4">Довіреність для вчинення дій:  </div>
+      <label class="options-profile__label" for="finance-legal-attorney"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Номер довіреності</div>
+        <input class="options-profile__input" id="finance-legal-attorney" type="text" name="finance-legal-attorney" placeholder="Введіть номер довіреності">
+      </label>
+      <label class="options-profile__label" for="finance-legal-issue-date"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Дата видачі</div>
+        <input class="options-profile__input" id="finance-legal-issue-date" type="text" name="finance-legal-issue-date" placeholder="Введіть дату видачі">
+      </label>
+      <label class="options-profile__label" for="finance-legal-certificate"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Ким засвідчена</div>
+        <input class="options-profile__input" id="inance-legal-certificate" type="text" name="inance-legal-certificate" placeholder="Введіть ким засвідчена">
+      </label>
+    </fieldset>
+  </div>
+  <div class="portfolio-finance__block" id="individual">
+    <fieldset class="portfolio-finance__fieldset">
+      <div class="c-title c-title__title4">Фізична особа:</div>
+      <label class="options-profile__label" for="finance-individual-name"> 
+        <div class="options-profile__clarification options-profile__clarification--required">ПІБ</div>
+        <input class="options-profile__input" id="finance-individual-name" type="text" name="finance-individual-name" placeholder="Введіть ПІБ">
+      </label>
+      <label class="options-profile__label" for="finance-individual-IPN"> 
+        <div class="options-profile__clarification options-profile__clarification--required">ІПН</div>
+        <input class="options-profile__input" id="finance-individual-IPN" type="text" name="finance-individual-IPN" placeholder="Введіть ІПН">
+      </label>
+      <label class="options-profile__label" for="finance-individual-address"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Місце проживання</div>
+        <input class="options-profile__input" id="finance-individual-address" type="text" name="finance-individual-address" placeholder="Введіть місце проживання">
+      </label>
+      <label class="options-profile__label" for="finance-individual-date"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Дата державної реєстрації</div>
+        <input class="options-profile__input" id="finance-individual-date" type="text" name="finance-individual-date" placeholder="Введіть дату державної реєстрації">
+      </label>
+      <label class="options-profile__label" for="finance-individual-number"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Номер державної реєстрації</div>
+        <input class="options-profile__input" id="finance-individual-number" type="text" name="finance-individual-number" placeholder="Введіть номер державної реєстрації">
+      </label>
+      <label class="options-profile__label" for="finance-individual-account"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Поточний рахунок</div>
+        <input class="options-profile__input" id="finance-individual-account" type="text" name="finance-individual-account" placeholder="Введіть поточний рахунок">
+      </label>
+      <label class="options-profile__label" for="finance-individual-bank"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Банківська установа</div>
+        <input class="options-profile__input" id="finance-individual-bank" type="text" name="finance-individual-bank" placeholder="Введіть банківську установу">
+      </label>
+      <label class="options-profile__label" for="finance-individual-tax-number"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Індивідуальний податковий номер</div>
+        <input class="options-profile__input" id="finance-individual-tax-number" type="text" name="finance-individual-tax-number" placeholder="Введіть індивідуальний податковий номер">
+      </label>
+      <label class="options-profile__label" for="finance-individual-phone"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Телефон для зв’язку</div>
+        <input class="options-profile__input" id="finance-individual-phone" type="tel" name="finance-individual-phone" placeholder="+380 50 123 4567">
+      </label>
+      <label class="options-profile__label" for="finance-individual-email"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Електронна пошта</div>
+        <input class="options-profile__input" id="finance-individual-email" type="email" name="finance-individual-email" placeholder="Введіть email">
+      </label>
+      <label class="options-profile__label" for="finance-individual-post"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Адреса для листів</div>
+        <input class="options-profile__input" id="finance-individual-post" type="text" name="finance-individual-post" placeholder="Введіть адресу для листування">
+      </label>
+      <label class="options-profile__label" for="finance-individual-document"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Підтверджуючий документ</div>
+        <input class="options-profile__input" id="finance-individual-document" type="text" name="finance-individual-document" placeholder="Введіть підтверджуючий документ">
+      </label>
+      <label class="options-profile__label" for="finance-individual-addfile">   <a class="portfolio-finance__addfile c-title c-title__title5" href="#">Прикріпити файл</a></label>
+    </fieldset>
+  </div>
+  <div class="portfolio-finance__block" id="independent">
+    <fieldset class="portfolio-finance__fieldset">
+      <div class="c-title c-title__title4">Незалежна ПП діяльність:</div>
+      <label class="options-profile__label" for="finance-independent-name"> 
+        <div class="options-profile__clarification options-profile__clarification--required">ПІБ</div>
+        <input class="options-profile__input" id="finance-independent-name" type="text" name="finance-independent-name" placeholder="Введіть ПІБ">
+      </label>
+      <label class="options-profile__label" for="finance-independent-IPN"> 
+        <div class="options-profile__clarification options-profile__clarification--required">ІПН</div>
+        <input class="options-profile__input" id="finance-independent-IPN" type="text" name="finance-independent-IPN" placeholder="Введіть ІПН">
+      </label>
+      <label class="options-profile__label" for="finance-independent-address"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Адреса місця реєстрації</div>
+        <input class="options-profile__input" id="finance-independent-address" type="text" name="finance-independent-address" placeholder="Введіть адресу місця реєстрації">
+      </label>
+      <label class="options-profile__label" for="finance-independent-passport-series"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Паспорт серія</div>
+        <input class="options-profile__input" id="finance-independent-passport-series" type="text" name="finance-independent-passport-series" placeholder="Введіть серію паспорта">
+      </label>
+      <label class="options-profile__label" for="finance-independent-passport-office"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Ким виданий паспорт</div>
+        <input class="options-profile__input" id="finance-independent-passport-office" type="text" name="finance-independent-passport-office" placeholder="Введіть ким виданий паспорт">
+      </label>
+      <label class="options-profile__label" for="finance-independent-passport-date"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Дата видачі паспорту</div>
+        <input class="options-profile__input" id="finance-independent-passport-date" type="text" name="finance-independent-passport-date" placeholder="Введіть дату видачі паспорту">
+      </label>
+      <label class="options-profile__label" for="finance-independent-number"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Поточний рахунок</div>
+        <input class="options-profile__input" id="finance-independent-number" type="text" name="finance-independent-number" placeholder="Введіть поточний рахунок">
+      </label>
+      <label class="options-profile__label" for="finance-independent-bank"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Банківська установа</div>
+        <input class="options-profile__input" id="finance-independent-bank" type="text" name="finance-independent-bank" placeholder="Введіть банківську установу">
+      </label>
+      <label class="options-profile__label" for="finance-independent-phone"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Телефон для зв’язку</div>
+        <input class="options-profile__input" id="finance-independent-phone" type="tel" name="finance-independent-phone" placeholder="+380 50 123 4567">
+      </label>
+      <label class="options-profile__label" for="finance-independent-email"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Електронна пошта</div>
+        <input class="options-profile__input" id="finance-independent-email" type="email" name="finance-independent-email" placeholder="Введіть email">
+      </label>
+      <label class="options-profile__label" for="finance-independent-post"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Адреса для листів</div>
+        <input class="options-profile__input" id="finance-independent-post" type="text" name="finance-independent-post" placeholder="Введіть адресу для листування">
+      </label>
+      <label class="options-profile__label" for="finance-independent-document"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Підтверджуючий документ</div>
+        <input class="options-profile__input" id="finance-independent-document" type="text" name="finance-independent-document" placeholder="Введіть підтверджуючий документ">
+      </label>
+      <label class="options-profile__label" for="finance-independent-addfile">   <a class="portfolio-finance__addfile c-title c-title__title5" href="#">Прикріпити файл</a></label>
+    </fieldset>
+  </div>
+  <div class="options-profile__buttons"> <a class="options-profile__button c-button c-button--primary c-button--lg" href="#">Зберегти зміни</a><a class="options-profile__button c-button c-button--bordered c-button--lg" href="#">Скасувати </a></div>
+</div>
             </div>
             <div class="options-page__tab" id="access" data-js-handler="options-tab">
               <p>access</p>
@@ -424,5 +607,5 @@
     </label><a class="c-button c-button--primary c-button--md c-button--mobile" href="#">Надіслати</a>
   </div>
 </div>
-  <script type="text/javascript" src="assets/js/vendors.1b7c5f69853785a621b3.js"></script><script type="text/javascript" src="assets/js/app.1b7c5f69853785a621b3.js"></script></body>
+  <script type="text/javascript" src="assets/js/vendors.8ed9c8bf8c5679fa701a.js"></script><script type="text/javascript" src="assets/js/app.8ed9c8bf8c5679fa701a.js"></script></body>
 </html>

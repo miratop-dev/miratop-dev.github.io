@@ -1,0 +1,150 @@
+.portfolio-finance
+  .portfolio-finance__types
+    a.portfolio-finance__type.active(href='#legal', data-js-handler='portfolio-finance-type') Юридична особа
+    a.portfolio-finance__type(href='#individual', data-js-handler='portfolio-finance-type') Фізична особа
+    a.portfolio-finance__type(href='#independent', data-js-handler='portfolio-finance-type') Незалежна ПП діяльність
+
+  .portfolio-finance__block.active#legal
+    fieldset.portfolio-finance__fieldset
+      .c-title.c-title__title4 Юридична особа:
+      label.options-profile__label(for='finance-legal-name') 
+        .options-profile__clarification.options-profile__clarification--required Назва юридичної особи
+        input.options-profile__input#finance-legal-name(type='text' name='finance-legal-name' placeholder='Введіть назву юридичної особи')
+      label.options-profile__label(for='finance-legal-EDRPOU') 
+        .options-profile__clarification.options-profile__clarification--required Код ЄДРПОУ
+        input.options-profile__input#finance-legal-EDRPOU(type='text' name='finance-legal-EDRPOU' placeholder='Введіть код ЄДРПОУ')
+      label.options-profile__label(for='finance-legal-address') 
+        .options-profile__clarification.options-profile__clarification--required Адреса юридичної особи
+        input.options-profile__input#finance-legal-address(type='text' name='finance-legal-address' placeholder='Введіть адресу юридичної особи') 
+      label.options-profile__label(for='finance-legal-number') 
+        .options-profile__clarification.options-profile__clarification--required Поточний рахунок
+        input.options-profile__input#finance-legal-number(type='text' name='finance-legal-number' placeholder='Введіть поточний рахунок')
+      label.options-profile__label(for='finance-legal-bank') 
+        .options-profile__clarification.options-profile__clarification--required Банківська установа
+        input.options-profile__input#finance-legal-bank(type='text' name='finance-legal-bank' placeholder='Введіть банківську установу')
+      label.options-profile__label(for='finance-legal-inn') 
+        .options-profile__clarification.options-profile__clarification--required Індивідуальний податковий номер
+        input.options-profile__input#finance-legal-inn(type='text' name='finance-legal-inn' placeholder='Введіть індивідуальний податковий номер') 
+      label.options-profile__label(for='finance-legal-phone') 
+        .options-profile__clarification.options-profile__clarification--required Телефон для зв’язку
+        input.options-profile__input#finance-legal-phone(type='tel' name='finance-legal-phone' placeholder='+380 50 123 4567')
+      label.options-profile__label(for='finance-legal-email') 
+        .options-profile__clarification.options-profile__clarification--required Електронна пошта
+        input.options-profile__input#finance-legal-email(type='text' name='finance-legal-email' placeholder='Введіть email')
+      label.options-profile__label(for='finance-legal-post') 
+        .options-profile__clarification.options-profile__clarification--required Адреса для листів
+        input.options-profile__input#finance-legal-post(type='text' name='finance-legal-post' placeholder='Введіть адресу для листування') 
+      label.options-profile__label(for='finance-legal-document') 
+        .options-profile__clarification.options-profile__clarification--required Підтверджуючий документ
+        input.options-profile__input#finance-legal-document(type='text' name='finance-legal-document' placeholder='Введіть підтверджуючий документ') 
+      label.options-profile__label(for='finance-legal-addfile')    
+        a.portfolio-finance__addfile.c-title.c-title__title5(href="#") Прикріпити файл
+
+    fieldset.portfolio-finance__fieldset
+      .c-title.c-title__title4 Довірена особа:
+      label.options-profile__label(for='finance-legal-confidant') 
+        .options-profile__clarification.options-profile__clarification--required ПІБ
+        input.options-profile__input#finance-legal-confidant(type='text' name='finance-legal-confidant' placeholder='Введіть ПІБ')
+      label.options-profile__label(for='finance-legal-position ') 
+        .options-profile__clarification.options-profile__clarification--required Посада
+        input.options-profile__input#finance-legal-position(type='text' name='finance-legal-position' placeholder='Введіть посаду')
+
+    fieldset.portfolio-finance__fieldset
+      .c-title.c-title__title4 Довіреність для вчинення дій:  
+      label.options-profile__label(for='finance-legal-attorney') 
+        .options-profile__clarification.options-profile__clarification--required Номер довіреності
+        input.options-profile__input#finance-legal-attorney(type='text' name='finance-legal-attorney' placeholder='Введіть номер довіреності')
+      label.options-profile__label(for='finance-legal-issue-date') 
+        .options-profile__clarification.options-profile__clarification--required Дата видачі
+        input.options-profile__input#finance-legal-issue-date(type='text' name='finance-legal-issue-date' placeholder='Введіть дату видачі')  
+      label.options-profile__label(for='finance-legal-certificate') 
+        .options-profile__clarification.options-profile__clarification--required Ким засвідчена
+        input.options-profile__input#inance-legal-certificate(type='text' name='inance-legal-certificate' placeholder='Введіть ким засвідчена')             
+
+  .portfolio-finance__block#individual
+    fieldset.portfolio-finance__fieldset
+      .c-title.c-title__title4 Фізична особа:
+      label.options-profile__label(for='finance-individual-name') 
+        .options-profile__clarification.options-profile__clarification--required ПІБ
+        input.options-profile__input#finance-individual-name(type='text' name='finance-individual-name' placeholder='Введіть ПІБ')
+      label.options-profile__label(for='finance-individual-IPN') 
+        .options-profile__clarification.options-profile__clarification--required ІПН
+        input.options-profile__input#finance-individual-IPN(type='text' name='finance-individual-IPN' placeholder='Введіть ІПН')
+      label.options-profile__label(for='finance-individual-address') 
+        .options-profile__clarification.options-profile__clarification--required Місце проживання
+        input.options-profile__input#finance-individual-address(type='text' name='finance-individual-address' placeholder='Введіть місце проживання') 
+      label.options-profile__label(for='finance-individual-date') 
+        .options-profile__clarification.options-profile__clarification--required Дата державної реєстрації
+        input.options-profile__input#finance-individual-date(type='text' name='finance-individual-date' placeholder='Введіть дату державної реєстрації')
+      label.options-profile__label(for='finance-individual-number') 
+        .options-profile__clarification.options-profile__clarification--required Номер державної реєстрації
+        input.options-profile__input#finance-individual-number(type='text' name='finance-individual-number' placeholder='Введіть номер державної реєстрації')
+      label.options-profile__label(for='finance-individual-account') 
+        .options-profile__clarification.options-profile__clarification--required Поточний рахунок
+        input.options-profile__input#finance-individual-account(type='text' name='finance-individual-account' placeholder='Введіть поточний рахунок') 
+      label.options-profile__label(for='finance-individual-bank') 
+        .options-profile__clarification.options-profile__clarification--required Банківська установа
+        input.options-profile__input#finance-individual-bank(type='text' name='finance-individual-bank' placeholder='Введіть банківську установу')
+      label.options-profile__label(for='finance-individual-tax-number') 
+        .options-profile__clarification.options-profile__clarification--required Індивідуальний податковий номер
+        input.options-profile__input#finance-individual-tax-number(type='text' name='finance-individual-tax-number' placeholder='Введіть індивідуальний податковий номер')
+      label.options-profile__label(for='finance-individual-phone') 
+        .options-profile__clarification.options-profile__clarification--required Телефон для зв’язку
+        input.options-profile__input#finance-individual-phone(type='tel' name='finance-individual-phone' placeholder='+380 50 123 4567') 
+      label.options-profile__label(for='finance-individual-email') 
+        .options-profile__clarification.options-profile__clarification--required Електронна пошта
+        input.options-profile__input#finance-individual-email(type='email' name='finance-individual-email' placeholder='Введіть email') 
+      label.options-profile__label(for='finance-individual-post') 
+        .options-profile__clarification.options-profile__clarification--required Адреса для листів
+        input.options-profile__input#finance-individual-post(type='text' name='finance-individual-post' placeholder='Введіть адресу для листування') 
+      label.options-profile__label(for='finance-individual-document') 
+        .options-profile__clarification.options-profile__clarification--required Підтверджуючий документ
+        input.options-profile__input#finance-individual-document(type='text' name='finance-individual-document' placeholder='Введіть підтверджуючий документ')         
+      label.options-profile__label(for='finance-individual-addfile')    
+        a.portfolio-finance__addfile.c-title.c-title__title5(href="#") Прикріпити файл
+
+  .portfolio-finance__block#independent
+    fieldset.portfolio-finance__fieldset
+      .c-title.c-title__title4 Незалежна ПП діяльність:
+      label.options-profile__label(for='finance-independent-name') 
+        .options-profile__clarification.options-profile__clarification--required ПІБ
+        input.options-profile__input#finance-independent-name(type='text' name='finance-independent-name' placeholder='Введіть ПІБ')
+      label.options-profile__label(for='finance-independent-IPN') 
+        .options-profile__clarification.options-profile__clarification--required ІПН
+        input.options-profile__input#finance-independent-IPN(type='text' name='finance-independent-IPN' placeholder='Введіть ІПН')
+      label.options-profile__label(for='finance-independent-address') 
+        .options-profile__clarification.options-profile__clarification--required Адреса місця реєстрації
+        input.options-profile__input#finance-independent-address(type='text' name='finance-independent-address' placeholder='Введіть адресу місця реєстрації') 
+      label.options-profile__label(for='finance-independent-passport-series') 
+        .options-profile__clarification.options-profile__clarification--required Паспорт серія
+        input.options-profile__input#finance-independent-passport-series(type='text' name='finance-independent-passport-series' placeholder='Введіть серію паспорта')
+      label.options-profile__label(for='finance-independent-passport-office') 
+        .options-profile__clarification.options-profile__clarification--required Ким виданий паспорт
+        input.options-profile__input#finance-independent-passport-office(type='text' name='finance-independent-passport-office' placeholder='Введіть ким виданий паспорт')
+      label.options-profile__label(for='finance-independent-passport-date') 
+        .options-profile__clarification.options-profile__clarification--required Дата видачі паспорту
+        input.options-profile__input#finance-independent-passport-date(type='text' name='finance-independent-passport-date' placeholder='Введіть дату видачі паспорту') 
+      label.options-profile__label(for='finance-independent-number') 
+        .options-profile__clarification.options-profile__clarification--required Поточний рахунок
+        input.options-profile__input#finance-independent-number(type='text' name='finance-independent-number' placeholder='Введіть поточний рахунок')
+      label.options-profile__label(for='finance-independent-bank') 
+        .options-profile__clarification.options-profile__clarification--required Банківська установа
+        input.options-profile__input#finance-independent-bank(type='text' name='finance-independent-bank' placeholder='Введіть банківську установу')
+      label.options-profile__label(for='finance-independent-phone') 
+        .options-profile__clarification.options-profile__clarification--required Телефон для зв’язку
+        input.options-profile__input#finance-independent-phone(type='tel' name='finance-independent-phone' placeholder='+380 50 123 4567') 
+      label.options-profile__label(for='finance-independent-email') 
+        .options-profile__clarification.options-profile__clarification--required Електронна пошта
+        input.options-profile__input#finance-independent-email(type='email' name='finance-independent-email' placeholder='Введіть email') 
+      label.options-profile__label(for='finance-independent-post') 
+        .options-profile__clarification.options-profile__clarification--required Адреса для листів
+        input.options-profile__input#finance-independent-post(type='text' name='finance-independent-post' placeholder='Введіть адресу для листування') 
+      label.options-profile__label(for='finance-independent-document') 
+        .options-profile__clarification.options-profile__clarification--required Підтверджуючий документ
+        input.options-profile__input#finance-independent-document(type='text' name='finance-independent-document' placeholder='Введіть підтверджуючий документ')         
+      label.options-profile__label(for='finance-independent-addfile')    
+        a.portfolio-finance__addfile.c-title.c-title__title5(href="#") Прикріпити файл
+
+  .options-profile__buttons 
+    a.options-profile__button.c-button.c-button--primary.c-button--lg(href="#") Зберегти зміни
+    a.options-profile__button.c-button.c-button--bordered.c-button--lg(href="#") Скасувати 
