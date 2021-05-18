@@ -293,8 +293,8 @@
       width: 50%;
     }
 
-    &:nth-child(-n + 3) {
-      margin: 0 0 40px;
+    &:nth-child(n + 4) {
+      margin: 40px 0 0;
     }
   }
 
@@ -304,6 +304,10 @@
 
     img {
       margin: 0 10px 0 0;
+    }
+
+    a {
+      font-size: 20px;
     }
 
     @include mobile {
