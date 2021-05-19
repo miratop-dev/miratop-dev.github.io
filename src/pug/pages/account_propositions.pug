@@ -1,0 +1,162 @@
+extends ../layout/2columns-wide-sidebar-right
+
+block variables
+  - var title = 'Mira.hub account propositions';
+  - var description = 'Mira.hub account propositions';
+  - var pageClass = 'account-page';
+  - let witchPage = 'account propositions'
+  - let pageTitle = 'Особистий кабінет'
+
+block title 
+  .page-title
+    .page-title__container
+      h1 Особистий 
+        span.c-accent.c-accent--pagetitle кабінет
+
+block statusbar
+
+block sidebar
+  .account-sidebar
+    .account-sidebar__imgwrap 
+      img(src="assets/img/rozetka.jpg", alt="img")
+    .account-sidebar__info
+      .c-title.c-title__title3.account-sidebar__title Rozetka
+      .account-sidebar__block
+        p
+          span Відгуків:
+          strong 1 / 0 / 2
+        p
+          span В обраних:
+          strong 10
+        p
+          span К-сть пропозицій:
+          strong 34 
+      .account-sidebar__block
+        .c-title.c-title__title4 Локація:
+        .account-sidebar__location Київ, Україна
+        p
+          span На сайті:
+          strong 1 рік
+        p
+          span Заходив:
+          strong 4 хвилини тому     
+      .account-sidebar__block   
+        .c-title.c-title__title4 Контакти:    
+        p
+          span +38 067 000-00-00
+        p
+          span info@rozetka.com.ua          
+
+
+block content 
+  .account-prop
+    .options-page
+      ul.options-page__tabs.account-prop__tabs(data-js-handler='options-tabs')
+        li.active
+          a(href="#offers") Пропозиції
+        li
+          a(href="#wip") В роботі     
+        li 
+          a(href="#messages") Повідомлення
+        li
+          a(href="#reviews") Відгуки
+
+    .options-page__tab.active#offers(data-js-handler='options-tab')
+      .options-tabs
+        .options-tabs__types
+          a.options-tabs__type.active(href='#open', data-js-handler='portfolio-type') Активні
+          a.options-tabs__type(href='#closed', data-js-handler='portfolio-type') Закриті
+        
+        .options-tabs__block.active#open
+          .account-prop__wrap
+            +propositionsBlock({
+              name: 'Разработать HR стратегию',
+              location: 'Киев, Украина',
+              date: 'Термін подачі: до 15.09.21',
+              description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+              edit: true,
+              cancel: true,
+              offers: '1 пропозиція',
+            })
+            +propositionsBlock({
+              name: 'Разработать HR стратегию',
+              location: 'Киев, Украина',
+              date: 'Термін подачі: до 15.09.21',
+              warning: true,
+              message: 'Очікує підтвердження адміністратора',
+              description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+              edit: true,
+              cancel: true,
+              offers: '0 пропозицій',
+            })
+            +propositionsBlock({
+              name: 'Разработать HR стратегию',
+              location: 'Киев, Украина',
+              date: 'Термін подачі: до 15.09.21',
+              alert: true,
+              message: 'Заблоковано адміністратором',
+              description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+              edit: true,
+              cancel: true,
+              offers: '1 пропозиція',
+            })
+            +propositionsBlock({
+              name: 'Разработать HR стратегию',
+              location: 'Киев, Украина',
+              date: 'Термін подачі: до 15.09.21',
+              warning: true,
+              message: 'Очікує підтвердження адміністратора',
+              description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+              edit: true,
+              cancel: true,
+              offers: '5 пропозиція',
+            })    
+
+          .options-profile__buttons(href="#")
+            a.options-profile__button.c-button.c-button--primary.c-button--lg(href="#") Додати проект                 
+
+        .options-tabs__block#closed
+          .account-prop__wrap
+            +propositionsBlock({
+              name: 'Разработать HR стратегию',
+              location: 'Киев, Украина',
+              date: '10.04.2021',
+              date2: 'Термін подачі: до 15.09.21',
+              message: 'Призупинена',
+              description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+              edit: true,
+              cancel: true,
+              offers: '1 пропозиція',
+            })
+            +propositionsBlock({
+              name: 'Разработать HR стратегию',
+              location: 'Киев, Украина',
+              date: '10.04.2021',
+              date2: 'Термін подачі: до 15.09.21',
+              message: 'Вибраний виконавець: Аня',
+              description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+              workflow: true,
+              offers: '4 пропозиції',
+            }) 
+            +propositionsBlock({
+              name: 'Разработать HR стратегию',
+              location: 'Киев, Украина',
+              date: '10.04.2021',
+              date2: 'Термін подачі: до 15.09.21',
+              message: 'Завершено',
+              description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+              workflow: true,
+              offers: '5 пропозиція',
+            })             
+
+          .options-profile__buttons(href="#")
+            a.options-profile__button.c-button.c-button--primary.c-button--lg(href="#") Додати замовлення
+
+    .options-page__tab#wip(data-js-handler='options-tab')
+      p #wip
+
+    .options-page__tab#messages(data-js-handler='options-tab')
+      p #messages
+
+    .options-page__tab#reviews(data-js-handler='options-tab')
+      p #reviews    

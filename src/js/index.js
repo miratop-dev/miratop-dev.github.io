@@ -275,13 +275,13 @@ $("[data-js-handler='options-expert-portfolio-blocks']").on('click', "[data-js-h
   }
 });
 
-$("[data-js-handler='portfolio-finance-type']").on('click', function(e){
+$("[data-js-handler='portfolio-type']").on('click', function(e){
   e.preventDefault();
   if(!$(this).hasClass('active')) {
     var id = $(this).attr('href');
     $(this).addClass('active');
     $(this).siblings().removeClass('active');
-    $('.portfolio-finance__block').removeClass('active');
+    $('.options-tabs__block').removeClass('active');
     $(id).addClass('active');
   }
 });

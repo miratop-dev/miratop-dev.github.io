@@ -1,0 +1,60 @@
+.account-sidebar {
+  background: $text-ultra-silver;
+  border-radius: 8px;
+  border: 1px solid $text-silver;
+
+  &__imgwrap {
+    background-color: #fff;
+    border-radius:  0 8px 8px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 42px 0;
+  }
+
+  &__info {
+    padding: 20px 40px 40px;
+    border-radius:  8px 0 0 8px;
+  }
+
+  &__title {
+    font-weight: 800;
+  }
+
+  &__block {
+    margin: 20px 0 0 0;
+
+    span {
+      color: $text-black;
+      font-size: 14px;
+      line-height: 28px;
+      margin: 0 12px 0 0;
+    }
+
+    strong {
+      color: $text-black;
+      font-size: 14px;
+      line-height: 28px;
+    }
+  }
+
+  &__location {
+    position: relative;
+    padding: 0 0 0 20px;
+    margin: 0 0 20px;
+    color: $text-black;
+    font-size: 14px;
+    line-height: 28px;
+
+    &::before {
+      content: '';
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='14' height='16' viewBox='0 0 14 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 0C3.64 0 0.90625 2.73375 0.90625 6.09375C0.90625 7.42344 1.32625 8.68687 2.12188 9.74687L6.62437 15.811C6.63562 15.8257 6.65281 15.8313 6.66531 15.8444C6.89031 16.0853 7.215 16.0247 7.37531 15.811C8.67188 14.081 11.0484 10.85 11.9622 9.63125C11.9622 9.63125 11.9625 9.63031 11.9628 9.62969L11.9684 9.62219C12.7047 8.58781 13.0938 7.36781 13.0938 6.09375C13.0938 2.73375 10.36 0 7 0ZM7 9.38125C5.19094 9.38125 3.7125 7.90281 3.7125 6.09375C3.7125 4.28469 5.19094 2.80625 7 2.80625C8.80906 2.80625 10.2875 4.28469 10.2875 6.09375C10.2875 7.90281 8.80906 9.38125 7 9.38125Z' fill='%23909090'/%3E%3C/svg%3E");
+      width: 14px;
+      height: 16px;
+      position: absolute;
+      left: 0;
+      top: 6px;
+      background-size: contain;
+    }
+  }
+}

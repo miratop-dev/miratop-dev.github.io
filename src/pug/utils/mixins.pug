@@ -111,6 +111,39 @@ mixin taskBlock(args)
     .tasks__description= args.description
     a.c-button.c-button--bordered.c-button--md.c-button--mobile.tasks__button(href= args.taskLink) Написать
 
+mixin propositionsBlock(args)
+  .account-prop__block
+    .account-prop__content
+      .account-prop__head
+        .c-title.c-title__title4.account-prop__title= args.name
+        if (args.message)
+          if(args.warning)
+            .c-title.c-title__title5.c-title--warning= args.message
+          else if (args.alert)
+            .c-title.c-title__title5.c-title--alert= args.message
+          else
+            .c-title.c-title__title5= args.message
+      .account-prop__info
+        .c-info
+          .c-info__location= args.location
+          .c-info__date= args.date
+          if(args.date2)
+            .c-info__date= args.date2
+        if (args.alert)
+          .account-prop__error Перевірте заповнення поля очікування
+      .account-prop__description
+        p= args.description
+    .account-prop__info 
+      .account-prop__controls
+        if (args.edit)
+          a.account-prop__edit(href="#") Редагувати
+        if (args.cancel)
+          a.account-prop__cancel(href="#") Відмінити публікацію
+        if (args.workflow)
+          a.account-prop__workflow(href="#") Хід роботи
+      .account-prop__offers= args.offers
+
+
 mixin relatedArticles(args)
   .article-related__block
     a(href= args.link)= args.title

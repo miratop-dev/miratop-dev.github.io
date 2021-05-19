@@ -1,10 +1,10 @@
-.portfolio-finance
-  .portfolio-finance__types
-    a.portfolio-finance__type.active(href='#legal', data-js-handler='portfolio-finance-type') Юридична особа
-    a.portfolio-finance__type(href='#individual', data-js-handler='portfolio-finance-type') Фізична особа
-    a.portfolio-finance__type(href='#independent', data-js-handler='portfolio-finance-type') Незалежна ПП діяльність
+.options-tabs.options-tabs--width
+  .options-tabs__types
+    a.options-tabs__type.active(href='#legal', data-js-handler='portfolio-type') Юридична особа
+    a.options-tabs__type(href='#individual', data-js-handler='portfolio-type') Фізична особа
+    a.options-tabs__type(href='#independent', data-js-handler='portfolio-type') Незалежна ПП діяльність
 
-  .portfolio-finance__block.active#legal
+  .options-tabs__block.active#legal
     fieldset.portfolio-fieldset
       .c-title.c-title__title4 Юридична особа:
       label.options-profile__label(for='finance-legal-name') 
@@ -61,7 +61,7 @@
         .options-profile__clarification.options-profile__clarification--required Ким засвідчена
         input.options-profile__input#inance-legal-certificate(type='text' name='inance-legal-certificate' placeholder='Введіть ким засвідчена')             
 
-  .portfolio-finance__block#individual
+  .options-tabs__block#individual
     fieldset.portfolio-fieldset
       .c-title.c-title__title4 Фізична особа:
       label.options-profile__label(for='finance-individual-name') 
@@ -103,7 +103,7 @@
       label.options-profile__label(for='finance-individual-addfile')    
         a.portfolio-finance__addfile.c-title.c-title__title5(href="#") Прикріпити файл
 
-  .portfolio-finance__block#independent
+  .options-tabs__block#independent
     fieldset.portfolio-fieldset
       .c-title.c-title__title4 Незалежна ПП діяльність:
       label.options-profile__label(for='finance-independent-name') 

@@ -607,11 +607,14 @@
   margin: 0 auto 40px;
 }
 
-.portfolio-finance {
+.options-tabs {
   width: 100%;
-  max-width: 620px;
   text-align: left;
   margin: 0 auto;
+
+  &--width {
+    max-width: 620px;
+  }
 
   &__type {
     position: relative;
