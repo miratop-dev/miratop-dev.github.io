@@ -11,11 +11,11 @@ block content
     .c-title.c-title__title3.service-main__title Зареєструйстесь на сайті за допомогою електронної пошти.
     form.service-main__form(action='#')
       fieldset
-        label.service-main__label
-          .service-main__message.service-main__message--error
+        label.service-main__label.hide(data-js-handler='error-message')
+          .service-main__message.error
             p Всі поля обов’язкові для заповнення.       
-        label.service-main__label
-          .service-main__message.service-main__message--success
+        label.service-main__label.hide(data-js-handler='success-message')
+          .service-main__message.success
             p Всі поля успішно заповнені.  
         label.service-main__label
           .service-main__clarification Тип аккаунту
@@ -33,10 +33,10 @@ block content
           input.service-main__input#phone(type='tel' name='phone' placeholder='+380 50 123 4567') 
         label.service-main__label(for='password') 
           .service-main__clarification.service-main__clarification--required Пароль
-          input.service-main__input.service-main__input--error#password(type='password' name='password' placeholder='Введіть ваш пароль')         
+          input.service-main__input#password(type='password' name='password' placeholder='Введіть ваш пароль')         
         label.service-main__label(for='confirm-password') 
           .service-main__clarification.service-main__clarification--required Пароль ще раз
-          input.service-main__input#confirm-password(type='password' name='confirm-password' placeholder='Повторіть пароль')      
+          input.service-main__input#confirm-password(type='password' name='confirm-password' placeholder='Повторіть пароль' data-js-handler='password-validation')      
         label.service-main__label(for='captcha') 
           .service-main__clarification.service-main__clarification--required Введіть каптчу
           input.service-main__input.service-main__input--half#captcha(type='text' name='captcha')   

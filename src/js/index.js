@@ -285,3 +285,20 @@ $("[data-js-handler='portfolio-type']").on('click', function(e){
     $(id).addClass('active');
   }
 });
+
+$("[data-js-handler='password-validation']").on('input', function(e){
+  var pass = $('#password').val();
+  if(pass !== $(this).val()) {
+    $(this).addClass('error');
+    $('#password').addClass('error');
+    $("[data-js-handler='error-message']").removeClass('hide').children('p').text('Паролі не співпадають');
+    $("[data-js-handler='success-message']").addClass('hide')
+  } else {
+    $(this).removeClass('error');
+    $('#password').removeClass('error');
+    if($(this).length > 0) {
+      $("[data-js-handler='success-message']").removeClass('hide').children('p').text('Паролі співпадають');
+      $("[data-js-handler='error-message']").addClass('hide')    
+    }
+  }
+});

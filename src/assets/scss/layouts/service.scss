@@ -90,12 +90,12 @@
     padding: 6px 20px;
     min-height: 40px;    
 
-    &--error {
+    &.error {
       background: #FFF8F7;
       border: 2px solid $color-pastel-12;
     }
 
-    &--success {
+    &.success {
       background: #f1fff3;
       border: 2px solid $color-pastel-2;
     }    
@@ -160,7 +160,7 @@
       text-transform: capitalize;
     } 
     
-    &--error {
+    &.error {
       border: 2px solid $color-pastel-12;
     }
 
