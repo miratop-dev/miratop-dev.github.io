@@ -162,14 +162,6 @@ $("[data-js-handler='account-type']").on('click', function(e){
   }
 });
 
-$("[data-js-handler='registration__user-type']").on('click', function(e){
-  e.preventDefault();
-  if(!$(this).hasClass('service-main__user--active')) {
-    $(this).addClass('service-main__user--active');
-    $(this).siblings().removeClass('service-main__user--active');
-  }
-});
-
 $("[data-js-handler='options-tabs'] a").on('click', function(e){
   e.preventDefault();
   if(!$(this).parent().hasClass('active')) {
@@ -300,5 +292,16 @@ $("[data-js-handler='password-validation']").on('input', function(e){
       $("[data-js-handler='success-message']").removeClass('hide').find('p').text('Паролі співпадають');
       $("[data-js-handler='error-message']").addClass('hide')    
     }
+  }
+});
+
+$("[data-js-handler='account-switch-editor']").on('click', function(e){
+  e.preventDefault();
+  if($('#proposals').hasClass('hide')) {
+    $('#proposals').removeClass('hide');
+    $('#new-proposal').addClass('hide');
+  } else {
+    $('#proposals').addClass('hide');
+    $('#new-proposal').removeClass('hide');
   }
 });

@@ -61,102 +61,193 @@ block content
         li
           a(href="#reviews") Відгуки
 
-    .options-page__tab.active#offers(data-js-handler='options-tab')
-      .options-tabs
-        .options-tabs__types
-          a.options-tabs__type.active(href='#open', data-js-handler='portfolio-type') Активні
-          a.options-tabs__type(href='#closed', data-js-handler='portfolio-type') Закриті
+      .options-page__tab.active#offers(data-js-handler='options-tab')
+        .options-tabs#proposals
+          .options-tabs__types
+            a.options-tabs__type.active(href='#open', data-js-handler='portfolio-type') Активні
+            a.options-tabs__type(href='#closed', data-js-handler='portfolio-type') Закриті
+          
+          .options-tabs__block.active#open
+            .account-prop__wrap
+              +propositionsBlock({
+                name: 'Разработать HR стратегию',
+                location: 'Киев, Украина',
+                date: 'Термін подачі: до 15.09.21',
+                description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+                edit: true,
+                cancel: true,
+                offers: '1 пропозиція',
+              })
+              +propositionsBlock({
+                name: 'Разработать HR стратегию',
+                location: 'Киев, Украина',
+                date: 'Термін подачі: до 15.09.21',
+                warning: true,
+                message: 'Очікує підтвердження адміністратора',
+                description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+                edit: true,
+                cancel: true,
+                offers: '0 пропозицій',
+              })
+              +propositionsBlock({
+                name: 'Разработать HR стратегию',
+                location: 'Киев, Украина',
+                date: 'Термін подачі: до 15.09.21',
+                alert: true,
+                message: 'Заблоковано адміністратором',
+                description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+                edit: true,
+                cancel: true,
+                offers: '1 пропозиція',
+              })
+              +propositionsBlock({
+                name: 'Разработать HR стратегию',
+                location: 'Киев, Украина',
+                date: 'Термін подачі: до 15.09.21',
+                warning: true,
+                message: 'Очікує підтвердження адміністратора',
+                description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+                edit: true,
+                cancel: true,
+                offers: '5 пропозиція',
+              })    
+
+            .options-profile__buttons(href="#")
+              a.options-profile__button.c-button.c-button--primary.c-button--lg(href="#" data-js-handler='account-switch-editor') Додати проект                 
+
+          .options-tabs__block#closed
+            .account-prop__wrap
+              +propositionsBlock({
+                name: 'Разработать HR стратегию',
+                location: 'Киев, Украина',
+                date: '10.04.2021',
+                date2: 'Термін подачі: до 15.09.21',
+                message: 'Призупинена',
+                description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+                edit: true,
+                cancel: true,
+                offers: '1 пропозиція',
+              })
+              +propositionsBlock({
+                name: 'Разработать HR стратегию',
+                location: 'Киев, Украина',
+                date: '10.04.2021',
+                date2: 'Термін подачі: до 15.09.21',
+                message: 'Вибраний виконавець: Аня',
+                description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+                workflow: true,
+                offers: '4 пропозиції',
+              }) 
+              +propositionsBlock({
+                name: 'Разработать HR стратегию',
+                location: 'Киев, Украина',
+                date: '10.04.2021',
+                date2: 'Термін подачі: до 15.09.21',
+                message: 'Завершено',
+                description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+                workflow: true,
+                offers: '5 пропозиція',
+              })             
+
+            .options-profile__buttons(href="#")
+              a.options-profile__button.c-button.c-button--primary.c-button--lg(href="#") Додати замовлення
         
-        .options-tabs__block.active#open
-          .account-prop__wrap
-            +propositionsBlock({
-              name: 'Разработать HR стратегию',
-              location: 'Киев, Украина',
-              date: 'Термін подачі: до 15.09.21',
-              description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
-              edit: true,
-              cancel: true,
-              offers: '1 пропозиція',
-            })
-            +propositionsBlock({
-              name: 'Разработать HR стратегию',
-              location: 'Киев, Украина',
-              date: 'Термін подачі: до 15.09.21',
-              warning: true,
-              message: 'Очікує підтвердження адміністратора',
-              description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
-              edit: true,
-              cancel: true,
-              offers: '0 пропозицій',
-            })
-            +propositionsBlock({
-              name: 'Разработать HR стратегию',
-              location: 'Киев, Украина',
-              date: 'Термін подачі: до 15.09.21',
-              alert: true,
-              message: 'Заблоковано адміністратором',
-              description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
-              edit: true,
-              cancel: true,
-              offers: '1 пропозиція',
-            })
-            +propositionsBlock({
-              name: 'Разработать HR стратегию',
-              location: 'Киев, Украина',
-              date: 'Термін подачі: до 15.09.21',
-              warning: true,
-              message: 'Очікує підтвердження адміністратора',
-              description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
-              edit: true,
-              cancel: true,
-              offers: '5 пропозиція',
-            })    
+        .options-tabs.hide#new-proposal
+          .c-title.c-title__title3 Додати пропозицію
 
-          .options-profile__buttons(href="#")
-            a.options-profile__button.c-button.c-button--primary.c-button--lg(href="#") Додати проект                 
+          form.options-profile(action="#")
+            label.options-profile__label(for='title') 
+              .options-profile__clarification.options-profile__clarification--required Заголовок
+              input.options-profile__input#title(type='text' name='title' placeholder='Введіть заголовок')
+            .options-profile__textarea 
+              .options-profile__clarification.options-profile__clarification--required Опис
+              textarea(name="description" cols="30" rows="10" placeholder="Введіть опис")
+            .options-profile__textarea 
+              .options-profile__clarification.options-profile__clarification--required Проблематика
+              textarea(name="problematic" cols="30" rows="10" placeholder="Опишіть проблематику")
+            .options-profile__textarea 
+              .options-profile__clarification.options-profile__clarification--required Очікування
+              textarea(name="expectations" cols="30" rows="10" placeholder="Опишіть очікування")     
+            .options-profile__controls    
+              label.options-profile__label  
+                .options-profile__clarification.options-profile__clarification--required Експертиза
+                select.options-profile__control-domain(data-js-handler='data-options-control-domain')
+                  option(value="#domain-1") Стратегія 1         
+                  option(value="#domain-2") Стратегія 2                 
+                  option(value="#domain-3") Стратегія 3
+              label.options-profile__label.fullwidth 
+                .options-profile__clarification.options-profile__clarification--required Категорія
+                select.options-profile__control-type.options-profile__control-type--fullwidth.active#domain-1(data-js-handler='data-options-control-type')
+                  option(value="type-1") Розробка стратегічного плану 1      
+                  option(value="type-2") Розробка стратегічного плану 2                  
+                  option(value="type-3") Розробка стратегічного плану 3
+                select.options-profile__control-type.options-profile__control-type--fullwidth#domain-2(data-js-handler='data-options-control-type')
+                  option(value="type-1") Тестовий тип 1      
+                  option(value="type-2") Тестовий тип 2                    
+                  option(value="type-3") Тестовий тип 3    
+                select.options-profile__control-type.options-profile__control-type--fullwidth#domain-3(data-js-handler='data-options-control-type')
+                  option(value="type-1") Інший тестовий тип 1      
+                  option(value="type-2") Інший тестовий тип 2                     
+                  option(value="type-3") Інший тестовий тип 3  
 
-        .options-tabs__block#closed
-          .account-prop__wrap
-            +propositionsBlock({
-              name: 'Разработать HR стратегию',
-              location: 'Киев, Украина',
-              date: '10.04.2021',
-              date2: 'Термін подачі: до 15.09.21',
-              message: 'Призупинена',
-              description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
-              edit: true,
-              cancel: true,
-              offers: '1 пропозиція',
-            })
-            +propositionsBlock({
-              name: 'Разработать HR стратегию',
-              location: 'Киев, Украина',
-              date: '10.04.2021',
-              date2: 'Термін подачі: до 15.09.21',
-              message: 'Вибраний виконавець: Аня',
-              description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
-              workflow: true,
-              offers: '4 пропозиції',
-            }) 
-            +propositionsBlock({
-              name: 'Разработать HR стратегию',
-              location: 'Киев, Украина',
-              date: '10.04.2021',
-              date2: 'Термін подачі: до 15.09.21',
-              message: 'Завершено',
-              description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
-              workflow: true,
-              offers: '5 пропозиція',
-            })             
+            .options-profile__controls 
+              label.options-profile__label  
+                .options-profile__clarification.options-profile__clarification--required Країна
+                select.options-profile__control-domain
+                  option(value="#country-1") Україна    
+                  option(value="#country-2") Бразилія             
+                  option(value="#country-3") Кот-д'Івуар
+              label.options-profile__label.fullwidth 
+                .options-profile__clarification.options-profile__clarification--required Місто
+                select.options-profile__control-type.options-profile__control-type--fullwidth.active#country-1(data-js-handler='data-options-control-type')
+                  option(value="type-1") Розробка стратегічного плану 1      
+                  option(value="type-2") Розробка стратегічного плану 2                  
+                  option(value="type-3") Розробка стратегічного плану 3
+                select.options-profile__control-type.options-profile__control-type--fullwidth#country-2(data-js-handler='data-options-control-type')
+                  option(value="type-1") Тестовий тип 1      
+                  option(value="type-2") Тестовий тип 2                    
+                  option(value="type-3") Тестовий тип 3    
+                select.options-profile__control-type.options-profile__control-type--fullwidth#country-3(data-js-handler='data-options-control-type')
+                  option(value="type-1") Інший тестовий тип 1      
+                  option(value="type-2") Інший тестовий тип 2                     
+                  option(value="type-3") Інший тестовий тип 3  
 
-          .options-profile__buttons(href="#")
-            a.options-profile__button.c-button.c-button--primary.c-button--lg(href="#") Додати замовлення
+            .options-profile__controls 
+              label.options-profile__label  
+                .options-profile__clarification.options-profile__clarification--required Термін подачі
+                select.options-profile__control-domain
+                  option(value="#deadline-1") Стратегія 1         
+                  option(value="#deadline-2") Стратегія 2                 
+                  option(value="#deadline-3") Стратегія 3
+              label.options-profile__label.fullwidth 
+                .options-profile__clarification.options-profile__clarification--required Бюджет
+                select.options-profile__control-type.options-profile__control-type--fullwidth.active#deadline-1(data-js-handler='data-options-control-type')
+                  option(value="type-1") Розробка стратегічного плану 1      
+                  option(value="type-2") Розробка стратегічного плану 2                  
+                  option(value="type-3") Розробка стратегічного плану 3
+                select.options-profile__control-type.options-profile__control-type--fullwidth#deadline-2(data-js-handler='data-options-control-type')
+                  option(value="type-1") Тестовий тип 1      
+                  option(value="type-2") Тестовий тип 2                    
+                  option(value="type-3") Тестовий тип 3    
+                select.options-profile__control-type.options-profile__control-type--fullwidth#deadline-3(data-js-handler='data-options-control-type')
+                  option(value="type-1") Інший тестовий тип 1      
+                  option(value="type-2") Інший тестовий тип 2                     
+                  option(value="type-3") Інший тестовий тип 3   
+                  
+            .service-main
+              label.service-main__label(for='private') 
+                input.service-main__checkbox#private(type='checkbox' name='private')  
+                p Приватна пропозиція 
 
-    .options-page__tab#wip(data-js-handler='options-tab')
-      p #wip
+            .options-profile__buttons 
+              a.options-profile__button.c-button.c-button--primary.c-button--lg(href="#" data-js-handler='account-switch-editor') Зберегти зміни
+              a.options-profile__button.c-button.c-button--bordered.c-button--lg(href="#" data-js-handler='account-switch-editor') Скасувати  
 
-    .options-page__tab#messages(data-js-handler='options-tab')
-      p #messages
+      .options-page__tab#wip(data-js-handler='options-tab')
+        p #wip
 
-    .options-page__tab#reviews(data-js-handler='options-tab')
-      p #reviews    
+      .options-page__tab#messages(data-js-handler='options-tab')
+        p #messages
+
+      .options-page__tab#reviews(data-js-handler='options-tab')
+        p #reviews    

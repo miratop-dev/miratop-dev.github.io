@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <link href="assets/css/app.c4dbd0d2569f5ab9e671.css" rel="stylesheet"></head>
+  <link href="assets/css/app.c9774dd0fa472414d269.css" rel="stylesheet"></head>
   <body class="login-page">
     <header class="service-header"> <a class="service-header__logo" href="/"><img src="assets/img/logo.svg" alt="logo"></a></header>
     <div class="service-main">
@@ -20,7 +20,7 @@
             <div class="c-title c-title__title5">Вітаємо, Андрій Петренко!</div>
           </div>
           <label class="service-main__label">
-            <div class="service-main__message service-main__message--error">
+            <div class="service-main__message error">
               <p>Користувач з вказаним email вже існує.       </p>
             </div>
           </label>
@@ -33,7 +33,20 @@
             <input class="service-main__input" id="phone" type="tel" name="phone" placeholder="+380 50 123 4567">
           </label>
           <label class="service-main__label"> 
-            <div class="service-main__users">   <a class="service-main__user service-main__user--active" href="customer" data-js-handler="registration__user-type">Замовник</a><a class="service-main__user" href="expert" data-js-handler="registration__user-type">Експерт</a></div>
+            <div class="service-main__users"> 
+              <div class="service-main__user"> 
+                <input type="radio" href="customer" id="customer" value="customer" name="user-type">
+                <label class="service-main__radio" for="customer"> 
+                  <div class="c-title c-title__title5">Замовник</div>
+                </label>
+              </div>
+              <div class="service-main__user">
+                <input type="radio" href="expert" id="expert" value="expert" name="user-type">
+                <label class="service-main__radio" for="expert"> 
+                  <div class="c-title c-title__title5">Експерт</div>
+                </label>
+              </div>
+            </div>
           </label>
         </fieldset>
         <fieldset>              
@@ -89,5 +102,5 @@
     </label><a class="c-button c-button--primary c-button--md c-button--mobile" href="#">Надіслати</a>
   </div>
 </div>
-  <script type="text/javascript" src="assets/js/vendors.c4dbd0d2569f5ab9e671.js"></script><script type="text/javascript" src="assets/js/app.c4dbd0d2569f5ab9e671.js"></script></body>
+  <script type="text/javascript" src="assets/js/vendors.c9774dd0fa472414d269.js"></script><script type="text/javascript" src="assets/js/app.c9774dd0fa472414d269.js"></script></body>
 </html>

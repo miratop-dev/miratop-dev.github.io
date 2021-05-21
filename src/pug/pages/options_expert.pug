@@ -29,7 +29,8 @@ block content
         a(href="#notice") Сповіщення
 
     .options-page__tab.active#profile(data-js-handler='options-tab')
-      include ../includes/modules/options-expert/options-expert-profile.pug
+      .options-page__block
+        include ../includes/modules/options-expert/options-expert-profile.pug
 
     .options-page__tab#portfolio(data-js-handler='options-tab')
       include ../includes/modules/options-expert/options-expert-portfolio.pug

@@ -41,12 +41,16 @@
       display: block;
     }
   }
+
+  &__block {
+    max-width: 620px;
+    margin: 0 auto;
+  }
 }
 
 .options-profile {
   width: 100%;
   max-width: 620px;
-  margin: 0 auto;
 
   &__columns {
     display: flex;
@@ -339,6 +343,14 @@
         width: 100%;
         max-width: 330px;
       } 
+
+      &.fullwidth {
+        max-width: unset;
+
+        &:nth-child(2) {
+          max-width: unset;
+        }         
+      }
     }
   }
 
@@ -367,17 +379,21 @@
     width: 100%;
     max-width: 330px;
     margin: 0 20px 0 0;
-
-    &.active {
-      display: block;
-    }
-
     border: 2px solid $text-silver;
     border-radius: 8px;
     padding: 8px 20px 7px;
     font-size: 14px;
     line-height: 18px;
-    color: $text-black;
+    color: $text-black;    
+
+    &--fullwidth {
+      max-width: unset;
+      margin: 0;
+    }
+
+    &.active {
+      display: block;
+    }
 
     option {
       color: $text-black;
@@ -611,6 +627,10 @@
   width: 100%;
   text-align: left;
   margin: 0 auto;
+
+  &.hide {
+    display: none;
+  }
 
   &--width {
     max-width: 620px;

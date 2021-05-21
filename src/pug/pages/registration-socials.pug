@@ -15,7 +15,7 @@ block content
           img(src='assets/img/expert-avatar-3.jpg', alt='avatar')
           .c-title.c-title__title5 Вітаємо, Андрій Петренко!
         label.service-main__label
-          .service-main__message.service-main__message--error
+          .service-main__message.error
             p Користувач з вказаним email вже існує.       
         label.service-main__label
           .service-main__clarification.service-main__clarification--required Електронна пошта
@@ -25,9 +25,16 @@ block content
           input.service-main__input#phone(type='tel' name='phone' placeholder='+380 50 123 4567')     
       
         label.service-main__label 
-          .service-main__users    
-            a.service-main__user.service-main__user--active(href='customer', data-js-handler='registration__user-type') Замовник
-            a.service-main__user(href='expert', data-js-handler='registration__user-type') Експерт
+          .service-main__users  
+            .service-main__user  
+              input(type="radio" href='customer' id='customer' value='customer' name='user-type')
+              label.service-main__radio(for='customer') 
+                .c-title.c-title__title5 Замовник
+            .service-main__user
+              input(type="radio" href='expert' id='expert' value='expert' name='user-type')
+              label.service-main__radio(for='expert') 
+                .c-title.c-title__title5 Експерт
+                
       fieldset               
         label.service-main__label(for='accept') 
           input.service-main__checkbox#accept(type='checkbox' name='accept')  

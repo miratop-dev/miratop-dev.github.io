@@ -26,53 +26,54 @@ block content
       li 
         a(href="#notice") Сповіщення
     .options-page__tab.active#profile(data-js-handler='options-tab')
-      form.options-profile(action="#")
-        label.options-profile__label
-          .options-profile__message.options-profile__message--error
-            p Всі поля обов’язкові для заповнення.       
-        .options-profile__columns
-          .options-profile__column.options-profile__column--vertical
-            .options-profile__photo 
-              .options-profile__avatar 
-                img(src="assets/img/default-user-avatar.svg", alt="user")
-              a.c-title.c-title__title5.options-profile__upload(href="#") Завантажити фото
-              .options-profile__hint Максимальний розмір файлу – 5Мб
-            label.options-profile__label(for='country') 
-              .options-profile__clarification.options-profile__clarification--required Країна
-              select#country.options-profile__select                  
-                option(value="ukraine") Україна                
-                option(value="germany") Німеччина                    
-                option(value="lesoto") Лесото     
-          .options-profile__column          
-            label.options-profile__label(for='lastname') 
-              .options-profile__clarification.options-profile__clarification--required Прізвище
-              input.options-profile__input#lastname(type='text' name='name' placeholder='Введіть прізвище')   
-            label.options-profile__label(for='name') 
-              .options-profile__clarification.options-profile__clarification--required Ім’я
-              input.options-profile__input#name(type='text' name='name' placeholder='Введіть ім’я')   
-            label.options-profile__label(for='login') 
-              .options-profile__clarification.options-profile__clarification--required Логін
-              input.options-profile__input#login(type='text' name='name' placeholder='Введіть логін')   
-            label.options-profile__label(for='phone') 
-              .options-profile__clarification.options-profile__clarification--required Телефон
-              input.options-profile__input#phone(type='tel' name='phone' placeholder='+380 50 123 4567')    
-            label.options-profile__label(for='email') 
-              .options-profile__clarification.options-profile__clarification--required Електронна пошта
-              input.options-profile__input#email(type='email' name='email' placeholder='Введіть email')  
-            label.options-profile__label(for='city') 
-              .options-profile__clarification.options-profile__clarification--required Місто
-              select#city.options-profile__select               
-                option Оберіть місто          
-                option(value="kyiv") Київ                  
-                option(value="odessa") Одеса                      
-                option(value="lviv") Львів                
-        .options-profile__container
-          .options-profile__textarea 
-            .options-profile__clarification.options-profile__clarification--required Опис діяльності
-            textarea(name="description" cols="30" rows="10" placeholder="Опишіть діяльність")
-        .options-profile__buttons 
-          a.options-profile__button.c-button.c-button--primary.c-button--lg Зберегти зміни
-          a.options-profile__button.c-button.c-button--bordered.c-button--lg Скасувати
+      .options-page__block
+        form.options-profile(action="#")
+          label.options-profile__label
+            .options-profile__message.options-profile__message--error
+              p Всі поля обов’язкові для заповнення.       
+          .options-profile__columns
+            .options-profile__column.options-profile__column--vertical
+              .options-profile__photo 
+                .options-profile__avatar 
+                  img(src="assets/img/default-user-avatar.svg", alt="user")
+                a.c-title.c-title__title5.options-profile__upload(href="#") Завантажити фото
+                .options-profile__hint Максимальний розмір файлу – 5Мб
+              label.options-profile__label(for='country') 
+                .options-profile__clarification.options-profile__clarification--required Країна
+                select#country.options-profile__select                  
+                  option(value="ukraine") Україна                
+                  option(value="germany") Німеччина                    
+                  option(value="lesoto") Лесото     
+            .options-profile__column          
+              label.options-profile__label(for='lastname') 
+                .options-profile__clarification.options-profile__clarification--required Прізвище
+                input.options-profile__input#lastname(type='text' name='name' placeholder='Введіть прізвище')   
+              label.options-profile__label(for='name') 
+                .options-profile__clarification.options-profile__clarification--required Ім’я
+                input.options-profile__input#name(type='text' name='name' placeholder='Введіть ім’я')   
+              label.options-profile__label(for='login') 
+                .options-profile__clarification.options-profile__clarification--required Логін
+                input.options-profile__input#login(type='text' name='name' placeholder='Введіть логін')   
+              label.options-profile__label(for='phone') 
+                .options-profile__clarification.options-profile__clarification--required Телефон
+                input.options-profile__input#phone(type='tel' name='phone' placeholder='+380 50 123 4567')    
+              label.options-profile__label(for='email') 
+                .options-profile__clarification.options-profile__clarification--required Електронна пошта
+                input.options-profile__input#email(type='email' name='email' placeholder='Введіть email')  
+              label.options-profile__label(for='city') 
+                .options-profile__clarification.options-profile__clarification--required Місто
+                select#city.options-profile__select               
+                  option Оберіть місто          
+                  option(value="kyiv") Київ                  
+                  option(value="odessa") Одеса                      
+                  option(value="lviv") Львів                
+          .options-profile__container
+            .options-profile__textarea 
+              .options-profile__clarification.options-profile__clarification--required Опис діяльності
+              textarea(name="description" cols="30" rows="10" placeholder="Опишіть діяльність")
+          .options-profile__buttons 
+            a.options-profile__button.c-button.c-button--primary.c-button--lg Зберегти зміни
+            a.options-profile__button.c-button.c-button--bordered.c-button--lg Скасувати
 
     .options-page__tab#finance(data-js-handler='options-tab')
       p finance
