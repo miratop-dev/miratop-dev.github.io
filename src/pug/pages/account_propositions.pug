@@ -156,88 +156,90 @@ block content
           .c-title.c-title__title3 Додати пропозицію
 
           form.options-profile(action="#")
-            label.options-profile__label(for='title') 
-              .options-profile__clarification.options-profile__clarification--required Заголовок
-              input.options-profile__input#title(type='text' name='title' placeholder='Введіть заголовок')
-            .options-profile__textarea 
-              .options-profile__clarification.options-profile__clarification--required Опис
-              textarea(name="description" cols="30" rows="10" placeholder="Введіть опис")
-            .options-profile__textarea 
-              .options-profile__clarification.options-profile__clarification--required Проблематика
-              textarea(name="problematic" cols="30" rows="10" placeholder="Опишіть проблематику")
-            .options-profile__textarea 
-              .options-profile__clarification.options-profile__clarification--required Очікування
-              textarea(name="expectations" cols="30" rows="10" placeholder="Опишіть очікування")     
-            .options-profile__controls    
-              label.options-profile__label  
-                .options-profile__clarification.options-profile__clarification--required Експертиза
-                select.options-profile__control-domain(data-js-handler='data-options-control-domain')
-                  option(value="#domain-1") Стратегія 1         
-                  option(value="#domain-2") Стратегія 2                 
-                  option(value="#domain-3") Стратегія 3
-              label.options-profile__label.fullwidth 
-                .options-profile__clarification.options-profile__clarification--required Категорія
-                select.options-profile__control-type.options-profile__control-type--fullwidth.active#domain-1(data-js-handler='data-options-control-type')
-                  option(value="type-1") Розробка стратегічного плану 1      
-                  option(value="type-2") Розробка стратегічного плану 2                  
-                  option(value="type-3") Розробка стратегічного плану 3
-                select.options-profile__control-type.options-profile__control-type--fullwidth#domain-2(data-js-handler='data-options-control-type')
-                  option(value="type-1") Тестовий тип 1      
-                  option(value="type-2") Тестовий тип 2                    
-                  option(value="type-3") Тестовий тип 3    
-                select.options-profile__control-type.options-profile__control-type--fullwidth#domain-3(data-js-handler='data-options-control-type')
-                  option(value="type-1") Інший тестовий тип 1      
-                  option(value="type-2") Інший тестовий тип 2                     
-                  option(value="type-3") Інший тестовий тип 3  
+            .options-profile__container
+              label.options-profile__label(for='title') 
+                .options-profile__clarification.options-profile__clarification--required Заголовок
+                input.options-profile__input#title(type='text' name='title' placeholder='Введіть заголовок')
+              .options-profile__textarea 
+                .options-profile__clarification.options-profile__clarification--required Опис
+                textarea(name="description" cols="30" rows="10" placeholder="Введіть опис")
+              .options-profile__textarea 
+                .options-profile__clarification.options-profile__clarification--required Проблематика
+                textarea(name="problematic" cols="30" rows="10" placeholder="Опишіть проблематику")
+              .options-profile__textarea 
+                .options-profile__clarification.options-profile__clarification--required Очікування
+                textarea(name="expectations" cols="30" rows="10" placeholder="Опишіть очікування")     
+              .options-profile__controls    
+                label.options-profile__label  
+                  .options-profile__clarification.options-profile__clarification--required Експертиза
+                  select.options-profile__control-domain(data-js-handler='data-options-control-domain')
+                    option(value="#domain-1") Стратегія 1         
+                    option(value="#domain-2") Стратегія 2                 
+                    option(value="#domain-3") Стратегія 3
+                label.options-profile__label.fullwidth 
+                  .options-profile__clarification.options-profile__clarification--required Категорія
+                  select.options-profile__control-type.options-profile__control-type--fullwidth.active#domain-1(data-js-handler='data-options-control-type')
+                    option(value="type-1") Розробка стратегічного плану 1      
+                    option(value="type-2") Розробка стратегічного плану 2                  
+                    option(value="type-3") Розробка стратегічного плану 3
+                  select.options-profile__control-type.options-profile__control-type--fullwidth#domain-2(data-js-handler='data-options-control-type')
+                    option(value="type-1") Тестовий тип 1      
+                    option(value="type-2") Тестовий тип 2                    
+                    option(value="type-3") Тестовий тип 3    
+                  select.options-profile__control-type.options-profile__control-type--fullwidth#domain-3(data-js-handler='data-options-control-type')
+                    option(value="type-1") Інший тестовий тип 1      
+                    option(value="type-2") Інший тестовий тип 2                     
+                    option(value="type-3") Інший тестовий тип 3  
 
-            .options-profile__controls 
-              label.options-profile__label  
-                .options-profile__clarification.options-profile__clarification--required Країна
-                select.options-profile__control-domain
-                  option(value="#country-1") Україна    
-                  option(value="#country-2") Бразилія             
-                  option(value="#country-3") Кот-д'Івуар
-              label.options-profile__label.fullwidth 
-                .options-profile__clarification.options-profile__clarification--required Місто
-                select.options-profile__control-type.options-profile__control-type--fullwidth.active#country-1(data-js-handler='data-options-control-type')
-                  option(value="type-1") Розробка стратегічного плану 1      
-                  option(value="type-2") Розробка стратегічного плану 2                  
-                  option(value="type-3") Розробка стратегічного плану 3
-                select.options-profile__control-type.options-profile__control-type--fullwidth#country-2(data-js-handler='data-options-control-type')
-                  option(value="type-1") Тестовий тип 1      
-                  option(value="type-2") Тестовий тип 2                    
-                  option(value="type-3") Тестовий тип 3    
-                select.options-profile__control-type.options-profile__control-type--fullwidth#country-3(data-js-handler='data-options-control-type')
-                  option(value="type-1") Інший тестовий тип 1      
-                  option(value="type-2") Інший тестовий тип 2                     
-                  option(value="type-3") Інший тестовий тип 3  
+              .options-profile__controls 
+                label.options-profile__label  
+                  .options-profile__clarification.options-profile__clarification--required Країна
+                  select.options-profile__control-domain
+                    option(value="#country-1") Україна    
+                    option(value="#country-2") Бразилія             
+                    option(value="#country-3") Кот-д'Івуар
+                label.options-profile__label.fullwidth 
+                  .options-profile__clarification.options-profile__clarification--required Місто
+                  select.options-profile__control-type.options-profile__control-type--fullwidth.active#country-1(data-js-handler='data-options-control-type')
+                    option(value="type-1") Розробка стратегічного плану 1      
+                    option(value="type-2") Розробка стратегічного плану 2                  
+                    option(value="type-3") Розробка стратегічного плану 3
+                  select.options-profile__control-type.options-profile__control-type--fullwidth#country-2(data-js-handler='data-options-control-type')
+                    option(value="type-1") Тестовий тип 1      
+                    option(value="type-2") Тестовий тип 2                    
+                    option(value="type-3") Тестовий тип 3    
+                  select.options-profile__control-type.options-profile__control-type--fullwidth#country-3(data-js-handler='data-options-control-type')
+                    option(value="type-1") Інший тестовий тип 1      
+                    option(value="type-2") Інший тестовий тип 2                     
+                    option(value="type-3") Інший тестовий тип 3  
 
-            .options-profile__controls 
-              label.options-profile__label  
-                .options-profile__clarification.options-profile__clarification--required Термін подачі
-                select.options-profile__control-domain
-                  option(value="#deadline-1") Стратегія 1         
-                  option(value="#deadline-2") Стратегія 2                 
-                  option(value="#deadline-3") Стратегія 3
-              label.options-profile__label.fullwidth 
-                .options-profile__clarification.options-profile__clarification--required Бюджет
-                select.options-profile__control-type.options-profile__control-type--fullwidth.active#deadline-1(data-js-handler='data-options-control-type')
-                  option(value="type-1") Розробка стратегічного плану 1      
-                  option(value="type-2") Розробка стратегічного плану 2                  
-                  option(value="type-3") Розробка стратегічного плану 3
-                select.options-profile__control-type.options-profile__control-type--fullwidth#deadline-2(data-js-handler='data-options-control-type')
-                  option(value="type-1") Тестовий тип 1      
-                  option(value="type-2") Тестовий тип 2                    
-                  option(value="type-3") Тестовий тип 3    
-                select.options-profile__control-type.options-profile__control-type--fullwidth#deadline-3(data-js-handler='data-options-control-type')
-                  option(value="type-1") Інший тестовий тип 1      
-                  option(value="type-2") Інший тестовий тип 2                     
-                  option(value="type-3") Інший тестовий тип 3   
-                  
-            .service-main
-              label.service-main__label(for='private') 
-                input.service-main__checkbox#private(type='checkbox' name='private')  
-                p Приватна пропозиція 
+              .options-profile__controls 
+                label.options-profile__label  
+                  .options-profile__clarification.options-profile__clarification--required Термін подачі
+                  select.options-profile__control-domain
+                    option(value="#deadline-1") Стратегія 1         
+                    option(value="#deadline-2") Стратегія 2                 
+                    option(value="#deadline-3") Стратегія 3
+                label.options-profile__label.fullwidth 
+                  .options-profile__clarification.options-profile__clarification--required Бюджет
+                  select.options-profile__control-type.options-profile__control-type--fullwidth.active#deadline-1(data-js-handler='data-options-control-type')
+                    option(value="type-1") Розробка стратегічного плану 1      
+                    option(value="type-2") Розробка стратегічного плану 2                  
+                    option(value="type-3") Розробка стратегічного плану 3
+                  select.options-profile__control-type.options-profile__control-type--fullwidth#deadline-2(data-js-handler='data-options-control-type')
+                    option(value="type-1") Тестовий тип 1      
+                    option(value="type-2") Тестовий тип 2                    
+                    option(value="type-3") Тестовий тип 3    
+                  select.options-profile__control-type.options-profile__control-type--fullwidth#deadline-3(data-js-handler='data-options-control-type')
+                    option(value="type-1") Інший тестовий тип 1      
+                    option(value="type-2") Інший тестовий тип 2                     
+                    option(value="type-3") Інший тестовий тип 3   
+                    
+              .options-profile__controls 
+                .service-main
+                  label.service-main__label(for='private') 
+                    input.service-main__checkbox#private(type='checkbox' name='private')  
+                    p Приватна пропозиція 
 
             .options-profile__buttons 
               a.options-profile__button.c-button.c-button--primary.c-button--lg(href="#" data-js-handler='account-switch-editor') Зберегти зміни

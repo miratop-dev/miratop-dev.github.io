@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <link href="assets/css/app.c9774dd0fa472414d269.css" rel="stylesheet"></head>
+  <link href="assets/css/app.50a5bbd9d2f829fb8118.css" rel="stylesheet"></head>
   <body class="account-page">
 <header class="header">
   <div class="header__container"><a class="header__logo" href="/"><img src="assets/img/logo.svg" alt="logo"></a>
@@ -261,111 +261,115 @@
                 <div class="options-tabs hide" id="new-proposal">
                   <div class="c-title c-title__title3">Додати пропозицію</div>
                   <form class="options-profile" action="#">
-                    <label class="options-profile__label" for="title"> 
-                      <div class="options-profile__clarification options-profile__clarification--required">Заголовок</div>
-                      <input class="options-profile__input" id="title" type="text" name="title" placeholder="Введіть заголовок">
-                    </label>
-                    <div class="options-profile__textarea"> 
-                      <div class="options-profile__clarification options-profile__clarification--required">Опис</div>
-                      <textarea name="description" cols="30" rows="10" placeholder="Введіть опис"></textarea>
-                    </div>
-                    <div class="options-profile__textarea"> 
-                      <div class="options-profile__clarification options-profile__clarification--required">Проблематика</div>
-                      <textarea name="problematic" cols="30" rows="10" placeholder="Опишіть проблематику"></textarea>
-                    </div>
-                    <div class="options-profile__textarea"> 
-                      <div class="options-profile__clarification options-profile__clarification--required">Очікування</div>
-                      <textarea name="expectations" cols="30" rows="10" placeholder="Опишіть очікування">    </textarea>
-                    </div>
-                    <div class="options-profile__controls">   
-                      <label class="options-profile__label"> 
-                        <div class="options-profile__clarification options-profile__clarification--required">Експертиза</div>
-                        <select class="options-profile__control-domain" data-js-handler="data-options-control-domain">
-                          <option value="#domain-1">Стратегія 1         </option>
-                          <option value="#domain-2">Стратегія 2                 </option>
-                          <option value="#domain-3">Стратегія 3</option>
-                        </select>
+                    <div class="options-profile__container">
+                      <label class="options-profile__label" for="title"> 
+                        <div class="options-profile__clarification options-profile__clarification--required">Заголовок</div>
+                        <input class="options-profile__input" id="title" type="text" name="title" placeholder="Введіть заголовок">
                       </label>
-                      <label class="options-profile__label fullwidth"> 
-                        <div class="options-profile__clarification options-profile__clarification--required">Категорія</div>
-                        <select class="options-profile__control-type options-profile__control-type--fullwidth active" id="domain-1" data-js-handler="data-options-control-type">
-                          <option value="type-1">Розробка стратегічного плану 1      </option>
-                          <option value="type-2">Розробка стратегічного плану 2                  </option>
-                          <option value="type-3">Розробка стратегічного плану 3</option>
-                        </select>
-                        <select class="options-profile__control-type options-profile__control-type--fullwidth" id="domain-2" data-js-handler="data-options-control-type">
-                          <option value="type-1">Тестовий тип 1      </option>
-                          <option value="type-2">Тестовий тип 2                    </option>
-                          <option value="type-3">Тестовий тип 3    </option>
-                        </select>
-                        <select class="options-profile__control-type options-profile__control-type--fullwidth" id="domain-3" data-js-handler="data-options-control-type">
-                          <option value="type-1">Інший тестовий тип 1      </option>
-                          <option value="type-2">Інший тестовий тип 2                     </option>
-                          <option value="type-3">Інший тестовий тип 3  </option>
-                        </select>
-                      </label>
-                    </div>
-                    <div class="options-profile__controls"> 
-                      <label class="options-profile__label"> 
-                        <div class="options-profile__clarification options-profile__clarification--required">Країна</div>
-                        <select class="options-profile__control-domain">
-                          <option value="#country-1">Україна    </option>
-                          <option value="#country-2">Бразилія             </option>
-                          <option value="#country-3">Кот-д'Івуар</option>
-                        </select>
-                      </label>
-                      <label class="options-profile__label fullwidth"> 
-                        <div class="options-profile__clarification options-profile__clarification--required">Місто</div>
-                        <select class="options-profile__control-type options-profile__control-type--fullwidth active" id="country-1" data-js-handler="data-options-control-type">
-                          <option value="type-1">Розробка стратегічного плану 1      </option>
-                          <option value="type-2">Розробка стратегічного плану 2                  </option>
-                          <option value="type-3">Розробка стратегічного плану 3</option>
-                        </select>
-                        <select class="options-profile__control-type options-profile__control-type--fullwidth" id="country-2" data-js-handler="data-options-control-type">
-                          <option value="type-1">Тестовий тип 1      </option>
-                          <option value="type-2">Тестовий тип 2                    </option>
-                          <option value="type-3">Тестовий тип 3    </option>
-                        </select>
-                        <select class="options-profile__control-type options-profile__control-type--fullwidth" id="country-3" data-js-handler="data-options-control-type">
-                          <option value="type-1">Інший тестовий тип 1      </option>
-                          <option value="type-2">Інший тестовий тип 2                     </option>
-                          <option value="type-3">Інший тестовий тип 3  </option>
-                        </select>
-                      </label>
-                    </div>
-                    <div class="options-profile__controls"> 
-                      <label class="options-profile__label"> 
-                        <div class="options-profile__clarification options-profile__clarification--required">Термін подачі</div>
-                        <select class="options-profile__control-domain">
-                          <option value="#deadline-1">Стратегія 1         </option>
-                          <option value="#deadline-2">Стратегія 2                 </option>
-                          <option value="#deadline-3">Стратегія 3</option>
-                        </select>
-                      </label>
-                      <label class="options-profile__label fullwidth"> 
-                        <div class="options-profile__clarification options-profile__clarification--required">Бюджет</div>
-                        <select class="options-profile__control-type options-profile__control-type--fullwidth active" id="deadline-1" data-js-handler="data-options-control-type">
-                          <option value="type-1">Розробка стратегічного плану 1      </option>
-                          <option value="type-2">Розробка стратегічного плану 2                  </option>
-                          <option value="type-3">Розробка стратегічного плану 3</option>
-                        </select>
-                        <select class="options-profile__control-type options-profile__control-type--fullwidth" id="deadline-2" data-js-handler="data-options-control-type">
-                          <option value="type-1">Тестовий тип 1      </option>
-                          <option value="type-2">Тестовий тип 2                    </option>
-                          <option value="type-3">Тестовий тип 3    </option>
-                        </select>
-                        <select class="options-profile__control-type options-profile__control-type--fullwidth" id="deadline-3" data-js-handler="data-options-control-type">
-                          <option value="type-1">Інший тестовий тип 1      </option>
-                          <option value="type-2">Інший тестовий тип 2                     </option>
-                          <option value="type-3">Інший тестовий тип 3   </option>
-                        </select>
-                      </label>
-                    </div>
-                    <div class="service-main">
-                      <label class="service-main__label" for="private"> 
-                        <input class="service-main__checkbox" id="private" type="checkbox" name="private">
-                        <p>Приватна пропозиція </p>
-                      </label>
+                      <div class="options-profile__textarea"> 
+                        <div class="options-profile__clarification options-profile__clarification--required">Опис</div>
+                        <textarea name="description" cols="30" rows="10" placeholder="Введіть опис"></textarea>
+                      </div>
+                      <div class="options-profile__textarea"> 
+                        <div class="options-profile__clarification options-profile__clarification--required">Проблематика</div>
+                        <textarea name="problematic" cols="30" rows="10" placeholder="Опишіть проблематику"></textarea>
+                      </div>
+                      <div class="options-profile__textarea"> 
+                        <div class="options-profile__clarification options-profile__clarification--required">Очікування</div>
+                        <textarea name="expectations" cols="30" rows="10" placeholder="Опишіть очікування">    </textarea>
+                      </div>
+                      <div class="options-profile__controls">   
+                        <label class="options-profile__label"> 
+                          <div class="options-profile__clarification options-profile__clarification--required">Експертиза</div>
+                          <select class="options-profile__control-domain" data-js-handler="data-options-control-domain">
+                            <option value="#domain-1">Стратегія 1         </option>
+                            <option value="#domain-2">Стратегія 2                 </option>
+                            <option value="#domain-3">Стратегія 3</option>
+                          </select>
+                        </label>
+                        <label class="options-profile__label fullwidth"> 
+                          <div class="options-profile__clarification options-profile__clarification--required">Категорія</div>
+                          <select class="options-profile__control-type options-profile__control-type--fullwidth active" id="domain-1" data-js-handler="data-options-control-type">
+                            <option value="type-1">Розробка стратегічного плану 1      </option>
+                            <option value="type-2">Розробка стратегічного плану 2                  </option>
+                            <option value="type-3">Розробка стратегічного плану 3</option>
+                          </select>
+                          <select class="options-profile__control-type options-profile__control-type--fullwidth" id="domain-2" data-js-handler="data-options-control-type">
+                            <option value="type-1">Тестовий тип 1      </option>
+                            <option value="type-2">Тестовий тип 2                    </option>
+                            <option value="type-3">Тестовий тип 3    </option>
+                          </select>
+                          <select class="options-profile__control-type options-profile__control-type--fullwidth" id="domain-3" data-js-handler="data-options-control-type">
+                            <option value="type-1">Інший тестовий тип 1      </option>
+                            <option value="type-2">Інший тестовий тип 2                     </option>
+                            <option value="type-3">Інший тестовий тип 3  </option>
+                          </select>
+                        </label>
+                      </div>
+                      <div class="options-profile__controls"> 
+                        <label class="options-profile__label"> 
+                          <div class="options-profile__clarification options-profile__clarification--required">Країна</div>
+                          <select class="options-profile__control-domain">
+                            <option value="#country-1">Україна    </option>
+                            <option value="#country-2">Бразилія             </option>
+                            <option value="#country-3">Кот-д'Івуар</option>
+                          </select>
+                        </label>
+                        <label class="options-profile__label fullwidth"> 
+                          <div class="options-profile__clarification options-profile__clarification--required">Місто</div>
+                          <select class="options-profile__control-type options-profile__control-type--fullwidth active" id="country-1" data-js-handler="data-options-control-type">
+                            <option value="type-1">Розробка стратегічного плану 1      </option>
+                            <option value="type-2">Розробка стратегічного плану 2                  </option>
+                            <option value="type-3">Розробка стратегічного плану 3</option>
+                          </select>
+                          <select class="options-profile__control-type options-profile__control-type--fullwidth" id="country-2" data-js-handler="data-options-control-type">
+                            <option value="type-1">Тестовий тип 1      </option>
+                            <option value="type-2">Тестовий тип 2                    </option>
+                            <option value="type-3">Тестовий тип 3    </option>
+                          </select>
+                          <select class="options-profile__control-type options-profile__control-type--fullwidth" id="country-3" data-js-handler="data-options-control-type">
+                            <option value="type-1">Інший тестовий тип 1      </option>
+                            <option value="type-2">Інший тестовий тип 2                     </option>
+                            <option value="type-3">Інший тестовий тип 3  </option>
+                          </select>
+                        </label>
+                      </div>
+                      <div class="options-profile__controls"> 
+                        <label class="options-profile__label"> 
+                          <div class="options-profile__clarification options-profile__clarification--required">Термін подачі</div>
+                          <select class="options-profile__control-domain">
+                            <option value="#deadline-1">Стратегія 1         </option>
+                            <option value="#deadline-2">Стратегія 2                 </option>
+                            <option value="#deadline-3">Стратегія 3</option>
+                          </select>
+                        </label>
+                        <label class="options-profile__label fullwidth"> 
+                          <div class="options-profile__clarification options-profile__clarification--required">Бюджет</div>
+                          <select class="options-profile__control-type options-profile__control-type--fullwidth active" id="deadline-1" data-js-handler="data-options-control-type">
+                            <option value="type-1">Розробка стратегічного плану 1      </option>
+                            <option value="type-2">Розробка стратегічного плану 2                  </option>
+                            <option value="type-3">Розробка стратегічного плану 3</option>
+                          </select>
+                          <select class="options-profile__control-type options-profile__control-type--fullwidth" id="deadline-2" data-js-handler="data-options-control-type">
+                            <option value="type-1">Тестовий тип 1      </option>
+                            <option value="type-2">Тестовий тип 2                    </option>
+                            <option value="type-3">Тестовий тип 3    </option>
+                          </select>
+                          <select class="options-profile__control-type options-profile__control-type--fullwidth" id="deadline-3" data-js-handler="data-options-control-type">
+                            <option value="type-1">Інший тестовий тип 1      </option>
+                            <option value="type-2">Інший тестовий тип 2                     </option>
+                            <option value="type-3">Інший тестовий тип 3   </option>
+                          </select>
+                        </label>
+                      </div>
+                      <div class="options-profile__controls"> 
+                        <div class="service-main">
+                          <label class="service-main__label" for="private"> 
+                            <input class="service-main__checkbox" id="private" type="checkbox" name="private">
+                            <p>Приватна пропозиція </p>
+                          </label>
+                        </div>
+                      </div>
                     </div>
                     <div class="options-profile__buttons"> <a class="options-profile__button c-button c-button--primary c-button--lg" href="#" data-js-handler="account-switch-editor">Зберегти зміни</a><a class="options-profile__button c-button c-button--bordered c-button--lg" href="#" data-js-handler="account-switch-editor">Скасувати  </a></div>
                   </form>
@@ -430,5 +434,5 @@
     </label><a class="c-button c-button--primary c-button--md c-button--mobile" href="#">Надіслати</a>
   </div>
 </div>
-  <script type="text/javascript" src="assets/js/vendors.c9774dd0fa472414d269.js"></script><script type="text/javascript" src="assets/js/app.c9774dd0fa472414d269.js"></script></body>
+  <script type="text/javascript" src="assets/js/vendors.50a5bbd9d2f829fb8118.js"></script><script type="text/javascript" src="assets/js/app.50a5bbd9d2f829fb8118.js"></script></body>
 </html>
