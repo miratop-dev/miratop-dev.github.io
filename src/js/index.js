@@ -180,8 +180,9 @@ $("[data-js-handler='data-options-additionals']").on('click', "[data-js-handler=
 
 $("[data-js-handler='data-options-control-domain']").on('change', function() {
   var active_type = $(this).val();
-  $("[data-js-handler='data-options-control-type']").removeClass('active');
-  $(active_type + "[data-js-handler='data-options-control-type']").addClass('active');
+  var parent = $(this).closest('.options-profile__controls');
+  parent.find("[data-js-handler='data-options-control-type']").removeClass('active');
+  parent.find(active_type + "[data-js-handler='data-options-control-type']").addClass('active');
 });  
 
 $("[data-js-handler='data-options-profile-add-option']").on('click', function(e){
@@ -304,4 +305,30 @@ $("[data-js-handler='account-switch-editor']").on('click', function(e){
     $('#proposals').addClass('hide');
     $('#new-proposal').removeClass('hide');
   }
+});
+
+$("[data-js-handler='account-add-project']").on('click', function(e){
+  e.preventDefault();
+  var title = '<div class="c-title c-title__title4 account-prop__title">' + $('#new-proposal #title').val() + '</div>';
+  var description = '<div class="account-prop__description"><p>' + $('#new-proposal #description').val() + '</p></div>';
+  var problematic = $('#new-proposal #problematic').val();
+  var expectations = $('#new-proposal #expectations').val();
+  var expertise = $('#new-proposal #expertise').children("option").filter(":selected").text();
+  var category = $($('#new-proposal #expertise').val()).children("option").filter(":selected").text();
+  var country = $('#new-proposal #country').children("option").filter(":selected").text();
+  var city = $($('#new-proposal #country').val()).children("option").filter(":selected").text();
+  var due_date = $('#new-proposal #due_date').children("option").filter(":selected").text();
+  var budget = $($('#new-proposal #due_date').val()).children("option").filter(":selected").text();
+
+  var container = $('#open .account-prop__wrap');
+  var block = '<div class="account-prop__block"><div class="account-prop__content"><div class="account-prop__head">';
+  block += title + '<div class="c-title c-title__title5 c-title--warning">Очікує підтвердження адміністратора</div></div>';
+  block += '<div class="account-prop__info"><div class="c-info"><div class="c-info__location">' + city + ',' +  country + '</div><div class="c-info__date">Термін подачі: ' + due_date + '</div></div></div>';
+  block += description + '</div>';
+  block += '<div class="account-prop__info"> <div class="account-prop__controls"><a class="account-prop__edit" href="#">Редагувати</a><a class="account-prop__cancel" href="#">Відмінити публікацію</a></div><a class="account-prop__offers" href="#">0 пропозицій</a></div>';
+  block += '</div>';
+  container.append(block);
+
+  $('#proposals').removeClass('hide');
+  $('#new-proposal').addClass('hide');
 });

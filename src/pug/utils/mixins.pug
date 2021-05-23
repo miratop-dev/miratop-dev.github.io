@@ -139,9 +139,11 @@ mixin propositionsBlock(args)
           a.account-prop__edit(href="#") Редагувати
         if (args.cancel)
           a.account-prop__cancel(href="#") Відмінити публікацію
+        if (args.publish)
+          a.account-prop__publish(href="#") Опублікувати         
         if (args.workflow)
           a.account-prop__workflow(href="#") Хід роботи
-      .account-prop__offers= args.offers
+      a.account-prop__offers(href="#")= args.offers
 
 
 mixin relatedArticles(args)

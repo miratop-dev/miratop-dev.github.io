@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <link href="assets/css/app.50a5bbd9d2f829fb8118.css" rel="stylesheet"></head>
+  <link href="assets/css/app.91808c532844a8c9708f.css" rel="stylesheet"></head>
   <body class="account-page">
 <header class="header">
   <div class="header__container"><a class="header__logo" href="/"><img src="assets/img/logo.svg" alt="logo"></a>
@@ -61,7 +61,6 @@
               <div class="c-title c-title__title3 account-sidebar__title">Rozetka</div>
               <div class="account-sidebar__block">
                 <p><span>Відгуків:</span><strong>1 / 0 / 2</strong></p>
-                <p><span>В обраних:</span><strong>10</strong></p>
                 <p><span>К-сть пропозицій:</span><strong>34 </strong></p>
               </div>
               <div class="account-sidebar__block">
@@ -109,8 +108,7 @@
                         </div>
                         <div class="account-prop__info"> 
                           <div class="account-prop__controls"><a class="account-prop__edit" href="#">Редагувати</a><a class="account-prop__cancel" href="#">Відмінити публікацію</a>
-                          </div>
-                          <div class="account-prop__offers">1 пропозиція</div>
+                          </div><a class="account-prop__offers" href="#">1 пропозиція</a>
                         </div>
                       </div>
                       <div class="account-prop__block">
@@ -131,8 +129,7 @@
                         </div>
                         <div class="account-prop__info"> 
                           <div class="account-prop__controls"><a class="account-prop__edit" href="#">Редагувати</a><a class="account-prop__cancel" href="#">Відмінити публікацію</a>
-                          </div>
-                          <div class="account-prop__offers">0 пропозицій</div>
+                          </div><a class="account-prop__offers" href="#">0 пропозицій</a>
                         </div>
                       </div>
                       <div class="account-prop__block">
@@ -154,8 +151,7 @@
                         </div>
                         <div class="account-prop__info"> 
                           <div class="account-prop__controls"><a class="account-prop__edit" href="#">Редагувати</a><a class="account-prop__cancel" href="#">Відмінити публікацію</a>
-                          </div>
-                          <div class="account-prop__offers">1 пропозиція</div>
+                          </div><a class="account-prop__offers" href="#">1 пропозиція</a>
                         </div>
                       </div>
                       <div class="account-prop__block">
@@ -176,8 +172,7 @@
                         </div>
                         <div class="account-prop__info"> 
                           <div class="account-prop__controls"><a class="account-prop__edit" href="#">Редагувати</a><a class="account-prop__cancel" href="#">Відмінити публікацію</a>
-                          </div>
-                          <div class="account-prop__offers">5 пропозиція</div>
+                          </div><a class="account-prop__offers" href="#">5 пропозиція</a>
                         </div>
                       </div>
                     </div>
@@ -203,9 +198,8 @@
                           </div>
                         </div>
                         <div class="account-prop__info"> 
-                          <div class="account-prop__controls"><a class="account-prop__edit" href="#">Редагувати</a><a class="account-prop__cancel" href="#">Відмінити публікацію</a>
-                          </div>
-                          <div class="account-prop__offers">1 пропозиція</div>
+                          <div class="account-prop__controls"><a class="account-prop__edit" href="#">Редагувати</a><a class="account-prop__publish" href="#">Опублікувати         </a>
+                          </div><a class="account-prop__offers" href="#">1 пропозиція</a>
                         </div>
                       </div>
                       <div class="account-prop__block">
@@ -227,8 +221,7 @@
                         </div>
                         <div class="account-prop__info"> 
                           <div class="account-prop__controls"><a class="account-prop__workflow" href="#">Хід роботи</a>
-                          </div>
-                          <div class="account-prop__offers">4 пропозиції</div>
+                          </div><a class="account-prop__offers" href="#">4 пропозиції</a>
                         </div>
                       </div>
                       <div class="account-prop__block">
@@ -250,12 +243,11 @@
                         </div>
                         <div class="account-prop__info"> 
                           <div class="account-prop__controls"><a class="account-prop__workflow" href="#">Хід роботи</a>
-                          </div>
-                          <div class="account-prop__offers">5 пропозиція</div>
+                          </div><a class="account-prop__offers" href="#">5 пропозиція</a>
                         </div>
                       </div>
                     </div>
-                    <div class="options-profile__buttons" href="#"><a class="options-profile__button c-button c-button--primary c-button--lg" href="#">Додати замовлення</a></div>
+                    <div class="options-profile__buttons" href="#"><a class="options-profile__button c-button c-button--primary c-button--lg" href="#" data-js-handler="account-switch-editor">Додати замовлення</a></div>
                   </div>
                 </div>
                 <div class="options-tabs hide" id="new-proposal">
@@ -268,20 +260,20 @@
                       </label>
                       <div class="options-profile__textarea"> 
                         <div class="options-profile__clarification options-profile__clarification--required">Опис</div>
-                        <textarea name="description" cols="30" rows="10" placeholder="Введіть опис"></textarea>
+                        <textarea id="description" name="description" cols="30" rows="10" placeholder="Введіть опис"></textarea>
                       </div>
                       <div class="options-profile__textarea"> 
                         <div class="options-profile__clarification options-profile__clarification--required">Проблематика</div>
-                        <textarea name="problematic" cols="30" rows="10" placeholder="Опишіть проблематику"></textarea>
+                        <textarea id="problematic" name="problematic" cols="30" rows="10" placeholder="Опишіть проблематику"></textarea>
                       </div>
                       <div class="options-profile__textarea"> 
                         <div class="options-profile__clarification options-profile__clarification--required">Очікування</div>
-                        <textarea name="expectations" cols="30" rows="10" placeholder="Опишіть очікування">    </textarea>
+                        <textarea id="expectations" name="expectations" cols="30" rows="10" placeholder="Опишіть очікування">    </textarea>
                       </div>
                       <div class="options-profile__controls">   
                         <label class="options-profile__label"> 
                           <div class="options-profile__clarification options-profile__clarification--required">Експертиза</div>
-                          <select class="options-profile__control-domain" data-js-handler="data-options-control-domain">
+                          <select class="options-profile__control-domain" id="expertise" data-js-handler="data-options-control-domain">
                             <option value="#domain-1">Стратегія 1         </option>
                             <option value="#domain-2">Стратегія 2                 </option>
                             <option value="#domain-3">Стратегія 3</option>
@@ -309,56 +301,56 @@
                       <div class="options-profile__controls"> 
                         <label class="options-profile__label"> 
                           <div class="options-profile__clarification options-profile__clarification--required">Країна</div>
-                          <select class="options-profile__control-domain">
+                          <select class="options-profile__control-domain" id="country" data-js-handler="data-options-control-domain">
                             <option value="#country-1">Україна    </option>
                             <option value="#country-2">Бразилія             </option>
-                            <option value="#country-3">Кот-д'Івуар</option>
+                            <option value="#country-3">Ісландія</option>
                           </select>
                         </label>
                         <label class="options-profile__label fullwidth"> 
                           <div class="options-profile__clarification options-profile__clarification--required">Місто</div>
                           <select class="options-profile__control-type options-profile__control-type--fullwidth active" id="country-1" data-js-handler="data-options-control-type">
-                            <option value="type-1">Розробка стратегічного плану 1      </option>
-                            <option value="type-2">Розробка стратегічного плану 2                  </option>
-                            <option value="type-3">Розробка стратегічного плану 3</option>
+                            <option value="type-1">Українське місто 1      </option>
+                            <option value="type-2">Українське місто 2                  </option>
+                            <option value="type-3">Українське місто 3</option>
                           </select>
                           <select class="options-profile__control-type options-profile__control-type--fullwidth" id="country-2" data-js-handler="data-options-control-type">
-                            <option value="type-1">Тестовий тип 1      </option>
-                            <option value="type-2">Тестовий тип 2                    </option>
-                            <option value="type-3">Тестовий тип 3    </option>
+                            <option value="type-1">Бразильске місто 1      </option>
+                            <option value="type-2">Бразильске місто 2                    </option>
+                            <option value="type-3">Бразильске місто 3    </option>
                           </select>
                           <select class="options-profile__control-type options-profile__control-type--fullwidth" id="country-3" data-js-handler="data-options-control-type">
-                            <option value="type-1">Інший тестовий тип 1      </option>
-                            <option value="type-2">Інший тестовий тип 2                     </option>
-                            <option value="type-3">Інший тестовий тип 3  </option>
+                            <option value="type-1">Ісландське місто 1      </option>
+                            <option value="type-2">Ісландське місто 2                     </option>
+                            <option value="type-3">Ісландське місто 3  </option>
                           </select>
                         </label>
                       </div>
                       <div class="options-profile__controls"> 
                         <label class="options-profile__label"> 
                           <div class="options-profile__clarification options-profile__clarification--required">Термін подачі</div>
-                          <select class="options-profile__control-domain">
-                            <option value="#deadline-1">Стратегія 1         </option>
-                            <option value="#deadline-2">Стратегія 2                 </option>
-                            <option value="#deadline-3">Стратегія 3</option>
+                          <select class="options-profile__control-domain" id="due_date" data-js-handler="data-options-control-domain">
+                            <option value="#deadline-1">До 15.09.21       </option>
+                            <option value="#deadline-2">До 15.09.21                  </option>
+                            <option value="#deadline-3">До 15.09.21 </option>
                           </select>
                         </label>
                         <label class="options-profile__label fullwidth"> 
                           <div class="options-profile__clarification options-profile__clarification--required">Бюджет</div>
                           <select class="options-profile__control-type options-profile__control-type--fullwidth active" id="deadline-1" data-js-handler="data-options-control-type">
-                            <option value="type-1">Розробка стратегічного плану 1      </option>
-                            <option value="type-2">Розробка стратегічного плану 2                  </option>
-                            <option value="type-3">Розробка стратегічного плану 3</option>
+                            <option value="type-1">До 20 коп      </option>
+                            <option value="type-2">Да 50 коп                </option>
+                            <option value="type-3">До гривні</option>
                           </select>
                           <select class="options-profile__control-type options-profile__control-type--fullwidth" id="deadline-2" data-js-handler="data-options-control-type">
-                            <option value="type-1">Тестовий тип 1      </option>
-                            <option value="type-2">Тестовий тип 2                    </option>
-                            <option value="type-3">Тестовий тип 3    </option>
+                            <option value="type-1">150к - 250к </option>
+                            <option value="type-2">250к - 350к                    </option>
+                            <option value="type-3">350к - 500к  </option>
                           </select>
                           <select class="options-profile__control-type options-profile__control-type--fullwidth" id="deadline-3" data-js-handler="data-options-control-type">
-                            <option value="type-1">Інший тестовий тип 1      </option>
-                            <option value="type-2">Інший тестовий тип 2                     </option>
-                            <option value="type-3">Інший тестовий тип 3   </option>
+                            <option value="type-1">Абсурдно багато    </option>
+                            <option value="type-2">Абсурдно багато + 1                </option>
+                            <option value="type-3">Порядку числа Грема </option>
                           </select>
                         </label>
                       </div>
@@ -371,7 +363,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="options-profile__buttons"> <a class="options-profile__button c-button c-button--primary c-button--lg" href="#" data-js-handler="account-switch-editor">Зберегти зміни</a><a class="options-profile__button c-button c-button--bordered c-button--lg" href="#" data-js-handler="account-switch-editor">Скасувати  </a></div>
+                    <div class="options-profile__buttons"> <a class="options-profile__button c-button c-button--primary c-button--lg" href="#" data-js-handler="account-add-project">Зберегти зміни</a><a class="options-profile__button c-button c-button--bordered c-button--lg" href="#" data-js-handler="account-switch-editor">Скасувати  </a></div>
                   </form>
                 </div>
               </div>
@@ -434,5 +426,5 @@
     </label><a class="c-button c-button--primary c-button--md c-button--mobile" href="#">Надіслати</a>
   </div>
 </div>
-  <script type="text/javascript" src="assets/js/vendors.50a5bbd9d2f829fb8118.js"></script><script type="text/javascript" src="assets/js/app.50a5bbd9d2f829fb8118.js"></script></body>
+  <script type="text/javascript" src="assets/js/vendors.91808c532844a8c9708f.js"></script><script type="text/javascript" src="assets/js/app.91808c532844a8c9708f.js"></script></body>
 </html>

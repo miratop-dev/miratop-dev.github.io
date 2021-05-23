@@ -9,12 +9,7 @@ form.options-profile(action="#")
           img(src="assets/img/default-user-avatar.svg", alt="user")
         a.c-title.c-title__title5.options-profile__upload(href="#") Завантажити фото
         .options-profile__hint Максимальний розмір файлу – 5Мб
-      label.options-profile__label(for='country') 
-        .options-profile__clarification.options-profile__clarification--required Країна
-        select#country.options-profile__select                  
-          option(value="ukraine") Україна                
-          option(value="germany") Німеччина                    
-          option(value="lesoto") Лесото     
+    
     .options-profile__column            
       label.options-profile__label(for='lastname') 
         .options-profile__clarification.options-profile__clarification--required Прізвище
@@ -31,13 +26,22 @@ form.options-profile(action="#")
       label.options-profile__label(for='email') 
         .options-profile__clarification.options-profile__clarification--required Електронна пошта
         input.options-profile__input#email(type='email' name='email' placeholder='Введіть email')  
-      label.options-profile__label(for='city') 
-        .options-profile__clarification.options-profile__clarification--required Місто
-        select#city.options-profile__select               
-          option Оберіть місто          
-          option(value="kyiv") Київ                  
-          option(value="odessa") Одеса                      
-          option(value="lviv") Львів 
+  .options-profile__location
+    label.options-profile__label(for='country') 
+      .options-profile__clarification.options-profile__clarification--required Країна
+      select#country.options-profile__select                  
+        option(value="ukraine") Україна                
+        option(value="germany") Німеччина                    
+        option(value="lesoto") Лесото 
+    label.options-profile__label(for='city') 
+      .options-profile__clarification.options-profile__clarification--required Місто
+      select#city.options-profile__select               
+        option Оберіть місто          
+        option(value="kyiv") Київ                  
+        option(value="odessa") Одеса                      
+        option(value="lviv") Львів 
+
+
   .options-profile__container
     .options-profile__textarea 
       .options-profile__clarification.options-profile__clarification--required Опис діяльності

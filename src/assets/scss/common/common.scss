@@ -308,7 +308,7 @@ main {
     border: 1px solid $color-secondary-7;
     background: var(--b, var(--background));
     transition: background .3s, border-color .3s, box-shadow .2s;
-    outline: none;
+    outline: none !important;
 
     &:after {
       content: '';
@@ -327,7 +327,7 @@ main {
       --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
       border: 1px solid $color-pastel-7;
     }
-    
+
     &:disabled {
       --b: var(--disabled);
       cursor: not-allowed;

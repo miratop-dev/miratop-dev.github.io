@@ -74,6 +74,17 @@
     margin: 15px 0 40px;
   }
 
+  &__location {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    label {
+      width: 290px;
+      margin: 0;
+    }
+  }
+
   &__message {
     width: 100%;
     max-width: 290px;
