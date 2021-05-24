@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <link href="assets/css/app.c0575e7aecf48a3ffc63.css" rel="stylesheet"></head>
+  <link href="assets/css/app.ed6c929fc84b8ac0a70d.css" rel="stylesheet"></head>
   <body class="account-page">
 <header class="header">
   <div class="header__container"><a class="header__logo" href="/"><img src="assets/img/logo.svg" alt="logo"></a>
@@ -254,6 +254,11 @@
                   <div class="c-title c-title__title3">Додати пропозицію</div>
                   <form class="options-profile" action="#">
                     <div class="options-profile__container">
+                      <label class="options-profile__label">
+                        <div class="options-profile__message options-profile__message--error">
+                          <p>Всі поля обов’язкові для заповнення.             </p>
+                        </div>
+                      </label>
                       <label class="options-profile__label" for="title"> 
                         <div class="options-profile__clarification options-profile__clarification--required">Заголовок</div>
                         <input class="options-profile__input" id="title" type="text" name="title" placeholder="Введіть заголовок">
@@ -298,6 +303,23 @@
                           </select>
                         </label>
                       </div>
+                      <div class="options-profile__information"> 
+                        <div class="c-title c-title__title4 options-profile__title">Навички</div>
+                        <div class="options-profile__tags" data-js-handler="data-options-additionals">
+                          <div class="options-profile__tag"> <span>HR</span><a href="#" data-js-handler="data-options-profile-remove"> </a></div>
+                          <div class="options-profile__tag"> <span>HR стратегія</span><a href="#" data-js-handler="data-options-profile-remove"> </a></div>
+                          <div class="options-profile__tag"> <span>Впровадження стратегії</span><a href="#" data-js-handler="data-options-profile-remove"> </a></div>
+                          <div class="options-profile__tag"> <span>Аудит</span><a href="#" data-js-handler="data-options-profile-remove">  </a></div>
+                          <div class="options-profile__tag"> <span>Аудит</span><a href="#" data-js-handler="data-options-profile-remove"> </a></div>
+                          <div class="options-profile__tag"> <span>Впровадження стратегії</span><a href="#" data-js-handler="data-options-profile-remove">   </a></div>
+                          <div class="options-profile__tag"> <span>Аудит</span><a href="#" data-js-handler="data-options-profile-remove">    </a></div>
+                        </div>
+                        <div class="options-profile__controls">
+                          <label class="options-profile__label options-profile__label--tag" for="tag"> 
+                            <input class="options-profile__input" id="tag" type="text" name="tag" placeholder="Введіть навичку" data-js-handler="data-options-profile-tag">
+                          </label><a class="options-profile__control-add" href="#" data-js-handler="data-options-profile-add-tag">Додати                                   </a>
+                        </div>
+                      </div>
                       <div class="options-profile__controls"> 
                         <label class="options-profile__label"> 
                           <div class="options-profile__clarification options-profile__clarification--required">Країна</div>
@@ -329,29 +351,15 @@
                       <div class="options-profile__controls"> 
                         <label class="options-profile__label"> 
                           <div class="options-profile__clarification options-profile__clarification--required">Термін подачі</div>
-                          <select class="options-profile__control-domain" id="due_date" data-js-handler="data-options-control-domain">
+                          <select class="options-profile__control-domain" id="due_date">
                             <option value="#deadline-1">До 15.09.21       </option>
                             <option value="#deadline-2">До 15.09.21                  </option>
                             <option value="#deadline-3">До 15.09.21 </option>
                           </select>
                         </label>
-                        <label class="options-profile__label fullwidth"> 
+                        <label class="options-profile__label fullwidth" for="budget"> 
                           <div class="options-profile__clarification options-profile__clarification--required">Бюджет</div>
-                          <select class="options-profile__control-type options-profile__control-type--fullwidth active" id="deadline-1" data-js-handler="data-options-control-type">
-                            <option value="type-1">До 20 коп      </option>
-                            <option value="type-2">Да 50 коп                </option>
-                            <option value="type-3">До гривні</option>
-                          </select>
-                          <select class="options-profile__control-type options-profile__control-type--fullwidth" id="deadline-2" data-js-handler="data-options-control-type">
-                            <option value="type-1">150к - 250к </option>
-                            <option value="type-2">250к - 350к                    </option>
-                            <option value="type-3">350к - 500к  </option>
-                          </select>
-                          <select class="options-profile__control-type options-profile__control-type--fullwidth" id="deadline-3" data-js-handler="data-options-control-type">
-                            <option value="type-1">Абсурдно багато    </option>
-                            <option value="type-2">Абсурдно багато + 1                </option>
-                            <option value="type-3">Порядку числа Грема </option>
-                          </select>
+                          <input class="options-profile__input" id="budget" type="text" name="budget" placeholder="Введіть бюджет">
                         </label>
                       </div>
                       <div class="options-profile__controls"> 
@@ -426,5 +434,5 @@
     </label><a class="c-button c-button--primary c-button--md c-button--mobile" href="#">Надіслати</a>
   </div>
 </div>
-  <script type="text/javascript" src="assets/js/vendors.c0575e7aecf48a3ffc63.js"></script><script type="text/javascript" src="assets/js/app.c0575e7aecf48a3ffc63.js"></script></body>
+  <script type="text/javascript" src="assets/js/vendors.ed6c929fc84b8ac0a70d.js"></script><script type="text/javascript" src="assets/js/app.ed6c929fc84b8ac0a70d.js"></script></body>
 </html>

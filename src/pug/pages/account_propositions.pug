@@ -154,6 +154,9 @@ block content
 
           form.options-profile(action="#")
             .options-profile__container
+              label.options-profile__label
+                .options-profile__message.options-profile__message--error
+                  p Всі поля обов’язкові для заповнення.             
               label.options-profile__label(for='title') 
                 .options-profile__clarification.options-profile__clarification--required Заголовок
                 input.options-profile__input#title(type='text' name='title' placeholder='Введіть заголовок')
@@ -188,6 +191,36 @@ block content
                     option(value="type-2") Інший тестовий тип 2                     
                     option(value="type-3") Інший тестовий тип 3  
 
+              .options-profile__information 
+                .c-title.c-title__title4.options-profile__title Навички
+                .options-profile__tags(data-js-handler='data-options-additionals')
+                  .options-profile__tag 
+                    span HR
+                    a(href="#" data-js-handler='data-options-profile-remove') 
+                  .options-profile__tag 
+                    span HR стратегія
+                    a(href="#" data-js-handler='data-options-profile-remove')  
+                  .options-profile__tag 
+                    span Впровадження стратегії
+                    a(href="#" data-js-handler='data-options-profile-remove')  
+                  .options-profile__tag 
+                    span Аудит
+                    a(href="#" data-js-handler='data-options-profile-remove')   
+                  .options-profile__tag 
+                    span Аудит
+                    a(href="#" data-js-handler='data-options-profile-remove')  
+                  .options-profile__tag 
+                    span Впровадження стратегії
+                    a(href="#" data-js-handler='data-options-profile-remove')    
+                  .options-profile__tag 
+                    span Аудит
+                    a(href="#" data-js-handler='data-options-profile-remove')     
+
+                .options-profile__controls
+                  label.options-profile__label.options-profile__label--tag(for='tag') 
+                    input.options-profile__input#tag(type='text' name='tag' placeholder='Введіть навичку' data-js-handler='data-options-profile-tag')
+                  a.options-profile__control-add(href="#" data-js-handler='data-options-profile-add-tag') Додати                                   
+
               .options-profile__controls 
                 label.options-profile__label  
                   .options-profile__clarification.options-profile__clarification--required Країна
@@ -213,24 +246,13 @@ block content
               .options-profile__controls 
                 label.options-profile__label  
                   .options-profile__clarification.options-profile__clarification--required Термін подачі
-                  select#due_date.options-profile__control-domain(data-js-handler='data-options-control-domain')
+                  select#due_date.options-profile__control-domain
                     option(value="#deadline-1") До 15.09.21       
                     option(value="#deadline-2") До 15.09.21                  
                     option(value="#deadline-3") До 15.09.21 
-                label.options-profile__label.fullwidth 
+                label.options-profile__label.fullwidth(for='budget') 
                   .options-profile__clarification.options-profile__clarification--required Бюджет
-                  select.options-profile__control-type.options-profile__control-type--fullwidth.active#deadline-1(data-js-handler='data-options-control-type')
-                    option(value="type-1") До 20 коп      
-                    option(value="type-2") Да 50 коп                
-                    option(value="type-3") До гривні
-                  select.options-profile__control-type.options-profile__control-type--fullwidth#deadline-2(data-js-handler='data-options-control-type')
-                    option(value="type-1") 150к - 250к 
-                    option(value="type-2") 250к - 350к                    
-                    option(value="type-3") 350к - 500к  
-                  select.options-profile__control-type.options-profile__control-type--fullwidth#deadline-3(data-js-handler='data-options-control-type')
-                    option(value="type-1") Абсурдно багато    
-                    option(value="type-2") Абсурдно багато + 1                
-                    option(value="type-3") Порядку числа Грема 
+                  input.options-profile__input#budget(type='text' name='budget' placeholder='Введіть бюджет')
                     
               .options-profile__controls 
                 .service-main
