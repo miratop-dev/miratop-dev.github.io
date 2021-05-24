@@ -494,6 +494,13 @@ $("[data-js-handler='account-add-project']").on('click', function (e) {
   $('#proposals').removeClass('hide');
   $('#new-proposal').addClass('hide');
 });
+$("[data-js-handler='account-sidebar-status']").on('change', function () {
+  if ($(this).parent().hasClass('free')) {
+    $(this).parent().removeClass('free').addClass('busy');
+  } else {
+    $(this).parent().removeClass('busy').addClass('free');
+  }
+});
 
 /***/ }),
 /* 2 */

@@ -129,6 +129,8 @@ mixin propositionsBlock(args)
           .c-info__date= args.date
           if(args.date2)
             .c-info__date= args.date2
+          if(args.client)
+            .c-info__client= args.client           
         if (args.alert)
           .account-prop__error Перевірте заповнення поля очікування
       .account-prop__description
@@ -143,6 +145,10 @@ mixin propositionsBlock(args)
           a.account-prop__publish(href="#") Опублікувати         
         if (args.workflow)
           a.account-prop__workflow(href="#") Хід роботи
+        if (args.accept)
+          a.account-prop__accept(href="#") Приняти пропозицію       
+        if (args.decline)
+          a.account-prop__decline(href="#") Відмовитись       
       a.account-prop__offers(href="#")= args.offers
 
 

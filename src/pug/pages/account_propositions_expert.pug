@@ -1,0 +1,203 @@
+extends ../layout/2columns-wide-sidebar-right
+
+block variables
+  - var title = 'Mira.hub account propositions expert';
+  - var description = 'Mira.hub account propositions expert';
+  - var pageClass = 'account-page';
+  - let witchPage = 'account propositions expert'
+  - let pageTitle = 'Особистий кабінет'
+
+block title 
+  .page-title
+    .page-title__container
+      h1 Особистий 
+        span.c-accent.c-accent--pagetitle кабінет
+
+block statusbar
+
+block sidebar
+  .account-sidebar
+    .account-sidebar__imgwrap 
+      img(src="assets/img/expert.jpg", alt="img")
+    .account-sidebar__description
+      .c-title.c-title__title3.account-sidebar__title Андрій Петренко
+      .account-sidebar__block
+      .account-sidebar__status 
+        .account-sidebar__notice Статус:
+        .account-sidebar__select.free
+          select(data-js-handler='account-sidebar-status')
+            option(value="free") Доступний
+            option(value="busy") Зайнятий
+      .account-sidebar__block
+        .c-title.c-title__title4 Досвід:
+        .account-sidebar__info.account-sidebar__info--experience 10 років досвіду   
+        .account-sidebar__info.account-sidebar__info--projects 527 виконаних проектів  
+      .account-sidebar__block   
+        .c-title.c-title__title4 Локація:
+        .account-sidebar__info.account-sidebar__info--location Київ, Україна   
+
+
+block content 
+  .account-prop
+    .options-page
+      ul.options-page__tabs.account-prop__tabs(data-js-handler='options-tabs')
+        li.active
+          a(href="#offers") Пропозиції
+        li
+          a(href="#wip") В роботі     
+        li 
+          a(href="#messages") Повідомлення
+        li
+          a(href="#reviews") Відгуки
+
+      .options-page__tab.active#offers(data-js-handler='options-tab')
+        .options-tabs#proposals
+          .options-tabs__types
+            a.options-tabs__type.active(href='#new', data-js-handler='portfolio-type') Нові
+            a.options-tabs__type(href='#in_progress', data-js-handler='portfolio-type') Виконую
+            a.options-tabs__type(href='#refused', data-js-handler='portfolio-type') Відмови
+          
+          .options-tabs__block.active#new
+            .account-prop__wrap
+              +propositionsBlock({
+                name: 'Разработать HR стратегию',
+                location: 'Киев, Украина',
+                date: '15.09.21',
+                date2: 'Термін подачі: до 15.09.21',
+                client: 'Rozetka',
+                message: 'Вам запропонували стати виконавцем',
+                description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+                accept: true,
+                decline: true,
+                offers: '1 пропозиція',
+              })
+              +propositionsBlock({
+                name: 'Разработать HR стратегию',
+                location: 'Киев, Украина',
+                date: '15.09.21',
+                date2: 'Термін подачі: до 15.09.21',
+                client: 'Rozetka',
+                message: 'Ваша пропозиція на розгляді',
+                description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+                offers: '1 пропозиція',
+              })
+              +propositionsBlock({
+                name: 'Разработать HR стратегию',
+                location: 'Киев, Украина',
+                date: '15.09.21',
+                date2: 'Термін подачі: до 15.09.21',
+                client: 'Rozetka',
+                message: 'Ви в списку кандидатів',
+                description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+                offers: '1 пропозиція',
+              })
+              +propositionsBlock({
+                name: 'Разработать HR стратегию',
+                location: 'Киев, Украина',
+                date: '15.09.21',
+                date2: 'Термін подачі: до 15.09.21',
+                client: 'Rozetka',
+                message: 'Пропозиція призупинена',
+                description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+                offers: '1 пропозиція',
+              })                  
+
+          .options-tabs__block#in_progress
+            .account-prop__wrap
+              +propositionsBlock({
+                name: 'Разработать HR стратегию',
+                location: 'Киев, Украина',
+                date: '15.09.21',
+                date2: 'Термін подачі: до 15.09.21',
+                client: 'Rozetka',
+                message: 'Вам запропонували стати виконавцем',
+                description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+                accept: true,
+                decline: true,
+                offers: '1 пропозиція',
+              })
+              +propositionsBlock({
+                name: 'Разработать HR стратегию',
+                location: 'Киев, Украина',
+                date: '15.09.21',
+                date2: 'Термін подачі: до 15.09.21',
+                client: 'Rozetka',
+                message: 'Вас обрали виконавцем',
+                description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+                workflow: true,
+                offers: '1 пропозиція',
+              })
+              +propositionsBlock({
+                name: 'Разработать HR стратегию',
+                location: 'Киев, Украина',
+                date: '15.09.21',
+                date2: 'Термін подачі: до 15.09.21',
+                client: 'Rozetka',
+                message: 'Завершено',
+                description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+                workflow: true,
+                offers: '1 пропозиція',
+              })
+              +propositionsBlock({
+                name: 'Разработать HR стратегию',
+                location: 'Киев, Украина',
+                date: '15.09.21',
+                date2: 'Термін подачі: до 15.09.21',
+                client: 'Rozetka',
+                message: 'Завершено',
+                description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+                workflow: true,
+                offers: '1 пропозиція',
+              })    
+
+          .options-tabs__block#refused
+            .account-prop__wrap
+              +propositionsBlock({
+                name: 'Разработать HR стратегию',
+                location: 'Киев, Украина',
+                date: '15.09.21',
+                date2: 'Термін подачі: до 15.09.21',
+                client: 'Rozetka',
+                message: 'Ви отримали відмову',
+                description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+                offers: '1 пропозиція',
+              })
+              +propositionsBlock({
+                name: 'Разработать HR стратегию',
+                location: 'Киев, Украина',
+                date: '15.09.21',
+                date2: 'Термін подачі: до 15.09.21',
+                client: 'Rozetka',
+                message: 'Ви отримали відмову',
+                description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+                offers: '1 пропозиція',
+              })
+              +propositionsBlock({
+                name: 'Разработать HR стратегию',
+                location: 'Киев, Украина',
+                date: '15.09.21',
+                date2: 'Термін подачі: до 15.09.21',
+                client: 'Rozetka',
+                message: 'Ви відмовились',
+                description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+                offers: '1 пропозиція',
+              })
+              +propositionsBlock({
+                name: 'Разработать HR стратегию',
+                location: 'Киев, Украина',
+                date: '15.09.21',
+                date2: 'Термін подачі: до 15.09.21',
+                client: 'Rozetka',
+                message: 'Ви відмовились',
+                description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+                offers: '1 пропозиція',
+              })          
+
+      .options-page__tab#wip(data-js-handler='options-tab')
+        p #wip
+
+      .options-page__tab#messages(data-js-handler='options-tab')
+        p #messages
+
+      .options-page__tab#reviews(data-js-handler='options-tab')
+        p #reviews    
