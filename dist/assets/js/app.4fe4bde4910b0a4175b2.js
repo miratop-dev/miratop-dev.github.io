@@ -335,9 +335,9 @@ $("[data-js-handler='options-tabs'] a").on('click', function (e) {
 
   if (!$(this).parent().hasClass('active')) {
     var href = $(this).attr('href');
-    $("[data-js-handler='options-tab']").removeClass('active');
+    $(this).closest("[data-js-handler='options-tabs']").siblings("[data-js-handler='options-tab']").removeClass('active');
     $(href).addClass('active');
-    $("[data-js-handler='options-tabs'] li").removeClass('active');
+    $(this).parent().siblings().removeClass('active');
     $(this).parent().addClass('active');
   }
 });
@@ -500,6 +500,27 @@ $("[data-js-handler='account-sidebar-status']").on('change', function () {
   } else {
     $(this).parent().removeClass('busy').addClass('free');
   }
+});
+$("[data-js-handler='portfolio-prop']").on('click', function (e) {
+  e.preventDefault();
+
+  if ($('#proposals').hasClass('hide')) {
+    $('#proposals').removeClass('hide');
+    $('#proposal-details').addClass('hide');
+  } else {
+    $('#proposals').addClass('hide');
+    $('#proposal-details').removeClass('hide');
+  }
+});
+$("[data-js-handler='candidacy-more']").on('click', function (e) {
+  e.preventDefault();
+  $(this).closest("[data-js-handler='candidacy-info']").addClass('hide');
+  $(this).closest("[data-js-handler='candidacy-info']").siblings("[data-js-handler='candidacy-correspondence']").removeClass('hide');
+});
+$("[data-js-handler='candidacy-less']").on('click', function (e) {
+  e.preventDefault();
+  $(this).closest("[data-js-handler='candidacy-correspondence']").addClass('hide');
+  $(this).closest("[data-js-handler='candidacy-correspondence']").siblings("[data-js-handler='candidacy-info']").removeClass('hide');
 });
 
 /***/ }),

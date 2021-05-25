@@ -149,7 +149,7 @@ mixin propositionsBlock(args)
           a.account-prop__accept(href="#") Приняти пропозицію       
         if (args.decline)
           a.account-prop__decline(href="#") Відмовитись       
-      a.account-prop__offers(href="#")= args.offers
+      a.account-prop__offers(href="#" data-js-handler='portfolio-prop')= args.offers
 
 
 mixin relatedArticles(args)

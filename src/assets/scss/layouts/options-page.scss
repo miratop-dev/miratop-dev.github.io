@@ -28,7 +28,7 @@
       font-weight: 600;
       font-size: 14px;
       line-height: 28px;
-      padding: 8px 40px;
+      padding: 8px;
       display: block;
     }
   }
@@ -50,7 +50,7 @@
 
 .options-profile {
   width: 100%;
-  max-width: 620px;
+  /*max-width: 620px;*/
 
   &__columns {
     display: flex;
