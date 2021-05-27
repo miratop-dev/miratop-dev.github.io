@@ -270,6 +270,12 @@ if ($("[data-js-handler='range-slider__handler']").length !== 0) {
   });
 }
 
+$(function () {
+  var availableTags = ["ActionScript", "AppleScript", "Asp", "BASIC", "C", "C++", "Clojure", "COBOL", "ColdFusion", "Erlang", "Fortran", "Groovy", "Haskell", "Java", "JavaScript", "Lisp", "Perl", "PHP", "Python", "Ruby", "Scala", "Scheme"];
+  $("#tag").autocomplete({
+    source: availableTags
+  });
+});
 $("[data-js-handler='mobile-filter__handler']").on('click', function (e) {
   e.preventDefault();
 
@@ -346,7 +352,7 @@ $("[data-js-handler='data-options-additionals']").on('click', "[data-js-handler=
   var cat = $(this).parent().attr('data-cat');
   var spec = $(this).parent().attr('data-spec');
 
-  if (cat.length != 0 && spec != 0) {
+  if (cat && spec) {
     $(cat).children("option").each(function (index, item) {
       if ($(item).val() === spec) {
         $(item).removeClass('inactive');
