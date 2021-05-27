@@ -363,3 +363,11 @@ $("[data-js-handler='candidacy-less']").on('click', function(e){
   $(this).closest("[data-js-handler='candidacy-correspondence']").addClass('hide');
   $(this).closest("[data-js-handler='candidacy-correspondence']").siblings("[data-js-handler='candidacy-info']").removeClass('hide');
 });
+
+$("[data-js-handler='candidacy-change-type']").on('click', function(e){
+  e.preventDefault();
+  if(!$(this).hasClass('checked')) {
+    $(this).siblings("[data-js-handler='candidacy-change-type']").removeClass('checked');
+    $(this).addClass('checked');
+  }
+});
