@@ -55,17 +55,17 @@ form.options-profile(action="#")
     .options-profile__information 
       .c-title.c-title__title4.options-profile__title.options-profile__title--required Експертиза  
       .options-profile__additionals(href="#" data-js-handler='data-options-additionals')
-        .options-profile__additional
-          .c-title.c-title__title5.options-profile__domain Маркетинг та PR
-          .options-profile__type Розробка маркетингової стратегії
+        .options-profile__additional(data-cat="#domain-1" data-spec="type-1")
+          .c-title.c-title__title5.options-profile__domain Стратегія 1
+          .options-profile__type Розробка стратегічного плану 1 
           a.options-profile__remove(href="#" data-js-handler='data-options-profile-remove')
-        .options-profile__additional
-          .c-title.c-title__title5.options-profile__domain Маркетинг та PR
-          .options-profile__type Розробка маркетингової стратегії
+        .options-profile__additional(data-cat="#domain-1" data-spec="type-2")
+          .c-title.c-title__title5.options-profile__domain Стратегія 1
+          .options-profile__type Розробка стратегічного плану 2
           a.options-profile__remove(href="#" data-js-handler='data-options-profile-remove')
-        .options-profile__additional
-          .c-title.c-title__title5.options-profile__domain Маркетинг та PR
-          .options-profile__type Розробка маркетингової стратегії
+        //.options-profile__additional(data-cat="#domain-1" data-spec="type-3")
+          .c-title.c-title__title5.options-profile__domain Стратегія 1
+          .options-profile__type Розробка стратегічного плану 3
           a.options-profile__remove(href="#" data-js-handler='data-options-profile-remove')  
       .options-profile__controls      
         select.options-profile__control-domain(data-js-handler='data-options-control-domain')
@@ -73,9 +73,10 @@ form.options-profile(action="#")
           option(value="#domain-2") Стратегія 2                 
           option(value="#domain-3") Стратегія 3
         select.options-profile__control-type.active#domain-1(data-js-handler='data-options-control-type')
-          option(value="type-1") Розробка стратегічного плану 1      
-          option(value="type-2") Розробка стратегічного плану 2                  
+          option.inactive(value="type-1") Розробка стратегічного плану 1      
+          option.inactive(value="type-2") Розробка стратегічного плану 2                  
           option(value="type-3") Розробка стратегічного плану 3
+          option(value="type-4") Розробка стратегічного плану 4
         select.options-profile__control-type#domain-2(data-js-handler='data-options-control-type')
           option(value="type-1") Тестовий тип 1      
           option(value="type-2") Тестовий тип 2                    

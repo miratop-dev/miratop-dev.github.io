@@ -30,6 +30,7 @@
       line-height: 28px;
       padding: 8px;
       display: block;
+      outline: none;
     }
   }
 
@@ -285,9 +286,15 @@
     align-items: center;
     justify-content: flex-start;
     margin: 0 0 10px;
+    border: 1px solid #fff;
+    padding: 0 7px;
 
     &:last-child {
       margin: 0;
+    }
+
+    &.error {
+      border: 1px solid $color-secondary-4;
     }
   }
 
@@ -411,6 +418,10 @@
       font-weight: 600;
       font-size: 14px;
       line-height: 28px;
+
+      &.inactive {
+        display: none;
+      }
     }
   }
 

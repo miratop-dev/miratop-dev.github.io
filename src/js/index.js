@@ -175,6 +175,15 @@ $("[data-js-handler='options-tabs'] a").on('click', function(e){
 
 $("[data-js-handler='data-options-additionals']").on('click', "[data-js-handler='data-options-profile-remove']", function(e){
   e.preventDefault();
+  var cat = $(this).parent().attr('data-cat');
+  var spec = $(this).parent().attr('data-spec');
+  if(cat.length != 0 && spec != 0) {
+    $(cat).children("option").each(function(index, item){
+      if($(item).val() === spec) {
+        $(item).removeClass('inactive');
+      }
+    })
+  }
   $(this).parent().remove();
 });
 
@@ -187,10 +196,29 @@ $("[data-js-handler='data-options-control-domain']").on('change', function() {
 
 $("[data-js-handler='data-options-profile-add-option']").on('click', function(e){
   e.preventDefault();
-  var domain = $(this).siblings("select[data-js-handler='data-options-control-domain']").children("option").filter(":selected").text();
-  var type = $(this).siblings("select.active[data-js-handler='data-options-control-type']").children("option").filter(":selected").text();
-  var additional = '<div class="options-profile__additional"><div class="c-title c-title__title5 options-profile__domain">' + domain + '</div><div class="options-profile__type">' + type + '</div><a class="options-profile__remove" href="#" data-js-handler="data-options-profile-remove"></a></div>';
-  $(this).parent().siblings("[data-js-handler='data-options-additionals']").append(additional);
+  var cat = $(this).siblings("select[data-js-handler='data-options-control-domain']").children("option").filter(":selected").val();
+  var spec = $(this).siblings("select.active[data-js-handler='data-options-control-type']").children("option").filter(":selected").val();
+  var flag = true;
+
+  var additionals = $(this).parent().siblings("[data-js-handler='data-options-additionals']");
+
+  additionals.children().each(function(index, item) {
+    if(cat === item.getAttribute('data-cat') && spec === item.getAttribute('data-spec')) {
+      flag = false;
+      additionals.children().removeClass('error');
+      $(item).addClass('error');
+    }
+  });
+
+  if(flag) {
+    var domain = $(this).siblings("select[data-js-handler='data-options-control-domain']").children("option").filter(":selected").text();
+    var type = $(this).siblings("select.active[data-js-handler='data-options-control-type']").children("option").filter(":selected").text();
+    $(this).siblings("select.active[data-js-handler='data-options-control-type']").children("option").filter(":selected").addClass('inactive');
+
+    var additional = '<div class="options-profile__additional" data-cat="' + cat + '" data-spec="' + spec + '"><div class="c-title c-title__title5 options-profile__domain">' + domain + '</div><div class="options-profile__type">' + type + '</div><a class="options-profile__remove" href="#" data-js-handler="data-options-profile-remove"></a></div>';
+    additionals.append(additional);
+    additionals.children().removeClass('error');
+  } 
 });
 
 $("[data-js-handler='data-options-profile-add-input']").on('click', function(e){

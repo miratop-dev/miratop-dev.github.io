@@ -3901,7 +3901,8 @@ main.index-page {
     font-size: 14px;
     line-height: 28px;
     padding: 8px;
-    display: block
+    display: block;
+    outline: none
 }
 
 .options-page__tab {
@@ -4229,11 +4230,17 @@ main.index-page {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    margin: 0 0 10px
+    margin: 0 0 10px;
+    border: 1px solid #fff;
+    padding: 0 7px
 }
 
 .options-profile__additional:last-child {
     margin: 0
+}
+
+.options-profile__additional.error {
+    border: 1px solid #ed7c79
 }
 
 .options-profile__domain {
@@ -4366,6 +4373,10 @@ main.index-page {
     font-weight: 600;
     font-size: 14px;
     line-height: 28px
+}
+
+.options-profile__control-type option.inactive {
+    display: none
 }
 
 .options-profile__control-add {
