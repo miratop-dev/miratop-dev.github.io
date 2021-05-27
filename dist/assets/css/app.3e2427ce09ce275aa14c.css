@@ -4901,6 +4901,12 @@ main.index-page {
     align-items: center
 }
 
+.candidacy__row--bottom {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end
+}
+
 .candidacy__description,
 .candidacy__status {
     color: #35343a;

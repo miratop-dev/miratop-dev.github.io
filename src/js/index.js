@@ -127,9 +127,11 @@ $(function() {
     "Scala",
     "Scheme"
   ];
-  $("#tag").autocomplete({
-    source: availableTags
-  });
+  if($("#tag").length > 0) {
+    $("#tag").autocomplete({
+      source: availableTags
+    });
+  }
 });
 
 $("[data-js-handler='mobile-filter__handler']").on('click', function(e){

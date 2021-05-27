@@ -272,9 +272,12 @@ if ($("[data-js-handler='range-slider__handler']").length !== 0) {
 
 $(function () {
   var availableTags = ["ActionScript", "AppleScript", "Asp", "BASIC", "C", "C++", "Clojure", "COBOL", "ColdFusion", "Erlang", "Fortran", "Groovy", "Haskell", "Java", "JavaScript", "Lisp", "Perl", "PHP", "Python", "Ruby", "Scala", "Scheme"];
-  $("#tag").autocomplete({
-    source: availableTags
-  });
+
+  if ($("#tag").length > 0) {
+    $("#tag").autocomplete({
+      source: availableTags
+    });
+  }
 });
 $("[data-js-handler='mobile-filter__handler']").on('click', function (e) {
   e.preventDefault();

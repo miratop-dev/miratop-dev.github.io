@@ -1,4 +1,4 @@
-extends ../layout/1column
+extends ../layout/2columns-wide-sidebar
 
 block variables
   - var title = 'Mira.hub propositions';
@@ -33,7 +33,7 @@ block content
             .c-title.c-title__title4 Очікування
             p Активный рост рынка Интернет-торговли за последние несколько лет привел к интенсивному развитию всех инструментов торговли в онлайне. Появилось множество новых Интернет-магазинов, популярность которых продолжает расти, а электронные системы платежей позволяют оплачивать покупки всем желающим.
           .account-prop__candidacies
-            .c-title.c-title__title3 Кандидати на співпрацю
+            .c-title.c-title__title3 Пропозиції про співпрацю
             .options-page
               .options-page__tab.active
                 .candidacy
@@ -43,7 +43,6 @@ block content
                     .candidacy__textwrap 
                       .candidacy__row
                         .c-title.c-title__title4 Андрей Петренко
-                        .c-title.c-title__title5 Виконавець
                       .candidacy__row
                         .c-info
                           .c-info__date 10.04.2021  14:37
@@ -88,7 +87,6 @@ block content
                     .candidacy__textwrap 
                       .candidacy__row
                         .c-title.c-title__title4 Андрей Петренко
-                        .c-title.c-title__title5 Очікує підтвердження статусу виконавець
                       .candidacy__row
                         .c-info
                           .c-info__date 10.04.2021  14:37                           
@@ -133,7 +131,6 @@ block content
                     .candidacy__textwrap 
                       .candidacy__row
                         .c-title.c-title__title4 Андрей Петренко
-                        .c-title.c-title__title5 Ви запропонували співпрацю
                       .candidacy__row
                         .c-info
                           .c-info__date 10.04.2021  14:37
@@ -178,7 +175,6 @@ block content
                     .candidacy__textwrap 
                       .candidacy__row
                         .c-title.c-title__title4 Андрей Петренко
-                        .c-title.c-title__title5 Ви запропонували співпрацю
                       .candidacy__row
                         .c-info
                           .c-info__date 10.04.2021  14:37                           
@@ -223,7 +219,6 @@ block content
                     .candidacy__textwrap 
                       .candidacy__row
                         .c-title.c-title__title4 Андрей Петренко
-                        .c-title.c-title__title5 Відмовлено в співпраці
                       .candidacy__row
                         .c-info
                           .c-info__date 10.04.2021  14:37
@@ -268,7 +263,6 @@ block content
                     .candidacy__textwrap 
                       .candidacy__row
                         .c-title.c-title__title4 Андрей Петренко
-                        .c-title.c-title__title5 Відмовився від пропозиції
                       .candidacy__row
                         .c-info
                           .c-info__date 10.04.2021  14:37
@@ -306,3 +300,49 @@ block content
                         .candidacy__response
                           a.candidacy__button.c-button.c-button--primary.c-button--lg(href="#") Надіслати
                           a.candidacy__link.candidacy__link--less(href="#" data-js-handler='candidacy-less') Згорнути переписку 
+
+block sidebar
+  .details-task-side
+    .c-title.c-title__title4 Похожие предложения
+    .details-task-side__similar
+      .details-task-side__block
+        .c-title.c-title__title5.details-task-side__name Разработать HR стратегию
+        .c-info
+          .c-info__location Киев, Украина
+          .c-info__date 15.01.2021
+          .c-info__client SoftBlues
+        .c-tags 
+          a.c-tags__tag(href='#') HR
+          a.c-tags__tag(href='#') HR стратегия
+          a.c-tags__tag(href='#') Внедрение стратегии    
+      .details-task-side__block
+        .c-title.c-title__title5.details-task-side__name Провести аудит
+        .c-info 
+          .c-info__location Киев, Украина
+          .c-info__date 15.01.2021
+          .c-info__client Kyivstar
+        .c-tags 
+          a.c-tags__tag(href='#') HR
+          a.c-tags__tag(href='#') HR стратегия
+          a.c-tags__tag(href='#') Внедрение стратегии     
+      .details-task-side__block
+        .c-title.c-title__title5.details-task-side__name Разработать финансовую модель
+        .c-info 
+          .c-info__location Киев, Украина
+          .c-info__date 15.01.2021
+          .c-info__client OKKO
+        .c-tags
+          a.c-tags__tag(href='#') HR
+          a.c-tags__tag(href='#') HR стратегия
+          a.c-tags__tag(href='#') Внедрение стратегии   
+    .c-title.c-title__title4 Другие предложения компании      
+    .details-task-side__other   
+      p
+        a(href="#") Разработать финансовую модель
+        span Срок подачи до: 5 апреля 2021
+      p
+        a(href="#") Провести аудит
+        span Срок подачи до: 5 апреля 2021
+      p
+        a(href="#") Обучение персонала
+        span Срок подачи до: 5 апреля 2021         
