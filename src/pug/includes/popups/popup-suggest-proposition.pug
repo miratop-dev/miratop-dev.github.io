@@ -4,20 +4,23 @@
     .popup-message__summary
       .c-title.c-title__title4 Запропонувати співпрацю в пропозиціях
   .popup-message__switch
-    .service-main
-      .service-main__account 
-        a.service-main__private.service-main__private--active(href='#', data-js-handler='account-type') Публічні
-        a.service-main__private.service-main__private--unactive(href='#', data-js-handler='account-type') Приватні
-  .popup-message-proposals
-    a.popup-message-proposals__link(href="#") 
-      .c-title.c-title__title5 Розробити HR стратегію
-    a.popup-message-proposals__link(href="#") 
-      .c-title.c-title__title5 Розробка ефективної системи підбору персонала
-    a.popup-message-proposals__link(href="#") 
-      .c-title.c-title__title5 Побудова стратегії просування
+    .options-page
+      ul.options-page__tabs.popup-message__tabs(data-js-handler='options-tabs')
+        li.active
+          a(href="#public") Публічні
+        li
+          a(href="#private") Приватні
+      .options-page__tab.active#public(data-js-handler='options-tab')
+        .portfolio-none.active
+          .portfolio-none__block
+            .c-title.c-title.c-title__title5.c-title--alert Проекти відсутні
+            a.c-button.c-button--primary.c-button--md(href='#popup-add-proposition', data-js-handler='popup__handler') Додати проект       
 
-  .portfolio-none.active
-    .portfolio-none__block
-      .c-title.c-title.c-title__title5.c-title--alert Проекти відсутні
-      a.c-button.c-button--primary.c-button--md(href='#popup-add-proposition', data-js-handler='popup__handler') Додати проект 
-
+      .options-page__tab#private(data-js-handler='options-tab')
+        .popup-message-proposals
+          a.popup-message-proposals__link(href="#") 
+            .c-title.c-title__title5 Розробити HR стратегію
+          a.popup-message-proposals__link(href="#") 
+            .c-title.c-title__title5 Розробка ефективної системи підбору персонала
+          a.popup-message-proposals__link(href="#") 
+            .c-title.c-title__title5 Побудова стратегії просування

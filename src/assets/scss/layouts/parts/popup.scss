@@ -1,5 +1,5 @@
 .popup {
-  position: absolute;
+  position: fixed;
   border-radius: 8px;
   background-color: $color-primary-white;
   background-repeat: no-repeat;
@@ -350,7 +350,6 @@
   }
 
   &__switch {
-    max-width: 200px;
     width: 100%;
     margin: 40px auto 0;
   }
@@ -362,6 +361,15 @@
       margin: 0;
     }
   }
+
+  &__tabs {
+    width: 100%;
+    max-width: 200px;
+
+    li {
+      width: 50%;
+    }
+  }  
 }
 
 .popup-message-proposals {
@@ -372,6 +380,7 @@
     border-top: 2px solid $color-secondary-border;
     transition: 0.3s all ease-in-out;
     display: block;
+    text-align: left;
 
     &:last-child {
       border-bottom: 2px solid $color-secondary-border;
