@@ -11,7 +11,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <link href="assets/css/app.3e2427ce09ce275aa14c.css" rel="stylesheet"></head>
+  <link href="assets/css/app.dd0619afeb9e3320c676.css" rel="stylesheet"></head>
   <body class="search-page">
 <header class="header">
   <div class="header__container"><a class="header__logo" href="/"><img src="assets/img/logo.svg" alt="logo"></a>
@@ -560,29 +560,84 @@
     </div>
   </div>
 </footer>
-<div class="popup popup popup--message hide" id="popup-message"><a class="popup__close" href="#" data-js-handler="popup__handler-close"></a>
+<div class="popup popup popup--proposal hide" id="popup-message"><a class="popup__close" href="#" data-js-handler="popup__handler-close"></a>
   <div class="popup-message__header"> 
-    <div class="popup-message__avatar"> <img src="assets/img/popup-avatar.png" alt="avatar">
-      <div class="popup-message__status popup-message__status--active"></div>
-    </div>
     <div class="popup-message__summary">
-      <div class="c-title c-title__title4">Розробити HR стратегію</div>
-      <div class="c-info"> 
-        <div class="c-info__location">Киев, Украина</div>
-        <div class="c-info__date">15.01.2021</div>
-        <div class="c-info__client">Rozetka</div>
-      </div>
+      <div class="c-title c-title__title4">Запропонувати співпрацю</div>
     </div>
   </div>
   <div class="popup-message__main"> 
-    <div class="popup-message__desc">Повідомлення</div>
+    <div class="popup-message__desc">Текст пропозиції</div>
     <textarea class="popup-message__textarea" type="textarea" rows="7"></textarea>
   </div>
-  <div class="popup-message__feedback"> 
-    <label class="popup-message__label" for="upload"> <a class="popup-message__upload">Прикріпити файл</a>
-      <div class="popup-message__maxsize">Максимальний розмір файлу – 5Мб</div>
-    </label><a class="c-button c-button--primary c-button--md c-button--mobile" href="#">Надіслати</a>
+  <div class="popup-message__feedback"> <a class="popup-message__button c-button c-button--bordered c-button--md c-button--mobile" href="#" data-js-handler="popup__handler-close">Скасувати</a><a class="popup-message__button c-button c-button--primary c-button--md c-button--mobile" href="#">Надіслати</a></div>
+</div>
+<div class="popup popup--proposal hide" id="popup-suggest-proposition"><a class="popup__close" href="#" data-js-handler="popup__handler-close"></a>
+  <div class="popup-message__header"> 
+    <div class="popup-message__summary">
+      <div class="c-title c-title__title4">Запропонувати співпрацю в пропозиціях</div>
+    </div>
+  </div>
+  <div class="popup-message__switch">
+    <div class="service-main">
+      <div class="service-main__account"> <a class="service-main__private service-main__private--active" href="#" data-js-handler="account-type">Публічні</a><a class="service-main__private service-main__private--unactive" href="#" data-js-handler="account-type">Приватні</a></div>
+    </div>
+  </div>
+  <div class="popup-message-proposals"><a class="popup-message-proposals__link" href="#"> 
+      <div class="c-title c-title__title5">Розробити HR стратегію</div></a><a class="popup-message-proposals__link" href="#"> 
+      <div class="c-title c-title__title5">Розробка ефективної системи підбору персонала</div></a><a class="popup-message-proposals__link" href="#"> 
+      <div class="c-title c-title__title5">Побудова стратегії просування</div></a></div>
+  <div class="portfolio-none active">
+    <div class="portfolio-none__block">
+      <div class="c-title c-title c-title__title5 c-title--alert">Проекти відсутні</div><a class="c-button c-button--primary c-button--md" href="#popup-add-proposition" data-js-handler="popup__handler">Додати проект </a>
+    </div>
   </div>
 </div>
-  <script type="text/javascript" src="assets/js/vendors.3e2427ce09ce275aa14c.js"></script><script type="text/javascript" src="assets/js/app.3e2427ce09ce275aa14c.js"></script></body>
+<div class="popup popup popup--proposal hide" id="popup-add-proposition"><a class="popup__close" href="#" data-js-handler="popup__handler-close"></a>
+  <div class="popup-message__header"> 
+    <div class="popup-message__summary">
+      <div class="c-title c-title__title4">Опублікувати свою пропозицію</div>
+    </div>
+  </div>
+  <div class="popup-message__main"> 
+    <div class="popup-message__desc">Текст пропозиції</div>
+    <textarea class="popup-message__textarea" type="textarea" rows="7"></textarea>
+  </div>
+  <div class="popup-message__feedback"> <a class="popup-message__button c-button c-button--bordered c-button--md c-button--mobile" href="#" data-js-handler="popup__handler-close">Скасувати</a><a class="popup-message__button c-button c-button--primary c-button--md c-button--mobile" href="#">Додати</a></div>
+</div>
+<div class="popup popup popup--info hide" id="popup-register"><a class="popup__close" href="#" data-js-handler="popup__handler-close"></a>
+  <div class="popup-message__header"> 
+    <div class="popup-message__summary">
+      <div class="c-title c-title__title4">Вибір виконавця</div>
+    </div>
+  </div>
+  <div class="popup-message__content">  
+    <div class="c-title c-title__title5">Аудит фінансового звіту</div>
+    <div class="popup-message__performer">
+      <div class="popup-message__desc">Виконавець</div><a class="popup-message__name" href="#">Ірина Матусевич</a>
+    </div>
+  </div>
+  <div class="options-profile">
+    <form class="options-profile__form" action="#">
+      <label class="options-profile__label" for="lastname"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Термін, днів</div>
+        <input class="options-profile__input" id="lastname" type="text" name="lastname" placeholder="Вкажіть термін">
+      </label>
+      <label class="options-profile__label" for="name"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Бюджет, грн</div>
+        <input class="options-profile__input" id="name" type="text" name="name" placeholder="Вкажіть бюджет">
+      </label>
+      <label class="options-profile__label" for="login"> 
+        <div class="options-profile__clarification options-profile__clarification--required">Аванс, грн</div>
+        <input class="options-profile__input" id="login" type="text" name="login" placeholder="Вкажіть аванс">
+      </label>
+      <div class="options-profile__textarea"> 
+        <div class="options-profile__clarification">Коментар</div>
+        <textarea name="description" cols="30" rows="10" placeholder="Коментар"></textarea>
+      </div>
+    </form>
+  </div>
+  <div class="popup-message__feedback"> <a class="popup-message__button c-button c-button--bordered c-button--md c-button--mobile" href="#" data-js-handler="popup__handler-close">Скасувати</a><a class="popup-message__button c-button c-button--primary c-button--md c-button--mobile" href="#">Обрати виконавцем </a></div>
+</div>
+  <script type="text/javascript" src="assets/js/vendors.dd0619afeb9e3320c676.js"></script><script type="text/javascript" src="assets/js/app.dd0619afeb9e3320c676.js"></script></body>
 </html>

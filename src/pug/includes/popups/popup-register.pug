@@ -1,40 +1,28 @@
 .popup.popup.popup--info.hide#popup-register
   a.popup__close(href='#', data-js-handler='popup__handler-close')
-  .popup__title Створити акаунт!
-  form.popup__form(action='#') 
-    .popup__account-types
-      a.popup__account-type.popup__account-type--active(href='#account-type-client', data-js-handler='popup__account-type')  Замовник
-      a.popup__account-type(href='#account-type-expert', data-js-handler='popup__account-type')  Експерт
-    .popup__data-wrap.popup__data-wrap--current#account-type-client
-      label.popup__label
-        .popup__desc Електронна пошта
-        input.popup__input.popup__input--text(type='email' name='client_login_name' placeholder='Client email')
-      label.popup__label
-        .popup__desc Пароль
-        input.popup__input.popup__input--text(type='password' name='client_login_pass' placeholder='Client password')
-      label.popup__label
-        .popup__desc Повторіть пароль
-        input.popup__input.popup__input--text(type='password ' name='confirm_client_login_pass' placeholder='Confirm client password') 
-    .popup__data-wrap#account-type-expert
-      label.popup__label
-        .popup__desc Електронна пошта
-        input.popup__input.popup__input--text(type='email' name='client_login_name' placeholder='Expert email')
-      label.popup__label
-        .popup__desc Пароль
-        input.popup__input.popup__input--text(type='password' name='client_login_pass' placeholder='Expert password')
-      label.popup__label
-        .popup__desc Повторіть пароль
-        input.popup__input.popup__input--text(type='password' name='confirm_expert_login_pass' placeholder='Confirm expert password')              
-    input.popup__input.popup__input--submit(type='submit' value='Зареєструватись')
-    .popup__unregistered 
-      span Вже зареєстровані? 
-      a(href="#popup-login", data-js-handler='popup__handler') Увійти
-    .popup__socials 
-      a.popup__social(href='#')
-        img(src='assets/img/popup-google.png')
-      a(href='#')
-        img(src='assets/img/popup-facebook.png') 
-  form.popup__form.hide(action='#')
-    img.popup__img--success(src='assets/img/register-success.svg')
-    div.popup__greetings Вітаємо! Ваша реєстрація пройшла успішно, приємного користування. 
-    input.popup__input.popup__input--submit(type='submit' value='Увійти')
+  .popup-message__header 
+    .popup-message__summary
+      .c-title.c-title__title4 Вибір виконавця
+  .popup-message__content   
+    .c-title.c-title__title5 Аудит фінансового звіту
+    .popup-message__performer
+      .popup-message__desc Виконавець
+      a.popup-message__name(href="#") Ірина Матусевич
+  .options-profile
+    form.options-profile__form(action='#')
+      label.options-profile__label(for='lastname') 
+        .options-profile__clarification.options-profile__clarification--required Термін, днів
+        input.options-profile__input#lastname(type='text' name='lastname' placeholder='Вкажіть термін')   
+      label.options-profile__label(for='name') 
+        .options-profile__clarification.options-profile__clarification--required Бюджет, грн
+        input.options-profile__input#name(type='text' name='name' placeholder='Вкажіть бюджет')   
+      label.options-profile__label(for='login') 
+        .options-profile__clarification.options-profile__clarification--required Аванс, грн
+        input.options-profile__input#login(type='text' name='login' placeholder='Вкажіть аванс')    
+      .options-profile__textarea 
+        .options-profile__clarification Коментар
+        textarea(name="description" cols="30" rows="10" placeholder="Коментар")
+
+  .popup-message__feedback 
+    a.popup-message__button.c-button.c-button--bordered.c-button--md.c-button--mobile(href='#' data-js-handler='popup__handler-close') Скасувати
+    a.popup-message__button.c-button.c-button--primary.c-button--md.c-button--mobile(href='#') Обрати виконавцем 

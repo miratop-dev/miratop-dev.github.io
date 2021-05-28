@@ -1828,7 +1828,7 @@ main.index-page {
     border-radius: 8px;
     background-color: #fff;
     background-repeat: no-repeat;
-    top: 10.4vw;
+    top: 5vw;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
@@ -1845,13 +1845,23 @@ main.index-page {
 }
 
 .popup--info {
-    padding: 40px 60px;
-    background-image: url(../../assets/img/popup-bg.png);
-    background-position: 20px 20px
+    width: 100%;
+    max-width: 480px;
+    padding: 40px;
+    background-image: url(../../assets/img/popup-bg-proposal.png);
+    background-position: 100% 0
 }
 
 .popup--message {
     padding: 40px
+}
+
+.popup--proposal {
+    width: 100%;
+    max-width: 720px;
+    padding: 40px;
+    background-image: url(../../assets/img/popup-bg-proposal.png);
+    background-position: 100% 0
 }
 
 .popup__close {
@@ -1949,11 +1959,6 @@ main.index-page {
 
 .popup__data-wrap--current {
     display: block
-}
-
-.popup form {
-    width: 320px;
-    margin: 40px 0 0
 }
 
 .popup form.hide {
@@ -2059,6 +2064,10 @@ main.index-page {
     justify-content: flex-start
 }
 
+.popup-message__content {
+    margin: 40px 0 0
+}
+
 .popup-message__avatar {
     position: relative;
     width: 84px;
@@ -2092,12 +2101,34 @@ main.index-page {
     margin: 40px 0 0
 }
 
+.popup-message__performer {
+    margin: 13px 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.popup-message__name {
+    display: block;
+    margin: 0 0 0 20px;
+    font-size: 14px;
+    line-height: 28px;
+    color: #35343a;
+    text-decoration: underline;
+    -webkit-text-decoration-color: #added4;
+    text-decoration-color: #added4;
+    text-decoration-thickness: 2px;
+    text-underline-position: under
+}
+
 .popup-message__desc {
     color: #35343a;
     text-transform: uppercase;
     font-size: 10px;
-    line-height: 16px;
-    margin: 0 0 5px
+    line-height: 16px
 }
 
 .popup-message__textarea {
@@ -2121,9 +2152,9 @@ main.index-page {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end
 }
 
 .popup-message__label {
@@ -2155,6 +2186,44 @@ main.index-page {
     font-size: 10px;
     line-height: 16px;
     color: #77747f
+}
+
+.popup-message__switch {
+    max-width: 200px;
+    width: 100%;
+    margin: 40px auto 0
+}
+
+.popup-message__button {
+    margin: 0 20px 0 0
+}
+
+.popup-message__button:last-child {
+    margin: 0
+}
+
+.popup-message-proposals {
+    margin: 20px 0 0
+}
+
+.popup-message-proposals__link {
+    padding: 15px 0;
+    border-top: 2px solid #e5e5e5;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: .3s all ease-in-out;
+    transition: all .3s ease-in-out;
+    display: block
+}
+
+.popup-message-proposals__link:last-child {
+    border-bottom: 2px solid #e5e5e5
+}
+
+.popup-message-proposals__link:hover {
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: .3s all ease-in-out;
+    transition: all .3s ease-in-out;
+    background: #f5f5f5
 }
 
 .main-page-banner__container {
@@ -3369,7 +3438,12 @@ main.index-page {
 
 .details-expert-head__button {
     top: 0;
-    right: 0
+    right: 0;
+    margin: 0 10px 0 0
+}
+
+.details-expert-head__button:last-child {
+    margin: 0
 }
 
 .details-expert-description__block {

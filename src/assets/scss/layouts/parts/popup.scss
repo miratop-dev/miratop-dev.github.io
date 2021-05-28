@@ -3,7 +3,7 @@
   border-radius: 8px;
   background-color: $color-primary-white;
   background-repeat: no-repeat;
-  top: 10.4vw;
+  top: 5vw;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
@@ -21,14 +21,24 @@
   }
 
   &--info {
-    padding: 40px 60px;
-    background-image: url('/assets/img/popup-bg.png');
-    background-position: 20px 20px;
+    width: 100%;
+    max-width: 480px;
+    padding: 40px;
+    background-image: url('/assets/img/popup-bg-proposal.png');
+    background-position: top right;
   }
 
   &--message {
     padding: 40px;
   }
+
+  &--proposal {
+    width: 100%;
+    max-width: 720px;
+    padding: 40px;
+    background-image: url('/assets/img/popup-bg-proposal.png');
+    background-position: top right;
+  }  
 
   &__close {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L17 17' stroke='%23D1D1D1' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M17 1L0.999999 17' stroke='%23D1D1D1' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
@@ -130,9 +140,6 @@
   }
 
   form {
-    width: 320px;
-    margin: 40px 0 0 0;
-
     &.hide {
       display: none;
     }
@@ -229,6 +236,10 @@
     justify-content: flex-start;
   }
 
+  &__content {
+    margin: 40px 0 0 0;
+  }
+
   &__avatar {
     position: relative;
     width: 84px;
@@ -262,12 +273,29 @@
     margin: 40px 0 0 0;
   }
 
+  &__performer {
+    margin: 13px 0 0 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__name {
+    display: block;
+    margin: 0 0 0 20px;
+    font-size: 14px;
+    line-height: 28px;
+    color: $text-black;
+    text-decoration: underline;
+    text-decoration-color: $color-pastel-7;
+    text-decoration-thickness: 2px;
+    text-underline-position: under;    
+  }
+
   &__desc {
     color: $text-black;
     text-transform: uppercase;
     font-size: 10px;
     line-height: 16px;
-    margin: 0 0 5px;
   }
 
   &__textarea {
@@ -287,7 +315,7 @@
     margin: 20px 0 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
 
   &__label {
@@ -319,5 +347,39 @@
     font-size: 10px;
     line-height: 16px;
     color: $text-grey;
+  }
+
+  &__switch {
+    max-width: 200px;
+    width: 100%;
+    margin: 40px auto 0;
+  }
+
+  &__button {
+    margin: 0 20px 0 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.popup-message-proposals {
+  margin: 20px 0 0 0;
+
+  &__link {
+    padding: 15px 0;
+    border-top: 2px solid $color-secondary-border;
+    transition: 0.3s all ease-in-out;
+    display: block;
+
+    &:last-child {
+      border-bottom: 2px solid $color-secondary-border;
+    }
+
+    &:hover {
+      transition: 0.3s all ease-in-out;
+      background: $color-secondary-grey-bg;
+    }
   }
 }
