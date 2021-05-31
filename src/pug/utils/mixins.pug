@@ -123,6 +123,8 @@ mixin propositionsBlock(args)
             .c-title.c-title__title5.c-title--alert= args.message
           else
             .c-title.c-title__title5= args.message
+              if(args.message2)
+                .account-prop__message2= args.message2
       .account-prop__info
         .c-info
           .c-info__location= args.location

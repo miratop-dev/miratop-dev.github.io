@@ -579,13 +579,209 @@ block content
                             a.candidacy__button.c-button.c-button--primary.c-button--lg(href="#") Надіслати
                             a.candidacy__link.candidacy__link--less(href="#" data-js-handler='candidacy-less') Згорнути переписку 
 
-
-
       .options-page__tab#wip(data-js-handler='options-tab')
-        p #wip
+        .options-tabs__block.active
+          .account-prop__wrap
+            +propositionsBlock({
+              name: 'Разработать HR стратегию',
+              location: 'Киев, Украина',
+              date: '15.09.21',
+              date2: 'Термін подачі: до 15.09.21',
+              client: 'Rozetka',
+              message: 'Виконавець: Аня',
+              message2: 'Резервація оплати',
+              description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+              workflow: true,
+              offers: '0 пропозицій',
+            })
+            +propositionsBlock({
+              name: 'Разработать HR стратегию',
+              location: 'Киев, Украина',
+              date: '15.09.21',
+              date2: 'Термін подачі: до 15.09.21',
+              client: 'Rozetka',
+              message: 'Виконавець: Аня',
+              message2: 'Виконання роботи',
+              description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+              workflow: true,
+              offers: '4 пропозиції',
+            })
+            +propositionsBlock({
+              name: 'Разработать HR стратегию',
+              location: 'Киев, Украина',
+              date: '15.09.21',
+              date2: 'Термін подачі: до 15.09.21',
+              client: 'Rozetka',
+              message: 'Виконавець: Аня',
+              message2: 'Доробки',
+              description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+              workflow: true,              
+              offers: '5 пропозицій',
+            })
+            +propositionsBlock({
+              name: 'Разработать HR стратегию',
+              location: 'Киев, Украина',
+              date: '15.09.21',
+              date2: 'Термін подачі: до 15.09.21',
+              client: 'Rozetka',
+              message: 'Виконавець: Аня',
+              message2: 'Виплата',
+              description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+              workflow: true,              
+              offers: '5 пропозицій',
+            })
+            +propositionsBlock({
+              name: 'Разработать HR стратегию',
+              location: 'Киев, Украина',
+              date: '15.09.21',
+              date2: 'Термін подачі: до 15.09.21',
+              client: 'Rozetka',
+              message: 'Виконавець: Аня',
+              message2: 'Завершено',
+              description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
+              workflow: true,              
+              offers: '5 пропозицій',
+            })  
 
       .options-page__tab#messages(data-js-handler='options-tab')
         p #messages
 
       .options-page__tab#reviews(data-js-handler='options-tab')
-        p #reviews    
+        .options-tabs#proposals
+          .options-tabs__types
+            a.options-tabs__type(href='#my_reviews', data-js-handler='portfolio-type') Мої відгуки
+            a.options-tabs__type.active(href='#other_reviews', data-js-handler='portfolio-type') Відгуки замовників та експертів
+
+          .options-tabs__block#my_reviews
+            p #my_reviews
+
+          .options-tabs__block.active#other_reviews 
+            .options-page__tab.active#consideration(data-js-handler='options-tab')
+              .candidacy
+                .candidacy__block 
+                  .candidacy__imgwrap 
+                    img(src="assets/img/expert-avatar-full.jpg", alt="img")
+                  .candidacy__textwrap 
+                    .candidacy__row
+                      .c-title.c-title__title4 Андрей Петренко
+                    .candidacy__row
+                      .c-info
+                        .c-info__positive Позитивний
+                        .c-info__date 10.04.2021
+                    .candidacy__info(data-js-handler='candidacy-info')
+                      .candidacy__description Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам. Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам. Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам.  
+                      .candidacy__row
+                        a.candidacy__link.candidacy__link--reply(href="#" data-js-handler='candidacy-more') Відповісти
+                    .candidacy__correspondence.hide(data-js-handler='candidacy-correspondence')
+                      .candidacy-reply
+                        .candidacy-reply__row
+                          .candidacy-reply__img
+                            img(src="assets/img/expert-avatar-full.jpg", alt="img")
+                          .c-title.c-title__title5.candidacy-reply__name Андрей Петренко
+                          .c-info.candidacy-reply__info
+                            .c-info__date 10.04.2021                       
+                        .candidacy-reply__message Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам. Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам. Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис.
+
+                      .candidacy-reply
+                        .candidacy-reply__row
+                          .candidacy-reply__img
+                            img(src="assets/img/popup-avatar.png", alt="img")
+                          .c-title.c-title__title5.candidacy-reply__name Rozetka
+                          .c-info.candidacy-reply__info
+                            .c-info__date 10.04.2021                        
+                        .candidacy-reply__message Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам. Популярный сервис, на котором удобно и клиентам.
+
+                      .candidacy-reply
+                        .options-profile
+                          .options-profile__container
+                            .options-profile__textarea 
+                              .options-profile__clarification Коментар 
+                              textarea(name="comment" cols="30" rows="10" placeholder="Вкажіть коментар")
+
+                      .candidacy__response
+                        a.candidacy__button.c-button.c-button--primary.c-button--lg(href="#") Надіслати
+                        a.candidacy__link.candidacy__link--less(href="#" data-js-handler='candidacy-less') Згорнути переписку                             
+
+                .candidacy__block 
+                  .candidacy__imgwrap 
+                    img(src="assets/img/expert-avatar-full.jpg", alt="img")
+                  .candidacy__textwrap 
+                    .candidacy__row
+                      .c-title.c-title__title4 Андрей Петренко
+                    .candidacy__row
+                      .c-info
+                        .c-info__negative Негативний  
+                        .c-info__date 10.04.2021                      
+                    .candidacy__info(data-js-handler='candidacy-info')
+                      .candidacy__description Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам. Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам. Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам.   
+                      .candidacy__row
+                        a.candidacy__link.candidacy__link--reply(href="#" data-js-handler='candidacy-more') Відповісти                      
+                    .candidacy__correspondence.hide(data-js-handler='candidacy-correspondence')
+                      .candidacy-reply
+                        .candidacy-reply__row
+                          .candidacy-reply__img
+                            img(src="assets/img/expert-avatar-full.jpg", alt="img")
+                          .c-title.c-title__title5.candidacy-reply__name Андрей Петренко
+                          .c-info.candidacy-reply__info
+                            .c-info__date 10.04.2021                       
+                        .candidacy-reply__message Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам. Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам. Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис.
+
+                      .candidacy-reply
+                        .candidacy-reply__row
+                          .candidacy-reply__img
+                            img(src="assets/img/popup-avatar.png", alt="img")
+                          .c-title.c-title__title5.candidacy-reply__name Rozetka
+                          .c-info.candidacy-reply__info
+                            .c-info__date 10.04.2021                      
+                        .candidacy-reply__message Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам. Популярный сервис, на котором удобно и клиентам.
+
+                      .candidacy-reply
+                        .options-profile
+                          .options-profile__container
+                            .options-profile__textarea 
+                              .options-profile__clarification Коментар 
+                              textarea(name="comment" cols="30" rows="10" placeholder="Вкажіть коментар")
+
+                      .candidacy__response
+                        a.candidacy__button.c-button.c-button--primary.c-button--lg(href="#") Надіслати
+                        a.candidacy__link.candidacy__link--less(href="#" data-js-handler='candidacy-less') Згорнути переписку                             
+
+                .candidacy__block 
+                  .candidacy__imgwrap 
+                    img(src="assets/img/expert-avatar-full.jpg", alt="img")
+                  .candidacy__textwrap 
+                    .candidacy__row
+                      .c-title.c-title__title4 Андрей Петренко
+                    .candidacy__row
+                      .c-info
+                        .c-info__negative Негативний  
+                        .c-info__date 10.04.2021
+                    .candidacy__info(data-js-handler='candidacy-info')                 
+                      .candidacy__description Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам. Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам. Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам.  
+                      .candidacy__row
+                        a.candidacy__link.candidacy__link--reply(href="#" data-js-handler='candidacy-more') Відповісти
+                    .candidacy__correspondence.hide(data-js-handler='candidacy-correspondence')
+                      .candidacy-reply
+                        .candidacy-reply__row
+                          .candidacy-reply__img
+                            img(src="assets/img/expert-avatar-full.jpg", alt="img")
+                          .c-title.c-title__title5.candidacy-reply__name Андрей Петренко
+                          .c-info.candidacy-reply__info
+                            .c-info__date 10.04.2021                     
+                        .candidacy-reply__message Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам. Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам. Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис.
+
+                      .candidacy-reply
+                        .candidacy-reply__row
+                          .candidacy-reply__img
+                            img(src="assets/img/popup-avatar.png", alt="img")
+                          .c-title.c-title__title5.candidacy-reply__name Rozetka
+                          .c-info.candidacy-reply__info
+                            .c-info__date 10.04.2021                     
+                        .candidacy-reply__message Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам. Популярный сервис, на котором удобно и клиентам.
+
+                      .candidacy-reply
+                        .options-profile
+                          .options-profile__container
+                            .options-profile__textarea 
+                              .options-profile__clarification Коментар 
+                              textarea(name="comment" cols="30" rows="10" placeholder="Вкажіть коментар")                             
