@@ -474,7 +474,7 @@ $("[data-js-handler='portfolio-type']").on('click', function (e) {
     var id = $(this).attr('href');
     $(this).addClass('active');
     $(this).siblings().removeClass('active');
-    $('.options-tabs__block').removeClass('active');
+    $(this).parent().siblings().removeClass('active');
     $(id).addClass('active');
   }
 });

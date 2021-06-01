@@ -455,6 +455,28 @@
       display: inline-block;
       margin: 0 12px 0 0;
     }
+
+    a {
+      color: $text-black;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 28px; 
+      border-bottom: 2px solid $color-pastel-7;     
+    }
+  }
+
+  &__note {
+    color: $text-black;
+    background: $text-ultra-silver;
+    border-radius: 8px;
+    margin: 20px 0;
+    padding: 20px 40px;
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  &__candidacy {
+    margin: 20px 0 0 0;
   }
 }
 

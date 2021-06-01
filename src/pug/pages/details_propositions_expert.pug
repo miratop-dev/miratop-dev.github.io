@@ -1,0 +1,120 @@
+extends ../layout/2columns-wide-sidebar
+
+block variables
+  - var title = 'Mira.hub expert task';
+  - var description = 'Mira.hub expert task';
+  - var pageClass = 'details-page';
+  - let pageTitle = 'Разработать HR стратегию'
+
+block title 
+  .page-title
+    .page-title__container
+      h1 Разработать HR
+        span.c-accent.c-accent--pagetitle стратегию
+
+block statusbar
+  .search-page-top 
+    .search-page-top__container 
+      .breadcrumbs
+        a.breadcrumbs__home(href="/") 
+        a.breadcrumbs__link(href="/") Особистий кабінет
+        a.breadcrumbs__link(href="/") В роботі
+        a.breadcrumbs__link.breadcrumbs__link--current(href="/")= pageTitle
+
+block content 
+  .details-expert-head.details-expert-head--top
+    .details-expert-head__summary
+      .details-expert-head__infowrap
+        .details-expert-head__headwrap
+          .details-expert-head__headinner
+            .details-expert-head__title= pageTitle
+            .c-info 
+              .c-info__location Киев, Украина
+              .c-info__experience 15.01.2021
+              .c-info__experience Термін подачі: до 15.09.21
+              .c-info__client Rozetka
+
+  .details-expert-description
+    .details-expert-description__block
+      p Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом. Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом. Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом. Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.
+      .details-expert-description__note В ходе работы не забывайте синхронизироваться с ТЗ, активно коммуницировать с экспертом в чате и отслеживать график работ.<br /><br />Как только работа будет завершена экспертом вы увидете информацию об этом
+      a.c-button.c-button--primary.c-button--md.c-button--mobile(href='#') Арбітраж
+
+    .details-expert-description__block
+      .c-title.c-title.c-title__title4 Історія змін 
+      div
+        .details-expert-description__line 
+          strong 23.05.2021 12:45
+          span Створена пропозиція
+        .details-expert-description__line 
+          strong 23.05.2021 12:45
+          span Початок роботи 
+        .details-expert-description__line 
+          strong 23.05.2021 12:45
+          span Виконання правок
+
+    .details-expert-description__block
+      .c-title.c-title.c-title__title4 Прикріплені файли
+      div
+        .details-expert-description__line 
+          strong 23.05.2021 12:45
+          a(href="#") Файл1.pdf
+        .details-expert-description__line 
+          strong 23.05.2021 12:45
+          a(href="#") Файл123.pdf
+
+    .details-expert-description__block
+      .c-title.c-title.c-title__title4 Обговорення
+      .candidacy.details-expert-description__candidacy
+        .candidacy-reply
+          .candidacy-reply__row
+            .candidacy-reply__img
+              img(src="assets/img/expert-avatar-full.jpg", alt="img")
+            .c-title.c-title__title5.candidacy-reply__name Андрей Петренко
+            .c-info.candidacy-reply__info
+              .c-info__date 10.04.2021  14:37                        
+          .candidacy-reply__message Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам. Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам. Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис.
+
+        .candidacy-reply
+          .candidacy-reply__row
+            .candidacy-reply__img
+              img(src="assets/img/popup-avatar.png", alt="img")
+            .c-title.c-title__title5.candidacy-reply__name Rozetka
+            .c-info.candidacy-reply__info
+              .c-info__date 10.04.2021  14:37                        
+          .candidacy-reply__message Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам. Популярный сервис, на котором удобно и клиентам.     
+
+        .candidacy-reply                      
+          .candidacy-reply__message.candidacy-reply__message--min
+            strong Початок роботи 28.05.2021 17:12  
+
+        .candidacy-reply
+          .options-profile
+            .options-profile__container
+              .options-profile__textarea 
+                .options-profile__clarification Коментар 
+                textarea(name="comment" cols="30" rows="10" placeholder="Вкажіть коментар")    
+
+        .candidacy-reply.candidacy-reply--flex
+          a.candidacy__button.c-button.c-button--primary.c-button--lg(href="#") Надіслати
+          .candidacy-reply__file
+            a.candidacy__link(href="#") Прикріпити файл
+            .candidacy-reply__note Максимальний розмір файлу – 5Мб
+
+block sidebar
+  .account-prop-sidebar
+    .account-prop-sidebar__block.done
+      .account-prop-sidebar__title.done Погодження умов
+
+    .account-prop-sidebar__block.done
+      .account-prop-sidebar__title.done Резервування оплати
+
+    .account-prop-sidebar__block.current
+      .account-prop-sidebar__title Виконання роботи
+      .account-prop-sidebar__details Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.
+
+    .account-prop-sidebar__block.upcoming
+      .account-prop-sidebar__title Виплата суми
+
+    .account-prop-sidebar__block.upcoming
+      .account-prop-sidebar__title Замовлення завершене                 
