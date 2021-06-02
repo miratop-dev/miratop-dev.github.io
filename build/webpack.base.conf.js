@@ -250,6 +250,11 @@ module.exports = {
       template: `${PAGES_DIR}/details_propositions_expert.pug`,
       filename: './details_propositions_expert.html',
       inject: true
-    }),     
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/messages.pug`,
+      filename: './messages.html',
+      inject: true
+    }),         
   ],
 }

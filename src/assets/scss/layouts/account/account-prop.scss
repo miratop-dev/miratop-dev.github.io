@@ -41,7 +41,7 @@
   }
 
   &__title {
-    margin: 0 0 8px;
+    
   }
 
   &__content {
@@ -146,7 +146,7 @@
     font-size: 14px;
     line-height: 18px;
     color: $text-black;
-    padding: 0 0 0 20px;
+    padding: 0 0 2px 20px;
     text-decoration: underline;
     text-decoration-color: $color-pastel-7;
     text-decoration-thickness: 2px;
@@ -404,6 +404,7 @@
   }
 
   &__title {
+    font-weight: bold;
     color: $text-black;
     font-size: 20px;
     line-height: 36px;

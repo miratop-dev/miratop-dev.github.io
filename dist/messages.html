@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Mira.hub client options</title>
-    <meta name="description" content="Mira.hub client options">
+    <title>Mira.hub messages</title>
+    <meta name="description" content="Mira.hub messages">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
@@ -12,7 +12,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <link href="assets/css/app.a6113669db73518e6936.css" rel="stylesheet"></head>
-  <body class="article-page">
+  <body class="message-page">
 <header class="header">
   <div class="header__container"><a class="header__logo" href="/"><img src="assets/img/logo.svg" alt="logo"></a>
     <div class="header__links"> <a class="header__link" href="search_task.html">Пропозиції</a><a class="header__link" href="search_expert.html">Експерти</a><a class="header__more" href="#">Як це працює </a></div>
@@ -51,92 +51,90 @@
 <div class="overlay" data-js-handler="overlay__handler"></div>
     <div class="page-title">
       <div class="page-title__container">
-        <h1> <span class="c-accent c-accent--pagetitle">Налаштування</span></h1>
+        <h1> <span class="c-accent c-accent--pagetitle">Повідомлення</span></h1>
       </div>
     </div>
-    <main class="article-page">
+    <main class="message-page">
       <div class="c-container">
         <div class="c-wide-content">
-          <div class="options-page">
-            <ul class="options-page__tabs" data-js-handler="options-tabs">
-              <li class="active"><a href="#profile">Профайл</a></li>
-              <li> <a href="#finance">Фінансова інформація</a></li>
-              <li><a href="#access">Доступ</a></li>
-              <li> <a href="#notice">Сповіщення</a></li>
-            </ul>
-            <div class="options-page__tab active" id="profile" data-js-handler="options-tab">
-              <div class="options-page__block">
-                <form class="options-profile" action="#">
-                  <label class="options-profile__label">
-                    <div class="options-profile__message options-profile__message--error">
-                      <p>Всі поля обов’язкові для заповнення.       </p>
-                    </div>
-                  </label>
-                  <div class="options-profile__columns">
-                    <div class="options-profile__column options-profile__column--vertical">
-                      <div class="options-profile__photo"> 
-                        <div class="options-profile__avatar"> <img src="assets/img/default-user-avatar.svg" alt="user"></div><a class="c-title c-title__title5 options-profile__upload" href="#">Завантажити фото</a>
-                        <div class="options-profile__hint">Максимальний розмір файлу – 5Мб</div>
+          <div class="messages">
+            <div class="messages__blocks"> 
+              <div class="messages__block">
+                <div class="messages__infowrap"> 
+                  <div class="messages__imgwrap"> <img src="assets/img/expert-avatar-full.jpg" alt="img"></div>
+                  <div class="messages__about">
+                    <div class="c-title c-title__title4">Андрей Петренко</div>
+                    <div class="messages__additional"><a class="messages__link messages__link--message" href="#">Повідомлення<span class="messages__counter">(2)</span></a>
+                      <div class="c-info messages__info">
+                        <div class="c-info__date">10.04.2021 в 14:23</div>
                       </div>
-                      <label class="options-profile__label" for="country"> 
-                        <div class="options-profile__clarification options-profile__clarification--required">Країна</div>
-                        <select class="options-profile__select" id="country">                 
-                          <option value="ukraine">Україна                </option>
-                          <option value="germany">Німеччина                    </option>
-                          <option value="lesoto">Лесото     </option>
-                        </select>
-                      </label>
-                    </div>
-                    <div class="options-profile__column">         
-                      <label class="options-profile__label" for="lastname"> 
-                        <div class="options-profile__clarification options-profile__clarification--required">Прізвище</div>
-                        <input class="options-profile__input" id="lastname" type="text" name="name" placeholder="Введіть прізвище">
-                      </label>
-                      <label class="options-profile__label" for="name"> 
-                        <div class="options-profile__clarification options-profile__clarification--required">Ім’я</div>
-                        <input class="options-profile__input" id="name" type="text" name="name" placeholder="Введіть ім’я">
-                      </label>
-                      <label class="options-profile__label" for="login"> 
-                        <div class="options-profile__clarification options-profile__clarification--required">Логін</div>
-                        <input class="options-profile__input" id="login" type="text" name="name" placeholder="Введіть логін">
-                      </label>
-                      <label class="options-profile__label" for="phone"> 
-                        <div class="options-profile__clarification options-profile__clarification--required">Телефон</div>
-                        <input class="options-profile__input" id="phone" type="tel" name="phone" placeholder="+380 50 123 4567">
-                      </label>
-                      <label class="options-profile__label" for="email"> 
-                        <div class="options-profile__clarification options-profile__clarification--required">Електронна пошта</div>
-                        <input class="options-profile__input" id="email" type="email" name="email" placeholder="Введіть email">
-                      </label>
-                      <label class="options-profile__label" for="city"> 
-                        <div class="options-profile__clarification options-profile__clarification--required">Місто</div>
-                        <select class="options-profile__select" id="city">              
-                          <option>Оберіть місто          </option>
-                          <option value="kyiv">Київ                  </option>
-                          <option value="odessa">Одеса                      </option>
-                          <option value="lviv">Львів                </option>
-                        </select>
-                      </label>
                     </div>
                   </div>
-                  <div class="options-profile__container">
-                    <div class="options-profile__textarea"> 
-                      <div class="options-profile__clarification options-profile__clarification--required">Опис діяльності</div>
-                      <textarea name="description" cols="30" rows="10" placeholder="Опишіть діяльність"></textarea>
-                    </div>
+                </div>
+                <div class="messages__notices">
+                  <div class="messages__row messages__row--fullwidth">
+                    <div class="c-title c-title__title5">Нотатка</div><a class="messages__link" href="#" data-js-handler="messages-show-editor">Додати</a>
                   </div>
-                  <div class="options-profile__buttons"> <a class="options-profile__button c-button c-button--primary c-button--lg">Зберегти зміни</a><a class="options-profile__button c-button c-button--bordered c-button--lg">Скасувати</a></div>
-                </form>
+                  <div class="messages__editor">
+                    <div class="options-profile">
+                      <div class="options-profile__textarea"> 
+                        <div class="options-profile__clarification">Текст нотатки</div>
+                        <textarea name="description" cols="30" rows="4" placeholder="Вкажіть нотатку"></textarea>
+                      </div>
+                    </div>
+                    <div class="messages__row messages__row--start"><a class="messages__link messages__link--save" href="#">Зберегти</a><a class="messages__link messages__link--undo" href="#" data-js-handler="messages-hide-editor">Відмінити               </a></div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="options-page__tab" id="finance" data-js-handler="options-tab">
-              <p>finance</p>
-            </div>
-            <div class="options-page__tab" id="access" data-js-handler="options-tab">
-              <p>access</p>
-            </div>
-            <div class="options-page__tab" id="notice" data-js-handler="options-tab">
-              <p>notice</p>
+              <div class="messages__block">
+                <div class="messages__infowrap"> 
+                  <div class="messages__imgwrap"> <img src="assets/img/expert-avatar-full.jpg" alt="img"></div>
+                  <div class="messages__about">
+                    <div class="c-title c-title__title4">Андрей Петренко</div>
+                    <div class="messages__additional"><a class="messages__link messages__link--message" href="#">Повідомлення<span class="messages__counter">(2)</span></a>
+                      <div class="c-info messages__info">
+                        <div class="c-info__date">10.04.2021 в 14:23</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="messages__notices">
+                  <div class="messages__row messages__row--fullwidth">
+                    <div class="c-title c-title__title5">Нотатка</div><a class="messages__link hide" href="#" data-js-handler="messages-show-editor">Додати</a>
+                  </div>
+                  <div class="messages__editor show">
+                    <div class="options-profile">
+                      <div class="options-profile__textarea"> 
+                        <div class="options-profile__clarification">Текст нотатки</div>
+                        <textarea name="description" cols="30" rows="4" placeholder="Вкажіть нотатку"></textarea>
+                      </div>
+                    </div>
+                    <div class="messages__row messages__row--start"><a class="messages__link messages__link--save" href="#">Зберегти</a><a class="messages__link messages__link--undo" href="#" data-js-handler="messages-hide-editor">Відмінити              </a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="messages__block">
+                <div class="messages__infowrap"> 
+                  <div class="messages__imgwrap"> <img src="assets/img/expert-avatar-full.jpg" alt="img"></div>
+                  <div class="messages__about">
+                    <div class="c-title c-title__title4">Андрей Петренко</div>
+                    <div class="messages__additional"><a class="messages__link messages__link--message" href="#">Повідомлення<span class="messages__counter">(2)</span></a>
+                      <div class="c-info messages__info">
+                        <div class="c-info__date">10.04.2021 в 14:23</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="messages__notices">
+                  <div class="messages__row messages__row--fullwidth">
+                    <div class="c-title c-title__title5">Нотатка</div><a class="messages__link" href="# ">Додати    </a>
+                  </div>
+                  <div class="messages__message">
+                    <p>Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам.                    </p>
+                  </div>
+                  <div class="messages__row messages__row--start"><a class="messages__link messages__link--edit" href="#">Редагувати</a><a class="messages__remove" href="#"> </a></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -1,0 +1,87 @@
+extends ../layout/1column
+
+block variables
+  - var title = 'Mira.hub messages';
+  - var description = 'Mira.hub messages';
+  - var pageClass = 'message-page';
+  - let pageTitle = 'Повідомлення'
+
+block title 
+  .page-title
+    .page-title__container
+      h1 
+        span.c-accent.c-accent--pagetitle Повідомлення
+
+block statusbar
+
+block content 
+  .messages
+    .messages__blocks 
+      .messages__block
+        .messages__infowrap 
+          .messages__imgwrap 
+            img(src="assets/img/expert-avatar-full.jpg", alt="img")
+          .messages__about
+            .c-title.c-title__title4 Андрей Петренко
+            .messages__additional
+              a.messages__link.messages__link--message(href="#") Повідомлення
+                span.messages__counter (2)
+              .c-info.messages__info
+                .c-info__date 10.04.2021 в 14:23
+        .messages__notices
+          .messages__row.messages__row--fullwidth
+            .c-title.c-title__title5 Нотатка
+            a.messages__link(href="#" data-js-handler='messages-show-editor') Додати
+          .messages__editor
+            .options-profile
+              .options-profile__textarea 
+                .options-profile__clarification Текст нотатки
+                textarea(name="description" cols="30" rows="4" placeholder="Вкажіть нотатку")
+            .messages__row.messages__row--start
+              a.messages__link.messages__link--save(href="#") Зберегти
+              a.messages__link.messages__link--undo(href="#" data-js-handler='messages-hide-editor') Відмінити               
+
+      .messages__block
+        .messages__infowrap 
+          .messages__imgwrap 
+            img(src="assets/img/expert-avatar-full.jpg", alt="img")
+          .messages__about
+            .c-title.c-title__title4 Андрей Петренко
+            .messages__additional
+              a.messages__link.messages__link--message(href="#") Повідомлення
+                span.messages__counter (2)
+              .c-info.messages__info
+                .c-info__date 10.04.2021 в 14:23
+        .messages__notices
+          .messages__row.messages__row--fullwidth
+            .c-title.c-title__title5 Нотатка
+            a.messages__link.hide(href="#" data-js-handler='messages-show-editor') Додати
+          .messages__editor.show
+            .options-profile
+              .options-profile__textarea 
+                .options-profile__clarification Текст нотатки
+                textarea(name="description" cols="30" rows="4" placeholder="Вкажіть нотатку")
+            .messages__row.messages__row--start
+              a.messages__link.messages__link--save(href="#") Зберегти
+              a.messages__link.messages__link--undo(href="#" data-js-handler='messages-hide-editor') Відмінити              
+
+      .messages__block
+        .messages__infowrap 
+          .messages__imgwrap 
+            img(src="assets/img/expert-avatar-full.jpg", alt="img")
+          .messages__about
+            .c-title.c-title__title4 Андрей Петренко
+            .messages__additional
+              a.messages__link.messages__link--message(href="#") Повідомлення
+                span.messages__counter (2)
+              .c-info.messages__info
+                .c-info__date 10.04.2021 в 14:23
+        .messages__notices
+          .messages__row.messages__row--fullwidth
+            .c-title.c-title__title5 Нотатка
+            a.messages__link(href="# ") Додати    
+          .messages__message
+            p Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам.                    
+          .messages__row.messages__row--start
+            a.messages__link.messages__link--edit(href="#") Редагувати
+            a.messages__remove(href="#") 

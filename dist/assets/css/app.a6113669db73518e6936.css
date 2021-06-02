@@ -3859,8 +3859,8 @@ main.index-page {
 }
 
 .about-explain__img {
-    margin: 0 0 0 110px;
-    max-width: 300px
+    margin: 50px 0 0 110px;
+    max-width: 400px
 }
 
 .about-unique {
@@ -3951,10 +3951,6 @@ main.index-page {
     min-height: 478px;
     border-radius: 12px;
     overflow: hidden
-}
-
-.about-who__imgwrap {
-    max-height: 280px
 }
 
 .about-who__textwrap {
@@ -4845,6 +4841,174 @@ main.index-page {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M22.9807 8.74063C22.5891 8.35114 21.956 8.35287 21.5665 8.74443L9.54519 20.8307C7.98558 22.3903 5.45253 22.3903 3.89001 20.8286C2.32866 19.2665 2.32866 16.7334 3.8902 15.1719L16.2673 2.72975C17.241 1.75609 18.8241 1.75609 19.8006 2.73186C20.7768 3.70811 20.7768 5.29097 19.8004 6.26749L9.54707 16.5207C9.54641 16.5214 9.54585 16.5221 9.54519 16.5228C9.15457 16.9112 8.52329 16.9107 8.13347 16.5209C7.74299 16.1304 7.74299 15.4975 8.13347 15.1071L13.0826 10.1569C13.4731 9.76628 13.4731 9.13308 13.0825 8.7426C12.6919 8.35212 12.0587 8.35217 11.6683 8.74274L6.71913 13.6929C5.54764 14.8643 5.54764 16.7636 6.71922 17.9351C7.89075 19.1066 9.78998 19.1066 10.9616 17.9351C10.9629 17.9337 10.964 17.9323 10.9653 17.9309L21.2146 7.68165C22.9721 5.92408 22.9721 3.07486 21.2146 1.31728C19.4568 -0.439257 16.6077 -0.439257 14.8512 1.31728L2.47407 13.7595C0.133362 16.1002 0.133361 19.8993 2.47576 22.2429C4.81971 24.5856 8.61883 24.5856 10.9614 22.2431L22.9846 10.1549C23.374 9.76328 23.3723 9.13012 22.9807 8.74063Z' fill='%23ADDED4'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E")
 }
 
+.messages__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding: 20px 0;
+    border-top: 2px solid #e5e5e5
+}
+
+.messages__block:last-child {
+    border-bottom: 2px solid #e5e5e5
+}
+
+.messages__message {
+    margin: 10px 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 28px;
+    color: #35343a
+}
+
+.messages__infowrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.messages__imgwrap {
+    width: 80px
+}
+
+.messages__about {
+    margin: 0 0 0 20px
+}
+
+.messages__additional {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.messages__info {
+    margin: 0 0 0 10px
+}
+
+.messages__notices {
+    width: 100%;
+    max-width: 400px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 26px 20px
+}
+
+.messages__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.messages__row--fullwidth {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.messages__row--start {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start
+}
+
+.messages__editor {
+    display: none
+}
+
+.messages__editor.show {
+    display: block
+}
+
+.messages__link {
+    position: relative;
+    color: #35343a;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    text-decoration: underline;
+    -webkit-text-decoration-color: #added4;
+    text-decoration-color: #added4;
+    text-decoration-thickness: 2px;
+    text-underline-position: under;
+    margin: 0 0 0 20px
+}
+
+.messages__link.hide {
+    display: none
+}
+
+.messages__link:first-child {
+    margin: 0
+}
+
+.messages__link:before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 6px
+}
+
+.messages__link--message {
+    font-weight: 600;
+    padding: 0 0 0 21px
+}
+
+.messages__link--message:before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.9881 3.44673C15.9881 3.42845 16.0007 3.41065 15.9998 3.39258L11.1172 8.09728L15.994 12.6517C15.9969 12.6192 15.9881 12.5863 15.9881 12.5531V3.44673Z' fill='%23ADDED4'/%3E%3Cpath d='M10.3722 8.82129L8.37899 10.739C8.27812 10.8361 8.14786 10.8847 8.01752 10.8847C7.88989 10.8847 7.76226 10.8382 7.66209 10.7448L5.67427 8.89247L0.765625 13.6239C0.88498 13.6667 1.01309 13.7 1.14726 13.7H14.8878C15.0871 13.7 15.2739 13.6394 15.4364 13.5489L10.3722 8.82129Z' fill='%23ADDED4'/%3E%3Cpath d='M8.0112 9.64548L15.4628 2.4674C15.2941 2.36709 15.0977 2.2998 14.8872 2.2998H1.14664C0.872547 2.2998 0.621393 2.40623 0.425781 2.56855L8.0112 9.64548Z' fill='%23ADDED4'/%3E%3Cpath d='M0 3.62109V12.5525C0 12.655 0.0235652 12.7539 0.0491463 12.8484L4.8969 8.18009L0 3.62109Z' fill='%23ADDED4'/%3E%3C/svg%3E")
+}
+
+.messages__link--save {
+    padding: 0 0 0 21px
+}
+
+.messages__link--save:before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 0C3.58862 0 0 3.58862 0 8C0 12.4114 3.58862 16 8 16C12.4114 16 16 12.4114 16 8C16 3.58862 12.4114 0 8 0Z' fill='%23ADDED4'/%3E%3Cpath d='M12.0542 6.3042L7.72083 10.6375C7.59082 10.7675 7.42017 10.8329 7.24951 10.8329C7.07886 10.8329 6.9082 10.7675 6.7782 10.6375L4.61157 8.47083C4.35083 8.21021 4.35083 7.78882 4.61157 7.5282C4.87219 7.26746 5.29346 7.26746 5.5542 7.5282L7.24951 9.22351L11.1116 5.36157C11.3722 5.10083 11.7935 5.10083 12.0542 5.36157C12.3148 5.62219 12.3148 6.04346 12.0542 6.3042Z' fill='white'/%3E%3C/svg%3E")
+}
+
+.messages__link--undo {
+    padding: 0 0 0 21px
+}
+
+.messages__link--undo:before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 0C3.58862 0 0 3.58862 0 8C0 12.4114 3.58862 16 8 16C12.4114 16 16 12.4114 16 8C16 3.58862 12.4114 0 8 0Z' fill='%23EBBAB4'/%3E%3Cpath d='M10.946 10.0022C11.2066 10.263 11.2066 10.6842 10.946 10.945C10.8159 11.075 10.6453 11.1403 10.4745 11.1403C10.3039 11.1403 10.1332 11.075 10.0032 10.945L7.99991 8.94156L5.99661 10.945C5.86661 11.075 5.69595 11.1403 5.5253 11.1403C5.35452 11.1403 5.18387 11.075 5.05386 10.945C4.79324 10.6842 4.79324 10.263 5.05386 10.0022L7.05728 7.99893L5.05386 5.99564C4.79324 5.73489 4.79324 5.31363 5.05386 5.05289C5.31461 4.79227 5.73587 4.79227 5.99661 5.05289L7.99991 7.0563L10.0032 5.05289C10.2639 4.79227 10.6852 4.79227 10.946 5.05289C11.2066 5.31363 11.2066 5.73489 10.946 5.99564L8.94254 7.99893L10.946 10.0022Z' fill='white'/%3E%3C/svg%3E")
+}
+
+.messages__link--edit {
+    padding: 0 0 0 21px
+}
+
+.messages__link--edit:before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.1427 7.99963C12.8271 7.99963 12.5712 8.25546 12.5712 8.57106V14.2853C12.5712 14.6009 12.3154 14.8567 11.9998 14.8567H1.71426C1.39866 14.8567 1.14283 14.6009 1.14283 14.2853V2.85684C1.14283 2.54124 1.39866 2.28541 1.71426 2.28541H8.57131C8.88691 2.28541 9.14275 2.02958 9.14275 1.71398C9.14275 1.39838 8.88691 1.14258 8.57131 1.14258H1.71426C0.767501 1.14258 0 1.91008 0 2.85684V14.2853C0 15.232 0.767501 15.9995 1.71426 15.9995H11.9998C12.9466 15.9995 13.7141 15.232 13.7141 14.2853V8.57103C13.7141 8.25546 13.4583 7.99963 13.1427 7.99963Z' fill='%23ADDED4'/%3E%3Cpath d='M15.3564 0.640782C14.9461 0.23043 14.3896 -5.7923e-05 13.8094 9.04044e-06C13.2288 -0.00166504 12.6717 0.229225 12.2626 0.64115L4.73576 8.1673C4.67332 8.23021 4.62621 8.30668 4.59805 8.39072L3.45522 11.8193C3.35548 12.1187 3.51737 12.4422 3.81679 12.542C3.87488 12.5613 3.93572 12.5712 3.99692 12.5712C4.05826 12.5711 4.11923 12.5613 4.17749 12.5421L7.60602 11.3993C7.69022 11.3712 7.76673 11.3238 7.82944 11.261L15.3562 3.73426C16.2105 2.88007 16.2106 1.49507 15.3564 0.640782Z' fill='%23ADDED4'/%3E%3C/svg%3E")
+}
+
+.messages__remove {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.9102 4.46582H3.08985C2.79267 4.46582 2.55176 4.70671 2.55176 5.00386V13.4093C2.55176 14.838 3.71414 16.0004 5.14274 16.0004H10.8571C12.2857 16.0004 13.4481 14.838 13.4481 13.4093V5.00386C13.4481 4.70674 13.2073 4.46582 12.9102 4.46582ZM6.7065 12.7597C6.7065 13.1247 6.41055 13.4207 6.04543 13.4207C5.68044 13.4207 5.38436 13.1247 5.38436 12.7597V7.7065C5.38436 7.3414 5.68038 7.04548 6.04543 7.04548C6.41053 7.04548 6.7065 7.34143 6.7065 7.7065V12.7597ZM10.6155 12.7597C10.6155 13.1247 10.3196 13.4207 9.95448 13.4207C9.58948 13.4207 9.2934 13.1247 9.2934 12.7597V7.7065C9.2934 7.3414 9.58943 7.04548 9.95448 7.04548C10.3196 7.04548 10.6155 7.34143 10.6155 7.7065V12.7597Z' fill='%23F8C3B9'/%3E%3Cpath d='M12.37 0.837176H10.0261V0.633909C10.0261 0.284366 9.74175 0 9.39223 0H6.60554C6.256 0 5.97163 0.284366 5.97163 0.633909V0.837176H3.62774C2.73022 0.837176 2 1.56735 2 2.46489V3.50865C2 3.69532 2.15132 3.84667 2.33807 3.84667H13.6597C13.8463 3.84667 13.9977 3.69532 13.9977 3.50865V2.46489C13.9977 1.56737 13.2675 0.837176 12.37 0.837176Z' fill='%23F8C3B9'/%3E%3C/svg%3E");
+    display: block;
+    margin: 0 0 0 20px;
+    width: 16px;
+    height: 16px
+}
+
 .account-prop__wrap {
     margin: 40px 0
 }
@@ -4890,10 +5054,6 @@ main.index-page {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center
-}
-
-.account-prop__title {
-    margin: 0 0 8px
 }
 
 .account-prop__content {
@@ -4991,7 +5151,7 @@ main.index-page {
     font-size: 14px;
     line-height: 18px;
     color: #35343a;
-    padding: 0 0 0 20px;
+    padding: 0 0 2px 20px;
     text-decoration: underline;
     -webkit-text-decoration-color: #added4;
     text-decoration-color: #added4;
@@ -5272,6 +5432,7 @@ main.index-page {
 }
 
 .account-prop-sidebar__title {
+    font-weight: 700;
     color: #35343a;
     font-size: 20px;
     line-height: 36px;

@@ -566,6 +566,18 @@ $("[data-js-handler='candidacy-change-type']").on('click', function (e) {
     $(this).addClass('checked');
   }
 });
+/****************** */
+
+$("[data-js-handler='messages-show-editor']").on('click', function (e) {
+  e.preventDefault();
+  $(this).addClass('hide');
+  $(this).parent().siblings('.messages__editor').addClass('show');
+});
+$("[data-js-handler='messages-hide-editor']").on('click', function (e) {
+  e.preventDefault();
+  $(this).closest('.messages__editor').removeClass('show');
+  $(this).closest('.messages__notices').find("[data-js-handler='messages-show-editor']").removeClass('hide');
+});
 
 /***/ }),
 /* 2 */
