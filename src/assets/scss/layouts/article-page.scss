@@ -255,7 +255,8 @@
   }
 
   &__imgwrap {
-    /*max-height: 280px;*/
+    max-height: 600px;
+    overflow: hidden;
   }
 
   &__textwrap {

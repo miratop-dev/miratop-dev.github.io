@@ -3953,6 +3953,11 @@ main.index-page {
     overflow: hidden
 }
 
+.about-who__imgwrap {
+    max-height: 600px;
+    overflow: hidden
+}
+
 .about-who__textwrap {
     padding: 20px 38px 40px 20px
 }
