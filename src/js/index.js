@@ -444,3 +444,28 @@ $("[data-js-handler='messages-hide-editor']").on('click', function(e){
   $(this).closest('.messages__editor').removeClass('show');
   $(this).closest('.messages__notices').find("[data-js-handler='messages-show-editor']").removeClass('hide');
 });  
+
+$("[data-js-handler='messages-add-notice']").on('click', function(e){
+  e.preventDefault();
+  var notice = $(this).parent().siblings().find('textarea').val();
+  if(notice.length > 0) {
+    $(this).parent().parent().removeClass('show');
+    $(this).parent().parent().siblings('.messages__exist-notice').find('.messages__message p').text(notice);
+    $(this).parent().parent().siblings('.messages__exist-notice').addClass('show');
+  }
+});  
+
+$("[data-js-handler='messages-delete-notice']").on('click', function(e){
+  e.preventDefault();
+  $(this).parent().parent().removeClass('show');
+  $(this).parent().parent().siblings().children("[data-js-handler='messages-show-editor']").removeClass('hide');
+  $(this).parent().siblings('.messages__message').find('p').text('');
+});  
+
+$("[data-js-handler='messages-edit-notice']").on('click', function(e){
+  e.preventDefault();
+  var notice = $(this).parent().siblings().find('p').text();
+  $(this).parent().parent().removeClass('show');
+  $(this).parent().parent().siblings('.messages__editor').find('textarea').val(notice);
+  $(this).parent().parent().siblings('.messages__editor').addClass('show');
+});    

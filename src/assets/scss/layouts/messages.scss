@@ -75,6 +75,14 @@
     }
   }
 
+  &__exist-notice {
+    display: none;
+
+    &.show {
+      display: block;
+    }
+  }  
+
   &__link {
     position: relative;
     color: $text-black;

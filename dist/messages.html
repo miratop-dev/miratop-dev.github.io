@@ -11,7 +11,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <link href="assets/css/app.aef02535023c1e8d4f07.css" rel="stylesheet"></head>
+  <link href="assets/css/app.349a3adfcceb5990b08f.css" rel="stylesheet"></head>
   <body class="message-page">
 <header class="header">
   <div class="header__container"><a class="header__logo" href="/"><img src="assets/img/logo.svg" alt="logo"></a>
@@ -82,7 +82,13 @@
                         <textarea name="description" cols="30" rows="4" placeholder="Вкажіть нотатку"></textarea>
                       </div>
                     </div>
-                    <div class="messages__row messages__row--start"><a class="messages__link messages__link--save" href="#">Зберегти</a><a class="messages__link messages__link--undo" href="#" data-js-handler="messages-hide-editor">Відмінити               </a></div>
+                    <div class="messages__row messages__row--start"><a class="messages__link messages__link--save" href="#" data-js-handler="messages-add-notice">Зберегти</a><a class="messages__link messages__link--undo" href="#" data-js-handler="messages-hide-editor">Відмінити        </a></div>
+                  </div>
+                  <div class="messages__exist-notice">
+                    <div class="messages__message">
+                      <p>                  </p>
+                    </div>
+                    <div class="messages__row messages__row--start"><a class="messages__link messages__link--edit" href="#">Редагувати</a><a class="messages__remove" href="#" data-js-handler="messages-delete-notice">                     </a></div>
                   </div>
                 </div>
               </div>
@@ -109,7 +115,13 @@
                         <textarea name="description" cols="30" rows="4" placeholder="Вкажіть нотатку"></textarea>
                       </div>
                     </div>
-                    <div class="messages__row messages__row--start"><a class="messages__link messages__link--save" href="#">Зберегти</a><a class="messages__link messages__link--undo" href="#" data-js-handler="messages-hide-editor">Відмінити              </a></div>
+                    <div class="messages__row messages__row--start"><a class="messages__link messages__link--save" href="#" data-js-handler="messages-add-notice">Зберегти</a><a class="messages__link messages__link--undo" href="#" data-js-handler="messages-hide-editor">Відмінити   </a></div>
+                  </div>
+                  <div class="messages__exist-notice">
+                    <div class="messages__message">
+                      <p>                  </p>
+                    </div>
+                    <div class="messages__row messages__row--start"><a class="messages__link messages__link--edit" href="#">Редагувати</a><a class="messages__remove" href="#" data-js-handler="messages-delete-notice">           </a></div>
                   </div>
                 </div>
               </div>
@@ -127,12 +139,23 @@
                 </div>
                 <div class="messages__notices">
                   <div class="messages__row messages__row--fullwidth">
-                    <div class="c-title c-title__title5">Нотатка</div><a class="messages__link" href="# ">Додати    </a>
+                    <div class="c-title c-title__title5">Нотатка</div><a class="messages__link hide" href="#" data-js-handler="messages-show-editor">Додати</a>
                   </div>
-                  <div class="messages__message">
-                    <p>Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам.                    </p>
+                  <div class="messages__editor">
+                    <div class="options-profile">
+                      <div class="options-profile__textarea"> 
+                        <div class="options-profile__clarification">Текст нотатки</div>
+                        <textarea name="description" cols="30" rows="4" placeholder="Вкажіть нотатку"></textarea>
+                      </div>
+                    </div>
+                    <div class="messages__row messages__row--start"><a class="messages__link messages__link--save" href="#" data-js-handler="messages-add-notice">Зберегти</a><a class="messages__link messages__link--undo" href="#" data-js-handler="messages-hide-editor">Відмінити              </a></div>
                   </div>
-                  <div class="messages__row messages__row--start"><a class="messages__link messages__link--edit" href="#">Редагувати</a><a class="messages__remove" href="#"> </a></div>
+                  <div class="messages__exist-notice show">
+                    <div class="messages__message">
+                      <p>Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам.                    </p>
+                    </div>
+                    <div class="messages__row messages__row--start"><a class="messages__link messages__link--edit" href="#" data-js-handler="messages-edit-notice">Редагувати</a><a class="messages__remove" href="#" data-js-handler="messages-delete-notice"> </a></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -247,5 +270,5 @@
   </div>
   <div class="popup-message__feedback"> <a class="popup-message__button c-button c-button--bordered c-button--md c-button--mobile" href="#" data-js-handler="popup__handler-close">Скасувати</a><a class="popup-message__button c-button c-button--primary c-button--md c-button--mobile" href="#">Обрати виконавцем </a></div>
 </div>
-  <script type="text/javascript" src="assets/js/vendors.aef02535023c1e8d4f07.js"></script><script type="text/javascript" src="assets/js/app.aef02535023c1e8d4f07.js"></script></body>
+  <script type="text/javascript" src="assets/js/vendors.349a3adfcceb5990b08f.js"></script><script type="text/javascript" src="assets/js/app.349a3adfcceb5990b08f.js"></script></body>
 </html>
