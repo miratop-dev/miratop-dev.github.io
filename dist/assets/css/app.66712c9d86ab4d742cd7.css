@@ -1257,7 +1257,7 @@ main.index-page {
 .footer {
     position: relative;
     background-color: #f5f5f5;
-    background-image: url(../../assets/img/footer.png)
+    background-image: url(../../assets/img/footer.png);
     background-repeat: no-repeat;
     background-position: 100%;
     background-size: contain;
