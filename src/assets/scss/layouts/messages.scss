@@ -1,6 +1,14 @@
 .messages {
   &__blocks {
+    &.hide {
+      display: none;
+    }
+  }
 
+  &__chat {
+    &.hide {
+      display: none;
+    }
   }
 
   &__block {
@@ -144,6 +152,15 @@
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.1427 7.99963C12.8271 7.99963 12.5712 8.25546 12.5712 8.57106V14.2853C12.5712 14.6009 12.3154 14.8567 11.9998 14.8567H1.71426C1.39866 14.8567 1.14283 14.6009 1.14283 14.2853V2.85684C1.14283 2.54124 1.39866 2.28541 1.71426 2.28541H8.57131C8.88691 2.28541 9.14275 2.02958 9.14275 1.71398C9.14275 1.39838 8.88691 1.14258 8.57131 1.14258H1.71426C0.767501 1.14258 0 1.91008 0 2.85684V14.2853C0 15.232 0.767501 15.9995 1.71426 15.9995H11.9998C12.9466 15.9995 13.7141 15.232 13.7141 14.2853V8.57103C13.7141 8.25546 13.4583 7.99963 13.1427 7.99963Z' fill='%23ADDED4'/%3E%3Cpath d='M15.3564 0.640782C14.9461 0.23043 14.3896 -5.7923e-05 13.8094 9.04044e-06C13.2288 -0.00166504 12.6717 0.229225 12.2626 0.64115L4.73576 8.1673C4.67332 8.23021 4.62621 8.30668 4.59805 8.39072L3.45522 11.8193C3.35548 12.1187 3.51737 12.4422 3.81679 12.542C3.87488 12.5613 3.93572 12.5712 3.99692 12.5712C4.05826 12.5711 4.11923 12.5613 4.17749 12.5421L7.60602 11.3993C7.69022 11.3712 7.76673 11.3238 7.82944 11.261L15.3562 3.73426C16.2105 2.88007 16.2106 1.49507 15.3564 0.640782Z' fill='%23ADDED4'/%3E%3C/svg%3E");
       }
     }
+
+    &--back {
+      padding: 0 0 0 21px;
+
+      &::before {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M0.195327 7.19561L6.19184 1.19911C6.38238 1.00922 6.66822 0.951242 6.91807 1.05453C7.16724 1.15714 7.32916 1.40101 7.32916 1.67019V4.33797C11.1629 4.4952 14.5076 7.0837 15.579 10.7929C16.0427 12.4013 16.0068 13.7078 15.9935 14.2002L15.9908 14.3295C15.9908 14.6293 15.7903 14.8925 15.5017 14.9718C15.4424 14.9878 15.3832 14.9957 15.3245 14.9957C15.094 14.9957 14.8741 14.8751 14.7522 14.6706C12.1131 10.2345 8.61643 10.1086 7.32916 10.2339V13.6632C7.32916 13.9324 7.16724 14.1763 6.91807 14.2789C6.66822 14.3828 6.38238 14.3248 6.19184 14.1343L0.195327 8.1378C-0.0651665 7.87721 -0.0651665 7.4561 0.195327 7.19561Z' fill='%23ADDED4'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='16' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+        top: 2px;
+      }
+    }    
   }
 
   &__remove {
@@ -152,5 +169,120 @@
     margin: 0 0 0 20px;
     width: 16px;
     height: 16px;
+  }
+}
+
+.detailed-chat {
+  &__imgwrap {
+    text-align: center;
+    margin: 0 0 10px;
+
+    img {
+      max-width: 80px;
+    }
+  }
+
+  &__name {
+    text-align: center;
+  }
+
+  &__main {
+    margin: 20px 0 40px 0;
+    padding: 20px 20px 40px 20px;
+    border: 2px solid $text-silver;
+    border-radius: 16px;    
+  }
+
+  &__block {
+    margin: 0 0 30px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__date {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    color: $text-grey;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 10px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px;
+
+    &--ansver {
+      flex-direction: row-reverse;
+
+      & > div {
+        &:nth-child(2) {
+          margin: 0 10px 0 0!important;
+        }
+  
+        &:nth-child(3) {
+          margin: 0 20px 0 0!important;
+        }      
+      }      
+    }
+
+    & > div {
+      &:nth-child(2) {
+        margin: 0 0 0 10px;
+      }
+
+      &:nth-child(3) {
+        margin: 0 0 0 20px;
+      }      
+    }
+  }
+
+  &__avatar {
+    img {
+      max-width: 32px;
+    }
+  }
+
+  &__title {
+    
+  }
+
+  &__info {
+
+  }
+
+  &__message {
+    &--ansver {
+      display: flex;
+      justify-content: flex-end;
+
+      p {
+        border-radius: 16px 0 16px 16px!important;
+      }
+    }
+
+    p {
+      padding: 20px;
+      background: $text-ultra-silver;
+      border: 1px solid $text-silver;
+      border-radius: 0 16px 16px 16px;    
+      color: $text-black;
+      font-size: 14px;
+      line-height: 28px;      
+      width: 100%;
+      max-width: 740px;
+    }
+  }
+
+  &__add-message {
+
+  }
+
+  &__send {
+    margin: 20px 0 0 0;
   }
 }

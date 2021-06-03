@@ -16,7 +16,7 @@ block statusbar
 
 block content 
   .messages
-    .messages__blocks 
+    .messages__blocks
       .messages__block
         .messages__infowrap 
           .messages__imgwrap 
@@ -24,7 +24,7 @@ block content
           .messages__about
             .c-title.c-title__title4 Андрей Петренко
             .messages__additional
-              a.messages__link.messages__link--message(href="#") Повідомлення
+              a.messages__link.messages__link--message(href="#" data-js-handler='messages-switch') Повідомлення
                 span.messages__counter (2)
               .c-info.messages__info
                 .c-info__date 10.04.2021 в 14:23
@@ -54,7 +54,7 @@ block content
           .messages__about
             .c-title.c-title__title4 Андрей Петренко
             .messages__additional
-              a.messages__link.messages__link--message(href="#") Повідомлення
+              a.messages__link.messages__link--message(href="#" data-js-handler='messages-switch') Повідомлення
                 span.messages__counter (2)
               .c-info.messages__info
                 .c-info__date 10.04.2021 в 14:23
@@ -84,7 +84,7 @@ block content
           .messages__about
             .c-title.c-title__title4 Андрей Петренко
             .messages__additional
-              a.messages__link.messages__link--message(href="#") Повідомлення
+              a.messages__link.messages__link--message(href="#" data-js-handler='messages-switch') Повідомлення
                 span.messages__counter (2)
               .c-info.messages__info
                 .c-info__date 10.04.2021 в 14:23
@@ -106,3 +106,46 @@ block content
             .messages__row.messages__row--start
               a.messages__link.messages__link--edit(href="#" data-js-handler='messages-edit-notice') Редагувати
               a.messages__remove(href="#" data-js-handler='messages-delete-notice') 
+
+    .messages__chat.hide  
+      a.messages__link.messages__link--back(href="#" data-js-handler='messages-switch') Назад до повідомлень
+      .detailed-chat 
+        .detailed-chat__imgwrap
+          img(src="assets/img/expert-avatar-full.jpg", alt="img")
+        .detailed-chat__name 
+          .c-title.c-title__title4 Андрей Петренко
+        .detailed-chat__main
+          .detailed-chat__block
+            .detailed-chat__date 10 квітня 2021
+            .detailed-chat__row 
+              .detailed-chat__avatar
+                img(src="assets/img/expert-avatar-full.jpg", alt="img")
+              .c-title.c-title__title5.detailed-chat__title Андрей Петренко
+              .c-info.detailed-chat__info
+                .c-info__date 10.04.2021  14:37   
+            .detailed-chat__message 
+              p Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам. Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам. Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис.           
+
+          .detailed-chat__block
+            .detailed-chat__date Сьогодні
+            .detailed-chat__row.detailed-chat__row--ansver
+              .detailed-chat__avatar
+                img(src="assets/img/popup-avatar.png", alt="img")
+              .c-title.c-title__title5.detailed-chat__title Rozetka
+              .c-info.detailed-chat__info
+                .c-info__date 14:37  
+            .detailed-chat__message.detailed-chat__message--ansver
+              p Популярный сервис, на котором удобно и клиентам, и специалистам. Популярный сервис, на котором удобно котором удобно и клиентам. Популярный сервис, на котором удобно и клиентам.
+
+        .detailed-chat__add-message
+          .options-profile
+            .options-profile__textarea 
+              .options-profile__clarification Повідомлення
+              textarea(name="description" cols="30" rows="4" placeholder="Вкажіть повідомлення")
+
+        .detailed-chat__send
+          .candidacy-reply.candidacy-reply--flex
+            a.candidacy__button.c-button.c-button--primary.c-button--lg(href="#") Надіслати
+            .candidacy-reply__file
+              a.candidacy__link(href="#") Прикріпити файл
+              .candidacy-reply__note Максимальний розмір файлу – 5Мб              

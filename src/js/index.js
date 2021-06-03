@@ -469,3 +469,14 @@ $("[data-js-handler='messages-edit-notice']").on('click', function(e){
   $(this).parent().parent().siblings('.messages__editor').find('textarea').val(notice);
   $(this).parent().parent().siblings('.messages__editor').addClass('show');
 });    
+
+$("[data-js-handler='messages-switch']").on('click', function(e){
+  e.preventDefault();
+  if($('.messages__blocks').hasClass('hide')) {
+    $('.messages__blocks').removeClass('hide');
+    $('.messages__chat').addClass('hide');
+  } else {
+    $('.messages__blocks').addClass('hide');
+    $('.messages__chat').removeClass('hide');
+  }
+});    
