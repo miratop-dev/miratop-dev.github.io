@@ -53,8 +53,6 @@ block content
           a(href="#offers") Пропозиції
         li
           a(href="#wip") В роботі     
-        li 
-          a(href="#messages") Повідомлення
         li
           a(href="#reviews") Відгуки
 
@@ -589,7 +587,7 @@ block content
               date2: 'Термін подачі: до 15.09.21',
               client: 'Rozetka',
               message: 'Виконавець: Аня',
-              message2: 'Резервація оплати',
+              status: 'Резервація оплати',
               description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
               workflow: true,
               offers: '0 пропозицій',
@@ -601,7 +599,7 @@ block content
               date2: 'Термін подачі: до 15.09.21',
               client: 'Rozetka',
               message: 'Виконавець: Аня',
-              message2: 'Виконання роботи',
+              status: 'Виконання роботи',
               description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
               workflow: true,
               offers: '4 пропозиції',
@@ -613,7 +611,7 @@ block content
               date2: 'Термін подачі: до 15.09.21',
               client: 'Rozetka',
               message: 'Виконавець: Аня',
-              message2: 'Доробки',
+              status: 'Доробки',
               description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
               workflow: true,              
               offers: '5 пропозицій',
@@ -625,7 +623,7 @@ block content
               date2: 'Термін подачі: до 15.09.21',
               client: 'Rozetka',
               message: 'Виконавець: Аня',
-              message2: 'Виплата',
+              status: 'Виплата',
               description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
               workflow: true,              
               offers: '5 пропозицій',
@@ -637,25 +635,19 @@ block content
               date2: 'Термін подачі: до 15.09.21',
               client: 'Rozetka',
               message: 'Виконавець: Аня',
-              message2: 'Завершено',
+              status: 'Завершено',
               description: 'Популярный сервис, на котором удобно и клиентам, и специалистам. Хороший подбор специалистов для ежедневных потребностей людей дополняется понятным и информативным интерфейсом.',
               workflow: true,              
               offers: '5 пропозицій',
             })  
 
-      .options-page__tab#messages(data-js-handler='options-tab')
-        p #messages
-
       .options-page__tab#reviews(data-js-handler='options-tab')
         .options-tabs#proposals
           .options-tabs__types
-            a.options-tabs__type(href='#my_reviews', data-js-handler='portfolio-type') Мої відгуки
-            a.options-tabs__type.active(href='#other_reviews', data-js-handler='portfolio-type') Відгуки замовників та експертів
+            a.options-tabs__type.active(href='#my_reviews', data-js-handler='portfolio-type') Мої відгуки
+            a.options-tabs__type(href='#other_reviews', data-js-handler='portfolio-type') Відгуки замовників та експертів
 
-          .options-tabs__block#my_reviews
-            p #my_reviews
-
-          .options-tabs__block.active#other_reviews 
+          .options-tabs__block.active#my_reviews
             .options-page__tab.active#consideration(data-js-handler='options-tab')
               .candidacy
                 .candidacy__block 
@@ -785,3 +777,6 @@ block content
                             .options-profile__textarea 
                               .options-profile__clarification Коментар 
                               textarea(name="comment" cols="30" rows="10" placeholder="Вкажіть коментар")                             
+
+          .options-tabs__block#other_reviews 
+            p #other_reviews 

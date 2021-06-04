@@ -612,6 +612,19 @@ $("[data-js-handler='messages-switch']").on('click', function (e) {
     $('.messages__chat').removeClass('hide');
   }
 });
+/****************************** */
+
+$("[data-js-handler='details-toggle']").on('click', function (e) {
+  e.preventDefault();
+
+  if ($(this).hasClass('expand')) {
+    $(this).removeClass('expand').addClass('collapse').text('Згорнути');
+    $(this).parent().next().css('display', 'block');
+  } else {
+    $(this).addClass('expand').removeClass('collapse').text('Розгорнути');
+    $(this).parent().next().css('display', 'none');
+  }
+});
 
 /***/ }),
 /* 2 */

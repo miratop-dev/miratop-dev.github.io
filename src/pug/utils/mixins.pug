@@ -133,8 +133,10 @@ mixin propositionsBlock(args)
             .c-info__date= args.date2
           if(args.client)
             .c-info__client= args.client           
-        if (args.alert)
+        if(args.alert)
           .account-prop__error Перевірте заповнення поля очікування
+        if(args.status)
+          .c-title.c-title__title5.account-prop__status= args.status       
       .account-prop__description
         p= args.description
     .account-prop__info 
