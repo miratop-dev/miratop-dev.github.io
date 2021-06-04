@@ -4067,13 +4067,16 @@ main.index-page {
 .options-page__tabs {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
-    display: inline-flex
+    display: inline-flex;
+    width: 100%;
+    max-width: 880px
 }
 
 .options-page__tabs li {
     border-top: 2px solid #added4;
     border-bottom: 2px solid #added4;
-    border-left: 2px solid #added4
+    border-left: 2px solid #added4;
+    width: 20%
 }
 
 .options-page__tabs li:first-child {
