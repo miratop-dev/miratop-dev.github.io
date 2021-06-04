@@ -5227,7 +5227,10 @@ main.index-page {
 }
 
 .account-prop__tabs {
-    width: 100%
+    width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
 }
 
 .account-prop__tabs li {

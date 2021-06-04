@@ -125,6 +125,8 @@ mixin propositionsBlock(args)
             .c-title.c-title__title5= args.message
               if(args.message2)
                 .account-prop__message2= args.message2
+        if (args.status)
+          .c-title.c-title__title5.account-prop__status= args.status                  
       .account-prop__info
         .c-info
           .c-info__location= args.location
@@ -132,11 +134,11 @@ mixin propositionsBlock(args)
           if(args.date2)
             .c-info__date= args.date2
           if(args.client)
-            .c-info__client= args.client           
+            .c-info__client= args.client
         if(args.alert)
           .account-prop__error Перевірте заповнення поля очікування
-        if(args.status)
-          .c-title.c-title__title5.account-prop__status= args.status       
+        if(args.message3)
+          .c-title.c-title__title5= args.message3
       .account-prop__description
         p= args.description
     .account-prop__info 
