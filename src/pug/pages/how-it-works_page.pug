@@ -1,0 +1,81 @@
+extends ../layout/1column-fullwidth
+
+block variables
+  - var title = 'Mira.hub article';
+  - var description = 'Mira.hub article';
+  - var pageClass = 'article-page';
+  - let pageTitle = 'Як це працює'
+
+block title 
+  .page-title
+    .page-title__container
+      h1 Як це 
+        span.c-accent.c-accent--pagetitle працює
+
+block statusbar
+
+block content 
+  .about
+    .how-it-works
+      .how-it-works__section 
+        .c-container
+          h3.c-title.c-title__title3 Якщо ти Клієнт
+        .c-container
+          .how-it-works__scheme
+            .how-it-works__column 
+              .how-it-works__block.how-it-works__block--pastel-11 
+                img(src="assets/img/how-it-works-idea.png", alt="idea")
+                span Сформулюй запит під потребу свого бізнесу
+            .how-it-works__column 
+              .how-it-works__block.how-it-works__block--pastel-7 
+                img(src="assets/img/how-it-works-clipboard.png", alt="clipboard")
+                span Опиши запит в особистому кабінеті як пропозицію
+            .how-it-works__column 
+              .how-it-works__block.how-it-works__block--pastel-3 
+                img(src="assets/img/how-it-works-feedback.png", alt="feedback")
+                span Очікуй, поки зацікавлений експерт зв’яжеться з тобою
+              .how-it-works__block.how-it-works__block--pastel-4 
+                img(src="assets/img/how-it-works-magnifier.png", alt="magnifier")
+                span Самостійно знайди потрібного експерта на платформі   
+        .c-container 
+          .how-it-works__additionals 
+            h3.c-title.c-title__title4 Додаткові рекомендації з вибору експерта:  
+            .how-it-works__additional
+              ul
+                li Звертай увагу не лише на експертизу та реалізовані кейси, а й на збіг по цінностям, адже ваша співпраця має бути максимально комфортною
+                li Зустрінься з експертом та проговори свої очікування від співпраці, отримай зворотний зв’язок
+              ul
+                li Після вибору експерта спільно визначіть терміни та критерії проєкту (ТЗ) та заключи договір
+                li Якщо потрібна допомога з вибором експерта, напиши адміністрації платформи і тебе проконсультують               
+      .how-it-works__section.how-it-works__section--grey
+        .c-container
+          h3.c-title.c-title__title3 Якщо ти Експерт  
+        .c-container  
+          .how-it-works__scheme         
+            .how-it-works__column 
+              .how-it-works__block.how-it-works__block--pastel-11 
+                img(src="assets/img/how-it-works-idea.png", alt="idea")
+                span Згадай успішні кейси та рекомендодавців
+            .how-it-works__column 
+              .how-it-works__block.how-it-works__block--pastel-7 
+                img(src="assets/img/how-it-works-clipboard.png", alt="clipboard")
+                span «Смачно» заповнити свій профіль
+            .how-it-works__column 
+              .how-it-works__block.how-it-works__block--pastel-3 
+                img(src="assets/img/how-it-works-feedback.png", alt="feedback")
+                span Очікуй, поки тебе знайде клієнт та запропонує співпрацю
+              .how-it-works__block.how-it-works__block--pastel-4 
+                img(src="assets/img/how-it-works-magnifier.png", alt="magnifier")
+                span Переглядай пропозиції та подавайся самостійно   
+        .c-container 
+          .how-it-works__additionals 
+            h3.c-title.c-title__title4 Рекомендації з вибору проектів та клієнтів: 
+            .how-it-works__additional
+              ul
+                li Обираючи проєкт, добре вивчи потребу клієнта та компанії
+                li «Приміряй» запит на свою експертизу та ресурс часу
+              ul
+                li Опиши план проєкту з термінами та бюджетом і погодь з клієнтом
+                li Підпиши договір і вперед до реалізації   
+      .how-it-works__best-wishes 
+        h3.c-title.c-title__title2 Успішних проeктів!
