@@ -1,0 +1,49 @@
+extends ../layout/1column
+
+block variables
+  - var title = 'Mira.hub article';
+  - var description = 'Mira.hub article';
+  - var pageClass = 'article-page';
+  - let pageTitle = 'Як стати Експертом'
+
+block title 
+  .page-title
+    .page-title__container
+      h1 Як стати 
+        span.c-accent.c-accent--pagetitle Експертом
+
+block statusbar
+
+block content 
+  .about
+    .how-to-expert
+      .how-to-expert__container
+        h3.c-title.c-title__title3.how-to-expert__title Експерти – успішний бізнес
+        .how-to-expert__description 
+          strong Експерти нашої платформи — це найбільша цінність. <br />
+          span Ми приділяємо неабияку увагу їх відбору та супроводженню.<br />
+          .how-to-expert__note Адже саме експерти роблять клієнтів щасливими, а їх бізнес — успішним!
+      .how-to-expert__container
+        h3.c-title.c-title__title3.how-to-expert__title Всього чотири кроки
+        .how-to-expert__steps 
+          .how-to-expert__step.how-to-expert__step--7
+            img(src="assets/img/how-to-expert-registration.png")  
+            .c-title.c-title__title4 Реєструйся
+            span Зареєструйся на платформі через кнопку «Приєднуйся»
+          .how-to-expert__step.how-to-expert__step--3
+            img(src="assets/img/how-to-expert-resume.png")  
+            .c-title.c-title__title4 Заповни профайл
+            span Напиши інформацію про свій досвід та успішні кейси
+          .how-to-expert__step.how-to-expert__step--10
+            img(src="assets/img/how-to-expert-interview.png")  
+            .c-title.c-title__title4 Пройди співбесіду
+            span Пройди співбесіду з нами та скажи, хто може тобі надати рекомендації
+          .how-to-expert__step.how-to-expert__step--11
+            img(src="assets/img/how-to-expert-profile.png")  
+            .c-title.c-title__title4 Пройди навчання
+            span Після нашої верифікації ми розкажемо як все працює          
+      .how-to-expert__container
+        .how-to-expert__bottom
+          span Більше деталей читай в <a href="#" class="how-to-expert__link">профілі експерта</a>. Тисни
+          a.how-to-expert__button.c-button.c-button--primary.c-button--md.c-button--mobile(href='#') Приєднатись 
+          span і погнали!

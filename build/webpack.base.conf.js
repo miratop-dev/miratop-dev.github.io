@@ -212,6 +212,11 @@ module.exports = {
       inject: true
     }),
     new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/how-to-start_page.pug`,
+      filename: './how-to-start.html',
+      inject: true
+    }),    
+    new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/how-it-works_page.pug`,
       filename: './how-it-works_page.html',
       inject: true

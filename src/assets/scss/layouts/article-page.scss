@@ -141,6 +141,8 @@
   &__img {
     margin: 50px 0 0 110px;
     max-width: 620px;
+    border-radius: 12px;
+    overflow: hidden;
   }
 }
 
@@ -300,6 +302,7 @@
   &__additional {
     margin: 20px 0 0 0;
     display: inline-flex;
+    justify-content: center;
 
      ul {
       width: 100%;
@@ -332,7 +335,7 @@
         border-radius: 8px;
         left: 0;
         top: 10px;
-        background-color: $color-pastel-7;
+        background: $color-pastel-7;
       }
     }
   }
@@ -341,5 +344,93 @@
     padding: 80px 0;
     text-align: center;
     margin: 0 0 -200px;
+  }
+}
+
+.how-to-expert {
+  &__container {
+    text-align: center;
+    margin: 0 0 120px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__description {
+    font-size: 20px;
+    line-height: 36px;
+  }
+
+  &__note {
+    margin: 10px 0 0 0;
+  }
+
+  &__steps {
+    margin: 40px 0 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__step {
+    width: 290px;
+    text-align: center;
+    padding: 40px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &--3 {
+      border: 2px solid $color-pastel-3;
+    }
+
+    &--7 {
+      border: 2px solid $color-pastel-7;
+    }
+
+    &--10 {
+      border: 2px solid $color-pastel-10;
+    }
+
+    &--11 {
+      border: 2px solid $color-pastel-11;
+    }
+
+    span {
+      display: inline-block;
+      margin: 10px 0 0 0;
+      font-size: 14px;
+      line-height: 28px;
+      color: $text-grey;
+    }
+  }
+
+  &__bottom {
+    color: $text-black;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__link {
+    color: $text-black;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 36px;
+    text-decoration: underline;
+    text-decoration-color: $color-pastel-7;
+    text-decoration-thickness: 2px;
+    text-underline-position: under;
+  }
+
+  &__button {
+    height: 48px;
+    margin: 0 10px;
   }
 }

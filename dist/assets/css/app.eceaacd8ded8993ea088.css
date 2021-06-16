@@ -3917,7 +3917,9 @@ main.index-page {
 
 .about-explain__img {
     margin: 50px 0 0 110px;
-    max-width: 620px
+    max-width: 620px;
+    border-radius: 12px;
+    overflow: hidden
 }
 
 .about-who__title {
@@ -4102,7 +4104,10 @@ main.index-page {
     margin: 20px 0 0;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
-    display: inline-flex
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
 }
 
 .how-it-works__additional ul {
@@ -4139,13 +4144,117 @@ main.index-page {
     border-radius: 8px;
     left: 0;
     top: 10px;
-    background-color: #added4
+    background: #added4
 }
 
 .how-it-works__best-wishes {
     padding: 80px 0;
     text-align: center;
     margin: 0 0 -200px
+}
+
+.how-to-expert__container {
+    text-align: center;
+    margin: 0 0 120px
+}
+
+.how-to-expert__container:last-child {
+    margin: 0
+}
+
+.how-to-expert__description {
+    font-size: 20px;
+    line-height: 36px
+}
+
+.how-to-expert__note {
+    margin: 10px 0 0
+}
+
+.how-to-expert__steps {
+    margin: 40px 0 0;
+    width: 100%
+}
+
+.how-to-expert__step,
+.how-to-expert__steps {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.how-to-expert__step {
+    width: 290px;
+    text-align: center;
+    padding: 40px;
+    border-radius: 12px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.how-to-expert__step--3 {
+    border: 2px solid #b7dcf4
+}
+
+.how-to-expert__step--7 {
+    border: 2px solid #added4
+}
+
+.how-to-expert__step--10 {
+    border: 2px solid #dbbde5
+}
+
+.how-to-expert__step--11 {
+    border: 2px solid #fdddaa
+}
+
+.how-to-expert__step span {
+    display: inline-block;
+    margin: 10px 0 0;
+    font-size: 14px;
+    line-height: 28px;
+    color: #77747f
+}
+
+.how-to-expert__bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.how-to-expert__bottom,
+.how-to-expert__link {
+    color: #35343a;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px
+}
+
+.how-to-expert__link {
+    text-decoration: underline;
+    -webkit-text-decoration-color: #added4;
+    text-decoration-color: #added4;
+    text-decoration-thickness: 2px;
+    text-underline-position: under
+}
+
+.how-to-expert__button {
+    height: 48px;
+    margin: 0 10px
 }
 
 .options-page {
