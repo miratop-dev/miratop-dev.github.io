@@ -3181,14 +3181,6 @@ main.index-page {
     max-width: 400px
 }
 
-.experts__description,
-.tasks__description {
-    max-width: 430px;
-    color: #35343a;
-    font-size: 14px;
-    line-height: 28px
-}
-
 .experts__buttons,
 .tasks__buttons {
     display: none
@@ -3202,7 +3194,12 @@ main.index-page {
 .tasks__summary {
     width: 100%;
     display: inline-block;
-    max-width: 410px
+    max-width: 410px;
+    margin: 0 0 10px
+}
+
+.tasks__summary__wrapper {
+    width: 100%
 }
 
 .tasks__block:hover {
@@ -3225,6 +3222,9 @@ main.index-page {
 }
 
 .tasks__description {
+    color: #35343a;
+    font-size: 14px;
+    line-height: 28px;
     padding: 0 40px 0 0
 }
 
@@ -3253,6 +3253,13 @@ main.index-page {
     transition: all .2s ease-in-out
 }
 
+.experts__description {
+    max-width: 430px;
+    color: #35343a;
+    font-size: 14px;
+    line-height: 28px
+}
+
 .expertise-help {
     margin: 40px auto 0;
     border-radius: 12px;
@@ -3267,6 +3274,45 @@ main.index-page {
 
 .expertise-help__title {
     margin-left: 180px
+}
+
+.stubs__container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start
+}
+
+.stubs__block {
+    margin: 0 0 100px
+}
+
+.stubs__img {
+    margin: 0 0 20px;
+    text-align: center
+}
+
+.stubs__img img {
+    max-height: 70px
+}
+
+.stubs__desc {
+    text-align: center;
+    width: 100%;
+    max-width: 440px;
+    font-size: 20px;
+    line-height: 36px;
+    color: #35343a
 }
 
 .details-task-head {
@@ -6055,8 +6101,15 @@ main.index-page {
         margin: 10px 0 0
     }
 
+    .tasks__block {
+        padding: 20px 20px 20px 0;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between
+    }
+
     .tasks__block:hover {
-        min-width: 845px;
+        min-width: 862px;
         padding: 30px 20px;
         margin: -10px 0 -12px -22px
     }

@@ -362,13 +362,6 @@
     }
   }
 
-  &__description {
-    max-width: 430px;
-    color: $text-black;
-    font-size: 14px;
-    line-height: 28px;
-  }
-
   &__contact {
     @include mobile {
       background: $color-secondary-blue;
@@ -415,14 +408,24 @@
     width: 100%;
     display: inline-block;
     max-width: 410px;
+    margin: 0 0 10px;
 
     @include mobile {
       padding: 0;
       max-width: 180px;
     }
+
+    &__wrapper {
+      width: 100%;
+    }
   }
 
   &__block {
+    @include desktop-large {
+      padding: 20px 20px 20px 0;
+      justify-content: space-between;
+    }
+    
     &:hover {
       border: 2px solid $color-pastel-7;
       margin: -20px -40px -22px;
@@ -441,7 +444,7 @@
       }          
   
       @include desktop-large {
-        min-width: 845px;
+        min-width: 862px;
         padding: 30px 20px;
         margin: -10px 0 -12px -22px;
       }
@@ -459,6 +462,9 @@
   }
 
   &__description {
+    color: $text-black;
+    font-size: 14px;
+    line-height: 28px;    
     padding: 0 40px 0 0;
 
     @include desktop-large {
@@ -520,6 +526,13 @@
       }
     }
   }
+
+  &__description {
+    max-width: 430px;
+    color: $text-black;
+    font-size: 14px;
+    line-height: 28px;
+  }  
 }
 
 .expertise-help {
@@ -535,5 +548,37 @@
 
   &__title {
     margin-left: 180px;
+  }
+}
+
+.stubs {
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__block {
+    margin: 0 0 100px;
+  }
+
+  &__img {
+    margin: 0 0 20px;
+    text-align: center;
+
+    img {
+      max-height: 70px;
+    }
+  }
+
+  &__desc {
+    text-align: center;
+    width: 100%;
+    max-width: 440px;
+    font-size: 20px;
+    line-height: 36px;
+    color: $text-black;
   }
 }

@@ -265,6 +265,11 @@ module.exports = {
       template: `${PAGES_DIR}/messages.pug`,
       filename: './messages.html',
       inject: true
-    }),         
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/stubs.pug`,
+      filename: './stubs.html',
+      inject: true
+    }),       
   ],
 }

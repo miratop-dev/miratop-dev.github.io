@@ -93,22 +93,23 @@ mixin expertBlock(args)
 
 mixin taskBlock(args)
   .tasks__block
-    .tasks__summary
-      .c-title.c-title__title4.tasks__name= args.name
-      .c-info
-        .c-info__location= args.location
-        .c-info__date= args.date
-        .c-info__client= args.client
-      .c-tags  
-        each tag, index in args.tags
-          if(index < 3)
-            a.c-tags__tag(href= tag.url)= tag.name
-          else 
-            a.c-tags__tag.hide(href= tag.url)= tag.name
-          if ((index == args.tags.length - 1) && (args.tags.length > 3))
-            a.c-tags__tag(href="#") еще 
-              span.c-tags__num= args.tags.length - 3
-    .tasks__description= args.description
+    .tasks__wrapper
+      .tasks__summary
+        .c-title.c-title__title4.tasks__name= args.name
+        .c-info
+          .c-info__location= args.location
+          .c-info__date= args.date
+          .c-info__client= args.client
+        .c-tags  
+          each tag, index in args.tags
+            if(index < 3)
+              a.c-tags__tag(href= tag.url)= tag.name
+            else 
+              a.c-tags__tag.hide(href= tag.url)= tag.name
+            if ((index == args.tags.length - 1) && (args.tags.length > 3))
+              a.c-tags__tag(href="#") еще 
+                span.c-tags__num= args.tags.length - 3
+      .tasks__description= args.description
     a.c-button.c-button--bordered.c-button--md.c-button--mobile.tasks__button(href= args.taskLink) Написать
 
 mixin propositionsBlock(args)
