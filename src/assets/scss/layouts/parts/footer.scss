@@ -43,6 +43,24 @@
     display: block;
     max-width: 204px;
     margin: 0 0 60px 0;
+
+    @include tablet {
+      margin: 0;
+    }
+
+    @include mobile {
+      margin: 0;
+    }
+
+    img {
+      @include tablet {
+        max-height: 40px;
+      }
+  
+      @include mobile {
+        max-height: 40px;
+      }
+    }
   }
 
   &__legal {
@@ -54,8 +72,8 @@
 
     @include mobile {
       margin: 0;
-      font-size: 8px;
-      line-height: 12px;
+      font-size: 10px;
+      line-height: 16px;
     }
 
     &:last-child {
@@ -104,6 +122,11 @@
   }
 
   &__contacts {
+
+    @include mobile {
+
+    }
+    margin: 0 0 30px;
     a {
       color: $text-grey;
       font-size: 14px;
@@ -114,10 +137,14 @@
       margin: 0 0 20px;
 
       @include mobile {
-        font-size: 10px;
-        line-height: 14px;
-        margin: 0 0 10px;
+        font-size: 14px;
+        line-height: 28px;
         padding: 0 0 0 22px;
+        margin: 0;
+
+        br {
+          display: none;
+        }
       }      
 
       &::before {
@@ -153,9 +180,9 @@
     margin: 0 0 20px;
 
     @include mobile {
-      margin: 0 0 10px;
-      font-size: 16px;
-      line-height: 28px;
+      margin: 0;
+      font-size: 20px;
+      line-height: 36px;
     }
   }
 
@@ -176,6 +203,8 @@
   }
 
   &__socials {
+    position: relative;
+
     @include desktop-medium {
       position: relative;
       text-align: left;
@@ -185,7 +214,7 @@
     }
     
     @include tablet {
-      margin: 0 0 20px;
+      margin: 0 0 30px;
     }
 
     @include mobile {
@@ -205,10 +234,11 @@
     }
 
     @include mobile {
+      display: flex;
+      top: 0;
+      right: 0;
       margin: 0 !important;
       position: absolute;
-      right: 27px;
-      bottom: 40px;
     }  
   }
 
@@ -223,7 +253,6 @@
       width: 40px;
       height: 40px;
       display: block;
-      margin: 0 0 20px;
     }
 
     &-fb {
@@ -240,6 +269,24 @@
 
     &:last-child {
       margin: 0;
+    }
+  }
+
+  &__legals {
+    display: block;
+
+    &--mobile {
+        display: none;
+    }
+
+    @include tablet {
+      &--desktop {
+        display: none;
+      }
+
+      &--mobile {
+        display: block;
+      }
     }
   }
 }

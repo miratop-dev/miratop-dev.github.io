@@ -26,7 +26,7 @@
     border-bottom: 1px solid $color-pastel-7;
     z-index: 2;
     width: 100%;    
-    padding: 38px 0;
+    padding: 10px 0 38px 0;
     box-shadow: 0px 30px 50px -30px rgba(37, 70, 72, 0.1);
     transition: 0.1s all ease-out;
   }  
@@ -35,11 +35,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     li {
       margin: 0 80px 0 0;
 
       &:last-child {
         margin: 0;
+
+        @include tablet {
+          margin: 0;
+        }
       }
 
       a {
@@ -53,6 +58,68 @@
           padding: 0 0 3px 0;
         }
       }
+
+      @include tablet {
+        margin: 0 0 24px;
+      }
+    }
+
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0 18px;
+      margin: 24px 0 60px 0;
+    }
+  }
+
+  &__links {
+    display: none;
+
+    @include tablet {
+      display: block;
+      margin: 0 18px;
+      border-bottom: 2px solid $color-secondary-border;
+    }
+
+    a {
+      color: $text-black;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 28px;
+      display: block;
+      margin: 0 0 24px;
+
+      &:hover {
+        border-bottom: 4px solid $color-pastel-7;
+        padding: 0 0 3px 0;
+      }
+    }
+  }
+
+  &__more {
+    position: relative;
+    padding: 0 0 0 32px;
+
+    &::before {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='12' fill='%23ADDED4'/%3E%3Cpath d='M16.2281 11.4841L10.7912 7.62261C10.5917 7.48129 10.3268 7.46001 10.1081 7.56983C9.88767 7.6788 9.75 7.90013 9.75 8.13935V15.8598C9.75 16.1016 9.88767 16.3221 10.1081 16.431C10.2013 16.477 10.3033 16.5 10.4061 16.5C10.5403 16.5 10.6762 16.4583 10.7912 16.3757L16.2281 12.5176C16.3998 12.3942 16.5 12.2035 16.5 12.0009C16.5009 11.7948 16.3981 11.605 16.2281 11.4841Z' fill='%2335343A'/%3E%3C/svg%3E");
+      position: absolute;
+      content: "";
+      width: 24px;
+      height: 24px;
+      left: 0;
+      top: 50%;
+      margin-top: -12px;
+    }   
+  }
+
+  &__join {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      max-width: 340px;
+      margin: 0 auto;
+      justify-content: center;
     }
   }
 }
