@@ -36,23 +36,48 @@
     display: none;
 
     @include desktop-medium {
-      font-weight: bold;
       position: relative;
-      display: block;
-      color: $color-primary-white;
-      font-size: 24px;
-      line-height: 32px;
-      padding: 20px 27px;
+      display: inline-block;
+      color: $text-black;
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 36px;
+      background: none;
+
+     &::after {
+        content: '';
+        position: absolute;
+        top: 60%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 10px;
+        background-color: $color-pastel-7;
+        z-index: -1;
+      }
     }    
 
     @include tablet {
-      font-weight: bold;
       position: relative;
-      display: block;
-      color: $color-primary-white;
-      font-size: 24px;
-      line-height: 32px;
-      padding: 20px 27px;
+      display: inline-block;
+      color: $text-black;
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 36px;
+      //padding: 20px 20px 0;
+      background: none;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 60%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 10px;
+        background-color: $color-pastel-7;
+        z-index: -1;
+      }
     }
   }
 
@@ -65,18 +90,18 @@
     top: 50%;
     margin-top: -8px;
     background-size: contain;
+    display: none;
   }
 
   &.over {
-    padding: 0 0 20px 0;
+    padding: 20px;
     position: fixed;
     display: block;
     background: #fff;
     top: 0;
-    left: 0;
     right: 0;
     border-radius: 0;
-    z-index: 2;
+    z-index: 3;
     height: 100%;
     overflow-y: auto;
   }
@@ -141,6 +166,10 @@
     height: 20px;
     background-color: $color-pastel-6;
     z-index: -1;
+
+    @include tablet {
+      height: 10px;
+    }
   }
 
   &--pagetitle {
@@ -197,7 +226,7 @@
   &--filter {
     @include desktop-medium {
       height: $control-height-lg--mobile;
-      font-size: 10px;
+      font-size: 12px;
       line-height: 14px;
       padding-left: 60px;
       padding-right: 60px;
@@ -205,8 +234,8 @@
 
     @include tablet {
       height: $control-height-lg--mobile;
-      font-size: 10px;
-      line-height: 14px;
+      font-size: 12px;
+      line-height: 20px;
       padding-left: 60px;
       padding-right: 60px;
     }  
@@ -214,16 +243,9 @@
 
   &--mobile {
     @include tablet {
-      background: $color-secondary-blue;
-      position: absolute;
-      font-size: 0;
-      width: 36px;
-      height: 36px;
-      padding: 0;
-      margin: 0!important;
-      border-radius: 18px 18px 18px 2px;
+      position: relative;
 
-      &::before {
+      /*&::before {
         content: '';
         position: absolute;
         border-radius: 2px;
@@ -243,7 +265,7 @@
         height: 3px;
         left: 8px;
         top: 20px;
-      }         
+      }     */    
     } 
   }
 }
@@ -357,8 +379,8 @@
   align-items: center;
   margin: 20px 0 0 0;
 
-  @include mobile {
-    justify-content: flex-start;
+  @include tablet {
+    justify-content: center;
   }
 
   &__block {

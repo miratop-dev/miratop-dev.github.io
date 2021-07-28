@@ -24,7 +24,7 @@
     position: absolute;
     background-color: $text-white;
     border-bottom: 1px solid $color-pastel-7;
-    z-index: 2;
+    z-index: 3;
     width: 100%;    
     padding: 10px 0 38px 0;
     box-shadow: 0px 30px 50px -30px rgba(37, 70, 72, 0.1);
@@ -92,6 +92,11 @@
       &:hover {
         border-bottom: 4px solid $color-pastel-7;
         padding: 0 0 3px 0;
+
+        @include tablet {
+          border-bottom: none;
+          padding: 0;
+        }
       }
     }
   }

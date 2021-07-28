@@ -294,7 +294,8 @@ main.index-page {
     align-items: center;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
-    justify-content: flex-end
+    justify-content: flex-end;
+    position: relative
 }
 
 .sort__legend {
@@ -304,7 +305,7 @@ main.index-page {
 }
 
 .sort__select {
-    position: relative;
+    width: 220px;
     margin: 0 0 0 8px
 }
 
@@ -360,24 +361,30 @@ main.index-page {
 }
 
 .sort .select-items div {
-    padding: 9px 108px 9px 20px
+    padding: 9px 108px 9px 20px;
+    border-left: 1px solid #added4;
+    border-right: 1px solid #added4
+}
+
+.sort .select-items div:last-child {
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px
 }
 
 .sort .select-items {
-    border-left: 1px solid #added4;
-    border-right: 1px solid #added4;
     border-bottom: 1px solid #added4;
     position: absolute;
     background-color: #fff;
     top: 100%;
-    left: 0;
+    left: unset;
     right: 0;
     z-index: 99;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
     -webkit-transition: all .3s ease-in-out;
     -o-transition: .3s all ease-in-out;
-    transition: all .3s ease-in-out
+    transition: all .3s ease-in-out;
+    width: 220px
 }
 
 .sort .select-items .same-as-selected {
@@ -657,19 +664,19 @@ main.index-page {
     height: 16px;
     top: 50%;
     margin-top: -8px;
-    background-size: contain
+    background-size: contain;
+    display: none
 }
 
 .c-aside.over {
-    padding: 0 0 20px;
+    padding: 20px;
     position: fixed;
     display: block;
     background: #fff;
     top: 0;
-    left: 0;
     right: 0;
     border-radius: 0;
-    z-index: 2;
+    z-index: 3;
     height: 100%;
     overflow-y: auto
 }
@@ -1447,7 +1454,7 @@ main.index-page {
     position: absolute;
     background-color: #fff;
     border-bottom: 1px solid #added4;
-    z-index: 2;
+    z-index: 3;
     width: 100%;
     padding: 10px 0 38px;
     -webkit-box-shadow: 0 30px 50px -30px rgba(37, 70, 72, .1);
@@ -1531,7 +1538,6 @@ main.index-page {
     position: relative;
     margin: 0 0 40px;
     padding: 12px 0;
-    background-image: url(../../assets/img/page-title.png);
     background-color: #f5f5f5;
     background-repeat: no-repeat;
     background-position: 100%;
@@ -6218,17 +6224,11 @@ main.index-page {
     }
 
     .c-button--lg {
-        height: 42px;
+        height: 40px;
         font-size: 14px;
         line-height: 2;
         padding-left: 32px;
         padding-right: 32px
-    }
-
-    .c-pagination {
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start
     }
 
     .c-pagination__link {
@@ -6458,23 +6458,10 @@ main.index-page {
         opacity: 1
     }
 
-    .experts__imgwrap,
-    .tasks__imgwrap {
-        width: 52px;
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 52px;
-        flex: 0 0 52px
-    }
-
     .experts__title,
     .tasks__title {
-        font-size: 14px;
-        line-height: 24px
-    }
-
-    .experts__info,
-    .tasks__info {
-        margin: 10px 0 0
+        font-size: 20px;
+        line-height: 36px
     }
 
     .experts__contact,
@@ -6492,8 +6479,7 @@ main.index-page {
         border-radius: 18px 18px 18px 2px
     }
 
-    .experts__summary,
-    .tasks__summary {
+    .experts__summary {
         padding: 0;
         max-width: 180px
     }
@@ -6509,11 +6495,14 @@ main.index-page {
     .search-page-top__filter {
         display: -webkit-inline-box !important;
         display: -ms-inline-flexbox !important;
-        display: inline-flex !important
+        display: inline-flex !important;
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+        order: 3
     }
 
     .breadcrumbs {
-        margin: 0 0 10px;
+        margin: 0 0 20px;
         width: 100%
     }
 
@@ -6540,7 +6529,11 @@ main.index-page {
         justify-content: center;
         border-radius: 64px;
         background-color: #fff;
-        border: 2px solid #278fff
+        border: 2px solid #added4;
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+        min-height: 42px
     }
 
     .sort__legend {
@@ -6548,13 +6541,35 @@ main.index-page {
     }
 
     .sort .select-selected:after {
-        top: 5px
+        right: 12px
     }
 
     .sort .select-items div,
     .sort .select-selected {
-        font-size: 10px;
-        line-height: 14px
+        font-size: 12px;
+        line-height: 20px
+    }
+
+    .sort .select-selected {
+        border: none
+    }
+
+    .sort .select-selected.select-arrow-active {
+        display: none
+    }
+
+    .sort .select-items {
+        right: unset;
+        top: -2px;
+        left: -2px;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px
+    }
+
+    .sort .select-items .same-as-selected {
+        display: block;
+        padding: 10px 108px 10px 20px;
+        border-radius: 8px 8px 0 0
     }
 
     .c-container {
@@ -6574,13 +6589,25 @@ main.index-page {
     }
 
     .c-aside__title {
-        font-weight: 700;
         position: relative;
-        display: block;
-        color: #fff;
-        font-size: 24px;
-        line-height: 32px;
-        padding: 20px 27px
+        display: inline-block;
+        color: #35343a;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 36px;
+        background: none
+    }
+
+    .c-aside__title:after {
+        content: "";
+        position: absolute;
+        top: 60%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 10px;
+        background-color: #added4;
+        z-index: -1
     }
 
     .c-sidebar {
@@ -6599,43 +6626,26 @@ main.index-page {
         padding-right: 0
     }
 
+    .c-accent:after {
+        height: 10px
+    }
+
     .c-button--filter {
-        height: 42px;
-        font-size: 10px;
-        line-height: 14px;
+        height: 40px;
+        font-size: 12px;
+        line-height: 20px;
         padding-left: 60px;
         padding-right: 60px
     }
 
     .c-button--mobile {
-        background: #278fff;
-        position: absolute;
-        font-size: 0;
-        width: 36px;
-        height: 36px;
-        padding: 0;
-        margin: 0 !important;
-        border-radius: 18px 18px 18px 2px
+        position: relative
     }
 
-    .c-button--mobile:before {
-        width: 20px;
-        top: 13px
-    }
-
-    .c-button--mobile:after,
-    .c-button--mobile:before {
-        content: "";
-        position: absolute;
-        border-radius: 2px;
-        background: #fff;
-        height: 3px;
-        left: 8px
-    }
-
-    .c-button--mobile:after {
-        width: 12px;
-        top: 20px
+    .c-pagination {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center
     }
 
     .c-info>div {
@@ -6717,6 +6727,11 @@ main.index-page {
         border-bottom: 2px solid #e5e5e5
     }
 
+    .main-menu__links a:hover {
+        border-bottom: none;
+        padding: 0
+    }
+
     .main-menu__join {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -6729,7 +6744,8 @@ main.index-page {
     }
 
     .page-title {
-        padding: 20px 0
+        padding: 10px 0;
+        margin: 0 0 10px
     }
 
     .page-title__container {
@@ -6737,8 +6753,8 @@ main.index-page {
     }
 
     .page-title h1 {
-        font-size: 24px;
-        line-height: 32px
+        font-size: 20px;
+        line-height: 36px
     }
 
     .main-page-banner__container {
@@ -7052,13 +7068,17 @@ main.index-page {
     }
 
     .filter-block {
-        padding: 20px 27px;
-        margin: 0
+        padding: 0 0 20px;
+        margin: 20px 0
     }
 
     .filter-block__title {
         font-size: 16px;
         line-height: 28px
+    }
+
+    .filter-block__search {
+        margin: 0 0 20px
     }
 
     .filter-block__search:first-child {
@@ -7068,15 +7088,26 @@ main.index-page {
         margin: 0 10px 0 0
     }
 
+    .filter-block__more {
+        border-bottom: none;
+        text-transform: none;
+        font-size: 14px;
+        line-height: 28px
+    }
+
     .filter-block.collapse {
-        max-height: 60px
+        max-height: 40px
     }
 
     .filter-block__links {
         padding: 35px 27px 20px;
         display: -webkit-box;
         display: -ms-flexbox;
-        display: flex
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse
     }
 
     .experts__block,
@@ -7091,18 +7122,78 @@ main.index-page {
     .tasks__block {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-        padding: 30px 20px
+        padding: 30px 0 20px
+    }
+
+    .experts__imgwrap,
+    .tasks__imgwrap {
+        width: 60px;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 60px;
+        flex: 0 0 60px
+    }
+
+    .experts__info,
+    .tasks__info {
+        margin: 10px 0 15px
     }
 
     .experts__button,
     .tasks__button {
-        right: 20px
+        width: 100%;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        max-width: 340px
     }
 
-    .experts__block:hover,
+    .tasks__summary {
+        padding: 0;
+        max-width: unset
+    }
+
+    .tasks__block {
+        padding: 20px 0
+    }
+
     .tasks__block:hover {
         padding: 40px 20px;
         margin: -10px 0 -12px -2px
+    }
+
+    .tasks__name {
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 36px;
+        margin: 0 0 8px
+    }
+
+    .tasks__description {
+        font-size: 12px;
+        line-height: 20px;
+        margin: 0 0 10px
+    }
+
+    .experts__summary>.c-info {
+        margin: 0
+    }
+
+    .experts__block:hover {
+        padding: 40px 20px;
+        margin: -10px 0 -12px -2px
+    }
+
+    .experts__description {
+        max-width: unset;
+        font-size: 12px;
+        line-height: 20px;
+        margin: 0 0 10px
+    }
+
+    .experts__value {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 28px
     }
 
     .details-task-head {
@@ -7235,7 +7326,7 @@ main.index-page {
     }
 
     .breadcrumbs {
-        margin: 0 0 10px;
+        margin: 0 0 20px;
         width: 100%
     }
 
@@ -7252,21 +7343,35 @@ main.index-page {
         justify-content: center;
         border-radius: 64px;
         background-color: #fff;
-        border: 2px solid #278fff
+        border: 2px solid #added4
     }
 
     .sort__legend {
         display: none
     }
 
-    .sort .select-selected:after {
-        top: 5px
-    }
-
     .sort .select-items div,
     .sort .select-selected {
-        font-size: 10px;
-        line-height: 14px
+        font-size: 12px;
+        line-height: 20px
+    }
+
+    .sort .select-selected.select-arrow-active {
+        display: none
+    }
+
+    .sort .select-items {
+        right: -2px;
+        top: -2px;
+        left: unset;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px
+    }
+
+    .sort .select-items .same-as-selected {
+        display: block;
+        padding: 10px 108px 10px 20px;
+        border-radius: 8px 8px 0 0
     }
 
     .c-container {
@@ -7281,13 +7386,25 @@ main.index-page {
     }
 
     .c-aside__title {
-        font-weight: 700;
         position: relative;
-        display: block;
-        color: #fff;
-        font-size: 24px;
-        line-height: 32px;
-        padding: 20px 27px
+        display: inline-block;
+        color: #35343a;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 36px;
+        background: none
+    }
+
+    .c-aside__title:after {
+        content: "";
+        position: absolute;
+        top: 60%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 10px;
+        background-color: #added4;
+        z-index: -1
     }
 
     .c-sidebar {
@@ -7310,8 +7427,8 @@ main.index-page {
     }
 
     .c-button--filter {
-        height: 42px;
-        font-size: 10px;
+        height: 40px;
+        font-size: 12px;
         line-height: 14px;
         padding-left: 60px;
         padding-right: 60px
@@ -7368,8 +7485,8 @@ main.index-page {
     }
 
     .filter-block {
-        padding: 20px 27px;
-        margin: 0
+        padding: 0 0 20px;
+        margin: 20px 0
     }
 
     .filter-block__title {

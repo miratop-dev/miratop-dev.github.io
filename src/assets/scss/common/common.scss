@@ -79,6 +79,7 @@ main {
 
     @include tablet {
       display: inline-flex !important;
+      order: 3;
     }
   }
 }
@@ -88,12 +89,12 @@ main {
   align-items: center;
 
   @include desktop-medium {
-    margin: 0 0 10px;
+    margin: 0 0 20px;
     width: 100%;    
   }
 
   @include tablet {
-    margin: 0 0 10px;
+    margin: 0 0 20px;
     width: 100%;
   }
 
@@ -142,6 +143,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  position: relative;
 
   @include desktop-medium {
     width: 155px;
@@ -150,7 +152,7 @@ main {
     justify-content: center;
     border-radius: 64px;
     background-color: $color-primary-white;
-    border: 2px solid $color-secondary-blue;
+    border: 2px solid $color-pastel-7;
   }
 
   @include tablet {
@@ -160,7 +162,9 @@ main {
     justify-content: center;
     border-radius: 64px;
     background-color: $color-primary-white;
-    border: 2px solid $color-secondary-blue;
+    border: 2px solid $color-pastel-7;
+    order: 2;
+    min-height: 42px;
   }  
 
   &__legend {
@@ -178,7 +182,7 @@ main {
   }
 
   &__select {
-    position: relative;
+    width: 220px;
     margin: 0 0 0 8px;
 
     @include mobile {
@@ -200,12 +204,8 @@ main {
     height: 4px;
     background-size: contain;
 
-    @include desktop-medium {
-      top: 5px;
-    }
-    
     @include tablet {
-      top: 5px;
+      right: 12px;
     }
   }
   
@@ -225,13 +225,13 @@ main {
     transition: 0.05s all ease-in-out;
 
     @include desktop-medium {
-      font-size: 10px;
-      line-height: 14px;
+      font-size: 12px;
+      line-height: 20px;
     }    
 
     @include tablet {
-      font-size: 10px;
-      line-height: 14px;
+      font-size: 12px;
+      line-height: 20px;
     }
   }
 
@@ -239,6 +239,10 @@ main {
     border-left: 1px solid $text-white;
     border-right: 1px solid $text-white;
     border-top: 1px solid $text-white;
+
+    @include tablet {
+      border: none;
+    }
 
     &.select-arrow-active {
       border-left: 1px solid $color-pastel-7;
@@ -248,29 +252,71 @@ main {
       border-top-left-radius: 8px;
       background-color: $text-ultra-silver;
       padding: 9px 108px 8px 20px;
+
+      @include desktop-medium {
+        display: none;
+      }
+
+      @include tablet {
+        display: none;
+      }
     }
   }
 
   .select-items div {
     padding: 9px 108px 9px 20px;
+    border-left: 1px solid $color-pastel-7;
+    border-right: 1px solid $color-pastel-7;
+
+    &:last-child {
+      border-bottom-right-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
   }
   
   .select-items {
-    border-left: 1px solid $color-pastel-7;
-    border-right: 1px solid $color-pastel-7;
     border-bottom: 1px solid $color-pastel-7;
     position: absolute;
     background-color: $color-primary-white;
     top: 100%;
-    left: 0;
+    left: unset;
     right: 0;
     z-index: 99;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
     transition: 0.3s all ease-in-out;
+    width: 220px;
+
+    @include desktop-medium {
+      right: -2px;
+      top: -2px;
+      left: unset;
+      border-top-right-radius: 8px;
+      border-top-left-radius: 8px;
+    }
+
+    @include tablet {
+      right: unset;
+      top: -2px;
+      left: -2px;
+      border-top-right-radius: 8px;
+      border-top-left-radius: 8px;
+    }
 
     .same-as-selected {
       display: none;
+
+      @include desktop-medium {
+        display: block;
+        padding: 10px 108px 10px 20px;
+        border-radius: 8px 8px 0 0;
+      }
+
+      @include tablet {
+        display: block;
+        padding: 10px 108px 10px 20px;
+        border-radius: 8px 8px 0 0;
+      }
     }
   }
 

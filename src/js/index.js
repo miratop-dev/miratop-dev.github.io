@@ -139,9 +139,11 @@ $("[data-js-handler='mobile-filter__handler']").on('click', function(e){
   if($('.c-aside').hasClass('over')) {
     $('body').removeClass('hidden');
     $('.c-aside').removeClass('over');
+    $('.overlay').removeClass('show');
   } else {
     $('body').addClass('hidden');
     $('.c-aside').addClass('over');
+    $('.overlay').addClass('show');
   }
 });
 
@@ -184,6 +186,10 @@ $("[data-js-handler='overlay__handler']").on('click', function(e){
   if($('.main-menu').hasClass('show')) {
     $('.main-menu').addClass('hide').removeClass('show');
   }  
+  if($('.c-aside').hasClass('over')) {
+    $('.c-aside').removeClass('over');
+    $('body, html').removeClass('hidden');
+  }
 });
 
 $("[data-js-handler='account-type']").on('click', function(e){
