@@ -6,11 +6,21 @@
     width: 100%;
     max-width: 970px;    
 
+    @include tablet {
+      flex-direction: column;
+    }
+
     li {
       border-top: 2px solid $color-pastel-7;
       border-bottom: 2px solid $color-pastel-7;
       border-left: 2px solid $color-pastel-7;
       width: 20%;
+
+      @include tablet {
+        width: 100%;
+        display: none;
+      }
+
       &:first-child {
         border-radius: 64px 0 0 64px;
       }
@@ -22,10 +32,44 @@
 
       &.active {
         background-color: $color-pastel-7;
+
+        @include tablet {
+          display: block;
+          background: none;
+          border-radius: 64px;
+          border-right: 2px solid $color-pastel-7;
+          order: 0;
+
+          a {
+            &::after {
+              background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23254648' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+              position: absolute;
+              content: "";
+              top: 50%;
+              right: 24px;
+              width: 8px;
+              height: 4px;
+              background-size: contain;
+            }
+          }
+        }
+      }
+
+      &.mobile-show {
+        @include tablet {
+          display: block;
+          border-top: none;
+          border-radius: 0;
+          max-width: 290px;
+          margin: 0 auto;
+          border-right: 2px solid $color-pastel-7;
+          order: 1;
+        }
       }
     }
 
     a {
+      position: relative;
       color: $text-black;
       font-weight: 600;
       font-size: 14px;

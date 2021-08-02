@@ -206,6 +206,24 @@ $("[data-js-handler='options-tabs'] a").on('click', function(e){
     let href = $(this).attr('href');
     $(this).closest("[data-js-handler='options-tabs']").siblings("[data-js-handler='options-tab']").removeClass('active');
     $(href).addClass('active');
+  }
+
+  let tabs = $(this).closest("[data-js-handler='options-tabs']");
+  let self = $(this).parent();
+  let current_active = tabs.children('.active');
+  if($(window).width() < 769) {
+    tabs.children().each(function(index, item){
+      if($(item).hasClass('mobile-show')) {
+        $(item).removeClass('mobile-show');
+      } else {
+        if(!$(item).hasClass('active')) {
+          $(item).addClass('mobile-show');
+        }
+      }
+    });
+    current_active.removeClass('active').removeClass('mobile-show')
+    self.addClass('active').removeClass('mobile-show');
+  } else {
     $(this).parent().siblings().removeClass('active');
     $(this).parent().addClass('active');
   }

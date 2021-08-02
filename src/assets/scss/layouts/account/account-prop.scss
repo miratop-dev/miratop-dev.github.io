@@ -32,6 +32,10 @@
 
     li {
       width: 25%;
+
+      @include tablet {
+        width: 100%;
+      }
     }
   }
 
@@ -192,11 +196,21 @@
     &:last-child {
       margin: 0;
     }
+
+    @include tablet {
+      display: block;
+    }
   }
 
   &__imgwrap {
     flex-basis: 80px;
     margin: 0 20px 0 0;
+
+    @include tablet {
+      float: left;
+      max-width: 60px;
+      margin: 0 10px 0 0;
+    }
   }
 
   &__textwrap {
@@ -208,8 +222,24 @@
     justify-content: space-between;
     align-items: center;
 
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     &--bottom {
       align-items: flex-end;
+
+      @include tablet {
+        margin: 0 0 10px;
+        text-align: left;
+      }
+    }
+
+    &:last-child {
+      @include tablet {
+        flex-direction: row;
+      }
     }
   }
 
@@ -225,6 +255,12 @@
     color: $text-black;
     font-size: 14px;
     line-height: 28px;
+
+    @include tablet {
+      margin: 10px 0;
+      font-size: 12px;
+      line-height: 20px;
+    }
   }
 
   &__link {
@@ -322,6 +358,13 @@
   &__button {
     height: 52px;
   }  
+
+  &__executant {
+    @include tablet {
+      margin: 0 0 10px 0;
+      display: flex;
+    }
+  }
 }
 
 .candidacy-reply {

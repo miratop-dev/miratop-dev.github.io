@@ -1,16 +1,31 @@
 .details-task-head {
   position: relative;
   margin: 0 0 40px;
-
-  @include tablet {
-    margin: 0 0 20px;
-  }
   
+  &__summary {
+    @include tablet {
+      margin: 0 0 10px;
+    }
+  }
+
+  &__buttons {
+    @include tablet {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
   &__button {
     margin: 0 10px 0 0;
 
     &:last-child {
       margin: 0;
+
+      @include tablet {
+        width: 100%;
+        justify-content: center;
+        max-width: 340px;
+      }
     }
   }
 
@@ -18,7 +33,21 @@
     font-size: 20px;
     line-height: 36px;
     color: $text-black;
-    font-weight: 700;
+    font-weight: 800;
+
+    @include tablet {
+      margin: 0 0 5px;
+    }
+
+    & ~ .c-info {
+      @include tablet {
+        flex-wrap: wrap;
+      }
+
+      & > div:last-child {
+        margin: 0;
+      }
+    }
   }
 
   &__headwrap {
@@ -26,6 +55,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
 }
 
@@ -35,8 +68,23 @@
   &__block {
     margin: 0 0 20px;
 
+    @include tablet {
+      margin: 0 0 10px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
     &:last-child {
       margin: 0;
+    }
+
+    .c-title {
+      @include tablet {
+        font-weight: 800;
+        margin: 0 0 10px;
+      }
     }
   }
 
@@ -90,13 +138,17 @@
     margin: 0 0 8px;
 
     @include tablet {
-      font-size: 10px;
-      line-height: 14px;
+      font-size: 12px;
+      line-height: 20px;
+
+      &:last-child {
+        margin: 0;
+      }
     }
   }
 
   &__subltitle {
-    margin: 0 0 5px;
+    margin: 0 0 5px!important;
   }
 }
 
@@ -186,6 +238,11 @@
 .details-task-footer {
   margin: 40px 0 0 0;
   text-align: center;
+
+  @include tablet {
+    margin: 24px 0 0 0;
+    text-align: left;
+  } 
 }
 
 .details-task-side {
@@ -253,8 +310,7 @@
     margin: 0 0 5px;
 
     @include tablet {
-      font-size: 16px;
-      line-height: 28px;
+      display: none;
     }
   }
 
@@ -281,7 +337,7 @@
     border-radius: 80px;
 
     @include tablet {
-      width: 65px;
+      width: 70px;
       float: left;
       margin: 0 20px 10px 0;
     }
@@ -290,6 +346,17 @@
   &__headwrap {
     display: flex;
     justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__buttons {
+    @include tablet {
+      display: flex;
+      margin: 0 0 10px;
+    }
   }
 
   &__button {
@@ -300,10 +367,19 @@
     &:last-child {
       margin: 0;
     }
+
+    @include tablet {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
   }
 }
 
 .details-expert-description {
+
+  .c-title__title4 {
+    font-weight: 800;
+  }
 
   p {
     color: $text-black;
@@ -320,10 +396,6 @@
   &__block {
     margin: 0 0 40px;
 
-    @include tablet {
-      margin: 0 0 20px;
-    }
-
     &:last-child {
       margin: 0;
     }
@@ -334,9 +406,13 @@
       font-size: 14px;
       line-height: 28px;
 
+      &:first-child {
+        margin: 0;
+      }
+
       @include tablet {
-        font-size: 10px;
-        line-height: 14px;
+        font-size: 12px;
+        line-height: 20px;
       }      
     }
 
@@ -425,7 +501,7 @@
       transition: max-height 0.15s ease-out;
 
       @include tablet {
-        max-height: 60px;
+        max-height: 70px;
         padding: 11px 10px 11px 44px;
       }
     }
@@ -494,8 +570,8 @@
     color: $text-black;
 
     @include tablet {
-      font-size: 12px;
-      line-height: 16px;
+      font-size: 14px;
+      line-height: 28px;
     }
 
     &:first-child {
