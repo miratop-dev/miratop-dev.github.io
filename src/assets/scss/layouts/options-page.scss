@@ -97,18 +97,27 @@
 
 .options-profile {
   width: 100%;
-  /*max-width: 620px;*/
 
   &__columns {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
     margin: 0 0 15px;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__column {
     width: 50%;
     max-width: 290px;
+
+    @include tablet {
+      max-width: 340px;
+      width: 100%;
+    }
 
     &--vertical {
       display: flex;
@@ -126,9 +135,21 @@
     justify-content: space-between;
     align-items: center;
 
+    @include tablet {
+      flex-direction: column;
+    }
+
     label {
       width: 290px;
       margin: 0;
+
+      @include tablet {
+        width: 100%;
+
+        &:first-child {
+          margin: 0 0 15px;
+        }
+      }
     }
   }
 
@@ -337,6 +358,12 @@
     border: 1px solid #fff;
     padding: 0 7px;
 
+    @include tablet {
+      position: relative;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     &:last-child {
       margin: 0;
     }
@@ -364,6 +391,12 @@
     height: 16px;
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.9092 4.46558H3.08887C2.7917 4.46558 2.55078 4.70647 2.55078 5.00362V13.4091C2.55078 14.8378 3.71316 16.0001 5.14176 16.0001H10.8561C12.2848 16.0001 13.4471 14.8378 13.4471 13.4091V5.00362C13.4472 4.70649 13.2064 4.46558 12.9092 4.46558ZM6.70553 12.7594C6.70553 13.1245 6.40958 13.4204 6.04445 13.4204C5.67946 13.4204 5.38338 13.1245 5.38338 12.7594V7.70626C5.38338 7.34116 5.67941 7.04524 6.04445 7.04524C6.40955 7.04524 6.70553 7.34118 6.70553 7.70626V12.7594ZM10.6146 12.7594C10.6146 13.1245 10.3186 13.4204 9.9535 13.4204C9.58851 13.4204 9.29243 13.1245 9.29243 12.7594V7.70626C9.29243 7.34116 9.58845 7.04524 9.9535 7.04524C10.3186 7.04524 10.6146 7.34118 10.6146 7.70626V12.7594Z' fill='%23F8C3B9'/%3E%3Cpath d='M12.37 0.837176H10.0261V0.633909C10.0261 0.284366 9.74175 0 9.39223 0H6.60554C6.256 0 5.97163 0.284366 5.97163 0.633909V0.837176H3.62774C2.73022 0.837176 2 1.56735 2 2.46489V3.50865C2 3.69532 2.15132 3.84667 2.33807 3.84667H13.6597C13.8463 3.84667 13.9977 3.69532 13.9977 3.50865V2.46489C13.9977 1.56737 13.2675 0.837176 12.37 0.837176Z' fill='%23F8C3B9'/%3E%3C/svg%3E");
     transition: 0.3s all ease-in-out;
+
+    @include tablet {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
 
     &:hover {
       opacity: 1;
@@ -393,6 +426,10 @@
     display: flex;
     align-items: flex-end;
 
+    @include tablet {
+      flex-direction: column;
+    }
+
     &:nth-child(n + 2) {
       margin: 15px 0 0 0;
     }
@@ -403,11 +440,21 @@
       &:first-child {
         width: 100%;
         max-width: 180px;
+
+        @include tablet {
+          max-width: unset;
+          margin: 0 0 15px;
+        }
       }
 
       &:nth-child(2) {
         width: 100%;
         max-width: 330px;
+
+        @include tablet {
+          max-width: unset;
+          margin: 0 0 15px;
+        }
       } 
 
       &.fullwidth {
@@ -432,6 +479,11 @@
     line-height: 18px;
     color: $text-black;
 
+    @include tablet {
+      max-width: unset;
+      margin: 0 0 15px;
+    }
+
     option {
       color: $text-black;
       font-weight: 600;
@@ -451,6 +503,11 @@
     font-size: 14px;
     line-height: 18px;
     color: $text-black;    
+
+    @include tablet {
+      max-width: unset;
+      margin: 0 0 15px;
+    }
 
     &--fullwidth {
       max-width: unset;
@@ -577,12 +634,23 @@
     justify-content: space-between;
     border-bottom: 2px solid $color-secondary-border;
     margin: 0 0 20px;
+
+    @include tablet {
+      align-items: flex-start;
+      flex-direction: column;
+    }
   }
 
   &__management {
     margin: 0 0 10px;
     display: flex;
     align-items: flex-end;
+
+    @include tablet {
+      width: 100%;
+      justify-content: flex-start;
+      margin: 20px 0 10px;
+    }
   }
 
   &__edit {
@@ -706,6 +774,13 @@
     max-width: 620px;
   }
 
+  &__types {
+    @include tablet {
+      flex-direction: column;
+      display: flex;
+    }
+  }
+
   &__type {
     position: relative;
     color: $text-black;
@@ -714,6 +789,10 @@
     line-height: 28px;
     padding: 0 0 0 34px;
     margin: 0 20px 0 0;
+
+    @include tablet {
+      margin: 0 0 10px;
+    }
 
     &:last-child {
       margin: 0;
@@ -728,6 +807,10 @@
       height: 24px;
       border: 2px solid $text-silver;
       border-radius: 12px;
+
+      @include tablet {
+        top: 3px;
+      }
     }
 
     &.active {
@@ -744,6 +827,10 @@
         height: 12px;
         border-radius: 6px;
         background-color: $color-pastel-7;
+
+        @include tablet {
+          top: 9px;
+        }
       }
     }
   }

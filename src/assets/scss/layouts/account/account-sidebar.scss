@@ -3,6 +3,10 @@
   border-radius: 8px;
   border: 1px solid $text-silver;
 
+  @include tablet {
+    margin: 0 0 40px;
+  }
+
   &__imgwrap {
     background-color: #fff;
     border-radius:  0 8px 8px 0;
