@@ -128,6 +128,11 @@
   justify-content: space-between;
   margin: 0 0 120px;
 
+  @include tablet {
+    display: block;
+    margin: 0 0 40px;
+  }
+
   &__desc {
     width: 100%;
     max-width: 620px;
@@ -143,6 +148,10 @@
     max-width: 620px;
     border-radius: 12px;
     overflow: hidden;
+
+    @include tablet {
+      margin: 0;
+    }
   }
 }
 
@@ -158,6 +167,11 @@
     align-items: stretch;
     display: flex;
     justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__block {
@@ -169,6 +183,16 @@
     min-height: 478px;
     border-radius: 12px;
     overflow: hidden;
+
+    @include tablet {
+      width: 100%;
+    }
+
+    &:first-child {
+      @include tablet {
+        margin: 0 0 20px;
+      }
+    }
   }
 
   &__imgwrap {

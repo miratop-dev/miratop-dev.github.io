@@ -121,6 +121,11 @@
 }
 
 .header-user {
+
+  @include tablet {
+    margin: 0 0 0 20px;
+  }
+
   &.hide {
     display: none;
   }
