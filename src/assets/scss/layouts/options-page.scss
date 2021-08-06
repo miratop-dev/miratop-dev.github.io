@@ -766,6 +766,14 @@
   text-align: left;
   margin: 0 auto;
 
+  .c-title__title3 {
+    @include tablet {
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 36px;
+    }
+  }  
+
   &.hide {
     display: none;
   }

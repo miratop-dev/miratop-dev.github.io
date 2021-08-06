@@ -18,6 +18,10 @@
     padding: 20px 0;
     border-top: 2px solid $color-secondary-border;
 
+    @include tablet {
+      flex-direction: column;
+    }
+
     &:last-child {
       border-bottom: 2px solid $color-secondary-border;
     }
@@ -35,6 +39,10 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    @include tablet {
+      margin: 0 0 20px;
+    }
   }
 
   &__imgwrap {
@@ -48,10 +56,19 @@
   &__additional {
     display: flex;
     align-items: center;
+
+    @include tablet {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
   }
 
   &__info {
     margin: 0 0 0 10px;
+
+    @include tablet {
+      margin: 0 0 12px;
+    }
   }
 
   &__notices {
@@ -173,6 +190,10 @@
 }
 
 .detailed-chat {
+  @include tablet {
+    margin: 20px 0 0 0;
+  }
+
   &__imgwrap {
     text-align: center;
     margin: 0 0 10px;

@@ -156,7 +156,6 @@
 }
 
 .about-who {
-
   &__title {
     text-align: center;
   }
@@ -215,8 +214,20 @@
 }
 
 .how-it-works {
+  h3 {
+    @include tablet {
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 36px;
+    }
+  }
+
   &__section {
     padding: 60px 0 120px;
+
+    @include tablet {
+      padding: 40px 0;
+    }
 
     &--grey {
       padding: 100px 0 120px;
@@ -229,6 +240,10 @@
     justify-content: flex-start;
     align-items: center;
     margin: 40px 0 20px;
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
 
   &__column {
@@ -246,6 +261,10 @@
       z-index: 3;
       margin: 0 0 0 120px;
 
+      @include tablet {
+        margin: 0;
+      }
+
       &::before {
         content: '';
         position: absolute;
@@ -256,12 +275,35 @@
         right: 277px;
         top: 50%;
         margin-top: -52px;
+
+        @include tablet {
+          right: unset;
+          top: -100px;
+          transform: rotate(90deg);
+          left: 50%;
+          margin-left: -71px;
+          margin-top: 0;
+        }
       }
     }
 
     &:nth-child(3) {
       z-index: 2;
       margin: 0 0 0 120px;
+
+      @include tablet {
+        margin: 0;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      & > div {
+        @include tablet {
+          height: auto;
+          margin: 0;
+          width: 48%;
+        }
+      }
 
       &::before {
         content: '';
@@ -273,6 +315,16 @@
         right: 277px;
         top: 50%;
         margin-top: -179px;
+
+        @include tablet {
+          transform: rotate(90deg);
+          margin-top: 0;
+          top: -148px;
+          right: 50%;
+          width: 100%;
+          max-width: 300px;
+          margin-right: -150px;
+        }
       }
     }          
   }
@@ -328,15 +380,24 @@
     display: inline-flex;
     justify-content: center;
 
-     ul {
+    @include tablet {
+      flex-direction: column;
+    }
+
+    ul {
       width: 100%;
       flex: 0 0 452px;
       margin: 0 0 0 80px;
 
+      @include tablet {
+        flex: auto;
+        margin: 0;
+      }
+
       &:first-child {
         margin: 0;
       }
-     }
+    }
 
      li {
       text-align: left;
@@ -368,13 +429,30 @@
     padding: 80px 0;
     text-align: center;
     margin: 0 0 -200px;
+
+    @include tablet {
+      padding: 40px 0;
+      margin: 60px 0 0 0;
+    }
   }
 }
 
 .how-to-expert {
+  h3 {
+    @include tablet {
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 36px;
+    }
+  }
+
   &__container {
     text-align: center;
     margin: 0 0 120px;
+
+    @include tablet {
+      margin: 40px 0;
+    }
 
     &:last-child {
       margin: 0;
@@ -384,6 +462,11 @@
   &__description {
     font-size: 20px;
     line-height: 36px;
+
+    @include tablet {
+      font-size: 14px;
+      line-height: 28px;
+    }
   }
 
   &__note {
@@ -395,6 +478,11 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__step {
@@ -406,6 +494,16 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    @include tablet {
+      margin: 0 0 12px;
+    }
+
+    &:last-child {
+      @include tablet {
+        margin: 0;
+      }
+    }
 
     &--3 {
       border: 2px solid $color-pastel-3;
@@ -440,6 +538,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
 
   &__link {
@@ -456,5 +558,9 @@
   &__button {
     height: 48px;
     margin: 0 10px;
+
+    @include tablet {
+      margin: 10px 0;
+    }
   }
 }
